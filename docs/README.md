@@ -66,7 +66,7 @@ python3 build.py --check   # 생성 없이 점검만. 정본과 사본 불일치
 - 유틸: `.overline` `.h-display` `.lead` `.wrap` `.reveal`(화면에 들어오면 페이드 + 24px 상승, 0.9s) `.sr-only`
 - 런타임: 현재 섹션 하이라이트, 진행 바, pin 여백을 계산한 앵커 이동, 모든 ScrollTrigger의 문서 순서 정렬 후 단일 refresh
 - 히어로 로딩: 01 조각이 실제 진행률(three.js 다운로드, WebGL 준비, 부품 생성, 셰이더 컴파일)을 0~100%로 보여 줍니다. 부품 생성은 32ms 단위로 쪼개 프레임을 양보하고, 백그라운드 탭에서는 쪼개지 않습니다. 셸의 단일 refresh는 `window.__heroReady`(히어로가 pin을 만든 뒤 해제)까지 기다리고, 로딩 중에는 페이지 스크롤을 잠급니다(최대 15초)
-- 로봇 도크: 히어로 pin이 끝나면 같은 로봇이 오른쪽 아래로 내려와 문서 끝까지 남습니다(설계와 검토는 [`review/ROBOT_COMPANION.md`](review/ROBOT_COMPANION.md)). 도크 요소 `#hero-dock`은 01 조각이 body에 붙이는 유일한 섹션 밖 요소이고, CSS 선택자는 `#hero-dock`으로 시작합니다. 데스크톱에서는 1360px 본문 오른쪽 여백에 맞춰 크기를 정하므로 본문을 가리지 않습니다. 멈춰 있으면 체중 이동, 둘러보기, 손 확인, 기지개를 하고, 7초가 지나면 앉습니다. 섹션이 바뀌면 본문을 가리키고, 커서를 올리면 손을 흔듭니다. 접기 상태는 `localStorage`의 `argos-dock`에 기억합니다
+- 로봇 도크: 히어로 pin이 끝나면 같은 로봇이 오른쪽 아래로 내려와 문서 끝까지 남습니다(설계와 검토는 [`review/ROBOT_COMPANION.md`](review/ROBOT_COMPANION.md)). 도크 요소 `#hero-dock`은 01 조각이 body에 붙이는 유일한 섹션 밖 요소이고, CSS 선택자는 `#hero-dock`으로 시작합니다. 데스크톱에서는 1360px 본문 오른쪽 여백에 맞춰 크기를 정하므로 본문을 가리지 않습니다. 스크롤 420px마다, 섹션이 바뀔 때마다, 멈춰 있을 때 동작 덱(춤 포함 18가지)에서 섞어 뽑아 매번 다른 동작을 하고, 7초 멈추면 앉습니다. 커서를 올리면 손을 흔듭니다. 접기 상태는 `localStorage`의 `argos-dock`에 기억합니다
 - 조각 간 이벤트: 해부도(02)는 부품을 가리키거나 고를 때 `document`에 `argos:part`(`detail: { id, on, sel }`)를 보내고, 도크의 로봇이 대응 부품을 X선처럼 밝힙니다. 대응표는 01 조각의 `PART_MAP`입니다. `content.json`의 해부도 id를 바꾸면 이 표도 함께 고칩니다
 - 섹션 배경: 셸이 섹션별 그라디언트를 소유합니다(앞 섹션의 끝 톤 = 다음 섹션의 시작 톤). 조각은 섹션 루트에 background를 지정하지 않습니다.
 - 푸터 출처: `build.py`가 `data/anthropic.json`(리서치 원문, PDF, 데이터)과 `data/videos_*.json`(업체별 공식 채널 영상 1건)에서 채웁니다.

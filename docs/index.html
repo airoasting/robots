@@ -1908,38 +1908,62 @@ async function initHero() {
     if (!m) return [];
     return parts.filter((pt) => (typeof m === 'function' ? m(pt) : m.test(pt.d.name)));
   };
-  /* ---------- dock behaviour: idle acts, sitting, greeting ----------
-     Standing still, the robot finds small things to do (weight shift, look around, check its hand, stretch).
-     After 7 s without scrolling it sits down, forearms on its knees, and stands up as soon as the page moves.
-     Events add a wave (first arrival, pointer on the dock) and a point at the page (new section). */
-  const ACT_DUR = { wave: 2.6, point: 2.2, stretch: 3.0, check: 2.8, shift: 3.4, look: 2.8 };
-  const act = { name: null, t: 0, w: 0, next: 2.5, still: 0, sit: 0, sitT: 0, waveCd: 0, greeted: false, last: '' };
+  /* ---------- dock behaviour: a repertoire played from shuffled decks ----------
+     Scrolling: every ~420px travelled the robot plays the next move from a shuffled deck (march, squat, hop, windmill,
+     pirouette...), so a long scroll never shows the same move twice in a row. A new section draws from its own deck
+     of presenting gestures. Standing still: small idle moves, then after 7 s it sits, forearms on its knees.
+     Spec: review/ROBOT_COMPANION.md */
+  const ACTS = {
+    wave: 2.6, point: 2.2, present: 2.2, salute: 2.2, bow: 2.4, shrug: 2.0, think: 2.6,
+    march: 2.6, squat: 2.2, hop: 1.6, windmill: 2.2, sidebend: 2.6, turn: 2.2,
+    shift: 3.4, look: 2.8, check: 2.8, stretch: 3.0,
+    groove: 4.0, robot: 4.2, disco: 3.6,
+  };
+  const DECKS = {
+    scroll: ['march', 'present', 'squat', 'hop', 'windmill', 'shrug', 'sidebend', 'turn', 'salute', 'wave', 'think', 'bow', 'groove', 'robot', 'disco'],
+    section: ['point', 'present', 'salute', 'bow'],
+    idle: ['shift', 'look', 'check', 'stretch', 'think', 'groove', 'robot', 'disco'],
+    seat: ['look', 'check', 'wave', 'think'],
+  };
+  const IDLE = { shift: 1, look: 1, check: 1, stretch: 1 }; // these give way the moment the page moves
+  const act = { name: null, t: 0, w: 0, next: 2.5, still: 0, dist: 0, sit: 0, sitT: 0, waveCd: 0, greeted: false, last: '', q: {} };
+  // draw from a shuffled deck; refill when empty, and never repeat the move that just played
+  function draw(deck) {
+    let q = act.q[deck];
+    if (!q || !q.length) {
+      q = DECKS[deck].slice();
+      for (let i = q.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); const tmp = q[i]; q[i] = q[j]; q[j] = tmp; }
+      act.q[deck] = q;
+    }
+    if (q.length > 1 && q[q.length - 1] === act.last) q.unshift(q.pop());
+    return q.pop();
+  }
   function playAct(name, force) {
     if (act.name && !force) return;
-    act.name = name; act.t = 0;
+    act.name = name; act.t = 0; act.last = name; act.dist = 0;
   }
   function stepAct(dt, vY, docked) {
     act.waveCd = Math.max(0, act.waveCd - dt);
     if (!docked) {
-      act.name = null; act.still = 0; act.sitT = 0; act.next = 2.5;
+      act.name = null; act.still = 0; act.sitT = 0; act.next = 2.5; act.dist = 0;
     } else {
       const moving = Math.abs(vY) > 25 || orbit.drag;
       act.still = moving ? 0 : act.still + dt;
+      act.dist += Math.abs(vY) * dt;
       if (!act.greeted && p > 0.99) { act.greeted = true; playAct('wave', true); act.waveCd = 6; }
       act.sitT = act.still > 7 ? 1 : 0;
-      if (moving && act.name !== 'wave' && act.name !== 'point') act.name = null; // scrolling cancels idle business
+      if (moving && IDLE[act.name]) act.name = null; // scrolling cancels idle business
       if (act.name) {
         act.t += dt;
-        if (act.t >= ACT_DUR[act.name]) { act.name = null; act.next = 3 + rnd() * 3; }
-      } else if (act.still > 1.2 && (act.next -= dt) <= 0) {
-        const pool = act.sit > 0.5 ? ['look', 'check'] : ['shift', 'look', 'check', 'stretch'];
-        let n = pool[Math.floor(rnd() * pool.length)];
-        if (n === act.last) n = pool[(pool.indexOf(n) + 1) % pool.length];
-        act.last = n; playAct(n);
+        if (act.t >= ACTS[act.name]) { act.name = null; act.next = 3 + rnd() * 3; }
+      }
+      if (!act.name) {
+        if (moving && act.dist > 420 && act.sit < 0.2) playAct(draw('scroll'));
+        else if (act.still > 1.2 && (act.next -= dt) <= 0) playAct(draw(act.sit > 0.5 ? 'seat' : 'idle'));
       }
     }
-    const d = act.name ? ACT_DUR[act.name] : 1;
-    act.w = act.name ? smooth(0, 0.45, act.t) * (1 - smooth(d - 0.6, d, act.t)) : 0;
+    const d = act.name ? ACTS[act.name] : 1;
+    act.w = act.name ? smooth(0, 0.35, act.t) * (1 - smooth(d - 0.5, d, act.t)) : 0;
     // sit down slowly, stand up briskly
     act.sit += (act.sitT - act.sit) * (1 - Math.exp(-dt * (act.sitT > act.sit ? 1.6 : 4.5)));
     if (Math.abs(act.sitT - act.sit) < 1e-4) act.sit = act.sitT;
@@ -1947,13 +1971,85 @@ async function initHero() {
   // seated pose: pelvis on the floor, thighs up, shins forward, forearms resting on the knees
   const SIT = { hx: -2.2, kn: 1.2, hz: 0.14, lean: 0.14, shx: -0.55, shz: 0.06, el: -1.0 };
   const footZ = (hx, k) => 0.42 * Math.sin(-hx) + 0.41 * Math.sin(-(hx + k));
-  // arm targets per act; side s = 1 is the robot's left (screen right), -1 its right (screen left, toward the text)
-  function actArm(name, s, t) {
-    if (name === 'wave' && s > 0) return { x: -2.45, z: s * (0.3 + 0.32 * Math.sin(t * 8.5)), el: -0.55 + 0.1 * Math.sin(t * 8.5 + 1) };
-    if (name === 'point' && s < 0) return { x: -0.3, z: s * 1.4, el: -0.12 };
-    if (name === 'stretch') return { x: -2.85, z: s * 0.18, el: -0.15 };
-    if (name === 'check' && s > 0) return { x: -1.15, z: -s * 0.25, el: -1.35 };
-    return null;
+  /* one move at time t: arm targets (z outward, k = own weight), per-leg hip/knee offsets, torso pitch/roll/yaw,
+     body lift, extra yaw, gaze. Side 1 is the robot's left (screen right), -1 its right (screen left, toward the text). */
+  function actPose(n, t, d) {
+    const o = { arm: {}, leg: { 1: [0, 0], '-1': [0, 0] }, tx: 0, tz: 0, ty: 0, lift: 0, yaw: 0, look: null, full: false };
+    const u = clamp(t / d, 0, 1), bump = Math.sin(Math.PI * u), eu = u * u * (3 - 2 * u);
+    const both = (a) => { o.arm[1] = a; o.arm[-1] = Object.assign({}, a); };
+    switch (n) {
+      case 'wave': o.arm[1] = { x: -2.45, z: 0.3 + 0.32 * Math.sin(t * 8.5), el: -0.55 + 0.1 * Math.sin(t * 8.5 + 1) }; o.look = [0.05, 0.2]; break;
+      case 'point': o.arm[-1] = { x: -0.3, z: 1.4, el: -0.12 }; o.ty = -0.25; o.look = [-0.95, 0.3]; break;
+      case 'present': both({ x: -0.75, z: 0.8, el: -0.35 }); o.tx = -0.05; o.look = [0, 0.25]; break;
+      case 'salute': o.arm[-1] = { x: -0.55, z: 1.25, el: -2.3 }; o.look = [0, 0.2]; o.tx = -0.04; break;
+      case 'bow': both({ x: -0.25, z: 0.04, el: -0.2, k: bump }); o.tx = 0.5 * bump; o.look = [0, -0.4]; break;
+      case 'shrug': both({ x: 0.05, z: 0.45, el: -1.5 }); o.tz = 0.08 * Math.sin(t * 3); o.lift = 0.012 * bump; o.look = [0.1, 0.1]; break;
+      case 'think': o.arm[-1] = { x: -1.2, z: -0.15, el: -2.0 }; o.look = [0.25, 0.4]; o.tz = 0.05; break;
+      case 'march': {
+        const ph = t * 6.5;
+        [1, -1].forEach((s) => {
+          const up = Math.max(0, Math.sin(ph + (s > 0 ? 0 : Math.PI))) * bump;
+          o.leg[s] = [-0.75 * up, 1.15 * up];
+          o.arm[s] = { x: 0.5 * Math.sin(ph + (s > 0 ? Math.PI : 0)), z: 0.08, el: -0.7 };
+        });
+        o.lift = 0.01 * Math.abs(Math.sin(ph)) * bump;
+        break;
+      }
+      case 'squat': o.leg[1] = o.leg[-1] = [-1.0 * bump, 1.8 * bump]; both({ x: -1.45, z: 0.1, el: -0.15, k: bump }); o.tx = 0.25 * bump; break;
+      case 'hop': {
+        const crouch = smooth(0, 0.25, u) * (1 - smooth(0.25, 0.35, u)) + smooth(0.7, 0.8, u) * (1 - smooth(0.85, 1, u));
+        const air = Math.sin(Math.PI * clamp((u - 0.3) / 0.45, 0, 1));
+        o.leg[1] = o.leg[-1] = [-0.45 * crouch, 0.8 * crouch];
+        o.lift = 0.16 * air;
+        both({ x: -1.6, z: 0.35, el: -0.3, k: air });
+        o.look = [0, 0.35];
+        break;
+      }
+      case 'windmill': o.arm[1] = { x: -2 * Math.PI * eu, z: 0.22, el: -0.08 }; o.full = true; o.look = [0.3, 0.15]; break;
+      case 'sidebend': o.arm[-1] = { x: -0.2, z: 2.7, el: -0.4 }; o.tz = -0.26 * bump; o.look = [0.2, 0.3]; break;
+      case 'turn': o.yaw = 2 * Math.PI * eu; o.full = true; o.lift = 0.02 * bump; both({ x: -0.2, z: 0.35 * bump, el: -0.5 }); break;
+      case 'shift': { const ws = bump; o.leg[1] = [0, 0.18 * ws]; o.leg[-1] = [0, -0.04 * ws]; o.tz = -0.07 * ws; o.pz = 0.05 * ws; break; }
+      case 'look': o.look = [Math.sin(t * 2.4) * 0.85, 0.15 + 0.1 * Math.sin(t * 1.3)]; break;
+      case 'check': o.arm[1] = { x: -1.15, z: -0.25, el: -1.35 }; o.look = [0.3, -0.6]; o.wrist = Math.sin(t * 3.2) * 0.6; break;
+      case 'stretch': both({ x: -2.85, z: 0.18, el: -0.15 }); o.tz = Math.sin(t * 2.2) * 0.06; o.look = [0, 0.5]; break;
+      /* dances */
+      case 'groove': { // bounce on the beat, hips sway, elbows bent and swinging, head bobbing
+        const b = t * Math.PI * 4, bb = Math.abs(Math.sin(b));
+        o.leg[1] = o.leg[-1] = [-0.12 * bb, 0.3 * bb];
+        o.pz = 0.07 * Math.sin(b / 2); o.tz = -0.09 * Math.sin(b / 2); o.ty = 0.2 * Math.sin(b / 4);
+        [1, -1].forEach((s) => { o.arm[s] = { x: -0.5 + 0.4 * Math.sin(b / 2 + (s > 0 ? 0 : Math.PI)), z: 0.3, el: -1.4 }; });
+        o.look = [0.25 * Math.sin(b / 4), 0.1 + 0.15 * bb];
+        break;
+      }
+      case 'robot': { // the robot dance: snap between four mechanical poses every 0.35 s
+        const K = [
+          [{ x: -1.57, z: 0.1, el: -1.57 }, { x: 0, z: 0.1, el: -1.57 }, -0.3, -0.6],
+          [{ x: 0, z: 0.1, el: -1.57 }, { x: -1.57, z: 0.1, el: -1.57 }, 0.3, 0.6],
+          [{ x: -1.57, z: 0.15, el: 0 }, { x: -1.57, z: 0.15, el: 0 }, 0, 0],
+          [{ x: 0, z: 1.5, el: -1.57 }, { x: 0, z: 1.5, el: -1.57 }, 0, 0.3],
+        ];
+        const step = 0.35, i = Math.floor(t / step), f = eOut3(clamp(((t % step) / step) * 3.5, 0, 1));
+        const A = K[(i + 3) % 4], B = K[i % 4];
+        const mix = (a, c) => ({ x: lerp(a.x, c.x, f), z: lerp(a.z, c.z, f), el: lerp(a.el, c.el, f) });
+        o.arm[1] = mix(A[0], B[0]); o.arm[-1] = mix(A[1], B[1]);
+        o.ty = lerp(A[2], B[2], f);
+        o.look = [lerp(A[3], B[3], f), 0.1];
+        o.leg[1] = o.leg[-1] = [0, 0.12 * (i % 2)]; // a knee dip on every other beat
+        break;
+      }
+      case 'disco': { // right hand up to the corner, down across the body, on the beat; left hand at the hip
+        const b = Math.floor(t / 0.45) % 2, f = eOut3(clamp(((t % 0.45) / 0.45) * 3, 0, 1));
+        const up = { x: -2.6, z: 0.6, el: -0.05 }, dn = { x: -0.6, z: -0.35, el: -0.05 };
+        const A = b ? dn : up, B = b ? up : dn;
+        o.arm[-1] = { x: lerp(A.x, B.x, f), z: lerp(A.z, B.z, f), el: -0.05 };
+        o.arm[1] = { x: 0.2, z: 0.55, el: -1.4 };
+        o.pz = 0.06 * (b ? 1 : -1) * f; o.tz = -0.08 * (b ? 1 : -1) * f;
+        o.leg[1] = [0, b ? 0.25 : 0.05]; o.leg[-1] = [0, b ? 0.05 : 0.25];
+        o.look = b ? [-0.6, 0.5] : [-0.2, -0.2];
+        break;
+      }
+    }
+    return o;
   }
   let dockEl = null, dockStage = null, dockBox = null, dockHit = null, dockMin = null, heroST = null;
   const heroStage = q('.h-stage');
@@ -1990,7 +2086,7 @@ async function initHero() {
     let idx = 0;
     for (let i = 0; i < SECS.length; i++) if (secTop(SECS[i]) <= probe) idx = i;
     if (idx !== dock.sec) {
-      if (dock.sec > 0 && idx > 0 && dock.mode === 'dock') { dock.glance = 0; playAct('point', true); } // look and point at the new section once
+      if (dock.sec > 0 && idx > 0 && dock.mode === 'dock') { dock.glance = 0; playAct(draw('section'), true); } // look over and present the new section (a different gesture each time)
       dock.sec = idx; dock.secId = SECS[idx] ? SECS[idx].id : '';
     }
   }
@@ -2281,51 +2377,54 @@ async function initHero() {
     /* pose: flexed stance, one actuator pump mid-assembly, breathing, contrapposto */
     const br = Math.sin(time * 1.6);
     const pump = STATIC ? 0 : Math.sin(Math.PI * clamp((p - 0.43) / 0.1, 0, 1));
-    const fl = dock.flex;
+    const aw = act.w, an = act.name;
+    const ap = an ? actPose(an, act.t, ACTS[an]) : null; // the move being played, if any
+    const fl = dock.flex * (1 - aw); // the scroll knee-dip steps aside while a move plays
     const sk = act.sit * act.sit * (3 - 2 * act.sit); // 0 standing, 1 seated
-    const aw = act.w, an = act.name, at = act.t;
-    // weight shift: one sway onto the right leg and back
-    const ws = an === 'shift' ? aw * Math.sin(Math.PI * clamp(at / ACT_DUR.shift, 0, 1)) : 0;
     const hx0 = POSE.hipx - pump * 0.14 - fl * 0.12, kn0 = POSE.kn + pump * 0.34 + fl * 0.3 + br * 0.012 * idle;
     const hx = lerp(hx0, SIT.hx, sk);
     const knB = lerp(kn0, SIT.kn, sk);
+    const legW = aw * (1 - sk); // leg moves only while standing
+    let rY = -Infinity;
     for (const L of LIMBS) {
-      const k = knB + (L.s < 0 ? POSE.knR * (1 - sk) : 0) + (L.s > 0 ? 0.18 : -0.04) * ws;
-      L.hp.rotation.x = hx;
+      const lo = ap ? ap.leg[L.s] : null;
+      const h = hx + (lo ? lo[0] * legW : 0);
+      const k = knB + (L.s < 0 ? POSE.knR * (1 - sk) : 0) + (lo ? lo[1] * legW : 0);
+      L.hp.rotation.x = h;
       L.hp.rotation.z = L.s * (0.02 + SIT.hz * sk);
       L.kn.rotation.x = k;
-      L.an.rotation.x = -(hx + k);
+      L.an.rotation.x = -(h + k);
       L.an.rotation.z = -L.s * (0.02 + SIT.hz * sk);
       L.el.rotation.x = lerp(POSE.el - (pump + fl * 0.5) * 0.4 + br * 0.01 * idle, SIT.el, sk);
+      rY = Math.max(rY, robotY(h, k - (L.s < 0 ? POSE.knR * (1 - sk) : 0))); // the straighter leg carries the body
     }
-    robot.position.y = robotY(hx, knB);
+    robot.position.y = rY + (ap ? ap.lift * legW : 0);
     // seated, the feet stay where they stood: the pelvis moves back instead of the feet sliding forward
     const dz = sk > 0 ? footZ(hx, knB) - footZ(hx0, kn0) : 0;
     for (const b of blobs) { b.position.y = 0.003 - robot.position.y; b.position.z = b.userData.z0 + dz; }
     seatBlob.position.y = 0.004 - robot.position.y;
     seatBlob.material.opacity = 0.5 * sk;
     seatBlob.visible = sk > 0.01;
-    pelv.rotation.z = POSE.tilt + 0.05 * ws;
-    torso.rotation.z = -POSE.tilt * 1.3 - 0.07 * ws;
+    pelv.rotation.z = POSE.tilt + (ap && ap.pz ? ap.pz * legW : 0);
+    torso.rotation.z = -POSE.tilt * 1.3 + (ap ? ap.tz * aw : 0);
     torso.position.y = 0.11 + br * 0.003 * idle;
-    torso.rotation.x = lerp(POSE.lean, SIT.lean, sk) + br * 0.008 * idle;
+    torso.rotation.x = lerp(POSE.lean, SIT.lean, sk) + br * 0.008 * idle + (ap ? ap.tx * aw : 0);
     shL.rotation.z = lerp(POSE.sh, SIT.shz, sk) + (br * 0.01 + Math.sin(time * 0.7) * 0.008) * idle;
     shR.rotation.z = -lerp(POSE.sh, SIT.shz, sk) - (br * 0.01 + Math.sin(time * 0.7 + 1) * 0.008) * idle;
     shL.rotation.x = lerp(POSE.shx, SIT.shx, sk) + Math.sin(time * 0.8) * 0.015 * idle;
     shR.rotation.x = lerp(POSE.shx, SIT.shx, sk) + Math.sin(time * 0.8 + 2) * 0.015 * idle;
-    // arm acts blend over whatever the arms are doing (standing or seated)
+    // arm targets blend over whatever the arms are doing (standing or seated); a full turn (windmill) adds instead of blending
     for (const L of LIMBS) {
-      const tg = an ? actArm(an, L.s, at) : null;
-      if (tg && aw > 0) {
-        L.sh.rotation.x = lerp(L.sh.rotation.x, tg.x, aw);
-        L.sh.rotation.z = lerp(L.sh.rotation.z, tg.z, aw);
-        L.el.rotation.x = lerp(L.el.rotation.x, tg.el, aw);
+      const tg = ap ? ap.arm[L.s] : null;
+      if (tg) {
+        const w = aw * (tg.k === undefined ? 1 : tg.k);
+        L.sh.rotation.x = ap.full ? L.sh.rotation.x + tg.x : lerp(L.sh.rotation.x, tg.x, w);
+        L.sh.rotation.z = lerp(L.sh.rotation.z, L.s * tg.z, w);
+        L.el.rotation.x = lerp(L.el.rotation.x, tg.el, w);
       }
-      // checking the hand: the wrist turns it over twice
-      L.wr.rotation.y = L.s * 0.15 + (an === 'check' && L.s > 0 ? Math.sin(at * 3.2) * 0.6 * aw : 0);
+      L.wr.rotation.y = L.s * 0.15 + (ap && ap.wrist && L.s > 0 ? ap.wrist * aw : 0);
     }
-    if (an === 'stretch') torso.rotation.z += Math.sin(at * 2.2) * 0.06 * aw;
-    robot.rotation.y = mouseS.x * 0.1 + orbit.yaw + (STATIC ? 0 : (1 - sp) * Math.sin(time * 0.12) * 0.25);
+    robot.rotation.y = mouseS.x * 0.1 + orbit.yaw + (ap ? ap.yaw : 0) + (STATIC ? 0 : (1 - sp) * Math.sin(time * 0.12) * 0.25);
     robot.position.x = -Math.sin(robot.rotation.y) * dz;
     robot.position.z = -Math.cos(robot.rotation.y) * dz;
 
@@ -2373,15 +2472,8 @@ async function initHero() {
         tx = lerp(tx, -0.95, g); ty = lerp(ty, 0.3, g);
         if (dock.glance >= 1.6) dock.glance = -1;
       }
-      // acts steer the gaze too: face the viewer to wave, look down at the hand, scan the room, look up mid-stretch
-      if (aw > 0) {
-        let gx = null, gy = 0;
-        if (an === 'wave') { gx = 0.05; gy = 0.2; }
-        else if (an === 'check') { gx = 0.3; gy = -0.6; }
-        else if (an === 'look') { gx = Math.sin(at * 2.4) * 0.85; gy = 0.15 + 0.1 * Math.sin(at * 1.3); }
-        else if (an === 'stretch') { gx = 0; gy = 0.5; }
-        if (gx !== null) { tx = lerp(tx, gx, aw); ty = lerp(ty, gy, aw); }
-      }
+      // each move steers the gaze too (face the viewer to wave, look down at the hand, scan the room...)
+      if (ap && ap.look && dock.glance < 0) { tx = lerp(tx, ap.look[0], aw); ty = lerp(ty, ap.look[1], aw); }
     }
     const kL = 1 - Math.exp(-dt * 4);
     look.x += (tx - look.x) * kL;
@@ -2389,7 +2481,7 @@ async function initHero() {
     // finished pose faces the viewer (offsets the torso lean); the head follows the pointer in both axes
     // the upper body turns with the gaze (about a third of it), the head carries the rest; up-look has more range than down-look
     const pitch = look.y > 0 ? look.y * 0.34 : look.y * 0.14;
-    torso.rotation.y = look.x * 0.2 * lookW - (an === 'point' ? 0.25 * aw : 0); // pointing turns the chest toward the text
+    torso.rotation.y = look.x * 0.2 * lookW + (ap ? ap.ty * aw : 0); // moves can turn the chest (pointing, dancing)
     torso.rotation.x -= pitch * 0.25 * lookW;
     head.rotation.y = look.x * 0.45 * lookW;
     head.rotation.x = lerp(0.24, -0.1, lift) - pitch * 0.75 * lookW + Math.sin(time * 1.6 + 0.6) * 0.008 * idle;
@@ -2707,19 +2799,19 @@ async function initHero() {
       <ol class="bf-list">
         <li><a href="#players">
           <span class="bf-no">01</span>
-          <span class="bf-q">지금 어디까지 왔습니까</span>
+          <span class="bf-q">로봇의 발전 속도는 어떠한가요?</span>
           <span class="bf-a">중국 업체는 연 수천 대씩 출하하기 시작했습니다. 미국 업체는 고객 현장 배치를 늘리고 있습니다.</span>
           <span class="bf-go"><span class="ref">ARG-03</span>업체 보기 <span class="ar" aria-hidden="true">↓</span></span>
         </a></li>
         <li><a href="#rl-verdict">
           <span class="bf-no">02</span>
-          <span class="bf-q">대체는 얼마나 빠릅니까</span>
+          <span class="bf-q">로봇이 사람 일을 얼마나 대신할 수 있나요?</span>
           <span class="bf-a">로봇이 기술적으로 수행할 수 있는 업무는 전체의 <b>34%</b>, 사람보다 저렴하게 수행할 수 있는 업무는 <b>0.3%</b>에 불과합니다.</span>
           <span class="bf-go"><span class="ref">ARG-04</span>판정 보기 <span class="ar" aria-hidden="true">↓</span></span>
         </a></li>
         <li><a href="#gl-faq-5-q">
           <span class="bf-no">03</span>
-          <span class="bf-q">리더는 무엇부터 합니까</span>
+          <span class="bf-q">리더는 무엇부터 준비해야 하나요?</span>
           <span class="bf-a">현장 작업을 동작 단위로 나눕니다. 정형화된 작업에는 이미 성숙한 AMR(자율이동로봇)과 협동로봇부터 적용합니다.</span>
           <span class="bf-go"><span class="ref">ARG-06</span>FAQ Q.05 보기 <span class="ar" aria-hidden="true">↓</span></span>
         </a></li>
