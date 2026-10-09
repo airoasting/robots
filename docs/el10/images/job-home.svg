@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="job-home-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8E7"/>
+      <stop offset="1" stop-color="#FFE7B3"/>
+    </linearGradient>
+    <linearGradient id="job-home-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4CC9F0"/>
+      <stop offset="1" stop-color="#B8ECFA"/>
+    </linearGradient>
+    <clipPath id="job-home-win"><rect x="30" y="40" width="110" height="100" rx="10"/></clipPath>
+    <clipPath id="job-home-body"><rect x="178" y="206" width="74" height="88" rx="26"/></clipPath>
+    <clipPath id="job-home-headclip"><circle cx="215" cy="150" r="50"/></clipPath>
+  </defs>
+
+  <!-- wall -->
+  <rect x="0" y="0" width="400" height="304" fill="url(#job-home-wall)"/>
+  <g fill="#FFD23F" opacity="0.35">
+    <circle cx="170" cy="40" r="5"/><circle cx="230" cy="70" r="5"/><circle cx="190" cy="100" r="5"/>
+    <circle cx="380" cy="150" r="5"/><circle cx="260" cy="20" r="5"/><circle cx="20" cy="200" r="5"/>
+    <circle cx="150" cy="180" r="5"/><circle cx="350" cy="220" r="5"/>
+  </g>
+  <!-- sunbeam -->
+  <path d="M30 140 L140 140 L230 304 L70 304 Z" fill="#FFFFFF" opacity="0.28"/>
+
+  <!-- window -->
+  <rect x="30" y="40" width="110" height="100" rx="10" fill="url(#job-home-sky)"/>
+  <g clip-path="url(#job-home-win)">
+    <circle cx="112" cy="66" r="16" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+    <path d="M40 110 Q50 96 62 104 Q72 92 84 104 Q96 104 94 116 L40 116 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M30 140 Q70 118 140 132 L140 140 Z" fill="#06D6A0"/>
+  </g>
+  <rect x="30" y="40" width="110" height="100" rx="10" fill="none" stroke="#2B2D42" stroke-width="6"/>
+  <line x1="85" y1="40" x2="85" y2="140" stroke="#2B2D42" stroke-width="5"/>
+  <line x1="30" y1="90" x2="140" y2="90" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="22" y="138" width="126" height="10" rx="4" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <!-- curtains -->
+  <path d="M18 32 L44 32 Q38 90 48 138 L18 138 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M126 32 L152 32 L152 138 L122 138 Q132 90 126 32 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M138 40 L146 40 L146 132 L138 132 Z" fill="#E04F4F"/>
+  <rect x="12" y="26" width="146" height="8" rx="4" fill="#FF9F1C" stroke="#2B2D42" stroke-width="4"/>
+
+  <!-- picture frame -->
+  <rect x="280" y="46" width="84" height="64" rx="6" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="290" y="56" width="64" height="44" rx="3" fill="#FFF8E7" stroke="#2B2D42" stroke-width="3"/>
+  <path d="M292 98 L312 74 L326 88 L336 78 L352 98 Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="340" cy="66" r="5" fill="#FFD23F"/>
+  <path d="M322 34 L298 46 M322 34 L346 46" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="322" cy="34" r="3" fill="#2B2D42"/>
+
+  <!-- floor -->
+  <rect x="0" y="300" width="400" height="100" fill="#F4B27A"/>
+  <g stroke="#E09A5F" stroke-width="3" stroke-linecap="round">
+    <line x1="0" y1="330" x2="400" y2="330"/>
+    <line x1="0" y1="364" x2="400" y2="364"/>
+    <line x1="80" y1="300" x2="80" y2="330"/>
+    <line x1="260" y1="300" x2="260" y2="330"/>
+    <line x1="150" y1="330" x2="150" y2="364"/>
+    <line x1="340" y1="330" x2="340" y2="364"/>
+    <line x1="60" y1="364" x2="60" y2="400"/>
+    <line x1="230" y1="364" x2="230" y2="400"/>
+  </g>
+  <rect x="0" y="296" width="400" height="9" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+
+  <!-- rug -->
+  <ellipse cx="205" cy="360" rx="150" ry="28" fill="#C8A6F2" stroke="#2B2D42" stroke-width="5"/>
+  <ellipse cx="205" cy="360" rx="122" ry="18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="8 8"/>
+
+  <!-- plant -->
+  <ellipse cx="62" cy="346" rx="34" ry="6" fill="#2B2D42" opacity="0.18"/>
+  <path d="M60 292 Q44 260 30 246" fill="none" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="38" cy="256" rx="11" ry="24" fill="#06D6A0" stroke="#2B2D42" stroke-width="4" transform="rotate(-40 38 256)"/>
+  <ellipse cx="86" cy="258" rx="11" ry="24" fill="#06D6A0" stroke="#2B2D42" stroke-width="4" transform="rotate(40 86 258)"/>
+  <ellipse cx="62" cy="244" rx="12" ry="28" fill="#06D6A0" stroke="#2B2D42" stroke-width="4"/>
+  <path d="M66 224 Q70 240 66 262" fill="none" stroke="#04B386" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="44" cy="282" rx="9" ry="18" fill="#06D6A0" stroke="#2B2D42" stroke-width="4" transform="rotate(-65 44 282)"/>
+  <ellipse cx="80" cy="282" rx="9" ry="18" fill="#06D6A0" stroke="#2B2D42" stroke-width="4" transform="rotate(65 80 282)"/>
+  <ellipse cx="57" cy="234" rx="3" ry="7" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="92" cy="232" r="7" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="92" cy="232" r="2.5" fill="#FF9F1C"/>
+  <path d="M30 292 L94 292 L86 346 L38 346 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M74 296 L90 296 L84 342 L70 342 Z" fill="#E04F4F"/>
+  <rect x="26" y="286" width="72" height="12" rx="5" fill="#FF6B6B" stroke="#2B2D42" stroke-width="5"/>
+  <ellipse cx="44" cy="314" rx="4" ry="9" fill="#FFFFFF" opacity="0.7"/>
+
+  <!-- water drops -->
+  <g fill="#4CC9F0" stroke="#2B2D42" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M70 244 Q66 252 70 255 Q74 252 70 244 Z"/>
+    <path d="M60 256 Q56 264 60 267 Q64 264 60 256 Z"/>
+    <path d="M76 262 Q72 270 76 273 Q80 270 76 262 Z"/>
+    <path d="M52 236 Q48 244 52 247 Q56 244 52 236 Z"/>
+  </g>
+
+  <!-- laundry basket -->
+  <ellipse cx="342" cy="362" rx="46" ry="7" fill="#2B2D42" opacity="0.18"/>
+  <path d="M302 330 Q318 312 330 326 Q340 308 356 322 Q370 312 380 330 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M296 330 L388 330 L380 362 L304 362 Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M362 334 L384 334 L378 358 L362 358 Z" fill="#04B386"/>
+  <g stroke="#2B2D42" stroke-width="3" stroke-linecap="round">
+    <line x1="318" y1="338" x2="320" y2="354"/>
+    <line x1="334" y1="338" x2="335" y2="354"/>
+    <line x1="350" y1="338" x2="350" y2="354"/>
+    <line x1="366" y1="338" x2="365" y2="354"/>
+  </g>
+
+  <!-- side table -->
+  <rect x="300" y="280" width="8" height="18" fill="#E07F00" stroke="#2B2D42" stroke-width="3"/>
+  <rect x="380" y="280" width="8" height="18" fill="#E07F00" stroke="#2B2D42" stroke-width="3"/>
+  <rect x="292" y="270" width="104" height="14" rx="5" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <!-- folded stack -->
+  <rect x="350" y="256" width="40" height="14" rx="4" fill="#4CC9F0" stroke="#2B2D42" stroke-width="4"/>
+  <rect x="353" y="244" width="36" height="13" rx="4" fill="#FF6B6B" stroke="#2B2D42" stroke-width="4"/>
+  <rect x="355" y="232" width="32" height="13" rx="4" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <line x1="358" y1="262" x2="382" y2="262" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- ROBOT -->
+  <ellipse cx="215" cy="340" rx="56" ry="9" fill="#2B2D42" opacity="0.2"/>
+  <!-- legs -->
+  <rect x="190" y="286" width="18" height="44" rx="7" fill="#E9ECEF" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="222" y="286" width="18" height="44" rx="7" fill="#E9ECEF" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="199" cy="306" r="5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="2.5"/>
+  <circle cx="231" cy="306" r="5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="2.5"/>
+  <ellipse cx="196" cy="334" rx="16" ry="9" fill="#06D6A0" stroke="#2B2D42" stroke-width="5"/>
+  <ellipse cx="234" cy="334" rx="16" ry="9" fill="#06D6A0" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- watering can (held by left hand) -->
+  <path d="M120 222 Q134 196 150 222" fill="none" stroke="#2B2D42" stroke-width="12" stroke-linecap="round"/>
+  <path d="M120 222 Q134 196 150 222" fill="none" stroke="#4CC9F0" stroke-width="5" stroke-linecap="round"/>
+  <path d="M114 240 L80 228 L76 236 L112 254 Z" fill="#4CC9F0" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="76" cy="232" rx="6" ry="10" fill="#FFD23F" stroke="#2B2D42" stroke-width="4" transform="rotate(-20 76 232)"/>
+  <rect x="108" y="220" width="48" height="38" rx="9" fill="#4CC9F0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M140 224 L150 224 Q152 238 150 254 L140 254 Z" fill="#2FA8D0"/>
+  <ellipse cx="118" cy="232" rx="3" ry="7" fill="#FFFFFF"/>
+  <path transform="translate(130 241) scale(0.6)" d="M0 8 C-14 -2 -10 -14 0 -6 C10 -14 14 -2 0 8Z" fill="#FFFFFF"/>
+
+  <!-- left arm -->
+  <polyline points="184,232 160,240 148,226" fill="none" stroke="#2B2D42" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="184,232 160,240 148,226" fill="none" stroke="#E9ECEF" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="160" cy="240" r="6" fill="#ADB5BD" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="146" cy="220" r="11" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- body -->
+  <rect x="178" y="206" width="74" height="88" rx="26" fill="#FFFFFF"/>
+  <rect x="232" y="200" width="30" height="100" fill="#E9ECEF" clip-path="url(#job-home-body)"/>
+  <rect x="178" y="206" width="74" height="88" rx="26" fill="none" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <!-- apron -->
+  <path d="M196 218 L196 214 M234 218 L234 214" stroke="#2B2D42" stroke-width="3"/>
+  <rect x="196" y="218" width="38" height="30" rx="6" fill="#06D6A0" stroke="#2B2D42" stroke-width="4"/>
+  <path d="M184 250 L246 250 L250 290 Q215 300 180 290 Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M232 252 L246 252 L249 288 L234 292 Z" fill="#04B386"/>
+  <rect x="202" y="262" width="26" height="16" rx="4" fill="#04B386" stroke="#2B2D42" stroke-width="3"/>
+  <path transform="translate(215 233) scale(0.8)" d="M0 8 C-14 -2 -10 -14 0 -6 C10 -14 14 -2 0 8Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="2.5" stroke-linejoin="round"/>
+  <line x1="182" y1="250" x2="248" y2="250" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- shirt being folded (held by right hand) -->
+  <path d="M272 204 L290 196 Q302 204 314 196 L332 204 L340 220 L328 224 L326 256 L278 256 L276 224 L264 220 Z" fill="#9B5DE5" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M314 200 L332 206 L338 219 L328 222 L326 254 L312 254 Z" fill="#7B3FC4"/>
+  <path transform="translate(298 232)" d="M0 -10 Q2 -2 10 0 Q2 2 0 10 Q-2 2 -10 0 Q-2 -2 0 -10Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M290 196 Q302 210 314 196" fill="none" stroke="#2B2D42" stroke-width="3"/>
+
+  <!-- right arm -->
+  <polyline points="246,232 270,222 290,204" fill="none" stroke="#2B2D42" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="246,232 270,222 290,204" fill="none" stroke="#E9ECEF" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="270" cy="222" r="6" fill="#ADB5BD" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="292" cy="200" r="11" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- neck -->
+  <rect x="204" y="194" width="22" height="16" rx="5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+
+  <!-- head -->
+  <line x1="215" y1="100" x2="215" y2="80" stroke="#2B2D42" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="215" cy="76" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="212" cy="73" r="2.5" fill="#FFFFFF"/>
+  <circle cx="165" cy="150" r="11" fill="#06D6A0" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="265" cy="150" r="11" fill="#06D6A0" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="215" cy="150" r="50" fill="#FFFFFF"/>
+  <circle cx="240" cy="168" r="50" fill="#E9ECEF" clip-path="url(#job-home-headclip)"/>
+  <circle cx="215" cy="150" r="50" fill="none" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M182 122 A40 40 0 0 1 204 106" fill="none" stroke="#E9ECEF" stroke-width="5" stroke-linecap="round"/>
+  <rect x="178" y="128" width="74" height="48" rx="22" fill="#2B2D42"/>
+  <path d="M188 136 L204 136" stroke="#4CC9F0" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <ellipse cx="201" cy="152" rx="9" ry="11" fill="#FFFFFF"/>
+  <circle cx="202" cy="154" r="5.5" fill="#2B2D42"/>
+  <circle cx="204" cy="150" r="2.2" fill="#FFFFFF"/>
+  <ellipse cx="229" cy="152" rx="9" ry="11" fill="#FFFFFF"/>
+  <circle cx="230" cy="154" r="5.5" fill="#2B2D42"/>
+  <circle cx="232" cy="150" r="2.2" fill="#FFFFFF"/>
+  <path d="M207 166 Q215 172 223 166" fill="none" stroke="#06D6A0" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="190" cy="164" rx="4.5" ry="2.8" fill="#FF6B6B" opacity="0.85"/>
+  <ellipse cx="240" cy="164" rx="4.5" ry="2.8" fill="#FF6B6B" opacity="0.85"/>
+
+  <!-- hearts and sparkles -->
+  <path transform="translate(108 196) scale(0.9)" d="M0 8 C-14 -2 -10 -14 0 -6 C10 -14 14 -2 0 8Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(268 120)" d="M0 -12 Q2.5 -2.5 12 0 Q2.5 2.5 0 12 Q-2.5 2.5 -12 0 Q-2.5 -2.5 0 -12Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(160 96) scale(0.7)" d="M0 -12 Q2.5 -2.5 12 0 Q2.5 2.5 0 12 Q-2.5 2.5 -12 0 Q-2.5 -2.5 0 -12Z" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(372 210) scale(0.7)" d="M0 -12 Q2.5 -2.5 12 0 Q2.5 2.5 0 12 Q-2.5 2.5 -12 0 Q-2.5 -2.5 0 -12Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+</svg>

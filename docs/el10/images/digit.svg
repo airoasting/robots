@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="digit-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF4E3"/>
+      <stop offset="1" stop-color="#FFE2BF"/>
+    </linearGradient>
+    <clipPath id="digit-c-head"><rect x="150" y="54" width="120" height="96" rx="40"/></clipPath>
+    <clipPath id="digit-c-torso"><rect x="148" y="156" width="104" height="100" rx="26"/></clipPath>
+  </defs>
+
+  <!-- backdrop blob -->
+  <path d="M204,34 C298,36 366,104 362,200 C358,296 296,364 200,362 C104,360 36,294 40,198 C44,102 110,32 204,34 Z" fill="url(#digit-bg)"/>
+  <!-- sparkles -->
+  <path d="M70,92 Q70,108 86,108 Q70,108 70,124 Q70,108 54,108 Q70,108 70,92 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M330,74 Q330,86 342,86 Q330,86 330,98 Q330,86 318,86 Q330,86 330,74 Z" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M350,292 Q350,302 360,302 Q350,302 350,312 Q350,302 340,302 Q350,302 350,292 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M62,250 Q62,259 71,259 Q62,259 62,268 Q62,259 53,259 Q62,259 62,250 Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="108" cy="58" r="4" fill="#FF6B6B"/>
+  <circle cx="300" cy="44" r="3.5" fill="#9B5DE5"/>
+  <circle cx="92" cy="186" r="3.5" fill="#FF9F1C"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="212" cy="378" rx="100" ry="11" fill="#2B2D42" opacity="0.15"/>
+
+  <!-- far leg (behind, darker) -->
+  <rect x="208" y="266" width="28" height="60" rx="14" transform="rotate(38 222 266)" fill="#8D96A0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="175" y="312" width="24" height="64" rx="12" transform="rotate(-44 187 312)" fill="#8D96A0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="187" cy="312" r="12" fill="#E07F00" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="232" cy="356" r="7" fill="#8D96A0" stroke="#2B2D42" stroke-width="4"/>
+  <path d="M214,374 L218,360 Q222,354 234,354 L266,358 Q282,362 282,374 Z" fill="#8D96A0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+
+  <!-- hip -->
+  <rect x="158" y="244" width="84" height="30" rx="13" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="214" y="250" width="22" height="18" rx="7" fill="#8D96A0"/>
+  <circle cx="172" cy="259" r="2.5" fill="#2B2D42"/>
+  <circle cx="200" cy="259" r="2.5" fill="#2B2D42"/>
+
+  <!-- near leg: thigh goes back, shin goes forward (bird-like) -->
+  <rect x="176" y="266" width="28" height="62" rx="14" transform="rotate(40 190 268)" fill="#E9ECEF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="193" y="274" width="7" height="44" rx="3" transform="rotate(40 190 268)" fill="#CBD2D9"/>
+  <rect x="138" y="316" width="24" height="64" rx="12" transform="rotate(-46 150 316)" fill="#E9ECEF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="153" y="324" width="6" height="46" rx="3" transform="rotate(-46 150 316)" fill="#CBD2D9"/>
+  <!-- spring rod along shin -->
+  <line x1="160" y1="304" x2="206" y2="348" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+  <line x1="160" y1="304" x2="206" y2="348" stroke="#FF9F1C" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- knee joint (points backward) -->
+  <circle cx="150" cy="316" r="14" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M152,328 A11,11 0 0 0 162,314" fill="none" stroke="#E07F00" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="146" cy="311" r="3.5" fill="#FFFFFF"/>
+  <!-- ankle and foot -->
+  <circle cx="196" cy="360" r="8" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <path d="M176,376 L180,362 Q184,356 196,356 L232,360 Q248,364 248,376 Z" fill="#E9ECEF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M226,364 Q242,366 242,372 L226,372 Z" fill="#CBD2D9"/>
+  <line x1="182" y1="371" x2="242" y2="371" stroke="#FF9F1C" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- neck -->
+  <rect x="196" y="142" width="26" height="20" rx="6" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- torso -->
+  <g clip-path="url(#digit-c-torso)">
+    <rect x="140" y="150" width="120" height="112" fill="#8D96A0"/>
+    <rect x="139" y="148" width="104" height="100" rx="26" fill="#ADB5BD"/>
+  </g>
+  <rect x="148" y="156" width="104" height="100" rx="26" fill="none" stroke="#2B2D42" stroke-width="6"/>
+  <rect x="168" y="172" width="60" height="62" rx="14" fill="#E9ECEF" stroke="#2B2D42" stroke-width="4"/>
+  <rect x="214" y="178" width="8" height="50" rx="4" fill="#CBD2D9"/>
+  <rect x="180" y="184" width="36" height="9" rx="4.5" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="186" cy="188" r="1.8" fill="#FFFFFF"/>
+  <line x1="182" y1="206" x2="212" y2="206" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="182" y1="214" x2="212" y2="214" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="182" y1="222" x2="212" y2="222" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="160" cy="170" r="2.5" fill="#2B2D42"/>
+  <circle cx="160" cy="242" r="2.5" fill="#2B2D42"/>
+  <ellipse cx="166" cy="166" rx="7" ry="3" transform="rotate(-35 166 166)" fill="#FFFFFF"/>
+
+  <!-- lidar puck on top of head -->
+  <rect x="188" y="40" width="44" height="18" rx="7" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="218" y="44" width="9" height="10" rx="3" fill="#E07F00"/>
+  <ellipse cx="210" cy="40" rx="12" ry="5" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3"/>
+  <ellipse cx="205" cy="39" rx="4" ry="1.6" fill="#FFFFFF"/>
+
+  <!-- head -->
+  <g clip-path="url(#digit-c-head)">
+    <rect x="140" y="46" width="140" height="112" fill="#CBD2D9"/>
+    <rect x="142" y="47" width="120" height="96" rx="40" fill="#E9ECEF"/>
+  </g>
+  <rect x="150" y="54" width="120" height="96" rx="40" fill="none" stroke="#2B2D42" stroke-width="6"/>
+  <ellipse cx="174" cy="70" rx="10" ry="4" transform="rotate(-30 174 70)" fill="#FFFFFF"/>
+  <!-- side ear sensor -->
+  <circle cx="162" cy="104" r="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="162" cy="104" r="4" fill="#FF9F1C"/>
+  <!-- face display -->
+  <rect x="180" y="74" width="84" height="52" rx="22" fill="#2B2D42" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M190,88 Q195,80 206,79" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="208" cy="99" r="12" fill="#FFFFFF"/>
+  <circle cx="242" cy="99" r="12" fill="#FFFFFF"/>
+  <circle cx="211" cy="101" r="7" fill="#2B2D42"/>
+  <circle cx="245" cy="101" r="7" fill="#2B2D42"/>
+  <circle cx="208" cy="97" r="2.8" fill="#FFFFFF"/>
+  <circle cx="242" cy="97" r="2.8" fill="#FFFFFF"/>
+  <path d="M216,114 Q226,121 236,114" fill="none" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="194" cy="114" rx="5" ry="3" fill="#FF6B6B" opacity="0.7"/>
+  <ellipse cx="256" cy="114" rx="5" ry="3" fill="#FF6B6B" opacity="0.7"/>
+
+  <!-- near upper arm -->
+  <rect x="184" y="186" width="24" height="46" rx="12" transform="rotate(-10 196 186)" fill="#E9ECEF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="199" y="194" width="6" height="30" rx="3" transform="rotate(-10 196 186)" fill="#CBD2D9"/>
+  <circle cx="196" cy="186" r="15" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="191" cy="181" r="3.5" fill="#FFFFFF"/>
+
+  <!-- tote box -->
+  <path d="M236,192 L254,176 L358,176 L340,192 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M340,192 L358,176 L358,252 L340,268 Z" fill="#E07F00" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="236" y="192" width="104" height="76" rx="4" fill="#FF9F1C" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="320" y="198" width="14" height="64" rx="3" fill="#E07F00"/>
+  <rect x="270" y="204" width="38" height="11" rx="5.5" fill="#2B2D42"/>
+  <line x1="244" y1="198" x2="262" y2="198" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="254" y="228" width="34" height="26" rx="4" fill="#FFF8E7" stroke="#2B2D42" stroke-width="3"/>
+  <line x1="260" y1="236" x2="282" y2="236" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round"/>
+  <line x1="260" y1="244" x2="276" y2="244" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round"/>
+  <path d="M300,232 L310,244 L300,256" fill="none" stroke="#2B2D42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M310,232 L320,244 L310,256" fill="none" stroke="#2B2D42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- far hand fingertips on box side -->
+  <ellipse cx="358" cy="214" rx="8" ry="13" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <ellipse cx="358" cy="238" rx="7" ry="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+
+  <!-- near forearm and hand on box -->
+  <circle cx="204" cy="230" r="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <rect x="204" y="219" width="40" height="22" rx="11" transform="rotate(8 204 230)" fill="#E9ECEF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="212" y="234" width="26" height="5" rx="2.5" transform="rotate(8 204 230)" fill="#CBD2D9"/>
+  <circle cx="204" cy="230" r="5" fill="#2B2D42"/>
+  <ellipse cx="248" cy="238" rx="13" ry="15" fill="#E9ECEF" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M244,232 L256,232 M244,240 L256,240" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+  <path d="M252,250 A11,11 0 0 0 259,240" fill="none" stroke="#CBD2D9" stroke-width="3" stroke-linecap="round"/>
+</svg>

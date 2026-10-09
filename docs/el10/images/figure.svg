@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="figure-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF7DC"/>
+      <stop offset="1" stop-color="#FFE7A6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop blob -->
+  <circle cx="200" cy="196" r="172" fill="url(#figure-bg)"/>
+  <circle cx="200" cy="196" r="148" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-dasharray="2 20" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- sparkles -->
+  <g stroke="#2B2D42" stroke-width="3" stroke-linejoin="round">
+    <path d="M58 70 Q58 84 72 84 Q58 84 58 98 Q58 84 44 84 Q58 84 58 70 Z" fill="#4CC9F0"/>
+    <path d="M342 56 Q342 68 354 68 Q342 68 342 80 Q342 68 330 68 Q342 68 342 56 Z" fill="#FF6B6B"/>
+    <path d="M352 255 Q352 268 365 268 Q352 268 352 281 Q352 268 339 268 Q352 268 352 255 Z" fill="#06D6A0"/>
+    <path d="M46 253 Q46 262 55 262 Q46 262 46 271 Q46 262 37 262 Q46 262 46 253 Z" fill="#9B5DE5"/>
+    <path d="M318 322 Q318 330 326 330 Q318 330 318 338 Q318 330 310 330 Q318 330 318 322 Z" fill="#FF9F1C"/>
+  </g>
+  <circle cx="96" cy="38" r="4" fill="#9B5DE5"/>
+  <circle cx="370" cy="170" r="5" fill="#4CC9F0"/>
+  <circle cx="30" cy="170" r="4" fill="#FF9F1C"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="366" rx="100" ry="12" fill="#2B2D42" opacity="0.18"/>
+
+  <g stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- legs -->
+    <rect x="150" y="344" width="52" height="20" rx="10" fill="#3D4058"/>
+    <ellipse cx="164" cy="350" rx="6" ry="2.5" fill="#FFFFFF" stroke="none" opacity="0.5"/>
+    <rect x="198" y="344" width="52" height="20" rx="10" fill="#3D4058"/>
+    <ellipse cx="212" cy="350" rx="6" ry="2.5" fill="#FFFFFF" stroke="none" opacity="0.5"/>
+    <rect x="163" y="284" width="28" height="32" rx="11" fill="#F1F3F5"/>
+    <rect x="209" y="284" width="28" height="32" rx="11" fill="#F1F3F5"/>
+    <rect x="162" y="314" width="30" height="36" rx="12" fill="#F1F3F5"/>
+    <path d="M180 317 A9 9 0 0 1 189 326 V338 A9 9 0 0 1 180 347 Z" fill="#CED4DA" stroke="none"/>
+    <rect x="208" y="314" width="30" height="36" rx="12" fill="#F1F3F5"/>
+    <path d="M226 317 A9 9 0 0 1 235 326 V338 A9 9 0 0 1 226 347 Z" fill="#CED4DA" stroke="none"/>
+    <circle cx="177" cy="314" r="9" fill="#3D4058" stroke-width="4"/>
+    <circle cx="223" cy="314" r="9" fill="#3D4058" stroke-width="4"/>
+
+    <!-- pelvis and waist -->
+    <path d="M160 270 H240 L232 294 Q200 306 168 294 Z" fill="#F1F3F5"/>
+    <rect x="170" y="254" width="60" height="22" rx="8" fill="#3D4058" stroke-width="5"/>
+    <path d="M186 258 V272 M200 258 V272 M214 258 V272" fill="none" stroke="#ADB5BD" stroke-width="3"/>
+
+    <!-- neck -->
+    <rect x="186" y="168" width="28" height="22" rx="6" fill="#3D4058" stroke-width="5"/>
+
+    <!-- torso -->
+    <path d="M152 200 Q152 184 170 184 H230 Q248 184 248 200 L240 252 Q238 262 226 262 H174 Q162 262 160 252 Z" fill="#F1F3F5"/>
+    <path d="M222 187 H230 Q245 187 245 200 L237 251 Q235 259 226 259 H218 Q230 220 222 187 Z" fill="#CED4DA" stroke="none"/>
+    <ellipse cx="166" cy="202" rx="5" ry="9" fill="#FFFFFF" stroke="none"/>
+    <path d="M200 192 V230" fill="none" stroke-width="3"/>
+    <path d="M176 220 Q188 226 200 226 Q212 226 224 220" fill="none" stroke-width="3"/>
+    <rect x="186" y="196" width="28" height="7" rx="3.5" fill="#4CC9F0" stroke-width="3"/>
+
+    <!-- upper arms -->
+    <rect x="128" y="206" width="26" height="44" rx="12" fill="#F1F3F5"/>
+    <path d="M145 209 A9 9 0 0 1 151 218 V238 A9 9 0 0 1 145 247 Z" fill="#CED4DA" stroke="none"/>
+    <rect x="246" y="206" width="26" height="44" rx="12" fill="#F1F3F5"/>
+    <path d="M263 209 A9 9 0 0 1 269 218 V238 A9 9 0 0 1 263 247 Z" fill="#CED4DA" stroke="none"/>
+
+    <!-- forearms (bent toward the box) -->
+    <rect x="129" y="254" width="24" height="36" rx="11" fill="#F1F3F5" transform="rotate(-35 141 252)"/>
+    <rect x="247" y="254" width="24" height="36" rx="11" fill="#F1F3F5" transform="rotate(35 259 252)"/>
+    <circle cx="141" cy="252" r="9" fill="#3D4058" stroke-width="4"/>
+    <circle cx="259" cy="252" r="9" fill="#3D4058" stroke-width="4"/>
+
+    <!-- shoulder caps -->
+    <circle cx="152" cy="202" r="18" fill="#F1F3F5"/>
+    <path d="M164.7 189.3 A18 18 0 0 1 139.3 214.7 A22 22 0 0 0 164.7 189.3 Z" fill="#CED4DA" stroke="none"/>
+    <circle cx="152" cy="202" r="18" fill="none"/>
+    <circle cx="248" cy="202" r="18" fill="#F1F3F5"/>
+    <path d="M260.7 189.3 A18 18 0 0 1 235.3 214.7 A22 22 0 0 0 260.7 189.3 Z" fill="#CED4DA" stroke="none"/>
+    <circle cx="248" cy="202" r="18" fill="none"/>
+
+    <!-- box being carried -->
+    <rect x="146" y="236" width="108" height="70" rx="6" fill="#FF9F1C"/>
+    <path d="M224 239 H248 A3 3 0 0 1 251 242 V300 A3 3 0 0 1 248 303 H224 Z" fill="#E8850F" stroke="none"/>
+    <path d="M146 252 H254" fill="none" stroke-width="3"/>
+    <rect x="188" y="236" width="24" height="70" fill="#FFF8E7" stroke-width="3"/>
+    <path d="M168 292 V274 M161 281 L168 274 L175 281" fill="none" stroke-width="3"/>
+    <ellipse cx="160" cy="244" rx="7" ry="3" fill="#FFFFFF" stroke="none" opacity="0.7"/>
+
+    <!-- hands gripping the box -->
+    <ellipse cx="155" cy="280" rx="12" ry="15" fill="#3D4058"/>
+    <path d="M160 272 H170 M160 280 H171 M160 288 H170" fill="none" stroke-width="4"/>
+    <ellipse cx="245" cy="280" rx="12" ry="15" fill="#3D4058"/>
+    <path d="M240 272 H230 M240 280 H229 M240 288 H230" fill="none" stroke-width="4"/>
+    <circle cx="151" cy="274" r="2.5" fill="#FFFFFF" stroke="none" opacity="0.6"/>
+    <circle cx="241" cy="274" r="2.5" fill="#FFFFFF" stroke="none" opacity="0.6"/>
+
+    <!-- side ear panels -->
+    <rect x="110" y="94" width="16" height="40" rx="8" fill="#F1F3F5" stroke-width="5"/>
+    <rect x="274" y="94" width="16" height="40" rx="8" fill="#F1F3F5" stroke-width="5"/>
+
+    <!-- glossy black head -->
+    <circle cx="200" cy="110" r="80" fill="#33364F"/>
+    <path d="M256.6 53.4 A80 80 0 0 1 143.4 166.6 A100 100 0 0 0 256.6 53.4 Z" fill="#1F2133" stroke="none"/>
+    <circle cx="200" cy="110" r="80" fill="none"/>
+    <path d="M144 84 Q156 52 196 42" fill="none" stroke="#FFFFFF" stroke-width="8" opacity="0.75"/>
+    <circle cx="140" cy="102" r="4" fill="#FFFFFF" stroke="none" opacity="0.75"/>
+    <path d="M262 122 Q260 144 246 160" fill="none" stroke="#4CC9F0" stroke-width="4" opacity="0.6"/>
+
+    <!-- face display -->
+    <rect x="144" y="90" width="112" height="70" rx="32" fill="#2B2D42" stroke-width="4"/>
+    <circle cx="173" cy="118" r="18" fill="#FFFFFF" stroke="none"/>
+    <circle cx="176" cy="121" r="11" fill="#4CC9F0" stroke="none"/>
+    <circle cx="177" cy="122" r="6.5" fill="#2B2D42" stroke="none"/>
+    <circle cx="170" cy="113" r="5" fill="#FFFFFF" stroke="none"/>
+    <circle cx="181" cy="127" r="2" fill="#FFFFFF" stroke="none"/>
+    <circle cx="227" cy="118" r="18" fill="#FFFFFF" stroke="none"/>
+    <circle cx="230" cy="121" r="11" fill="#4CC9F0" stroke="none"/>
+    <circle cx="231" cy="122" r="6.5" fill="#2B2D42" stroke="none"/>
+    <circle cx="224" cy="113" r="5" fill="#FFFFFF" stroke="none"/>
+    <circle cx="235" cy="127" r="2" fill="#FFFFFF" stroke="none"/>
+    <path d="M190 144 Q200 152 210 144" fill="none" stroke="#4CC9F0" stroke-width="4"/>
+    <ellipse cx="156" cy="144" rx="7" ry="4" fill="#FF6B6B" stroke="none" opacity="0.8"/>
+    <ellipse cx="244" cy="144" rx="7" ry="4" fill="#FF6B6B" stroke="none" opacity="0.8"/>
+  </g>
+</svg>

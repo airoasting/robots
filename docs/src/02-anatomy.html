@@ -1,0 +1,1195 @@
+<section id="anatomy" class="sec" data-nav="해부도" aria-labelledby="anat-title">
+  <div class="wrap">
+    <div class="sheet">
+      <span class="sheet-no">ARG-01</span>
+      <span class="sheet-name">해부도</span>
+    </div>
+
+    <nav class="anat-brief" aria-labelledby="anat-brief-t" data-reveal>
+      <div class="bf-head">
+        <p class="bf-title" id="anat-brief-t">3분 요약</p>
+      </div>
+      <ol class="bf-list">
+        <li><a href="#players">
+          <span class="bf-no">01</span>
+          <span class="bf-q">지금 어디까지 왔습니까</span>
+          <span class="bf-a">중국 업체는 연 수천 대씩 출하하기 시작했습니다. 미국 업체는 고객 현장 배치를 늘리고 있습니다.</span>
+          <span class="bf-go"><span class="ref">ARG-03</span>업체 보기 <span class="ar" aria-hidden="true">↓</span></span>
+        </a></li>
+        <li><a href="#rl-verdict">
+          <span class="bf-no">02</span>
+          <span class="bf-q">대체는 얼마나 빠릅니까</span>
+          <span class="bf-a">로봇이 기술적으로 수행할 수 있는 업무는 전체의 <b>34%</b>, 사람보다 저렴하게 수행할 수 있는 업무는 <b>0.3%</b>에 불과합니다.</span>
+          <span class="bf-go"><span class="ref">ARG-04</span>판정 보기 <span class="ar" aria-hidden="true">↓</span></span>
+        </a></li>
+        <li><a href="#gl-faq-5-q">
+          <span class="bf-no">03</span>
+          <span class="bf-q">리더는 무엇부터 합니까</span>
+          <span class="bf-a">현장 작업을 동작 단위로 나눕니다. 정형화된 작업에는 이미 성숙한 AMR(자율이동로봇)과 협동로봇부터 적용합니다.</span>
+          <span class="bf-go"><span class="ref">ARG-06</span>FAQ Q.05 보기 <span class="ar" aria-hidden="true">↓</span></span>
+        </a></li>
+      </ol>
+    </nav>
+
+    <header class="anat-head">
+      <h2 class="h-display" id="anat-title" data-reveal>로봇을 움직이는 열두 가지 부품</h2>
+      <p class="lead anat-lead" data-reveal>2023년 이후의 변화는 AI에서 왔습니다. 시각, 언어, 동작을 한 모델로 묶은 VLA(Vision-Language-Action) 모델 덕분에, 이제는 사람의 시연만으로 새 작업을 가르칠 수 있습니다. 보행은 시뮬레이션에서 익혀 실제 로봇에 옮기는 sim-to-real 방식이 표준이 됐습니다. 병목은 하드웨어입니다. 손의 내구성, 배터리 지속 시간, 감속기 원가는 AI만큼 빠르게 개선되지 않습니다.</p>
+    </header>
+
+    <div class="anat-dwg">
+      <figure class="anat-figcol" data-reveal>
+        <div class="anat-fig">
+          <svg class="anat-svg" viewBox="0 0 560 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="anat-svg-t anat-svg-d">
+<title id="anat-svg-t">휴머노이드 정면도</title>
+<desc id="anat-svg-d">머리, 몸통, 팔, 손, 다리와 관절 위치를 외형선으로 그린 정면도입니다. 점선은 몸 안쪽이나 뒤쪽에 있는 부품, 1점 쇄선은 중심선입니다. 번호 풍선은 부품표의 번호와 같습니다.</desc>
+<g class="anat-frame" aria-hidden="true">
+<rect class="fr-o" x="1" y="1" width="558" height="798"/>
+<rect class="fr-i" x="24" y="24" width="512" height="752"/>
+<path class="fr-t" d="M140 1V24M280 1V24M420 1V24M140 776V799M280 776V799M420 776V799M1 160H24M1 320H24M1 480H24M1 640H24M536 160H559M536 320H559M536 480H559M536 640H559"/>
+</g>
+<g class="anat-decor" aria-hidden="true">
+<path class="d cl" d="M280 36 L280 764"/>
+<path class="d gh" d="M118 736 L442 736"/>
+<path class="d gh-x" d="M126 736 l-8 8M146 736 l-8 8M166 736 l-8 8M186 736 l-8 8M206 736 l-8 8M226 736 l-8 8M246 736 l-8 8M266 736 l-8 8M286 736 l-8 8M306 736 l-8 8M326 736 l-8 8M346 736 l-8 8M366 736 l-8 8M386 736 l-8 8M406 736 l-8 8M426 736 l-8 8M446 736 l-8 8"/>
+</g>
+<g class="anat-body" transform="translate(70 30)" aria-hidden="true">
+<path class="b" data-t="head" d="M210 38 C236 38 248 54 248 78 L246 100 C244 112 232 120 210 120 C188 120 176 112 174 100 L172 78 C172 54 184 38 210 38 Z"/>
+<path class="b" data-t="visor" d="M182 66 C196 61 224 61 238 66 L236 88 C224 94 196 94 184 88 Z"/>
+<circle class="b" data-t="cam" cx="197" cy="77" r="3.2"/>
+<circle class="b" data-t="cam" cx="223" cy="77" r="3.2"/>
+<circle class="b" data-t="cam" cx="210" cy="76" r="1.6"/>
+<rect class="b" data-t="head" x="166" y="70" width="6" height="20" rx="1.5"/>
+<rect class="b" data-t="head" x="248" y="70" width="6" height="20" rx="1.5"/>
+<path class="b" data-t="head" d="M192 112 C200 116 220 116 228 112"/>
+<path class="b ph" data-t="fov" d="M197 77 L128 22"/>
+<path class="b ph" data-t="fov" d="M223 77 L292 22"/>
+<path class="b" data-t="head" d="M199 120 L197 138"/>
+<path class="b" data-t="head" d="M221 120 L223 138"/>
+<circle class="b" data-t="joint rot" cx="210" cy="130" r="4.5"/>
+<path class="b" data-t="shell" d="M210 136 C188 136 166 139 152 146 L144 156 C141 184 146 220 156 246 C163 264 170 278 174 292 L210 294"/>
+<path class="b" data-t="shell" d="M210 136 C232 136 254 139 268 146 L276 156 C279 184 274 220 264 246 C257 264 250 278 246 292 L210 294"/>
+<path class="b" data-t="shell" d="M210 160 C192 160 174 166 165 178 C163 196 168 212 182 220 L210 224"/>
+<path class="b" data-t="shell" d="M210 160 C228 160 246 166 255 178 C257 196 252 212 238 220 L210 224"/>
+<path class="b" data-t="shell" d="M198 142 L160 152"/>
+<path class="b" data-t="shell" d="M222 142 L260 152"/>
+<rect class="b" data-t="soc" x="190" y="178" width="40" height="28" rx="3"/>
+<rect class="b" data-t="soc" x="202" y="186" width="16" height="12" rx="1.5"/>
+<path class="b" data-t="soc" d="M196 178 L196 173 M204 178 L204 173"/>
+<path class="b" data-t="soc" d="M224 178 L224 173 M216 178 L216 173"/>
+<path class="b" data-t="soc" d="M196 206 L196 211 M204 206 L204 211"/>
+<path class="b" data-t="soc" d="M224 206 L224 211 M216 206 L216 211"/>
+<rect class="b hid" data-t="batt" x="180" y="228" width="60" height="54" rx="4"/>
+<path class="b hid" data-t="batt" d="M200 228 L200 282"/>
+<path class="b hid" data-t="batt" d="M220 228 L220 282"/>
+<rect class="b hid" data-t="batt" x="204" y="223" width="12" height="5" rx="1"/>
+<path class="b hid" data-t="bus" d="M218 132 L246 150 L246 199"/>
+<path class="b hid" data-t="bus" d="M246 213 L246 328"/>
+<path class="b hid" data-t="bus" d="M246 160 L273 166"/>
+<circle class="b hid" data-t="estop" cx="246" cy="206" r="7"/>
+<circle class="b hid" data-t="estop" cx="246" cy="206" r="2.6"/>
+<path class="b hid" data-t="net" d="M202 98 C190 128 194 158 203 177"/>
+<path class="b hid" data-t="net" d="M218 98 C230 128 226 158 217 177"/>
+<path class="b hid" data-t="net" d="M190 188 C172 183 158 177 147 172"/>
+<path class="b hid" data-t="net" d="M230 188 C248 183 262 177 273 172"/>
+<path class="b hid" data-t="net" d="M196 207 C186 250 182 296 184 328"/>
+<path class="b hid" data-t="net" d="M224 207 C234 250 238 296 236 328"/>
+<path class="b hid" data-t="net" d="M190 200 C160 214 136 236 128 257"/>
+<path class="b hid" data-t="net" d="M230 200 C260 214 284 236 292 257"/>
+<path class="b" data-t="shell" d="M152 146 C134 143 118 151 114 167 C112 181 117 193 127 198"/>
+<path class="b" data-t="shell" d="M268 146 C286 143 302 151 306 167 C308 181 303 193 293 198"/>
+<circle class="b" data-t="joint rot" cx="134" cy="168" r="13"/>
+<circle class="b" data-t="joint rot" cx="286" cy="168" r="13"/>
+<circle class="b" data-t="joint rot" cx="134" cy="168" r="5.5"/>
+<circle class="b" data-t="joint rot" cx="286" cy="168" r="5.5"/>
+<path class="b" data-t="arm" d="M116 188 C112 212 112 238 114 256"/>
+<path class="b" data-t="arm" d="M304 188 C308 212 308 238 306 256"/>
+<path class="b" data-t="arm" d="M146 192 C145 218 140 240 133 256"/>
+<path class="b" data-t="arm" d="M274 192 C275 218 280 240 287 256"/>
+<circle class="b" data-t="joint rot" cx="123" cy="266" r="10"/>
+<circle class="b" data-t="joint rot" cx="297" cy="266" r="10"/>
+<circle class="b" data-t="joint rot" cx="123" cy="266" r="4"/>
+<circle class="b" data-t="joint rot" cx="297" cy="266" r="4"/>
+<path class="b" data-t="arm" d="M113 276 C110 302 108 324 107 344"/>
+<path class="b" data-t="arm" d="M307 276 C310 302 312 324 313 344"/>
+<path class="b" data-t="arm" d="M133 274 C131 300 128 322 125 344"/>
+<path class="b" data-t="arm" d="M287 274 C289 300 292 322 295 344"/>
+<rect class="b" data-t="wrist-R joint" x="104" y="345" width="23" height="8" rx="2"/>
+<rect class="b" data-t="wrist-L joint" x="293" y="345" width="23" height="8" rx="2"/>
+<path class="b" data-t="hand-R" d="M106 358 L126 358 L127 390 C121 397 111 397 105 390 Z"/>
+<path class="b" data-t="hand-L" d="M314 358 L294 358 L293 390 C299 397 309 397 315 390 Z"/>
+<path class="b" data-t="hand-R" d="M107 393 L105 420"/>
+<path class="b" data-t="hand-L" d="M313 393 L315 420"/>
+<path class="b" data-t="hand-R" d="M112 396 L111 428"/>
+<path class="b" data-t="hand-L" d="M308 396 L309 428"/>
+<path class="b" data-t="hand-R" d="M118 396 L118 427"/>
+<path class="b" data-t="hand-L" d="M302 396 L302 427"/>
+<path class="b" data-t="hand-R" d="M123 394 L124 418"/>
+<path class="b" data-t="hand-L" d="M297 394 L296 418"/>
+<path class="b" data-t="hand-R" d="M127 366 C135 372 138 382 134 392"/>
+<path class="b" data-t="hand-L" d="M293 366 C285 372 282 382 286 392"/>
+<circle class="b" data-t="tip-R" cx="105" cy="421.5" r="1.8"/>
+<circle class="b" data-t="tip-L" cx="315" cy="421.5" r="1.8"/>
+<circle class="b" data-t="tip-R" cx="111" cy="429.5" r="1.8"/>
+<circle class="b" data-t="tip-L" cx="309" cy="429.5" r="1.8"/>
+<circle class="b" data-t="tip-R" cx="118" cy="428.5" r="1.8"/>
+<circle class="b" data-t="tip-L" cx="302" cy="428.5" r="1.8"/>
+<circle class="b" data-t="tip-R" cx="124" cy="419.5" r="1.8"/>
+<circle class="b" data-t="tip-L" cx="296" cy="419.5" r="1.8"/>
+<circle class="b" data-t="tip-R" cx="134" cy="393.5" r="1.8"/>
+<circle class="b" data-t="tip-L" cx="286" cy="393.5" r="1.8"/>
+<path class="b" data-t="shell" d="M174 292 C172 306 170 318 168 330 C180 344 196 350 210 352"/>
+<path class="b" data-t="shell" d="M246 292 C248 306 250 318 252 330 C240 344 224 350 210 352"/>
+<path class="b" data-t="shell" d="M175 300 L210 302"/>
+<path class="b" data-t="shell" d="M245 300 L210 302"/>
+<circle class="b" data-t="joint rot" cx="184" cy="340" r="11"/>
+<circle class="b" data-t="joint rot" cx="236" cy="340" r="11"/>
+<circle class="b" data-t="joint rot" cx="184" cy="340" r="4.5"/>
+<circle class="b" data-t="joint rot" cx="236" cy="340" r="4.5"/>
+<path class="b" data-t="leg shell" d="M168 346 C164 380 166 420 172 484"/>
+<path class="b" data-t="leg shell" d="M252 346 C256 380 254 420 248 484"/>
+<path class="b" data-t="leg shell" d="M200 354 C200 392 198 440 197 484"/>
+<path class="b" data-t="leg shell" d="M220 354 C220 392 222 440 223 484"/>
+<rect class="b" data-t="lin" x="179" y="357" width="7" height="10" rx="1.5"/>
+<rect class="b" data-t="lin" x="234" y="357" width="7" height="10" rx="1.5"/>
+<path class="b" data-t="lin" d="M182.5 367 L182.5 466"/>
+<path class="b" data-t="lin" d="M237.5 367 L237.5 466"/>
+<rect class="b" data-t="lin" x="179" y="466" width="7" height="10" rx="1.5"/>
+<rect class="b" data-t="lin" x="234" y="466" width="7" height="10" rx="1.5"/>
+<path class="b" data-t="leg shell" d="M174 486 C178 480 194 480 198 486 L196 512 C190 518 182 518 176 512 Z"/>
+<path class="b" data-t="leg shell" d="M246 486 C242 480 226 480 222 486 L224 512 C230 518 238 518 244 512 Z"/>
+<circle class="b" data-t="joint lin" cx="186" cy="500" r="9"/>
+<circle class="b" data-t="joint lin" cx="234" cy="500" r="9"/>
+<circle class="b" data-t="joint lin" cx="186" cy="500" r="3.5"/>
+<circle class="b" data-t="joint lin" cx="234" cy="500" r="3.5"/>
+<path class="b" data-t="leg shell" d="M172 518 C170 560 174 610 178 652"/>
+<path class="b" data-t="leg shell" d="M248 518 C250 560 246 610 242 652"/>
+<path class="b" data-t="leg shell" d="M200 518 C202 560 200 610 198 652"/>
+<path class="b" data-t="leg shell" d="M220 518 C218 560 220 610 222 652"/>
+<rect class="b" data-t="lin" x="185" y="523" width="7" height="8" rx="1.5"/>
+<rect class="b" data-t="lin" x="228" y="523" width="7" height="8" rx="1.5"/>
+<path class="b" data-t="lin" d="M188.5 531 L188.5 632"/>
+<path class="b" data-t="lin" d="M231.5 531 L231.5 632"/>
+<rect class="b" data-t="lin" x="185" y="632" width="7" height="8" rx="1.5"/>
+<rect class="b" data-t="lin" x="228" y="632" width="7" height="8" rx="1.5"/>
+<circle class="b" data-t="joint leg" cx="188" cy="662" r="8"/>
+<circle class="b" data-t="joint leg" cx="232" cy="662" r="8"/>
+<circle class="b" data-t="joint leg" cx="188" cy="662" r="3"/>
+<circle class="b" data-t="joint leg" cx="232" cy="662" r="3"/>
+<path class="b" data-t="leg" d="M178 670 C172 680 166 690 162 698 L208 698 C207 690 203 679 198 670"/>
+<path class="b" data-t="leg" d="M242 670 C248 680 254 690 258 698 L212 698 C213 690 217 679 222 670"/>
+<path class="b" data-t="leg" d="M160 702 L206 702"/>
+<path class="b" data-t="leg" d="M260 702 L214 702"/>
+<circle class="b" data-t="com" cx="210" cy="316" r="5"/>
+<path class="b" data-t="com" d="M202 316 L218 316 M210 308 L210 324"/>
+<path class="b hid" data-t="com" d="M210 324 L210 704"/>
+<path class="b hid" data-t="com" d="M160 712 L260 712"/>
+</g>
+<g class="anat-ldr" aria-hidden="true"></g>
+<g class="anat-hl" transform="translate(70 30)" aria-hidden="true"></g>
+</svg>
+          <div class="anat-zones" aria-hidden="true">
+            <span style="left:12.5%;top:1.5%">1</span><span style="left:37.5%;top:1.5%">2</span><span style="left:62.5%;top:1.5%">3</span><span style="left:87.5%;top:1.5%">4</span>
+            <span style="left:2.143%;top:10%">A</span><span style="left:2.143%;top:30%">B</span><span style="left:2.143%;top:50%">C</span><span style="left:2.143%;top:70%">D</span><span style="left:2.143%;top:90%">E</span>
+          </div>
+          <div class="anat-balloons" role="group" aria-label="번호 풍선"></div>
+        </div>
+        <figcaption class="anat-cap">그림 1. 휴머노이드 정면도. 축척 없이 그린 일반형이며 특정 제품이 아닙니다.</figcaption>
+      </figure>
+
+      <div class="anat-side">
+        <div class="bom-head">
+          <h3 class="bom-title">부품표</h3>
+          <p class="bom-hint"><span class="on-desk">번호 풍선이나 부품명을 누르면 아래 사양서가 바뀝니다.</span><span class="on-mob">부품명을 누르면 사양서가 펼쳐집니다.</span></p>
+        </div>
+        <table class="anat-bom">
+          <caption class="anat-sr">부품표. 계통, 번호, 부품명, 위치, 도면 구역</caption>
+          <thead><tr><th scope="col">계통</th><th scope="col">번호</th><th scope="col">부품명</th><th scope="col">위치</th><th scope="col">구역</th></tr></thead>
+        </table>
+        <div class="anat-acc"></div>
+        <dl class="anat-tblock">
+          <div><dt>프로젝트</dt><dd>ARGOS</dd></div>
+          <div><dt>도면</dt><dd>FIG.01</dd></div>
+          <div><dt>투상</dt><dd>정면도</dd></div>
+          <div><dt>축척</dt><dd>없음 (NTS)</dd></div>
+          <div class="tb-lines"><dt>선 종류</dt><dd>
+            <span><svg viewBox="0 0 28 6" aria-hidden="true"><path class="lg-o" d="M0 3H28"/></svg>외형선</span>
+            <span><svg viewBox="0 0 28 6" aria-hidden="true"><path class="lg-h" d="M0 3H28"/></svg>숨은선</span>
+            <span><svg viewBox="0 0 28 6" aria-hidden="true"><path class="lg-c" d="M0 3H28"/></svg>중심선</span>
+            <span><svg viewBox="0 0 28 6" aria-hidden="true"><path class="lg-s" d="M0 3H28"/></svg>선택 부품</span>
+          </dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <article class="anat-panel" id="anat-panel" aria-label="부품 사양서" tabindex="-1"></article>
+  </div>
+
+  <script type="application/json" id="anatomy-data">[
+  {
+    "id": "vision",
+    "name_ko": "비전 센서",
+    "name_en": "Vision Sensors (Camera, Depth, LiDAR)",
+    "zone": "head",
+    "anchor": "head",
+    "one_liner_ko": "로봇이 세상을 보는 눈입니다. 색과 형태, 거리를 한꺼번에 측정합니다.",
+    "detail_ko": "비전 센서는 RGB 카메라, 거리를 재는 깊이 카메라, 레이저로 주변을 3차원으로 그리는 LiDAR로 나뉩니다. 테슬라는 카메라 중심 인식을 택했고, 유니트리 G1은 LiDAR와 깊이 카메라를 함께 씁니다. 피규어 03은 손바닥에도 카메라를 달아 손 안쪽을 봅니다. 최근에는 VLA 모델이 카메라 영상을 바로 동작으로 바꾸는 구조가 늘고 있습니다. 병목은 투명하거나 반사가 심한 물체, 강한 역광, 고해상도 영상의 실시간 처리입니다.",
+    "how_it_works_ko": [
+      "카메라와 깊이 센서가 초당 수십 장의 영상과 거리 지도를 만듭니다.",
+      "IMU(관성 측정 장치)와 시각 정보를 합쳐 로봇 자신의 위치와 자세를 추정합니다(Visual SLAM).",
+      "인식 모델이 물체, 사람, 바닥면, 장애물을 구분하고 3차원 좌표를 붙입니다.",
+      "이 결과가 보행 제어와 손 동작을 결정하는 AI 모델의 입력으로 들어갑니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "카메라 프레임률",
+        "value": "일반적으로 30~60fps, 고속 제어용은 90fps 이상"
+      },
+      {
+        "label_ko": "깊이 카메라 유효 거리",
+        "value": "약 0.3~10m(실내 스테레오·ToF 기준)"
+      },
+      {
+        "label_ko": "3D LiDAR 시야",
+        "value": "수평 360도(예: Livox MID-360)"
+      },
+      {
+        "label_ko": "손바닥 카메라",
+        "value": "피규어 03 양손 탑재(회사 발표)"
+      }
+    ],
+    "examples_ko": "유니트리 G1은 LiDAR와 깊이 카메라를 기본으로 탑재합니다. 보스턴 다이내믹스의 사족보행 로봇 Spot은 몸통 여러 면에 스테레오 카메라를 달아 사방을 봅니다.",
+    "challenge_ko": "유리, 비닐, 광택 금속처럼 빛을 투과하거나 반사하는 물체는 여전히 깊이 측정이 부정확합니다. 센서를 늘릴수록 원가, 발열, 연산 부담이 함께 커집니다."
+  },
+  {
+    "id": "touch-force",
+    "name_ko": "촉각·힘토크 센서",
+    "name_en": "Tactile and Force/Torque Sensors",
+    "zone": "hand",
+    "anchor": "hand_r",
+    "one_liner_ko": "얼마나 세게 쥐었는지, 물체가 미끄러지는지를 느끼는 피부와 손목 감각입니다.",
+    "detail_ko": "힘토크 센서는 주로 손목과 발목에 들어가며, 세 방향의 힘과 세 축의 회전력을 함께 재는 6축 센서가 표준입니다. 촉각 센서는 손가락 끝과 손바닥에서 접촉 위치와 압력을 잽니다. 방식은 압저항식, 정전용량식, 자기식, 광학식으로 나뉩니다. 피규어는 피규어 03의 손끝 센서가 약 3g의 힘까지 감지한다고 발표했습니다. 병목은 내구성입니다. 실험실에서 정밀하던 센서도 현장에서는 몇 주 만에 닳는 경우가 많습니다.",
+    "how_it_works_ko": [
+      "손가락 끝 센서가 접촉 순간의 압력 분포를 측정합니다.",
+      "손목의 6축 센서가 물체 무게와 당기거나 미는 힘을 측정합니다.",
+      "제어기가 미끄러짐 징후(전단력 변화)를 감지하면 쥐는 힘을 높입니다.",
+      "조립이나 삽입 작업에서는 측정된 힘을 기준으로 위치를 미세 보정합니다(힘 제어)."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "힘토크 센서 측정 축",
+        "value": "6축(힘 3축, 토크 3축)"
+      },
+      {
+        "label_ko": "손끝 최소 감지 힘",
+        "value": "약 3g(피규어 03, 회사 발표)"
+      },
+      {
+        "label_ko": "제어 주기",
+        "value": "일반적으로 수백 Hz~1kHz"
+      }
+    ],
+    "examples_ko": "협동로봇 팔은 손목 힘토크 센서로 충돌을 감지하면 멈춥니다. 피규어 03은 손끝 촉각과 손바닥 카메라를 함께 써서 빨래 개기, 식기 정리 같은 가정 작업을 시연했습니다.",
+    "challenge_ko": "고해상도 촉각 데이터를 대량으로 모으는 표준 방식은 아직 없습니다. 시각 데이터보다 AI 학습 자료가 훨씬 부족한 이유입니다. 센서 피부의 마모와 교체 비용도 상용화의 걸림돌입니다."
+  },
+  {
+    "id": "compute",
+    "name_ko": "온보드 컴퓨트",
+    "name_en": "Onboard Compute (SoC, GPU)",
+    "zone": "torso",
+    "anchor": "chest",
+    "one_liner_ko": "AI 모델과 실시간 제어를 로봇 몸 안에서 실행하는 두뇌 하드웨어입니다.",
+    "detail_ko": "로봇의 연산은 두 층으로 나뉩니다. 위층의 고성능 SoC는 카메라 영상을 해석하고 VLA 같은 대형 모델을 실행합니다. 아래층의 실시간 제어기는 1초에 수백에서 수천 번 모터 전류를 조절합니다. 엔비디아 Jetson AGX Thor는 블랙웰 GPU와 128GB 메모리를 갖췄고, 여러 휴머노이드 업체가 채택하고 있습니다. 테슬라는 자율주행차용 자체 칩 계열을 옵티머스에 넣었습니다. 병목은 전력과 발열입니다. 컴퓨트가 100W를 쓰면 그만큼 보행 시간이 줄어듭니다.",
+    "how_it_works_ko": [
+      "센서 데이터가 고속 버스(내부 데이터 통로)를 거쳐 메인 SoC로 모입니다.",
+      "GPU가 인식 모델과 VLA 모델을 실행해 목표 동작을 계산합니다.",
+      "실시간 제어기가 목표 동작을 관절별 토크 명령으로 쪼갭니다.",
+      "관절 드라이버가 1kHz 안팎의 주기로 모터 전류를 조절합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "Jetson AGX Thor AI 성능",
+        "value": "약 2,070 TFLOPS(FP4 희소 기준)"
+      },
+      {
+        "label_ko": "Jetson AGX Thor 메모리",
+        "value": "128GB LPDDR5X"
+      },
+      {
+        "label_ko": "Jetson AGX Thor 전력",
+        "value": "40~130W 설정 가능"
+      },
+      {
+        "label_ko": "저수준 관절 제어 주기",
+        "value": "일반적으로 500Hz~1kHz 이상"
+      }
+    ],
+    "examples_ko": "유니트리 G1 EDU는 엔비디아 Jetson Orin 모듈을 추가로 탑재합니다. 피규어는 피규어 03이 자체 Helix 모델을 로봇 안에서 직접 실행한다고 밝혔습니다.",
+    "challenge_ko": "더 큰 모델을 실행할수록 전력 소모와 발열이 늘어 배터리 사용 시간이 줄어듭니다. 일부 연산을 클라우드로 보내면 통신 지연과 보안 문제가 생깁니다."
+  },
+  {
+    "id": "foundation-model",
+    "name_ko": "파운데이션 모델",
+    "name_en": "Robot Foundation Models (VLA, World Models)",
+    "zone": "system",
+    "anchor": "head",
+    "one_liner_ko": "보고 듣고 움직이는 법을 대량 데이터로 미리 배운 범용 로봇 두뇌입니다.",
+    "detail_ko": "VLA(Vision-Language-Action) 모델은 카메라 영상과 자연어 지시를 받아 로봇 관절의 동작을 직접 출력합니다. 구글 딥마인드의 RT-2(2023) 이후 피지컬 인텔리전스의 π0, 피규어의 Helix, 엔비디아의 GR00T N 시리즈가 뒤를 이었습니다. 피규어는 자사 로봇 전용 모델을, 엔비디아는 여러 로봇에 쓰는 공개 모델을 택했습니다. 월드 모델은 행동의 결과를 미리 예측해 학습 데이터를 늘립니다. 가장 큰 병목은 데이터입니다. 로봇 동작 데이터는 사람이 원격조종으로 만들어야 합니다.",
+    "how_it_works_ko": [
+      "인터넷 규모의 이미지와 텍스트로 사전학습된 시각언어 모델이 장면과 지시를 이해합니다.",
+      "원격조종 시연 데이터로, 이해한 내용을 관절 동작의 묶음(액션 청크)으로 바꾸는 법을 배웁니다.",
+      "느린 추론 모듈이 작업을 계획하면 빠른 제어 모듈이 이를 짧은 주기의 동작으로 실행합니다.",
+      "현장 운용 데이터를 다시 모아 모델을 반복 개선합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "Helix 구조",
+        "value": "느린 추론 약 7~9Hz, 빠른 제어 약 200Hz(피규어 발표)"
+      },
+      {
+        "label_ko": "GR00T N1.7(얼리 액세스)",
+        "value": "약 30억 파라미터, 공개·상업 라이선스"
+      },
+      {
+        "label_ko": "Gemini Robotics 1.5 공개",
+        "value": "2025년 9월"
+      }
+    ],
+    "examples_ko": "피규어는 2026년 1월 전신을 제어하는 Helix 02를 공개했습니다. 보스턴 다이내믹스는 구글 딥마인드와 협력해 Gemini Robotics 모델을 아틀라스에 통합한다고 발표했습니다.",
+    "challenge_ko": "시연 영상 속 성공률과 현장에서 반복했을 때의 성공률은 차이가 큽니다. 수천 번 중 몇 번만 실패해도 사고로 이어질 수 있습니다. 모델이 왜 그런 동작을 했는지 설명하기 어렵다는 점도 안전 인증의 과제입니다."
+  },
+  {
+    "id": "rotary-actuator",
+    "name_ko": "회전 액추에이터",
+    "name_en": "Rotary Actuators (Motor + Reducer)",
+    "zone": "arm",
+    "anchor": "shoulder_l",
+    "one_liner_ko": "모터와 감속기를 묶어 관절을 돌리는 로봇의 근육입니다.",
+    "detail_ko": "전기 모터는 빠르게 돌지만 힘이 약합니다. 그래서 감속기로 회전수를 낮추고 토크를 키워 관절에 전달합니다. 하모닉 드라이브는 작고 감속비가 높으며 유격이 거의 없지만, 충격에 약합니다. 사이클로이드·RV 감속기는 강성이 높아 큰 하중이 걸리는 관절에 쓰입니다. 유성 기어는 감속비가 낮은 대신 외력에 유연하게 반응해, 사족보행 로봇에 널리 쓰입니다. 유니트리는 유성 기어 관절로 원가를 낮췄습니다. 병목은 토크 밀도, 발열, 소수 기업에 의존해 온 정밀 감속기 공급망입니다.",
+    "how_it_works_ko": [
+      "제어기가 목표 토크를 정하면 모터 드라이버가 BLDC 모터(브러시 없는 직류 모터)에 전류를 흘립니다.",
+      "감속기가 모터의 고속 저토크 회전을 저속 고토크 회전으로 바꿉니다.",
+      "엔코더(회전 각도 센서)가 관절 각도를 읽어 제어기로 되돌려 보냅니다.",
+      "제어기가 목표와 실제의 차이를 계산해 전류를 다시 조정합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "하모닉 감속비",
+        "value": "약 30:1~160:1"
+      },
+      {
+        "label_ko": "준직접구동 유성 감속비",
+        "value": "약 6:1~10:1"
+      },
+      {
+        "label_ko": "무릎 최대 토크",
+        "value": "유니트리 G1 약 90Nm, H1 약 360Nm(공개값)"
+      }
+    ],
+    "examples_ko": "유니트리의 사족보행 로봇 Go2와 휴머노이드 G1은 저감속 고토크 모터 관절로 가격을 낮췄습니다. 산업용 로봇 팔은 대부분 하모닉과 RV 감속기를 조합합니다.",
+    "challenge_ko": "넘어질 때 생기는 충격 하중을 견디면서도 작고 가벼운 관절을 저렴하게 만드는 일이 핵심 과제입니다. 관절 수가 수십 개라서 관절당 원가가 로봇 전체 가격을 좌우합니다."
+  },
+  {
+    "id": "linear-actuator",
+    "name_ko": "선형 액추에이터",
+    "name_en": "Linear Actuators (Planetary Roller Screw)",
+    "zone": "leg",
+    "anchor": "knee_l",
+    "one_liner_ko": "회전을 직선 운동으로 바꿔 큰 힘을 내는 구동기로, 사람의 허벅지 근육과 비슷한 역할을 합니다.",
+    "detail_ko": "선형 액추에이터는 모터의 회전을 나사 기구로 직선 운동으로 바꿉니다. 유성 롤러 스크루는 롤러 여러 개가 축을 감싸 접촉 면적이 넓습니다. 그래서 같은 크기에서 더 큰 하중과 충격을 견디고, 다리 관절에 잘 맞습니다. 테슬라 옵티머스는 다리 관절에 이 방식을 쓴 것으로 알려졌습니다. 보스턴 다이내믹스의 구형 아틀라스는 유압 실린더를 썼지만, 2024년 전기식으로 바꿨습니다. 병목은 가공 정밀도와 원가입니다. 나사산을 마이크로미터 단위로 갈아 맞춰야 합니다.",
+    "how_it_works_ko": [
+      "모터가 나사 축(또는 너트)을 회전시킵니다.",
+      "축을 둘러싼 롤러가 나사산을 따라 돌며 너트를 직선으로 밀어냅니다.",
+      "너트에 연결된 링크가 무릎이나 발목을 접고 폅니다.",
+      "힘 센서나 모터 전류로 출력 힘을 추정해 착지 충격을 흡수하도록 제어합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "옵티머스 롤러 스크루 하중 등급",
+        "value": "약 500N, 3,900N, 8,000N 세 종류(테슬라 AI 데이 2022 공개, 시제품 기준)"
+      },
+      {
+        "label_ko": "롤러 스크루 vs 볼 스크루",
+        "value": "같은 크기에서 하중 용량과 수명이 더 큼"
+      },
+      {
+        "label_ko": "주요 적용 부위",
+        "value": "무릎, 고관절, 발목, 팔꿈치, 손목"
+      }
+    ],
+    "examples_ko": "테슬라 옵티머스는 회전형과 선형 액추에이터를 섞어 쓰는 대표 사례입니다. 구형 유압 아틀라스는 같은 역할을 유압 실린더로 수행했습니다.",
+    "challenge_ko": "고하중 롤러 스크루는 단가가 높아 휴머노이드 원가에서 큰 비중을 차지합니다. 연삭 공정의 생산 능력이 대량생산 속도를 제한하는 요인으로 꼽힙니다."
+  },
+  {
+    "id": "hand",
+    "name_ko": "손",
+    "name_en": "Dexterous Hand",
+    "zone": "hand",
+    "anchor": "hand_l",
+    "one_liner_ko": "사람이 쓰는 도구를 그대로 쓰기 위한 부품으로, 휴머노이드에서 가장 만들기 어렵습니다.",
+    "detail_ko": "사람의 손은 손목을 포함해 자유도가 약 27개입니다. 로봇 손의 구동 방식은 세 가지입니다. 손가락 안에 모터를 넣으면 구조는 단순하지만 손가락이 두꺼워집니다. 팔뚝의 모터가 케이블 텐던으로 당기면 사람 손 크기에 가까워지지만, 케이블이 닳습니다. 링크 기구로 여러 마디를 함께 움직이면 튼튼하고 저렴하지만 섬세한 조작이 어렵습니다. 테슬라 옵티머스의 2세대 손은 11 자유도였습니다. 산업 현장에서는 여전히 집게형 그리퍼가 대부분입니다.",
+    "how_it_works_ko": [
+      "비전 모델이 물체의 형태와 잡을 위치를 정합니다.",
+      "손가락 관절들이 물체를 감싸도록 자세를 만듭니다(파지 계획).",
+      "촉각 센서가 접촉을 확인하면 손가락별로 쥐는 힘을 배분합니다.",
+      "물체를 손 안에서 돌리거나 고쳐 잡는 동작(인핸드 조작)으로 작업을 마칩니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "사람 손 자유도",
+        "value": "약 27(손목 포함)"
+      },
+      {
+        "label_ko": "휴머노이드 손 자유도",
+        "value": "일반적으로 약 6~22"
+      },
+      {
+        "label_ko": "옵티머스 2세대 손",
+        "value": "11 자유도(테슬라 공개)"
+      },
+      {
+        "label_ko": "산업용 그리퍼",
+        "value": "대부분 1~2 자유도"
+      }
+    ],
+    "examples_ko": "피규어 03은 손끝 촉각 센서와 손바닥 카메라를 결합했습니다. 섀도우 로봇의 덱스터러스 핸드는 연구용 고자유도 손의 기준 제품으로 쓰입니다.",
+    "challenge_ko": "현장에서 수백만 회 반복 사용을 견디는 고자유도 손은 아직 없습니다. 손을 정교하게 만들수록 무게가 손끝에 실려 팔의 가반하중(들 수 있는 무게)과 속도가 줄어듭니다."
+  },
+  {
+    "id": "battery",
+    "name_ko": "배터리·전력",
+    "name_en": "Battery and Power System",
+    "zone": "torso",
+    "anchor": "back",
+    "one_liner_ko": "로봇의 가동 시간을 결정하는 에너지원이자 무게 부담입니다.",
+    "detail_ko": "휴머노이드는 대부분 리튬이온 배터리 팩을 몸통에 넣습니다. 피규어는 피규어 03이 약 5시간 작동하고 발바닥 코일로 무선 충전한다고 발표했습니다. 보스턴 다이내믹스의 아틀라스 제품형은 약 4시간 작동하고, 배터리가 소진되면 스스로 팩을 교체합니다. 운용 방식은 사람이 교체, 로봇이 자가 교체, 충전 도크 복귀의 세 가지입니다. 교대 근무 공장에서는 자가 교체 여부가 가동률을 좌우합니다. 병목은 에너지 밀도와 안전 인증입니다.",
+    "how_it_works_ko": [
+      "리튬이온 셀 수십 개를 직렬·병렬로 묶어 팩을 만듭니다.",
+      "배터리 관리 시스템(BMS)이 셀 전압, 잔량, 온도를 감시합니다.",
+      "전력 분배 회로가 관절 모터, 컴퓨트, 센서에 필요한 전압으로 나눕니다.",
+      "잔량이 줄면 로봇이 충전 위치로 이동하거나 팩을 교체합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "팩 용량",
+        "value": "약 1~3kWh(옵티머스 시제품·피규어 03 2.3kWh)"
+      },
+      {
+        "label_ko": "작동 시간",
+        "value": "약 2~5시간(제조사 발표 기준)"
+      },
+      {
+        "label_ko": "아틀라스 제품형",
+        "value": "약 4시간, 자가 배터리 교체"
+      },
+      {
+        "label_ko": "안전 인증 예",
+        "value": "UN38.3(운송), UL2271(경량 전동기기 배터리)"
+      }
+    ],
+    "examples_ko": "아틀라스는 몸통의 이중 배터리 팩을 스스로 교체합니다. 피규어 03은 충전 매트 위에 서기만 하면 무선으로 충전됩니다.",
+    "challenge_ko": "8시간 교대 근무를 한 번 충전으로 버티는 휴머노이드는 아직 없습니다. 배터리를 키우면 무게가 늘어 다시 더 많은 에너지가 필요해지는 악순환이 있습니다."
+  },
+  {
+    "id": "dof",
+    "name_ko": "관절·자유도 설계",
+    "name_en": "Joint Layout and Degrees of Freedom",
+    "zone": "system",
+    "anchor": "hip",
+    "one_liner_ko": "관절 몇 개를 어디에 어떤 방향으로 둘지 정한 로봇 몸의 설계도입니다.",
+    "detail_ko": "자유도(DoF)는 로봇이 독립적으로 움직일 수 있는 축의 수입니다. 일반적인 휴머노이드 다리는 고관절 3, 무릎 1, 발목 2를 합쳐 한쪽당 6 자유도입니다. 유니트리 G1 기본형은 23 자유도이고, 보스턴 다이내믹스는 아틀라스 제품형을 56 자유도로 공개했습니다. 아틀라스는 상당수 관절이 360도 연속 회전합니다. 자유도를 늘리면 수행 가능한 동작이 늘어납니다. 대신 원가와 무게, 제어 난이도, 고장 지점도 함께 늘어납니다.",
+    "how_it_works_ko": [
+      "목표 작업(들기, 걷기, 쪼그려 앉기)에 필요한 동작 범위를 정의합니다.",
+      "관절 수와 회전 축 방향, 각 관절의 토크와 속도 요구치를 배분합니다.",
+      "기구학 모델로 손과 발이 닿는 작업 공간과 특이점(움직일 수 없는 자세)을 검증합니다.",
+      "시뮬레이션에서 보행과 조작을 돌려 관절 사양을 반복 조정합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "유니트리 G1",
+        "value": "23 자유도(기본형), EDU 최대 43"
+      },
+      {
+        "label_ko": "아틀라스 제품형",
+        "value": "56 자유도, 키 1.9m, 90kg(회사 사양서)"
+      },
+      {
+        "label_ko": "다리 한쪽",
+        "value": "일반적으로 6 자유도"
+      },
+      {
+        "label_ko": "팔 한쪽",
+        "value": "일반적으로 5~7 자유도"
+      }
+    ],
+    "examples_ko": "아틀라스 제품형은 연속 회전 관절로 사람이 할 수 없는 자세를 활용합니다. 유니트리 G1은 자유도를 줄여 가격을 낮췄습니다.",
+    "challenge_ko": "자유도를 하나 더할 때마다 원가와 고장 확률이 오릅니다. 그래서 작업에 꼭 필요한 최소 자유도를 찾는 일이 양산 설계의 핵심입니다. 사람의 공간에 맞으면서도 사람보다 효율적인 형태가 무엇인지는 아직 답이 나오지 않았습니다."
+  },
+  {
+    "id": "locomotion",
+    "name_ko": "보행 제어",
+    "name_en": "Locomotion Control (MPC, RL, Sim-to-Real)",
+    "zone": "leg",
+    "anchor": "ankle_r",
+    "one_liner_ko": "로봇이 넘어지지 않고 걷고 뛰게 하는 균형 알고리즘입니다. 미끄러져도 다시 균형을 잡게 합니다.",
+    "detail_ko": "초기 휴머노이드는 ZMP(영모멘트점)를 기준으로 미리 계산한 궤적을 따라 걸었습니다. 혼다 아시모가 대표입니다. 이후 모델 예측 제어(MPC)가 매 순간 힘을 다시 계산하면서 달리고 뛰는 동작이 가능해졌습니다. 2019년 이후에는 시뮬레이션에서 강화학습으로 보행을 익혀 실제 로봇에 옮기는 sim-to-real 방식이 주류입니다. 핵심 기법은 마찰, 질량, 지연 시간을 무작위로 바꿔 학습하는 도메인 랜덤화입니다. 병목은 계단, 젖은 바닥, 사람과의 충돌 같은 드문 상황에서의 신뢰성입니다.",
+    "how_it_works_ko": [
+      "IMU와 관절 엔코더가 몸의 기울기, 발 접촉 상태, 속도를 측정합니다.",
+      "보행 정책(MPC 또는 강화학습 신경망)이 수십 Hz로 다음 발 위치와 관절 목표를 정합니다.",
+      "저수준 제어기가 1kHz 안팎으로 관절 토크를 조절해 목표를 따라갑니다.",
+      "외란(밀치거나 부딪히는 바깥 힘)이 감지되면 발 디딤 위치를 바꿔 균형을 회복합니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "보행 정책 주기",
+        "value": "일반적으로 약 50~200Hz"
+      },
+      {
+        "label_ko": "시뮬레이션 병렬 환경",
+        "value": "GPU 1대에서 수천 개 동시 학습"
+      },
+      {
+        "label_ko": "피규어 03 보행 속도",
+        "value": "약 1.2m/s(회사 발표)"
+      }
+    ],
+    "examples_ko": "유니트리 로봇들의 공중제비와 무술 시연, 보스턴 다이내믹스 전기 아틀라스의 체조 동작은 시뮬레이션 강화학습과 동작 모방을 결합한 결과입니다.",
+    "challenge_ko": "상용화의 기준은 화려한 동작보다 반복 작업의 신뢰성입니다. 무거운 물건을 들고 수천 시간 동안 넘어지지 않아야 합니다. 넘어지더라도 사람을 다치게 하거나 주변 설비를 망가뜨리지 않는 낙상 관리도 아직 해결 중인 과제입니다."
+  },
+  {
+    "id": "structure",
+    "name_ko": "골격·소재",
+    "name_en": "Structure and Materials",
+    "zone": "torso",
+    "anchor": "waist",
+    "one_liner_ko": "가볍고 튼튼한 뼈대와 사람에게 안전한 외피를 만드는 소재 기술입니다.",
+    "detail_ko": "로봇 골격은 대부분 알루미늄 합금으로 만듭니다. 하중이 몰리는 부위에는 티타늄이나 고강도 강을, 무게를 줄일 부위에는 마그네슘 합금과 탄소섬유를 씁니다. 최근에는 액추에이터 하우징을 골격의 일부로 쓰는 일체형 설계가 늘고 있습니다. 외피는 용도에 따라 갈립니다. 피규어 03은 부드러운 섬유와 폼으로 감쌌고, 1X는 NEO에 니트 소재 옷을 입혔습니다. 산업용 아틀라스는 IP67 등급의 단단한 외장을 택했습니다. 병목은 무게와 비용의 균형입니다.",
+    "how_it_works_ko": [
+      "구조 해석으로 관절별 최대 하중과 넘어질 때의 충격을 계산합니다.",
+      "하중 경로에 맞춰 합금, 복합재, 플라스틱을 배치합니다.",
+      "배선, 냉각 통로, 센서 위치를 골격 안에 통합합니다.",
+      "외피로 끼임과 충격을 줄이고 먼지와 물을 막습니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "피규어 03",
+        "value": "키 약 173cm, 61kg(회사 발표)"
+      },
+      {
+        "label_ko": "유니트리 G1",
+        "value": "키 약 132cm, 약 35kg"
+      },
+      {
+        "label_ko": "아틀라스 제품형",
+        "value": "90kg, IP67, 작동 온도 -20~40℃"
+      }
+    ],
+    "examples_ko": "피규어 03과 1X NEO는 섬유 외피를 둘러 가정에 어울리는 친근함을 강조합니다. 아틀라스는 공장 환경을 견디는 방수 외장을 택했습니다.",
+    "challenge_ko": "넘어짐과 충돌을 수천 번 견디는 내구성과, 사람 옆에서 안전한 부드러움을 동시에 확보해야 합니다. 자동차 수준의 대량생산 공정으로 골격 원가를 낮추는 일도 남아 있습니다."
+  },
+  {
+    "id": "safety-comms",
+    "name_ko": "안전·통신",
+    "name_en": "Functional Safety and Communications",
+    "zone": "system",
+    "anchor": "back",
+    "one_liner_ko": "고장이 나도 사람이 다치지 않게 막고 몸 안팎의 신호를 끊김 없이 잇는 체계입니다.",
+    "detail_ko": "기능안전은 센서나 소프트웨어가 고장 나도 위험한 상태로 가지 않도록 보장하는 설계 원칙입니다. 산업용 로봇은 ISO 10218을, 협동로봇은 ISO/TS 15066을 따릅니다. 휴머노이드는 전원을 끊으면 넘어지므로, 안전하게 멈추는 방법부터 새로 정해야 합니다. 이를 다루는 ISO 25785-1이 위원회 초안 단계에서 논의되고 있습니다. 몸 안에서는 EtherCAT이나 CAN FD 같은 실시간 버스가 1ms 안팎 주기로 관절을 동기화하고, 몸 밖으로는 Wi-Fi나 5G로 연결됩니다.",
+    "how_it_works_ko": [
+      "위험 분석으로 끼임, 충돌, 낙상, 화재 같은 위험원을 목록으로 정리합니다.",
+      "이중화된 센서와 독립 안전 제어기가 사람과의 거리, 힘, 속도를 감시합니다.",
+      "위험이 감지되면 감속, 정지, 안전 자세로 앉기 순서로 대응합니다.",
+      "모든 이벤트를 기록해 원격 관제와 사후 분석에 씁니다."
+    ],
+    "key_specs": [
+      {
+        "label_ko": "산업용 로봇 안전 표준",
+        "value": "ISO 10218-1/-2(2025년 개정)"
+      },
+      {
+        "label_ko": "협동 작업 힘 기준",
+        "value": "ISO/TS 15066"
+      },
+      {
+        "label_ko": "균형형 이동 로봇 표준",
+        "value": "ISO 25785-1(위원회 초안 단계)"
+      },
+      {
+        "label_ko": "내부 실시간 통신 주기",
+        "value": "일반적으로 1ms 안팎(EtherCAT 등)"
+      }
+    ],
+    "examples_ko": "현재 배치된 어질리티 Digit은 작업 구역을 사람과 분리한 상태로 운용됩니다. 2026년 9월 공개한 Digit 5는 사람 곁에서 일하는 협동 안전을 설계 목표로 삼았습니다. 1X NEO는 초기 단계에서 원격 조종자가 개입할 수 있습니다. 이 때문에 원격 조종자가 집 안 영상을 볼 수 있다는 사생활 문제도 함께 제기되었습니다.",
+    "challenge_ko": "휴머노이드 전용 안전 표준은 아직 확정되지 않았습니다. 지금은 기업마다 위험성 평가를 따로 해야 합니다. AI 모델이 결정하는 동작을 기존 기능안전 인증 체계로 어떻게 검증할지도 열린 문제입니다."
+  }
+]</script>
+</section>
+
+<style>
+#anatomy { background: var(--bg); color: var(--text); font-family: var(--f-body); overflow-x: clip; }
+#anatomy .bf-no, #anatomy .bf-go .ref, #anatomy .anat-zones span, #anatomy .bn, #anatomy .anat-bom td.zn, #anatomy .anat-tblock dd, #anatomy .sp-meta dd, #anatomy .sp-steps .n, #anatomy .sp-nav button span { font-variant-numeric: tabular-nums; }
+#anatomy .anat-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- 3분 요약: ruled summary sheet ---------- */
+#anatomy .anat-brief { margin: 8px 0 clamp(96px, 10vw, 160px); }
+#anatomy .bf-head { padding-bottom: 16px; border-bottom: 1px solid var(--line-2); }
+#anatomy .bf-title { margin: 0; font: 700 clamp(26px, 2.2vw, 32px)/1.25 var(--f-display); letter-spacing: -.02em; color: var(--text); }
+#anatomy .bf-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line-2); }
+#anatomy .bf-list li { display: flex; min-width: 0; }
+#anatomy .bf-list li + li { border-left: 1px solid var(--line); }
+#anatomy .bf-list a { position: relative; display: flex; flex-direction: column; width: 100%; padding: 30px clamp(20px, 2.6vw, 40px) 28px; color: var(--text); text-decoration: none; }
+#anatomy .bf-list li:first-child a { padding-left: 0; }
+#anatomy .bf-list li:last-child a { padding-right: 0; }
+#anatomy .bf-list a::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform .45s var(--ease); }
+#anatomy .bf-no { font: 600 14px/1 var(--f-mono); letter-spacing: .04em; color: var(--accent); }
+#anatomy .bf-q { margin-top: 16px; font: 700 clamp(21px, 1.75vw, 25px)/1.4 var(--f-display); letter-spacing: -.02em; color: var(--text); word-break: keep-all; text-wrap: balance; }
+#anatomy .bf-a { margin: 14px 0 26px; font-size: 17px; line-height: 1.75; color: var(--muted); word-break: keep-all; text-wrap: pretty; }
+#anatomy .bf-a b { font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+#anatomy .bf-go { display: flex; align-items: center; gap: 12px; margin-top: auto; font: 500 15px/1.4 var(--f-body); color: var(--text); transition: color .3s var(--ease); }
+#anatomy .bf-go .ref { padding: 3px 7px; border: 1px solid var(--line-2); border-radius: 2px; font: 500 13px/1.2 var(--f-mono); letter-spacing: .02em; color: var(--muted); }
+#anatomy .bf-go .ar { color: var(--accent); transition: transform .35s var(--ease); }
+#anatomy .bf-list a:hover::before, #anatomy .bf-list a:focus-visible::before { transform: none; }
+#anatomy .bf-list a:hover .bf-go { color: var(--accent-2); }
+#anatomy .bf-list a:hover .ar { transform: translateY(3px); }
+#anatomy .bf-list a:focus { outline: none; }
+#anatomy .bf-list a:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* ---------- chapter head ---------- */
+#anatomy .anat-head { max-width: none; }
+#anatomy .anat-lead { margin-top: 24px; }
+
+/* ---------- FIG.01 drawing sheet ---------- */
+#anatomy .anat-dwg { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(32px, 4vw, 64px); margin-top: clamp(48px, 6vw, 80px); align-items: stretch; }
+#anatomy .anat-figcol { margin: 0; min-width: 0; }
+#anatomy .anat-fig { position: relative; width: min(calc((100vw - 2 * var(--gutter)) * .46), calc(min(80vh, 780px) * .7)); aspect-ratio: 560 / 800; }
+#anatomy .anat-svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#anatomy .anat-svg .fr-o, #anatomy .anat-svg .fr-i { fill: none; stroke: var(--line-2); stroke-width: 1.2; }
+#anatomy .anat-svg .fr-t { fill: none; stroke: var(--line-2); stroke-width: 1; }
+#anatomy .anat-svg .d { fill: none; }
+#anatomy .anat-svg .cl { stroke: var(--line-2); stroke-width: 1; stroke-dasharray: 26 4 3 4; }
+#anatomy .anat-svg .gh { stroke: var(--muted); stroke-width: 1.3; }
+#anatomy .anat-svg .gh-x { stroke: var(--line-2); stroke-width: 1; }
+#anatomy .anat-svg .anat-body { transition: opacity .4s var(--ease); }
+#anatomy .anat-svg .b { fill: none; stroke: var(--muted); stroke-width: 1.15; stroke-linecap: round; stroke-linejoin: round; }
+#anatomy .anat-svg .b.hid { stroke: var(--dim); stroke-width: 1; stroke-dasharray: 4 3; stroke-linecap: butt; }
+#anatomy .anat-svg .b.ph { stroke: var(--dim); stroke-width: .9; stroke-dasharray: 14 3 2 3 2 3; stroke-linecap: butt; }
+#anatomy .anat-svg .b[data-t~="net"] { opacity: .7; }
+#anatomy .anat-svg.has-sel .anat-body { opacity: .6; }
+#anatomy .anat-svg .hl-el { fill: none; stroke: var(--accent); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+#anatomy .anat-svg .hl-el.hid { stroke-width: 1.5; stroke-dasharray: 4 3; stroke-linecap: butt; }
+#anatomy .anat-svg .ldr { fill: none; stroke: var(--dim); stroke-width: 1.15; }
+#anatomy .anat-svg .ldr-dot { fill: var(--dim); }
+#anatomy .anat-svg .ldr-g.pv .ldr { stroke: var(--accent-2); stroke-width: 1.2; }
+#anatomy .anat-svg .ldr-g.pv .ldr-dot { fill: var(--accent-2); }
+#anatomy .anat-svg .ldr-g.on .ldr { stroke: var(--accent); stroke-width: 1.5; }
+#anatomy .anat-svg .ldr-g.on .ldr-dot { fill: var(--accent); }
+
+#anatomy .anat-zones span { position: absolute; transform: translate(-50%, -50%); font: 500 13px/1 var(--f-mono); color: var(--dim); }
+#anatomy .anat-balloons { position: absolute; inset: 0; }
+#anatomy .bl { position: absolute; display: grid; place-items: center; width: 32px; height: 32px; margin: -16px 0 0 -16px; padding: 0; border: 1.5px solid var(--muted); border-radius: 50%; background: var(--bg); color: var(--text); font: 600 13px/1 var(--f-mono); font-variant-numeric: tabular-nums; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background-color .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease); }
+#anatomy .bl:hover, #anatomy .bl.pv { border-color: var(--accent-2); color: var(--accent-2); }
+#anatomy .bl.is-on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#anatomy .bl:focus { outline: none; }
+#anatomy .bl:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+#anatomy .anat-cap { margin: 14px 0 0; max-width: 520px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+
+/* ---------- 부품표 (BOM) + 표제란 ---------- */
+#anatomy .anat-side { display: flex; flex-direction: column; min-width: 0; }
+#anatomy .bom-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; }
+#anatomy .bom-title { margin: 0; font: 700 22px/1.3 var(--f-display); letter-spacing: -.02em; color: var(--text); }
+#anatomy .bom-hint { margin: 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
+#anatomy .on-mob { display: none; }
+#anatomy .anat-bom { width: 100%; margin: 14px 0 28px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+#anatomy .anat-bom thead th { padding: 9px 12px 9px 0; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); text-align: left; font: 500 13px/1.3 var(--f-body); color: var(--dim); }
+#anatomy .anat-bom thead th:nth-child(2) { padding-left: 10px; }
+#anatomy .anat-bom tbody + tbody { border-top: 1px solid var(--line-2); }
+#anatomy .anat-bom td, #anatomy .anat-bom .grp { height: 42px; padding: 0 12px 0 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+#anatomy .anat-bom tbody tr:last-child td, #anatomy .anat-bom .grp { border-bottom: 0; }
+#anatomy .anat-bom .grp { width: 96px; padding-top: 11px; vertical-align: top; text-align: left; font: 600 15px/1.35 var(--f-body); color: var(--text); }
+#anatomy .anat-bom .grp small { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.4; color: var(--dim); }
+#anatomy .anat-bom td.no { width: 50px; padding-left: 10px; }
+#anatomy .anat-bom td.loc { width: 92px; font-size: 15px; color: var(--muted); }
+#anatomy .anat-bom td.zn { width: 52px; padding-right: 10px; font: 500 14px/1 var(--f-mono); color: var(--muted); }
+#anatomy .bn { display: inline-grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--muted); border-radius: 50%; font: 600 13px/1 var(--f-mono); color: var(--text); transition: background-color .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease); }
+#anatomy .bom-btn { display: block; width: 100%; padding: 10px 0; border: 0; background: none; color: var(--text); font: 500 16px/1.35 var(--f-body); text-align: left; cursor: pointer; }
+#anatomy .bom-btn:focus { outline: none; }
+#anatomy .bom-btn:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+#anatomy .anat-bom tr.it { cursor: pointer; }
+#anatomy .anat-bom tr.it td { transition: background-color .25s var(--ease); }
+#anatomy .anat-bom tr.it:hover td, #anatomy .anat-bom tr.it.pv td { background: color-mix(in srgb, var(--surface) 75%, transparent); }
+#anatomy .anat-bom tr.it.pv .bn { border-color: var(--accent-2); color: var(--accent-2); }
+#anatomy .anat-bom tr.it.is-on td { background: color-mix(in srgb, var(--accent) 13%, transparent); }
+#anatomy .anat-bom tr.it.is-on .bn { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#anatomy .anat-bom tr.it.is-on .bom-btn { color: var(--accent-2); font-weight: 600; }
+
+#anatomy .anat-tblock { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: auto 0 0; border: 1px solid var(--line-2); border-radius: 2px; }
+#anatomy .anat-tblock > div { min-width: 0; padding: 9px 12px 10px; border-left: 1px solid var(--line); }
+#anatomy .anat-tblock > div:first-child { border-left: 0; }
+#anatomy .anat-tblock dt { font: 500 13px/1.3 var(--f-body); color: var(--dim); }
+#anatomy .anat-tblock dd { margin: 4px 0 0; font: 600 15px/1.3 var(--f-mono); color: var(--text); }
+#anatomy .anat-tblock .tb-lines { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; border-left: 0; border-top: 1px solid var(--line); }
+#anatomy .anat-tblock .tb-lines dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; font: 400 14px/1.4 var(--f-body); color: var(--muted); }
+#anatomy .anat-tblock .tb-lines dd > span { display: inline-flex; align-items: center; gap: 8px; }
+#anatomy .anat-tblock .tb-lines svg { width: 28px; height: 6px; overflow: visible; }
+#anatomy .anat-tblock .tb-lines path { fill: none; stroke-width: 1.5; }
+#anatomy .anat-tblock .lg-o { stroke: var(--muted); }
+#anatomy .anat-tblock .lg-h { stroke: var(--dim); stroke-dasharray: 4 3; }
+#anatomy .anat-tblock .lg-c { stroke: var(--line-2); stroke-width: 1.2; stroke-dasharray: 12 3 2 3; }
+#anatomy .anat-tblock .lg-s { stroke: var(--accent); stroke-width: 2; }
+
+/* ---------- 사양서 (spec sheet) ---------- */
+#anatomy .anat-panel { margin-top: clamp(56px, 6vw, 88px); border: 1px solid var(--line-2); border-radius: 2px; scroll-margin-top: calc(var(--nav-h) + 16px); }
+#anatomy .anat-panel:focus { outline: none; }
+#anatomy .sp-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; border-bottom: 1px solid var(--line-2); }
+#anatomy .sp-no { display: grid; place-items: center; padding: 0 28px; border-right: 1px solid var(--line); }
+#anatomy .bn.bn-lg { width: 48px; height: 48px; border-width: 1.5px; border-color: var(--accent); background: var(--accent); color: var(--accent-ink); font-size: 17px; }
+#anatomy .sp-ttl { min-width: 0; padding: 22px 28px; }
+#anatomy .sp-kick { margin: 0 0 6px; font: 500 13px/1.3 var(--f-body); color: var(--dim); }
+#anatomy .sp-name { margin: 0; font: 700 clamp(28px, 2.6vw, 38px)/1.2 var(--f-display); letter-spacing: -.025em; color: var(--text); word-break: keep-all; }
+#anatomy .sp-en { margin: 8px 0 0; font: 400 14px/1.45 var(--f-mono); color: var(--muted); }
+#anatomy .sp-meta { display: grid; grid-template-columns: repeat(3, auto); margin: 0; }
+#anatomy .sp-meta > div { min-width: 92px; padding: 22px 24px; border-left: 1px solid var(--line); }
+#anatomy .sp-meta dt { font: 500 13px/1.3 var(--f-body); color: var(--dim); }
+#anatomy .sp-meta dd { margin: 6px 0 0; font: 600 17px/1.3 var(--f-body); color: var(--text); }
+#anatomy .sp-meta dd.mono { font-family: var(--f-mono); }
+#anatomy .sp-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#anatomy .sp-sec { min-width: 0; padding: 26px 28px 30px; border-top: 1px solid var(--line); }
+#anatomy .sp-sec:first-child { border-top: 0; }
+#anatomy .sp-sec.sp-ov { grid-column: 1 / -1; }
+#anatomy .sp-sec:nth-child(odd):not(:first-child) { border-left: 1px solid var(--line); }
+#anatomy .sp-h { margin: 0 0 14px; font: 600 15px/1.3 var(--f-body); color: var(--text); }
+#anatomy .sp-ch .sp-h { color: var(--danger); }
+#anatomy .sp-ovg { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px clamp(28px, 4vw, 56px); }
+#anatomy .sp-one { margin: 0; font: 500 clamp(19px, 1.6vw, 22px)/1.6 var(--f-display); letter-spacing: -.01em; color: var(--text); word-break: keep-all; text-wrap: pretty; }
+#anatomy .sp-sec p { word-break: keep-all; text-wrap: pretty; }
+#anatomy .sp-detail, #anatomy .sp-sec > p { margin: 0; font-size: 16px; line-height: 1.8; color: var(--muted); }
+#anatomy .sp-steps { list-style: none; margin: 0; padding: 0; }
+#anatomy .sp-steps li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.65; color: var(--text); word-break: keep-all; }
+#anatomy .sp-steps li:first-child { padding-top: 2px; border-top: 0; }
+#anatomy .sp-steps li:last-child { padding-bottom: 0; }
+#anatomy .sp-steps .n { font: 600 14px/1.65 var(--f-mono); color: var(--accent); }
+#anatomy .sp-specs { width: 100%; border-collapse: collapse; }
+#anatomy .sp-specs th, #anatomy .sp-specs td { padding: 11px 0; border-top: 1px solid var(--line); vertical-align: top; text-align: left; font-size: 15px; line-height: 1.6; }
+#anatomy .sp-specs tr:first-child th, #anatomy .sp-specs tr:first-child td { padding-top: 2px; border-top: 0; }
+#anatomy .sp-specs th { width: 40%; padding-right: 18px; font-weight: 500; color: var(--muted); word-break: keep-all; }
+#anatomy .sp-specs td { color: var(--text); font-variant-numeric: tabular-nums; word-break: keep-all; overflow-wrap: anywhere; }
+#anatomy .sp-nav { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line-2); }
+#anatomy .sp-nav button { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 16px 28px 18px; border: 0; background: none; color: var(--text); font: 500 16px/1.35 var(--f-body); text-align: left; cursor: pointer; transition: color .25s var(--ease); }
+#anatomy .sp-nav button + button { align-items: flex-end; text-align: right; border-left: 1px solid var(--line); }
+#anatomy .sp-nav button span { font: 500 13px/1.3 var(--f-body); color: var(--dim); }
+#anatomy .sp-nav button:hover { color: var(--accent-2); }
+#anatomy .sp-nav button:focus { outline: none; }
+#anatomy .sp-nav button:focus-visible { outline: 2px solid var(--accent-2); outline-offset: -2px; }
+
+/* ---------- accordion (mobile) ---------- */
+#anatomy .anat-acc { display: none; }
+#anatomy .acc-grp { margin: 0; padding: 22px 0 10px; border-bottom: 1px solid var(--line-2); font: 600 15px/1.3 var(--f-body); color: var(--text); }
+#anatomy .acc-grp small { margin-left: 8px; font-size: 13px; font-weight: 400; color: var(--dim); }
+#anatomy .acc-item { border-bottom: 1px solid var(--line); }
+#anatomy .acc-h { margin: 0; }
+#anatomy .acc-btn { width: 100%; display: grid; grid-template-columns: 28px minmax(0, 1fr) 14px; gap: 14px; align-items: center; padding: 14px 0; border: 0; background: none; color: var(--text); text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+#anatomy .acc-btn .ko { display: block; font: 500 17px/1.35 var(--f-body); }
+#anatomy .acc-btn .en { display: block; margin-top: 3px; font: 400 13px/1.4 var(--f-mono); color: var(--muted); }
+#anatomy .acc-btn .ic { position: relative; width: 14px; height: 14px; }
+#anatomy .acc-btn .ic::before, #anatomy .acc-btn .ic::after { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 1.5px; background: var(--muted); transition: transform .35s var(--ease), background-color .35s var(--ease); }
+#anatomy .acc-btn .ic::after { transform: rotate(90deg); }
+#anatomy .acc-btn[aria-expanded="true"] .bn { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+#anatomy .acc-btn[aria-expanded="true"] .ic::after { transform: none; }
+#anatomy .acc-btn[aria-expanded="true"] .ic::before, #anatomy .acc-btn[aria-expanded="true"] .ic::after { background: var(--accent); }
+#anatomy .acc-btn:focus { outline: none; }
+#anatomy .acc-btn:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+#anatomy .acc-body { padding: 0 0 22px; }
+#anatomy .acc-body .sp-meta { grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+#anatomy .acc-body .sp-meta > div { min-width: 0; padding: 10px 12px; }
+#anatomy .acc-body .sp-meta > div:first-child { border-left: 0; padding-left: 0; }
+#anatomy .acc-body .sp-meta dd { font-size: 16px; }
+#anatomy .acc-body .sp-body { grid-template-columns: minmax(0, 1fr); }
+#anatomy .acc-body .sp-sec { padding: 20px 0 0; border-top: 0; border-left: 0; }
+#anatomy .acc-body .sp-ovg { grid-template-columns: minmax(0, 1fr); }
+#anatomy .acc-body .sp-sec + .sp-sec { margin-top: 4px; }
+#anatomy .acc-body .sp-sec:not(.sp-ov) { border-top: 1px solid var(--line); margin-top: 20px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1180px) {
+  #anatomy .sp-meta > div { min-width: 0; padding: 22px 18px; }
+}
+@media (max-width: 959px) {
+  #anatomy .bf-list { grid-template-columns: minmax(0, 1fr); }
+  #anatomy .bf-list li + li { border-left: 0; border-top: 1px solid var(--line); }
+  #anatomy .bf-list a, #anatomy .bf-list li:first-child a, #anatomy .bf-list li:last-child a { padding: 24px 0 22px; }
+  #anatomy .bf-a { margin-bottom: 18px; }
+  #anatomy .anat-dwg { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  #anatomy .anat-fig { width: min(100%, calc(72vh * .7)); margin: 0 auto; }
+  #anatomy .anat-cap { margin-left: auto; margin-right: auto; text-align: center; }
+  #anatomy .bl { width: 26px; height: 26px; margin: -13px 0 0 -13px; border-width: 1.2px; }
+  #anatomy .anat-svg .b { stroke-width: 1.5; }
+  #anatomy .anat-svg .b.hid, #anatomy .anat-svg .b.ph { stroke-width: 1.2; }
+  #anatomy .anat-svg .ldr { stroke-width: 1.2; }
+  #anatomy .anat-svg .hl-el { stroke-width: 2.4; }
+  #anatomy .anat-bom, #anatomy .anat-panel { display: none; }
+  #anatomy .anat-acc { display: block; margin-top: 4px; }
+  #anatomy .on-desk { display: none; }
+  #anatomy .on-mob { display: inline; }
+  #anatomy .anat-tblock { order: -1; margin: 0 0 36px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #anatomy .anat-tblock > div:nth-child(3) { border-left: 0; }
+  #anatomy .anat-tblock > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #anatomy .bf-list a::before, #anatomy .bf-go, #anatomy .bf-go .ar, #anatomy .anat-svg .anat-body, #anatomy .bl, #anatomy .bn, #anatomy .anat-bom tr.it td { transition: none; }
+}
+</style>
+
+<script>
+(function () {
+  'use strict';
+  var root = document.getElementById('anatomy');
+  var dataEl = document.getElementById('anatomy-data');
+  if (!root || !dataEl) return;
+  var RAW;
+  try { RAW = JSON.parse(dataEl.textContent); } catch (e) { return; }
+  if (!Array.isArray(RAW) || !RAW.length) return;
+
+  var VBW = 560, VBH = 800, OX = 70, OY = 30;
+  var G = window.gsap, ST = window.ScrollTrigger;
+  var RM = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var ANIM = !!(G && ST) && !RM;
+  var MQ = window.matchMedia('(min-width: 960px)');
+
+  /* BOM groups follow the hero's five stages. Parts without a clear stage stay in 통합. Data is not edited; order is mapped by id. */
+  var GROUPS = [
+    { k: '골격', ids: ['structure', 'dof'] },
+    { k: '근육', ids: ['rotary-actuator', 'linear-actuator'] },
+    { k: '에너지', ids: ['battery'] },
+    { k: '감각', ids: ['vision', 'touch-force'] },
+    { k: '지능', ids: ['compute', 'foundation-model', 'locomotion'] },
+    { k: '통합', note: '여러 계통에 걸침', ids: ['hand', 'safety-comms'] }
+  ];
+  /* a: leader end on the part (figure coordinates). side/by: balloon column and height (sheet coordinates) */
+  var LAYOUT = {
+    'foundation-model': { a: [216, 54], side: 'R', by: 62 },
+    'vision': { a: [193, 75], side: 'L', by: 58 },
+    'compute': { a: [202, 192], side: 'L', by: 136 },
+    'rotary-actuator': { a: [292, 162], side: 'R', by: 158 },
+    'safety-comms': { a: [246, 206], side: 'R', by: 248 },
+    'structure': { a: [150, 224], side: 'L', by: 262 },
+    'battery': { a: [226, 266], side: 'R', by: 334 },
+    'dof': { a: [182, 336], side: 'L', by: 372 },
+    'hand': { a: [304, 384], side: 'R', by: 432 },
+    'touch-force': { a: [116, 384], side: 'L', by: 470 },
+    'linear-actuator': { a: [237.5, 430], side: 'R', by: 520 },
+    'locomotion': { a: [184, 668], side: 'L', by: 650 }
+  };
+  var POS = { head: [210, 81], chest: [210, 192], back: [210, 255], waist: [210, 289], hip: [210, 338], shoulder_l: [286, 168], shoulder_r: [134, 168], hand_l: [304, 378], hand_r: [116, 378], knee_l: [234, 500], knee_r: [186, 500], ankle_l: [232, 662], ankle_r: [188, 662] };
+  /* component id -> drawing layers that light up */
+  var TAGS = {
+    'vision': 'visor cam fov',
+    'touch-force': 'hand-R wrist-R tip-R',
+    'compute': 'soc',
+    'foundation-model': 'net soc',
+    'rotary-actuator': 'rot',
+    'linear-actuator': 'lin',
+    'hand': 'hand-L tip-L',
+    'battery': 'batt',
+    'dof': 'joint',
+    'locomotion': 'leg com',
+    'structure': 'shell',
+    'safety-comms': 'bus estop'
+  };
+  var ZONE = { head: '머리', hand: '손', torso: '몸통', system: '전신', arm: '팔', leg: '다리' };
+
+  var $ = function (s, c) { return (c || root).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || root).querySelectorAll(s)); };
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var esc = function (s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  };
+
+  /* ---------- order: group by stage ---------- */
+  var byId = {}, seen = {}, groups = [];
+  RAW.forEach(function (d) { byId[d.id] = d; });
+  GROUPS.forEach(function (g) {
+    var items = g.ids.filter(function (id) { return byId[id] && !seen[id]; }).map(function (id) { seen[id] = 1; return byId[id]; });
+    if (items.length) groups.push({ k: g.k, note: g.note, items: items });
+  });
+  var rest = RAW.filter(function (d) { return !seen[d.id]; });
+  if (rest.length) {
+    var tail = groups.filter(function (g) { return g.k === '통합'; })[0];
+    if (tail) tail.items = tail.items.concat(rest);
+    else groups.push({ k: '통합', note: '여러 계통에 걸침', items: rest });
+  }
+  var DATA = [], GRP = [];
+  groups.forEach(function (g) { g.items.forEach(function (d) { DATA.push(d); GRP.push(g.k); }); });
+  var N = DATA.length;
+  $$('[data-anat-n]').forEach(function (el) { el.textContent = N; });
+
+  /* ---------- geometry ---------- */
+  var alt = 0;
+  var GEO = DATA.map(function (d) {
+    var L = LAYOUT[d.id], a, side, by;
+    if (L) { a = L.a; side = L.side; by = L.by; }
+    else { a = POS[d.anchor] || [210, 390]; side = (alt++ % 2) ? 'R' : 'L'; by = a[1] + OY; }
+    var ax = a[0] + OX, ay = a[1] + OY;
+    var bx = side === 'L' ? 54 : VBW - 54;
+    var zone = String.fromCharCode(65 + Math.max(0, Math.min(4, Math.floor(ay / 160)))) + (Math.max(0, Math.min(3, Math.floor(ax / 140))) + 1);
+    return { ax: ax, ay: ay, bx: bx, by: by, side: side, zone: zone };
+  });
+
+  var svg = $('.anat-svg'), bodyG = $('.anat-body'), hlG = $('.anat-hl'), ldrG = $('.anat-ldr');
+  var fig = $('.anat-fig'), blLayer = $('.anat-balloons'), bom = $('.anat-bom'), panel = $('#anat-panel'), acc = $('.anat-acc');
+
+  ldrG.innerHTML = GEO.map(function (g, i) {
+    var sx = g.side === 'L' ? g.bx + 30 : g.bx - 30;
+    return '<g class="ldr-g" data-i="' + i + '"><path class="ldr" d="M' + g.bx + ' ' + g.by + ' H' + sx + ' L' + g.ax + ' ' + g.ay + '"/>' +
+      '<circle class="ldr-dot" cx="' + g.ax + '" cy="' + g.ay + '" r="2.8"/></g>';
+  }).join('');
+
+  blLayer.innerHTML = DATA.map(function (d, i) {
+    var g = GEO[i];
+    return '<button type="button" class="bl" data-i="' + i + '" style="left:' + (g.bx / VBW * 100).toFixed(3) + '%;top:' + (g.by / VBH * 100).toFixed(3) + '%"' +
+      ' aria-label="' + pad(i + 1) + ' ' + esc(d.name_ko) + '" aria-pressed="false" aria-controls="anat-panel">' + pad(i + 1) + '</button>';
+  }).join('');
+
+  var idx = 0;
+  bom.insertAdjacentHTML('beforeend', groups.map(function (g) {
+    return '<tbody>' + g.items.map(function (d, k) {
+      var i = idx++;
+      return '<tr class="it" data-i="' + i + '">' +
+        (k === 0 ? '<th scope="rowgroup" rowspan="' + g.items.length + '" class="grp">' + esc(g.k) + (g.note ? '<small>' + esc(g.note) + '</small>' : '') + '</th>' : '') +
+        '<td class="no"><span class="bn">' + pad(i + 1) + '</span></td>' +
+        '<td class="nm"><button type="button" class="bom-btn" data-i="' + i + '" aria-controls="anat-panel" aria-pressed="false">' + esc(d.name_ko) + '</button></td>' +
+        '<td class="loc">' + esc(ZONE[d.zone] || d.zone || '') + '</td>' +
+        '<td class="zn">' + GEO[i].zone + '</td></tr>';
+    }).join('') + '</tbody>';
+  }).join(''));
+
+  function render(i, compact) {
+    var d = DATA[i], g = GEO[i];
+    var steps = (d.how_it_works_ko || []).map(function (s, k) {
+      return '<li><span class="n">' + (k + 1) + '</span><span>' + esc(s) + '</span></li>';
+    }).join('');
+    var specs = (d.key_specs || []).map(function (s) {
+      return '<tr><th scope="row">' + esc(s.label_ko) + '</th><td>' + esc(s.value) + '</td></tr>';
+    }).join('');
+    var meta = '<dl class="sp-meta"><div><dt>계통</dt><dd>' + esc(GRP[i]) + '</dd></div><div><dt>위치</dt><dd>' + esc(ZONE[d.zone] || d.zone || '') + '</dd></div><div><dt>도면 구역</dt><dd class="mono">' + g.zone + '</dd></div></dl>';
+    var head = compact ? meta :
+      '<header class="sp-head"><div class="sp-no"><span class="bn bn-lg">' + pad(i + 1) + '</span></div>' +
+      '<div class="sp-ttl"><p class="sp-kick">사양서</p><h3 class="sp-name">' + esc(d.name_ko) + '</h3><p class="sp-en">' + esc(d.name_en) + '</p></div>' + meta + '</header>';
+    var body = '<div class="sp-body">' +
+      '<section class="sp-sec sp-ov"><h4 class="sp-h">개요</h4><div class="sp-ovg"><p class="sp-one">' + esc(d.one_liner_ko) + '</p><p class="sp-detail">' + esc(d.detail_ko) + '</p></div></section>' +
+      '<section class="sp-sec"><h4 class="sp-h">작동 원리</h4><ol class="sp-steps">' + steps + '</ol></section>' +
+      '<section class="sp-sec"><h4 class="sp-h">핵심 사양</h4><table class="sp-specs"><caption class="anat-sr">' + esc(d.name_ko) + ' 핵심 사양</caption><tbody>' + specs + '</tbody></table></section>' +
+      '<section class="sp-sec"><h4 class="sp-h">적용 사례</h4><p>' + esc(d.examples_ko) + '</p></section>' +
+      '<section class="sp-sec sp-ch"><h4 class="sp-h">남은 과제</h4><p>' + esc(d.challenge_ko) + '</p></section>' +
+      '</div>';
+    if (compact) return head + body;
+    var p = (i - 1 + N) % N, n = (i + 1) % N;
+    return head + body +
+      '<nav class="sp-nav" aria-label="부품 이동">' +
+      '<button type="button" data-go="-1"><span>이전 부품 ' + pad(p + 1) + '</span>' + esc(DATA[p].name_ko) + '</button>' +
+      '<button type="button" data-go="1"><span>다음 부품 ' + pad(n + 1) + '</span>' + esc(DATA[n].name_ko) + '</button></nav>';
+  }
+
+  var ai = 0;
+  acc.innerHTML = groups.map(function (g) {
+    return '<p class="acc-grp">' + esc(g.k) + (g.note ? '<small>' + esc(g.note) + '</small>' : '') + '</p>' + g.items.map(function (d) {
+      var i = ai++;
+      return '<div class="acc-item"><h3 class="acc-h"><button type="button" class="acc-btn" id="anat-accb-' + i + '" data-i="' + i + '"' +
+        ' aria-expanded="false" aria-controls="anat-acc-' + i + '">' +
+        '<span class="bn">' + pad(i + 1) + '</span><span class="t"><span class="ko">' + esc(d.name_ko) + '</span><span class="en">' + esc(d.name_en) + '</span></span>' +
+        '<span class="ic" aria-hidden="true"></span></button></h3>' +
+        '<div class="acc-body" id="anat-acc-' + i + '" role="region" aria-labelledby="anat-accb-' + i + '" hidden><div class="acc-inner">' +
+        render(i, true) + '</div></div></div>';
+    }).join('');
+  }).join('');
+
+  var bls = $$('.bl'), rows = $$('tr.it', bom), bomBtns = $$('.bom-btn', bom), ldrs = $$('.ldr-g', ldrG), accBtns = $$('.acc-btn');
+  var cur = -1, drawn = false;
+
+  function len(el) { try { return Math.max(1, Math.ceil(el.getTotalLength())); } catch (e) { return 400; } }
+  function isDesk() { return MQ.matches; }
+
+  /* ---------- highlight on the drawing ---------- */
+  function highlight(i, quick) {
+    if (!drawn || i < 0) return;
+    var toks = (TAGS[DATA[i].id] || '').split(' ').filter(Boolean);
+    if (ANIM) G.killTweensOf($$('.hl-el', hlG));
+    hlG.textContent = '';
+    var draws = [];
+    $$('[data-t]', bodyG).forEach(function (el) {
+      var t = el.getAttribute('data-t').split(' ');
+      if (!t.some(function (x) { return toks.indexOf(x) > -1; })) return;
+      var c = el.cloneNode(false);
+      var hid = el.classList.contains('hid') || el.classList.contains('ph');
+      c.removeAttribute('style');
+      c.removeAttribute('data-t');
+      c.setAttribute('class', 'hl-el' + (hid ? ' hid' : ''));
+      hlG.appendChild(c);
+      if (!hid) draws.push(c);
+    });
+    svg.classList.add('has-sel');
+    if (!ANIM || quick) return;
+    draws.forEach(function (c) { var L = len(c); c.style.strokeDasharray = L; c.style.strokeDashoffset = L; });
+    G.to(draws, {
+      strokeDashoffset: 0, duration: .8, ease: 'power2.inOut', stagger: { each: .02 },
+      onComplete: function () { draws.forEach(function (c) { c.style.strokeDasharray = ''; c.style.strokeDashoffset = ''; }); }
+    });
+  }
+  function preview(i, on) {
+    bls.forEach(function (b, k) { b.classList.toggle('pv', on && k === i && k !== cur); });
+    rows.forEach(function (r, k) { r.classList.toggle('pv', on && k === i && k !== cur); });
+    ldrs.forEach(function (l, k) { l.classList.toggle('pv', on && k === i && k !== cur); });
+    if (!drawn) return;
+    highlight(on && i !== cur ? i : cur, true);
+  }
+
+  /* ---------- spec sheet ---------- */
+  function swapPanel(i, instant) {
+    panel.innerHTML = render(i, false);
+    if (ANIM && !instant) G.fromTo(panel.children, { opacity: 0 }, { opacity: 1, duration: .45, ease: 'power1.out' });
+  }
+
+  /* ---------- accordion ---------- */
+  function setAcc(i, open, scroll) {
+    accBtns.forEach(function (b, k) {
+      var on = open && k === i;
+      var body = document.getElementById('anat-acc-' + k);
+      var was = b.getAttribute('aria-expanded') === 'true';
+      b.setAttribute('aria-expanded', on ? 'true' : 'false');
+      body.hidden = !on;
+      if (on && !was && ANIM) G.fromTo(body.firstChild, { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: .4, ease: 'power2.out' });
+    });
+    if (open && scroll) {
+      var nav = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 56;
+      var y = accBtns[i].getBoundingClientRect().top + window.pageYOffset - nav - 12;
+      window.scrollTo({ top: y, behavior: RM ? 'auto' : 'smooth' });
+    }
+    if (ST && ST.refresh) ST.refresh();
+  }
+
+  /* ---------- select ---------- */
+  function select(i, opt) {
+    opt = opt || {};
+    i = ((i % N) + N) % N;
+    var changed = i !== cur;
+    cur = i;
+    bls.forEach(function (b, k) { b.classList.toggle('is-on', k === i); b.classList.remove('pv'); b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
+    rows.forEach(function (r, k) { r.classList.toggle('is-on', k === i); r.classList.remove('pv'); });
+    bomBtns.forEach(function (b, k) { b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
+    ldrs.forEach(function (l, k) { l.classList.toggle('on', k === i); l.classList.remove('pv'); });
+    if (changed || opt.force) {
+      swapPanel(i, opt.instant);
+      highlight(i, opt.instant);
+    }
+    if (opt.focus) opt.focus[i].focus();
+  }
+
+  /* ---------- events ---------- */
+  function keyStep(e) {
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'ArrowDown') return 1;
+    if (k === 'ArrowLeft' || k === 'ArrowUp') return -1;
+    if (k === 'Home') return 'home';
+    if (k === 'End') return 'end';
+    return 0;
+  }
+  function stepFrom(base, s) { return s === 'home' ? 0 : s === 'end' ? N - 1 : ((base + s) % N + N) % N; }
+
+  blLayer.addEventListener('click', function (e) {
+    var b = e.target.closest('.bl');
+    if (!b) return;
+    var i = +b.getAttribute('data-i');
+    select(i);
+    if (!isDesk()) setAcc(i, true, true);
+  });
+  blLayer.addEventListener('keydown', function (e) {
+    var b = e.target.closest('.bl'), s = keyStep(e);
+    if (!b || !s) return;
+    e.preventDefault();
+    var i = stepFrom(+b.getAttribute('data-i'), s);
+    select(i, { focus: bls });
+    if (!isDesk()) setAcc(i, true, false);
+  });
+  bom.addEventListener('click', function (e) {
+    var r = e.target.closest('tr.it');
+    if (r) select(+r.getAttribute('data-i'));
+  });
+  bom.addEventListener('keydown', function (e) {
+    var b = e.target.closest('.bom-btn'), s = keyStep(e);
+    if (!b || !s) return;
+    e.preventDefault();
+    select(stepFrom(+b.getAttribute('data-i'), s), { focus: bomBtns });
+  });
+  function hover(list) {
+    list.forEach(function (el) {
+      el.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') preview(+el.getAttribute('data-i'), true); });
+      el.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') preview(+el.getAttribute('data-i'), false); });
+    });
+  }
+  hover(bls);
+  hover(rows);
+
+  panel.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-go]');
+    if (b) select(cur + (+b.getAttribute('data-go')));
+  });
+
+  acc.addEventListener('click', function (e) {
+    var b = e.target.closest('.acc-btn');
+    if (!b) return;
+    var i = +b.getAttribute('data-i');
+    var open = b.getAttribute('aria-expanded') !== 'true';
+    setAcc(i, open, false);
+    if (open) select(i);
+  });
+  acc.addEventListener('keydown', function (e) {
+    var b = e.target.closest('.acc-btn'), s = keyStep(e);
+    if (!b || !s) return;
+    e.preventDefault();
+    accBtns[stepFrom(+b.getAttribute('data-i'), s)].focus();
+  });
+
+  /* ---------- initial state ---------- */
+  select(0, { instant: true, force: true });
+  function finishDraw() { drawn = true; highlight(cur, !ANIM); }
+
+  if (!ANIM) { finishDraw(); return; }
+
+  /* reveal */
+  $$('[data-reveal]').forEach(function (el) {
+    G.fromTo(el, { opacity: 0, y: 20 }, {
+      opacity: 1, y: 0, duration: .8, ease: 'power3.out', clearProps: 'transform',
+      scrollTrigger: { trigger: el, start: 'top 90%', once: true }
+    });
+  });
+
+  /* drawing: frame and outlines draw in, hidden lines and balloons follow */
+  var frameEls = $$('.anat-frame rect, .anat-frame path, .anat-decor .d');
+  var bodyDraw = $$('.anat-body .b:not(.hid):not(.ph)').map(function (el) {
+    var y = 0;
+    try { y = el.getBBox().y; } catch (e) {}
+    return { el: el, y: y };
+  }).sort(function (a, b) { return a.y - b.y; }).map(function (o) { return o.el; });
+  var drawEls = frameEls.concat(bodyDraw);
+  var fadeEls = $$('.anat-body .b.hid, .anat-body .b.ph');
+  var zones = $$('.anat-zones span');
+  drawEls.forEach(function (el) { var L = len(el); el.style.strokeDasharray = L; el.style.strokeDashoffset = L; });
+  G.set(fadeEls.concat(ldrs, zones, bls), { opacity: 0 });
+
+  ST.create({
+    trigger: fig, start: 'top 82%', once: true,
+    onEnter: function () {
+      G.timeline({ onComplete: function () {
+        drawEls.forEach(function (el) { el.style.strokeDasharray = ''; el.style.strokeDashoffset = ''; });
+        finishDraw();
+      } })
+        .to(frameEls, { strokeDashoffset: 0, duration: .9, ease: 'power2.inOut', stagger: .02 }, 0)
+        .to(zones, { opacity: 1, duration: .5, stagger: .02 }, .3)
+        .to(bodyDraw, { strokeDashoffset: 0, duration: 1, ease: 'power2.inOut', stagger: .008 }, .2)
+        .to(fadeEls, { opacity: 1, duration: .6 }, 1)
+        .to(ldrs, { opacity: 1, duration: .4, stagger: .03 }, 1.2)
+        .to(bls, { opacity: 1, duration: .4, stagger: .03 }, 1.25);
+    }
+  });
+})();
+</script>

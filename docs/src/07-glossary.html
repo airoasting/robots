@@ -1,0 +1,621 @@
+<section id="glossary" class="sec" data-nav="용어·FAQ" aria-labelledby="glossary-title">
+  <div class="wrap">
+    <div class="sheet">
+      <span class="sheet-no">ARG-06</span>
+      <span class="sheet-name">용어·FAQ</span>
+    </div>
+
+    <div class="gl-head">
+      <div class="gl-head-text">
+        <h2 id="glossary-title" class="h-display">기사와 발표를 이해하는 핵심 용어</h2>
+        <p class="lead">구동, 제어, 학습, 센서, 안전에 걸쳐 로봇 기사와 기업 발표에 자주 나오는 용어를 가나다순으로 모았습니다. 한글과 영문 어느 쪽으로도 찾을 수 있습니다.</p>
+      </div>
+      <div class="gl-search" role="search">
+        <label class="gl-search-label" for="gl-q">용어 찾기</label>
+        <div class="gl-field">
+          <svg class="gl-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+          <input id="gl-q" type="search" autocomplete="off" spellcheck="false" placeholder="예: 감속기, SLAM, 강화학습" aria-describedby="gl-status">
+          <button type="button" class="gl-clear" data-gl-clear hidden>지우기</button>
+        </div>
+        <p class="gl-status" id="gl-status" aria-live="polite"><b data-gl-shown>24</b> / <span data-gl-total>24</span> 표제어</p>
+      </div>
+    </div>
+
+    <nav class="gl-index" aria-label="자모 색인" data-gl-index></nav>
+
+    <div class="gl-dict" data-gl-dict></div>
+    <p class="gl-empty" data-gl-empty hidden>일치하는 용어가 없습니다. 다른 표현이나 영문 약어로 찾아보십시오.</p>
+
+    <div class="gl-faq-block">
+      <header class="gl-faq-head">
+        <h3 class="gl-sub">자주 묻는 질문</h3>
+        <p class="gl-faq-lead">도입을 검토하는 경영 리더가 가장 먼저 묻는 질문 <span data-gl-faq-total>5</span>가지입니다.</p>
+      </header>
+      <div class="gl-faq" data-gl-faq></div>
+    </div>
+  </div>
+  <script type="application/json" id="glossary-data">[
+  {
+    "term_ko": "자유도",
+    "term_en": "Degrees of Freedom (DoF)",
+    "def_ko": "로봇이 독립적으로 움직일 수 있는 축의 개수입니다. 자유도가 많을수록 동작이 다양해지지만 원가와 제어 난이도도 함께 오릅니다.",
+    "see": [
+      "전신 제어"
+    ]
+  },
+  {
+    "term_ko": "액추에이터",
+    "term_en": "Actuator",
+    "def_ko": "전기, 유압, 공압 에너지를 움직임으로 바꾸는 구동 장치입니다. 휴머노이드에서는 흔히 모터, 감속기, 센서, 드라이버를 하나로 묶은 관절 모듈을 가리킵니다.",
+    "see": [
+      "하모닉 드라이브",
+      "사이클로이드 감속기",
+      "준직접구동"
+    ]
+  },
+  {
+    "term_ko": "하모닉 드라이브",
+    "term_en": "Harmonic Drive (Strain Wave Gear)",
+    "def_ko": "얇은 탄성 기어를 휘게 만드는 방식으로, 작은 크기로도 높은 감속비를 내는 감속기입니다. 백래시(맞물린 기어 사이의 틈)가 거의 없어 정밀하지만 충격 하중에는 약합니다.",
+    "see": [
+      "사이클로이드 감속기"
+    ]
+  },
+  {
+    "term_ko": "사이클로이드 감속기",
+    "term_en": "Cycloidal / RV Reducer",
+    "def_ko": "사이클로이드 곡선 모양의 원판이 핀을 따라 구르며 속도를 줄이는 감속기입니다. 강성(힘을 받아도 잘 휘지 않는 성질)과 충격 내성이 높아 산업용 로봇의 큰 관절에 주로 쓰입니다.",
+    "see": [
+      "하모닉 드라이브"
+    ]
+  },
+  {
+    "term_ko": "준직접구동",
+    "term_en": "Quasi-Direct Drive (QDD)",
+    "def_ko": "토크(회전하는 힘)가 큰 모터에 감속비가 낮은 유성 기어를 붙인 구동 방식입니다. 관절이 외부 힘에 부드럽게 반응해 착지 충격을 잘 흡수합니다. 그래서 사족보행 로봇에 널리 쓰입니다.",
+    "see": [
+      "백드라이버빌리티"
+    ]
+  },
+  {
+    "term_ko": "유성 롤러 스크루",
+    "term_en": "Planetary Roller Screw",
+    "def_ko": "나사산이 있는 여러 롤러가 축을 감싸 돌며 회전을 직선 운동으로 바꾸는 기구입니다. 볼 스크루보다 하중과 충격에 강해 휴머노이드 다리 관절에 쓰입니다.",
+    "see": [
+      "액추에이터"
+    ]
+  },
+  {
+    "term_ko": "백드라이버빌리티",
+    "term_en": "Backdrivability",
+    "def_ko": "출력 쪽에서 힘을 가했을 때 관절이 거꾸로 쉽게 돌아가는 성질입니다. 이 성질이 높을수록 부딪혔을 때 충격이 작고, 힘을 감지하기도 쉽습니다. 그래서 사람 곁에서 일해도 안전합니다.",
+    "see": [
+      "준직접구동",
+      "협동로봇"
+    ]
+  },
+  {
+    "term_ko": "영모멘트점",
+    "term_en": "Zero Moment Point (ZMP)",
+    "def_ko": "발바닥에 작용하는 힘의 회전 효과가 0이 되는 지점입니다. 이 점을 지지 영역(발이 바닥을 딛고 있는 범위) 안에 두면 로봇은 넘어지지 않습니다. 초기 휴머노이드의 보행은 이 원리로 설계되었습니다.",
+    "see": [
+      "모델 예측 제어"
+    ]
+  },
+  {
+    "term_ko": "모델 예측 제어",
+    "term_en": "Model Predictive Control (MPC)",
+    "def_ko": "로봇 동역학 모델(힘과 움직임의 관계를 나타낸 모델)로 가까운 미래를 예측하고, 매 순간 최적의 제어 입력을 다시 계산하는 방법입니다. 달리기와 점프처럼 빠른 동작에서 균형을 잡는 데 쓰입니다.",
+    "see": [
+      "전신 제어",
+      "영모멘트점"
+    ]
+  },
+  {
+    "term_ko": "전신 제어",
+    "term_en": "Whole-Body Control (WBC)",
+    "def_ko": "모든 관절을 한꺼번에 제어하는 방법입니다. 균형, 손 위치, 관절 한계 같은 여러 목표를 우선순위에 따라 동시에 만족시킵니다. 걸으면서 물건을 드는 동작에는 꼭 필요합니다.",
+    "see": [
+      "모델 예측 제어",
+      "자유도"
+    ]
+  },
+  {
+    "term_ko": "강화학습",
+    "term_en": "Reinforcement Learning (RL)",
+    "def_ko": "시행착오를 거치며 보상이 가장 커지는 행동 정책(상황마다 어떤 행동을 할지 정한 규칙)을 스스로 익히는 방법입니다. 로봇 분야에서는 주로 시뮬레이션 안에서 수천 개 환경을 동시에 돌려 보행을 학습시킵니다.",
+    "see": [
+      "심투리얼",
+      "모방학습"
+    ]
+  },
+  {
+    "term_ko": "심투리얼",
+    "term_en": "Sim-to-Real Transfer",
+    "def_ko": "시뮬레이션에서 학습한 정책을 실제 로봇에 옮겨 쓰는 기술입니다. 가상과 현실의 물리적 차이를 줄이는 것이 핵심 과제입니다.",
+    "see": [
+      "도메인 랜덤화",
+      "강화학습"
+    ]
+  },
+  {
+    "term_ko": "도메인 랜덤화",
+    "term_en": "Domain Randomization",
+    "def_ko": "시뮬레이션의 마찰, 질량, 지연, 조명 등을 무작위로 바꿔 가며 학습시키는 기법입니다. 이렇게 여러 조건을 미리 겪으며 학습한 정책은 현실의 낯선 조건에서도 잘 작동합니다.",
+    "see": [
+      "심투리얼"
+    ]
+  },
+  {
+    "term_ko": "VLA 모델",
+    "term_en": "Vision-Language-Action Model",
+    "def_ko": "영상과 언어 지시를 입력받아 로봇 동작을 직접 출력하는 AI 모델입니다. 대규모 시각언어 모델의 일반 지식을 로봇 행동으로 옮기는 것이 목표입니다.",
+    "see": [
+      "모방학습",
+      "월드 모델"
+    ]
+  },
+  {
+    "term_ko": "월드 모델",
+    "term_en": "World Model",
+    "def_ko": "어떤 행동을 하면 세상이 어떻게 바뀔지 예측하는 AI 모델입니다. 로봇 학습용 가상 데이터를 생성하거나 정책을 미리 평가하는 데 쓰입니다.",
+    "see": [
+      "VLA 모델"
+    ]
+  },
+  {
+    "term_ko": "원격조종",
+    "term_en": "Teleoperation",
+    "def_ko": "사람이 VR 장비나 조종 장치로 멀리서 로봇을 움직이는 방식입니다. 지금은 로봇 AI 학습 데이터를 얻는 주요 통로입니다. 상용화 초기에는 자율 기능의 부족한 부분을 보완하는 데도 쓰입니다.",
+    "see": [
+      "모방학습"
+    ]
+  },
+  {
+    "term_ko": "모방학습",
+    "term_en": "Imitation Learning (Behavior Cloning)",
+    "def_ko": "사람이 시연한 데이터를 보고 같은 행동을 따라 하도록 학습하는 방법입니다. 보상을 설계하기 어려운 조작 작업도 빠르게 가르칠 수 있습니다.",
+    "see": [
+      "원격조종",
+      "강화학습"
+    ]
+  },
+  {
+    "term_ko": "엔드이펙터",
+    "term_en": "End Effector",
+    "def_ko": "로봇 팔 끝에 달려 실제로 작업을 수행하는 장치입니다. 그리퍼, 흡착 패드, 용접 토치, 다섯 손가락 손이 모두 여기에 해당합니다.",
+    "see": [
+      "6축 힘토크 센서"
+    ]
+  },
+  {
+    "term_ko": "6축 힘토크 센서",
+    "term_en": "6-Axis Force/Torque Sensor",
+    "def_ko": "세 방향의 힘과 세 축의 회전력을 동시에 측정하는 센서입니다. 로봇 손목에 달아 조립, 연마, 충돌 감지에 씁니다.",
+    "see": [
+      "엔드이펙터"
+    ]
+  },
+  {
+    "term_ko": "관성 측정 장치",
+    "term_en": "Inertial Measurement Unit (IMU)",
+    "def_ko": "가속도계와 자이로스코프로 몸의 기울기와 회전 속도를 측정하는 센서입니다. 사람 귓속의 평형 기관처럼, 로봇이 균형을 잡을 때 쓰는 기본 정보를 줍니다.",
+    "see": [
+      "영모멘트점"
+    ]
+  },
+  {
+    "term_ko": "SLAM",
+    "term_en": "Simultaneous Localization and Mapping",
+    "def_ko": "로봇이 주변 지도를 그리면서 동시에 그 지도 안에서 자기 위치를 추정하는 기술입니다. AMR(자율이동로봇), 사족보행 로봇, 휴머노이드가 스스로 이동할 때 공통으로 쓰입니다."
+  },
+  {
+    "term_ko": "협동로봇",
+    "term_en": "Collaborative Robot (Cobot)",
+    "def_ko": "안전 울타리 없이 사람과 같은 공간에서 일하도록 설계된 로봇입니다. 사람과 닿을 때의 힘을 제한하거나, 사람이 다가오면 속도를 줄여 안전을 지킵니다.",
+    "see": [
+      "기능안전",
+      "백드라이버빌리티"
+    ]
+  },
+  {
+    "term_ko": "기능안전",
+    "term_en": "Functional Safety",
+    "def_ko": "부품이나 소프트웨어가 고장 나도 시스템이 위험하지 않은 상태를 유지하도록 보장하는 설계 체계입니다. ISO 13849, IEC 61508 같은 표준이 요구 수준과 검증 방법을 정합니다.",
+    "see": [
+      "협동로봇"
+    ]
+  },
+  {
+    "term_ko": "EtherCAT",
+    "term_en": "Ethernet for Control Automation Technology",
+    "def_ko": "이더넷을 기반으로 한 산업용 실시간 통신 규격입니다. 수십 개 관절 드라이버를 1ms 안팎의 주기로 동기화할 수 있어 로봇 내부 통신에 널리 쓰입니다.",
+    "see": [
+      "액추에이터"
+    ]
+  }
+]</script>
+  <script type="application/json" id="faq-data">[
+  {
+    "q_ko": "휴머노이드는 언제 우리 공장이나 물류센터에서 실제로 일하게 됩니까?",
+    "a_ko": "일부 기업에서는 이미 파일럿 형태로 일하고 있습니다. 어질리티의 Digit은 GXO, 셰플러 등 고객 현장에서 운용 시간을 쌓았습니다. 사람과 같은 공간에서 대규모로 일하는 단계는 2027~2030년 사이로 보는 시각이 많습니다. 현대차그룹은 메타플랜트에 2028년 부품 서열, 2030년 부품 조립 작업으로 아틀라스를 투입하겠다고 밝혔습니다. 지금은 후보 작업을 고르고 파일럿 조건을 설계할 때입니다."
+  },
+  {
+    "q_ko": "왜 굳이 사람 모양이어야 합니까? 바퀴나 고정형 팔이 더 효율적이지 않습니까?",
+    "a_ko": "특정 작업 하나만 보면 바퀴 로봇이나 고정형 팔이 대부분 더 저렴하고 빠르고 안정적입니다. 휴머노이드의 강점은 범용성입니다. 사람에 맞춘 계단, 문, 공구를 그대로 쓰고, 사람의 동작 데이터로 학습하기도 쉽습니다. 바닥이 평평하고 공정이 반복되는 현장이라면 AMR이나 협동로봇을 먼저 검토하는 편이 합리적입니다."
+  },
+  {
+    "q_ko": "휴머노이드와 사족보행 로봇의 가격은 어느 정도입니까?",
+    "a_ko": "가격은 제품마다 크게 다릅니다. 유니트리 G1은 2024년 공개 당시 9만 9천 위안(약 1만 6천 달러)부터였고, 1X NEO는 2만 달러 또는 월 499달러 구독으로 사전 주문을 받았습니다. 산업용은 대부분 가격이 비공개입니다. 실제 비용은 통합, 안전 평가, 유지보수, 가동률에서 갈리므로 총소유비용으로 비교해야 합니다."
+  },
+  {
+    "q_ko": "지금 휴머노이드 기술의 가장 큰 병목은 무엇입니까?",
+    "a_ko": "신뢰성입니다. 시연에서 한 번 성공하는 것과 현장에서 하루 수천 번 실패 없이 반복하는 것은 다릅니다. 그 밑에는 손의 내구성, 8시간 교대를 못 버티는 배터리, 동작 데이터 부족, 미확정 안전 표준이 있습니다. 하드웨어와 제도의 개선 속도가 AI보다 느립니다."
+  },
+  {
+    "q_ko": "경영 리더는 지금 무엇부터 해야 합니까?",
+    "a_ko": "먼저 작업을 동작 단위로 나눠 이동, 집기, 놓기, 판단 가운데 어디에 시간이 드는지 측정합니다. 정형화된 작업은 AMR과 협동로봇으로 자동화하고, 사람의 공간을 그대로 써야 하는 작업만 휴머노이드 파일럿 후보로 남깁니다. 시작 전에 성공률, 사람 개입 빈도, 시간당 처리량 기준을 정하고, 현장 데이터와 안전 평가 기록을 다음 도입의 기준으로 쌓아 둡니다."
+  }
+]</script>
+</section>
+
+<style>
+#glossary{color:var(--text);font-family:var(--f-body)}
+
+/* head: title left, search right (no sticky) */
+#glossary .gl-head{display:grid;grid-template-columns:1fr;gap:32px;align-items:end}
+#glossary .gl-search{max-width:560px}
+#glossary .h-display{word-break:keep-all}
+#glossary .lead{word-break:keep-all}
+
+#glossary .gl-search-label{display:block;margin-bottom:10px;font:600 14px/1.4 var(--f-body);color:var(--text)}
+#glossary .gl-field{
+  position:relative;display:flex;align-items:center;gap:12px;
+  padding:0 8px 0 14px;height:52px;border:1px solid var(--line-2);border-radius:var(--radius);
+  background:var(--bg);transition:border-color .25s var(--ease);
+}
+#glossary .gl-field:focus-within{border-color:var(--accent);outline:1px solid var(--accent);outline-offset:0}
+#glossary .gl-ico{flex:0 0 18px;width:18px;height:18px;fill:none;stroke:var(--muted);stroke-width:1.5;stroke-linecap:round}
+#glossary .gl-field input{
+  flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;color:var(--text);
+  font-family:var(--f-body);font-size:16px;-webkit-appearance:none;appearance:none;
+}
+#glossary .gl-field input::placeholder{color:var(--dim)}
+#glossary .gl-field input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+#glossary .gl-clear{
+  flex:0 0 auto;padding:7px 10px;border:1px solid var(--line-2);border-radius:2px;background:transparent;
+  color:var(--muted);font:500 13px/1 var(--f-body);cursor:pointer;
+}
+#glossary .gl-clear:hover{color:var(--text);border-color:var(--muted)}
+#glossary .gl-status{margin:10px 0 0;font:500 13px/1.4 var(--f-mono);color:var(--dim);font-variant-numeric:tabular-nums}
+#glossary .gl-status b{font-weight:600;color:var(--accent)}
+
+/* thumb index: ㄱ to ㅎ, then Latin */
+#glossary .gl-index{display:flex;flex-wrap:wrap;align-items:stretch;margin:clamp(40px,4vw,56px) 0 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line)}
+#glossary .gl-jump{
+  flex:0 0 auto;min-width:44px;height:46px;padding:0 10px;border:0;border-right:1px solid var(--line);background:transparent;
+  font:700 17px/1 var(--f-display);color:var(--text);cursor:pointer;transition:color .2s var(--ease),background .2s var(--ease);
+}
+#glossary .gl-jump:first-child{border-left:1px solid var(--line)}
+#glossary .gl-jump.is-latin{padding:0 14px;font:500 14px/1 var(--f-body)}
+#glossary .gl-jump:hover:not(:disabled){background:var(--surface);color:var(--accent-2)}
+#glossary .gl-jump:disabled{font-weight:500;color:var(--dim);cursor:default;text-decoration:line-through;text-decoration-color:var(--line-2)}
+#glossary .gl-jump:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+
+/* dictionary: ruled multi-column setting */
+#glossary .gl-dict{margin-top:8px;columns:1;column-gap:48px;column-rule:1px solid var(--line);column-fill:balance}
+@media (min-width:720px){#glossary .gl-dict{columns:2}}
+@media (min-width:1180px){#glossary .gl-dict{columns:3}}
+#glossary .gl-ent{break-inside:avoid;padding:14px 0 16px;border-bottom:1px solid var(--line);scroll-margin-top:calc(var(--nav-h) + 24px);outline:1px solid transparent;outline-offset:6px;transition:outline-color .6s var(--ease)}
+#glossary .gl-ent[hidden]{display:none}
+#glossary .gl-ent.is-last{border-bottom:0}
+#glossary .gl-ent.is-hit{outline-color:var(--accent)}
+#glossary .gl-ini{
+  display:flex;align-items:baseline;gap:12px;margin:0;padding-bottom:8px;border-bottom:1px solid var(--line-2);
+  font:700 26px/1 var(--f-display);letter-spacing:-.02em;color:var(--accent);
+}
+#glossary .gl-ini.is-latin{font:700 17px/1.6 var(--f-body);letter-spacing:-.01em}
+#glossary .gl-ini small{margin-left:auto;font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--dim)}
+#glossary .gl-ent:has(.gl-ini){padding-top:16px}
+#glossary .gl-ent:has(.gl-ini) .gl-ini{margin:0 0 12px}
+#glossary .gl-term{margin:0;font:700 20px/1.35 var(--f-display);letter-spacing:-.02em;color:var(--text);word-break:keep-all}
+#glossary .gl-en{margin:3px 0 0;font:500 13px/1.5 var(--f-mono);letter-spacing:0;color:var(--dim)}
+#glossary .gl-def{margin:8px 0 0;font-size:16px;line-height:1.66;color:var(--muted);word-break:keep-all}
+#glossary .gl-see{font-size:15px;color:var(--dim);white-space:normal}
+#glossary .gl-see a,#glossary .gl-xref{color:var(--steel-ink);text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px;transition:color .2s var(--ease),text-decoration-color .2s var(--ease)}
+#glossary .gl-see a:hover,#glossary .gl-xref:hover{color:var(--accent-2);text-decoration-color:var(--accent)}
+#glossary .gl-nw{white-space:nowrap}
+#glossary .gl-see i{font-style:normal;margin:0 6px 0 2px;color:var(--accent)}
+#glossary mark{background:color-mix(in srgb,var(--accent) 30%,transparent);color:var(--text);border-radius:2px;padding:0 1px}
+#glossary .gl-empty{margin:24px 0 0;padding:40px 24px;border:1px solid var(--line);border-radius:var(--radius);text-align:center;font-size:16px;color:var(--muted);word-break:keep-all}
+
+/* FAQ: ruled list, serif questions, 17px answers */
+#glossary .gl-faq-block{display:grid;grid-template-columns:1fr;gap:28px;margin-top:clamp(80px,8vw,120px);padding-top:28px;border-top:1px solid var(--line-2)}
+@media (min-width:1080px){#glossary .gl-faq-block{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(48px,6vw,96px)}}
+#glossary .gl-sub{margin:0;font:700 clamp(28px,2.8vw,40px)/1.25 var(--f-display);letter-spacing:-.02em;color:var(--text)}
+#glossary .gl-faq-lead{margin:16px 0 0;max-width:420px;font-size:16px;line-height:1.75;color:var(--muted);word-break:keep-all}
+#glossary .gl-faq{border-top:1px solid var(--line-2)}
+#glossary .gl-qa{border-bottom:1px solid var(--line)}
+#glossary .gl-qh{margin:0;font:inherit}
+#glossary .gl-q{
+  display:grid;grid-template-columns:52px 1fr 24px;gap:16px;align-items:start;width:100%;
+  padding:24px 0;border:0;background:transparent;color:var(--text);text-align:left;cursor:pointer;
+  scroll-margin-top:calc(var(--nav-h) + 32px);
+}
+#glossary .gl-q:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px}
+#glossary .gl-qn{padding-top:5px;font:600 13px/1.4 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--dim)}
+#glossary .gl-qa.is-open .gl-qn{color:var(--accent)}
+#glossary .gl-qt{font:700 clamp(18px,1.55vw,21px)/1.5 var(--f-display);letter-spacing:-.02em;word-break:keep-all;text-wrap:pretty}
+#glossary .gl-q:hover .gl-qt{color:var(--accent-2)}
+#glossary .gl-pm{font:400 24px/1.2 var(--f-body);color:var(--muted);text-align:center}
+#glossary .gl-qa.is-open .gl-pm{color:var(--accent)}
+#glossary .gl-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+#glossary .gl-qa.is-open .gl-a{grid-template-rows:1fr}
+#glossary .gl-a-in{overflow:hidden}
+#glossary .gl-a p{
+  margin:0;padding:0 40px 28px 68px;max-width:none;
+  font-size:17px;line-height:1.8;color:var(--muted);word-break:keep-all;
+  opacity:0;transition:opacity .35s var(--ease);
+}
+#glossary .gl-qa.is-open .gl-a p{opacity:1;transition-delay:.08s}
+@media (max-width:560px){
+  #glossary .gl-index{margin-top:32px}
+  #glossary .gl-jump{min-width:0;flex:1 0 12.5%;height:44px;padding:0 4px;font-size:16px}
+  #glossary .gl-jump.is-latin{flex:1 0 100%;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+  #glossary .gl-jump:nth-child(8n+1){border-left:1px solid var(--line)}
+  #glossary .gl-q{grid-template-columns:1fr 24px;gap:6px 12px;padding:20px 0}
+  #glossary .gl-qn{grid-column:1 / -1;padding-top:0}
+  #glossary .gl-pm{grid-column:2;grid-row:2}
+  #glossary .gl-a p{padding:0 0 24px}
+}
+@media (prefers-reduced-motion:reduce){
+  #glossary .gl-a,#glossary .gl-a p,#glossary .gl-ent,#glossary .gl-field,#glossary .gl-jump{transition:none!important}
+}
+</style>
+
+<script>
+(function(){
+  var root=document.getElementById('glossary');
+  if(!root) return;
+  var terms,faq;
+  try{
+    terms=JSON.parse(document.getElementById('glossary-data').textContent);
+    faq=JSON.parse(document.getElementById('faq-data').textContent);
+  }catch(e){ return; }
+
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function reEsc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+  function norm(s){return String(s||'').normalize('NFC').toLowerCase();}
+  function pad(n){return (n<10?'0':'')+n;}
+  function refresh(ms){
+    if(!window.ScrollTrigger) return;
+    clearTimeout(refreshTimer);
+    refreshTimer=setTimeout(function(){ window.ScrollTrigger && ScrollTrigger.refresh(); },ms);
+  }
+  var refreshTimer=0;
+
+  /* ---- 자모 머리글 ---- */
+  var CHO='ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ', FOLD={'ㄲ':'ㄱ','ㄸ':'ㄷ','ㅃ':'ㅂ','ㅆ':'ㅅ','ㅉ':'ㅈ'};
+  var HEADS=['ㄱ','ㄴ','ㄷ','ㄹ','ㅁ','ㅂ','ㅅ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ','영문·숫자'];
+  var LATIN='영문·숫자';
+  function initial(s){
+    var c=String(s).normalize('NFC').charCodeAt(0);
+    if(c>=0xAC00&&c<=0xD7A3){var j=CHO.charAt(Math.floor((c-0xAC00)/588));return FOLD[j]||j;}
+    return LATIN;
+  }
+
+  /* 가나다순. 영문·숫자 표제어는 끝에 둡니다 */
+  var list=terms.map(function(t,i){return {t:t,i:i,g:initial(t.term_ko)};});
+  list.sort(function(a,b){
+    var la=a.g===LATIN?1:0, lb=b.g===LATIN?1:0;
+    return la-lb || a.t.term_ko.localeCompare(b.t.term_ko,'ko');
+  });
+  var byKo={}; list.forEach(function(e){byKo[e.t.term_ko]=e;});
+  function tid(e){return 'gl-t-'+e.i;}
+
+  /* ---- 상호참조: 정의에 나온 표제어 + data의 see 필드(표제어끼리의 편집 참조) ---- */
+  var keys=list.map(function(e){return e.t.term_ko;});
+  function seeOf(e){
+    var out=[], ko=e.t.term_ko;
+    keys.forEach(function(k){ if(k!==ko && e.t.def_ko.indexOf(k)!==-1) out.push(k); });
+    (e.t.see||[]).forEach(function(k){ if(byKo[k] && out.indexOf(k)===-1) out.push(k); });
+    return out;
+  }
+
+  /* ---- render dictionary ---- */
+  var dict=root.querySelector('[data-gl-dict]');
+  var empty=root.querySelector('[data-gl-empty]');
+  var shownEl=root.querySelector('[data-gl-shown]');
+  [].forEach.call(root.querySelectorAll('[data-gl-total]'),function(el){el.textContent=terms.length;});
+  [].forEach.call(root.querySelectorAll('[data-gl-faq-total]'),function(el){el.textContent=faq.length;});
+  shownEl.textContent=terms.length;
+
+  dict.innerHTML=list.map(function(e){
+    var see=seeOf(e);
+    return '<article class="gl-ent" tabindex="-1" data-g="'+esc(e.g)+'" id="'+tid(e)+'">'+
+      '<h4 class="gl-term" data-f="term_ko">'+esc(e.t.term_ko)+'</h4>'+
+      '<p class="gl-en" lang="en" data-f="term_en">'+esc(e.t.term_en)+'</p>'+
+      '<p class="gl-def"><span data-f="def_ko">'+esc(e.t.def_ko)+'</span>'+
+      (see.length?' <span class="gl-see">'+see.map(function(k,j){var l='<a href="#'+tid(byKo[k])+'" data-gl-ref>'+esc(k)+'</a>';return j?l:'<span class="gl-nw"><i aria-hidden="true">→</i><span class="sr-only">참조 </span>'+l+'</span>';}).join(', ')+'</span>':'')+
+      '</p>'+
+    '</article>';
+  }).join('');
+  var ents=[].slice.call(dict.children);
+
+  /* group heads: one node per group, moved into the first visible entry */
+  var groups={}, order=[];
+  ents.forEach(function(el,k){
+    var g=list[k].g;
+    if(!groups[g]){groups[g]={els:[],head:document.createElement('h3')};order.push(g);}
+    groups[g].els.push(el);
+  });
+  order.forEach(function(g){
+    var h=groups[g].head;
+    h.className='gl-ini'+(g===LATIN?' is-latin':'');
+    h.innerHTML=esc(g)+'<small></small>';
+  });
+
+  /* thumb index */
+  var idx=root.querySelector('[data-gl-index]');
+  idx.innerHTML=HEADS.map(function(g){
+    return '<button type="button" class="gl-jump'+(g===LATIN?' is-latin':'')+'" data-gl-jump="'+esc(g)+'">'+esc(g)+'</button>';
+  }).join('');
+  var jumps=[].slice.call(idx.children);
+
+  var hay=list.map(function(e){var t=e.t;return norm(t.term_ko+' '+t.term_en+' '+t.def_ko)+' '+norm(t.term_ko).replace(/\s+/g,'')+' '+norm(t.term_en).replace(/\s+/g,'');});
+  function highlight(text,tokens){
+    if(!tokens.length) return esc(text);
+    var re=new RegExp('('+tokens.map(reEsc).sort(function(a,b){return b.length-a.length;}).join('|')+')','gi');
+    return String(text).split(re).map(function(part,i){return i%2?'<mark>'+esc(part)+'</mark>':esc(part);}).join('');
+  }
+
+  function layoutGroups(){
+    var lastVisible=null;
+    order.forEach(function(g){
+      var G=groups[g], vis=G.els.filter(function(el){return !el.hidden;});
+      G.vis=vis.length;
+      if(vis.length){ vis[0].insertBefore(G.head,vis[0].firstChild); G.head.lastChild.textContent=vis.length; }
+      else if(G.head.parentNode){ G.head.parentNode.removeChild(G.head); }
+      G.els.forEach(function(el){el.classList.remove('is-last');});
+      if(vis.length) vis[vis.length-1].classList.add('is-last');
+    });
+    jumps.forEach(function(b){ var G=groups[b.getAttribute('data-gl-jump')]; b.disabled=!(G&&G.vis); });
+  }
+
+  var input=root.querySelector('#gl-q');
+  var clearBtn=root.querySelector('[data-gl-clear]');
+  var revealed=false;
+
+  function apply(){
+    var raw=norm(input.value).trim();
+    var tokens=raw?raw.split(/\s+/).filter(Boolean):[];
+    var n=0;
+    if(!revealed && tokens.length) finishReveal();
+    ents.forEach(function(el,i){
+      var ok=tokens.every(function(tk){return hay[i].indexOf(tk)!==-1;});
+      el.hidden=!ok;
+      if(ok){
+        n++;
+        var t=list[i].t;
+        el.querySelectorAll('[data-f]').forEach(function(f){f.innerHTML=highlight(t[f.getAttribute('data-f')],tokens);});
+      }
+    });
+    layoutGroups();
+    shownEl.textContent=n;
+    empty.hidden=n!==0;
+    clearBtn.hidden=!input.value;
+    refresh(250);
+  }
+  input.addEventListener('input',apply);
+  input.addEventListener('keydown',function(e){if(e.key==='Escape'&&input.value){input.value='';apply();}});
+  clearBtn.addEventListener('click',function(){input.value='';apply();input.focus();});
+  layoutGroups();
+
+  /* scroll helpers */
+  var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function navH(){return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'))||64;}
+  function goTo(el,flash){
+    if(!revealed) finishReveal();
+    var y=el.getBoundingClientRect().top+window.scrollY-navH()-24;
+    window.scrollTo({top:Math.max(0,y),behavior:RM?'auto':'smooth'});
+    /* a ScrollTrigger refresh can cut a smooth scroll short; finish the jump once it settles */
+    setTimeout(function(){
+      var y2=el.getBoundingClientRect().top+window.scrollY-navH()-24;
+      if(Math.abs(window.scrollY-y2)>4) window.scrollTo({top:Math.max(0,y2),behavior:'auto'});
+    },900);
+    if(flash){
+      el.classList.add('is-hit');
+      try{el.focus({preventScroll:true});}catch(_){}
+      setTimeout(function(){el.classList.remove('is-hit');},1600);
+    }
+  }
+  idx.addEventListener('click',function(e){
+    var b=e.target.closest('[data-gl-jump]'); if(!b||b.disabled) return;
+    var G=groups[b.getAttribute('data-gl-jump')]; if(!G||!G.head.parentNode) return;
+    goTo(G.head.parentNode,false);
+  });
+  root.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[data-gl-ref]'); if(!a) return;
+    var el=document.getElementById(a.getAttribute('href').slice(1)); if(!el) return;
+    e.preventDefault();
+    if(el.hidden){ input.value=''; apply(); clearTimeout(refreshTimer); window.ScrollTrigger && ScrollTrigger.refresh(); }
+    goTo(el,true);
+  });
+
+  /* ---- FAQ accordion ---- */
+  var faqWrap=root.querySelector('[data-gl-faq]');
+  var linkRe=new RegExp('('+keys.slice().sort(function(a,b){return b.length-a.length;}).map(reEsc).join('|')+')','g');
+  function linkTerms(text){
+    var used={};
+    return String(text).split(linkRe).map(function(part,i){
+      if(i%2 && byKo[part] && !used[part]){ used[part]=1; return '<a class="gl-xref" href="#'+tid(byKo[part])+'" data-gl-ref>'+esc(part)+'</a>'; }
+      return esc(part);
+    }).join('');
+  }
+  faqWrap.innerHTML=faq.map(function(f,i){
+    var id='gl-faq-'+(i+1);
+    return '<div class="gl-qa">'+
+      '<h4 class="gl-qh"><button type="button" class="gl-q" aria-expanded="false" aria-controls="'+id+'" id="'+id+'-q">'+
+        '<span class="gl-qn">Q.'+pad(i+1)+'</span><span class="gl-qt">'+esc(f.q_ko)+'</span><span class="gl-pm" aria-hidden="true">+</span>'+
+      '</button></h4>'+
+      '<div class="gl-a" id="'+id+'" role="region" aria-labelledby="'+id+'-q"><div class="gl-a-in"><p>'+linkTerms(f.a_ko)+'</p></div></div>'+
+    '</div>';
+  }).join('');
+  var qas=[].slice.call(faqWrap.children);
+  function setOpen(qa,open){
+    qa.classList.toggle('is-open',open);
+    qa.querySelector('.gl-q').setAttribute('aria-expanded',open?'true':'false');
+    qa.querySelector('.gl-pm').textContent=open?'−':'+';
+    qa.querySelector('.gl-a').inert=!open;
+  }
+  /* 마지막 질문(리더의 첫 행동)은 펼쳐 둡니다. 3분 요약의 #gl-faq-5-q 링크가 이 자리로 옵니다 */
+  qas.forEach(function(qa,i){
+    setOpen(qa,i===qas.length-1);
+    qa.querySelector('.gl-q').addEventListener('click',function(){
+      setOpen(qa,!qa.classList.contains('is-open'));
+      refresh(600);
+    });
+  });
+  function openFromHash(h){
+    var m=/^#?(gl-faq-\d+)(-q)?$/.exec(h||''); if(!m) return false;
+    var b=document.getElementById(m[1]+'-q'); if(!b) return false;
+    var qa=b.closest('.gl-qa'); if(!qa) return false;
+    if(!qa.classList.contains('is-open')){ setOpen(qa,true); refresh(600); }
+    return true;
+  }
+  /* links like #gl-faq-5-q (e.g. from the 3-minute brief) open that answer */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#gl-faq-"]'); if(!a) return;
+    openFromHash(a.getAttribute('href'));
+  });
+  openFromHash(location.hash);
+  window.addEventListener('hashchange',function(){openFromHash(location.hash);});
+
+  /* ---- reveal ---- */
+  var gsap=window.gsap, ST=window.ScrollTrigger;
+  var batchTriggers=[];
+  function finishReveal(){
+    revealed=true;
+    if(!gsap) return;
+    batchTriggers.forEach(function(t){t.kill();});
+    gsap.killTweensOf(ents);
+    gsap.set(ents,{clearProps:'opacity,transform'});
+  }
+  if(RM || !gsap || !ST){ revealed=true; return; }
+  gsap.registerPlugin(ST);
+  gsap.from(root.querySelectorAll('.gl-head-text,.gl-search,.gl-index'),{
+    opacity:0,y:20,duration:.8,ease:'power3.out',stagger:.08,
+    scrollTrigger:{trigger:root,start:'top 78%',once:true}
+  });
+  gsap.set(ents,{opacity:0});
+  batchTriggers=ST.batch(ents,{
+    start:'top 92%',once:true,
+    onEnter:function(b){gsap.to(b,{opacity:1,duration:.7,ease:'power2.out',stagger:.04,overwrite:true});}
+  });
+  var fb=root.querySelector('.gl-faq-block');
+  gsap.from(fb.querySelectorAll('.gl-faq-head,.gl-qa'),{
+    opacity:0,y:20,duration:.8,ease:'power3.out',stagger:.06,
+    scrollTrigger:{trigger:fb,start:'top 80%',once:true}
+  });
+})();
+</script>

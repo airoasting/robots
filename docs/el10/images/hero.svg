@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="hero-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4CC9F0"/>
+      <stop offset="1" stop-color="#C9F1FD"/>
+    </linearGradient>
+    <linearGradient id="hero-grass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06D6A0"/>
+      <stop offset="1" stop-color="#05BF8F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- SKY -->
+  <rect x="0" y="0" width="800" height="450" fill="url(#hero-sky)"/>
+  <!-- rainbow -->
+  <g fill="none" stroke-width="16" opacity="0.55">
+    <path d="M90 380 A330 330 0 0 1 750 380" stroke="#FF6B6B"/>
+    <path d="M106 380 A314 314 0 0 1 734 380" stroke="#FF9F1C"/>
+    <path d="M122 380 A298 298 0 0 1 718 380" stroke="#FFD23F"/>
+    <path d="M138 380 A282 282 0 0 1 702 380" stroke="#06D6A0"/>
+    <path d="M154 380 A266 266 0 0 1 686 380" stroke="#9B5DE5"/>
+  </g>
+  <!-- sun -->
+  <g stroke="#2B2D42" stroke-width="5" stroke-linecap="round">
+    <path d="M720 22 L720 8 M720 138 L720 152 M662 80 L648 80 M778 80 L792 80 M679 39 L669 29 M761 121 L771 131 M761 39 L771 29 M679 121 L669 131"/>
+  </g>
+  <circle cx="720" cy="80" r="40" fill="#FFD23F" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M748 52 A40 40 0 0 1 720 120 A34 34 0 0 0 748 52 Z" fill="#FF9F1C"/>
+  <ellipse cx="704" cy="64" rx="10" ry="6" fill="#FFFFFF" opacity="0.8" transform="rotate(-30 704 64)"/>
+  <circle cx="708" cy="80" r="3.5" fill="#2B2D42"/>
+  <circle cx="732" cy="80" r="3.5" fill="#2B2D42"/>
+  <path d="M710 92 Q720 100 730 92" stroke="#2B2D42" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- clouds -->
+  <path d="M60 110 Q56 86 80 84 Q88 62 112 70 Q128 56 144 74 Q166 74 164 96 Q176 110 156 116 L70 116 Q56 116 60 110 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M74 112 L154 112 Q164 110 160 102 Q150 108 74 106 Z" fill="#E9ECEF"/>
+  <path d="M500 80 Q496 60 518 58 Q526 40 548 46 Q562 34 578 50 Q598 50 596 70 Q606 82 588 86 L510 86 Q496 86 500 80 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M512 82 L586 82 Q596 80 592 74 Q580 78 512 76 Z" fill="#E9ECEF"/>
+  <path d="M250 150 Q248 136 262 134 Q268 120 284 126 Q296 118 304 132 Q318 132 316 146 Q322 154 310 156 L258 156 Q248 156 250 150 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- GROUND -->
+  <path d="M0 378 Q200 350 400 372 Q600 394 800 358 L800 450 L0 450 Z" fill="url(#hero-grass)" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M0 430 Q220 412 420 428 Q620 444 800 418 L800 450 L0 450 Z" fill="#04A57B"/>
+  <!-- grass tufts -->
+  <path d="M30 396 L36 384 L42 396 M300 380 L306 368 L312 380 M560 398 L566 386 L572 398 M770 380 L776 368 L782 380" stroke="#2B2D42" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- flowers -->
+  <circle cx="150" cy="420" r="7" fill="#FF6B6B" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="150" cy="420" r="2.5" fill="#FFD23F"/>
+  <circle cx="320" cy="430" r="7" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="320" cy="430" r="2.5" fill="#FF9F1C"/>
+  <circle cx="560" cy="432" r="7" fill="#9B5DE5" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="560" cy="432" r="2.5" fill="#FFF8E7"/>
+  <!-- bush right -->
+  <path d="M722 410 Q716 380 742 378 Q752 356 774 366 Q796 362 798 388 Q808 404 792 412 Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M780 372 Q796 374 796 390 Q800 404 790 408 L776 408 Q790 394 780 372 Z" fill="#04A57B"/>
+  <circle cx="748" cy="392" r="4" fill="#FF6B6B"/>
+  <circle cx="770" cy="384" r="4" fill="#FF6B6B"/>
+
+  <!-- ground shadows -->
+  <ellipse cx="420" cy="414" rx="112" ry="13" fill="#2B2D42" opacity="0.2"/>
+  <ellipse cx="210" cy="414" rx="48" ry="8" fill="#2B2D42" opacity="0.2"/>
+  <ellipse cx="88" cy="404" rx="44" ry="8" fill="#2B2D42" opacity="0.2"/>
+  <ellipse cx="650" cy="414" rx="52" ry="9" fill="#2B2D42" opacity="0.2"/>
+
+  <!-- ============ FRIEND 1: little orange robot (left) ============ -->
+  <!-- legs -->
+  <rect x="70" y="372" width="14" height="24" rx="4" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <rect x="94" y="372" width="14" height="24" rx="4" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <path d="M64 402 Q64 392 76 392 L86 392 L86 404 Z" fill="#9B5DE5" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M92 404 L92 392 L102 392 Q114 392 114 402 Z" fill="#9B5DE5" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <!-- arms up cheering -->
+  <path d="M64 340 Q46 326 44 300" stroke="#2B2D42" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M64 340 Q46 326 44 300" stroke="#FF9F1C" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M114 340 Q132 326 134 300" stroke="#2B2D42" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M114 340 Q132 326 134 300" stroke="#FF9F1C" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="44" cy="296" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="134" cy="296" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <!-- body -->
+  <rect x="58" y="330" width="62" height="48" rx="14" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M104 333 Q116 334 116 346 L116 364 Q116 375 104 375 Z" fill="#E8850A"/>
+  <rect x="72" y="342" width="28" height="18" rx="4" fill="#FFF8E7" stroke="#2B2D42" stroke-width="3"/>
+  <path d="M78 352 L84 352 L86 346 L90 356 L92 352 L96 352" stroke="#FF6B6B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- head -->
+  <rect x="52" y="276" width="74" height="56" rx="20" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M108 279 Q122 282 122 298 L122 312 Q122 328 108 328 Z" fill="#E9ECEF"/>
+  <line x1="89" y1="276" x2="89" y2="260" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="89" cy="256" r="7" fill="#FF6B6B" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="74" cy="302" r="10" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="104" cy="302" r="10" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="75" cy="304" r="5.5" fill="#2B2D42"/>
+  <circle cx="105" cy="304" r="5.5" fill="#2B2D42"/>
+  <circle cx="77" cy="301" r="2" fill="#FFFFFF"/>
+  <circle cx="107" cy="301" r="2" fill="#FFFFFF"/>
+  <path d="M82 316 Q89 324 96 316 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="64" cy="316" rx="5" ry="3" fill="#FF6B6B" opacity="0.8"/>
+  <ellipse cx="114" cy="316" rx="5" ry="3" fill="#FF6B6B" opacity="0.8"/>
+
+  <!-- ============ HIGH-FIVE BURST ============ -->
+  <path d="M272 168 L282 192 L306 180 L296 204 L322 212 L296 222 L308 246 L282 234 L272 258 L262 234 L238 246 L248 222 L222 212 L248 204 L238 180 L262 192 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M272 186 L278 202 L294 196 L288 210 L304 214 L288 220 L294 234 L278 228 L272 242 Z" fill="#E9ECEF"/>
+
+  <!-- ============ CHILD ============ -->
+  <!-- legs -->
+  <rect x="190" y="352" width="16" height="50" rx="6" fill="#3A5BA0" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="214" y="352" width="16" height="50" rx="6" fill="#3A5BA0" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M180 412 Q180 398 196 398 L208 398 L208 414 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M212 414 L212 398 L226 398 Q242 398 242 412 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M184 408 L206 408 M216 408 L238 408" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <!-- down arm (left) -->
+  <path d="M186 306 Q170 324 168 344" stroke="#2B2D42" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M186 306 Q170 324 168 344" stroke="#FFD9B8" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- raised arm toward robot -->
+  <path d="M234 304 Q254 280 262 236" stroke="#2B2D42" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M234 304 Q254 280 262 236" stroke="#FFD9B8" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <!-- child palm -->
+  <path d="M250 236 Q248 216 256 214 L256 204 Q260 198 264 204 L266 200 Q270 196 274 202 L276 206 Q280 204 282 210 L280 232 Q276 244 262 244 Q252 244 250 236 Z" fill="#FFD9B8" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <!-- shirt -->
+  <path d="M182 300 Q182 284 200 284 L220 284 Q238 284 238 300 L240 356 L180 356 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M226 288 Q236 292 236 304 L237 352 L226 352 Z" fill="#F2BE1A"/>
+  <path d="M182 300 L172 318 L186 324 L190 306 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M238 300 L250 288 L258 300 L242 312 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <!-- star on shirt -->
+  <path d="M210 306 L214 315 L224 316 L216 322 L219 332 L210 326 L201 332 L204 322 L196 316 L206 315 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- backpack straps -->
+  <path d="M190 288 L188 340 M230 288 L232 340" stroke="#9B5DE5" stroke-width="5" stroke-linecap="round"/>
+  <!-- head -->
+  <circle cx="212" cy="246" r="42" fill="#FFD9B8" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M236 216 Q254 236 248 262 Q240 282 216 288 Q240 270 240 246 Q240 226 236 216 Z" fill="#F2C29E"/>
+  <!-- hair -->
+  <path d="M170 248 Q164 206 206 200 Q226 194 246 208 Q258 220 254 240 Q240 226 222 230 Q226 220 216 216 Q208 230 186 232 Q176 236 170 248 Z" fill="#5A3A29" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="210" rx="10" ry="4" fill="#8A6047" transform="rotate(-15 200 210)"/>
+  <!-- ears -->
+  <circle cx="171" cy="252" r="7" fill="#FFD9B8" stroke="#2B2D42" stroke-width="4"/>
+  <!-- eyes -->
+  <circle cx="204" cy="252" r="9" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="232" cy="252" r="9" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="206" cy="253" r="5" fill="#2B2D42"/>
+  <circle cx="234" cy="253" r="5" fill="#2B2D42"/>
+  <circle cx="208" cy="250" r="2" fill="#FFFFFF"/>
+  <circle cx="236" cy="250" r="2" fill="#FFFFFF"/>
+  <ellipse cx="196" cy="268" rx="6" ry="3.5" fill="#FF6B6B" opacity="0.7"/>
+  <ellipse cx="244" cy="268" rx="5" ry="3.5" fill="#FF6B6B" opacity="0.7"/>
+  <!-- big open smile -->
+  <path d="M210 266 Q220 284 232 266 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M212 268 L230 268" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ============ ROBO (mascot) ============ -->
+  <!-- legs -->
+  <rect x="374" y="328" width="34" height="66" rx="10" fill="#4CC9F0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="432" y="328" width="34" height="66" rx="10" fill="#4CC9F0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="396" y="332" width="9" height="58" rx="4" fill="#2FA8D0"/>
+  <rect x="454" y="332" width="9" height="58" rx="4" fill="#2FA8D0"/>
+  <circle cx="391" cy="360" r="7" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="449" cy="360" r="7" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+  <!-- boots -->
+  <path d="M358 414 Q356 390 382 388 L410 388 L410 414 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M430 414 L430 388 L458 388 Q484 390 482 414 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M398 392 L406 392 L406 410 L398 410 Z" fill="#F2BE1A"/>
+  <path d="M466 396 Q476 400 478 410 L466 410 Z" fill="#F2BE1A"/>
+  <ellipse cx="376" cy="396" rx="7" ry="3" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="444" cy="396" rx="7" ry="3" fill="#FFFFFF" opacity="0.8"/>
+
+  <!-- left arm reaching to high-five -->
+  <path d="M352 252 Q318 250 296 222" stroke="#2B2D42" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <path d="M352 252 Q318 250 296 222" stroke="#4CC9F0" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <path d="M340 260 Q318 258 302 240" stroke="#2FA8D0" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="324" cy="246" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <!-- robo palm (open) -->
+  <path d="M276 228 Q266 220 270 208 L272 190 Q276 182 282 188 L284 182 Q288 176 294 182 L296 186 Q302 182 306 190 L304 214 Q302 230 290 234 Q282 234 276 228 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M298 196 L304 196 L302 216 Q300 226 292 230 Q298 220 298 196 Z" fill="#F2BE1A"/>
+
+  <!-- right arm waving up -->
+  <path d="M488 252 Q530 240 546 180" stroke="#2B2D42" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <path d="M488 252 Q530 240 546 180" stroke="#4CC9F0" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <path d="M500 258 Q536 248 554 196" stroke="#2FA8D0" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="526" cy="236" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <!-- waving hand -->
+  <path d="M532 176 Q526 156 538 150 L538 136 Q542 128 548 134 L550 128 Q556 122 560 130 L562 134 Q568 130 570 138 L568 166 Q566 180 552 182 Q538 184 532 176 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M562 144 L568 144 L566 166 Q564 176 556 180 Q562 168 562 144 Z" fill="#F2BE1A"/>
+  <path d="M584 136 Q594 150 588 166 M598 128 Q612 150 602 174" stroke="#2B2D42" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- body -->
+  <rect x="346" y="218" width="148" height="122" rx="32" fill="#4CC9F0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M470 222 Q490 226 490 250 L490 310 Q490 336 466 336 L460 336 Q478 320 478 300 L478 250 Q478 232 470 222 Z" fill="#2FA8D0"/>
+  <ellipse cx="372" cy="234" rx="12" ry="5" fill="#FFFFFF" opacity="0.8"/>
+  <!-- belly panel -->
+  <rect x="376" y="244" width="88" height="72" rx="18" fill="#FFD23F" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M448 248 Q460 250 460 264 L460 298 Q460 312 446 312 Z" fill="#F2BE1A"/>
+  <rect x="390" y="256" width="52" height="32" rx="8" fill="#2B2D42"/>
+  <path d="M416 262 Q416 258 420 258 Q424 258 424 263 Q424 258 428 258 Q432 258 432 262 Q432 270 424 276 Q416 270 416 262 Z" fill="#FF6B6B" transform="translate(-8 0)"/>
+  <rect x="396" y="280" width="40" height="4" rx="2" fill="#06D6A0"/>
+  <circle cx="400" cy="300" r="5" fill="#FF6B6B" stroke="#2B2D42" stroke-width="2.5"/>
+  <circle cx="416" cy="300" r="5" fill="#06D6A0" stroke="#2B2D42" stroke-width="2.5"/>
+  <circle cx="432" cy="300" r="5" fill="#9B5DE5" stroke="#2B2D42" stroke-width="2.5"/>
+  <!-- bolts -->
+  <circle cx="360" cy="320" r="3.5" fill="#FFF8E7" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="480" cy="232" r="3.5" fill="#FFF8E7" stroke="#2B2D42" stroke-width="2"/>
+
+  <!-- head -->
+  <line x1="420" y1="74" x2="420" y2="40" stroke="#2B2D42" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="420" cy="34" r="13" fill="#FFD23F" stroke="#2B2D42" stroke-width="5"/>
+  <ellipse cx="416" cy="30" rx="4" ry="2.5" fill="#FFFFFF"/>
+  <path d="M398 18 L392 10 M442 18 L448 10 M420 12 L420 4" stroke="#FFD23F" stroke-width="4" stroke-linecap="round"/>
+  <!-- ears -->
+  <circle cx="338" cy="146" r="20" fill="#FFD23F" stroke="#2B2D42" stroke-width="6"/>
+  <circle cx="502" cy="146" r="20" fill="#FFD23F" stroke="#2B2D42" stroke-width="6"/>
+  <circle cx="338" cy="146" r="7" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="502" cy="146" r="7" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3"/>
+  <rect x="340" y="72" width="160" height="148" rx="52" fill="#4CC9F0" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M462 78 Q496 88 496 140 L496 168 Q496 214 448 216 Q484 196 484 160 L484 132 Q484 96 462 78 Z" fill="#2FA8D0"/>
+  <ellipse cx="372" cy="92" rx="16" ry="6" fill="#FFFFFF" opacity="0.85" transform="rotate(-20 372 92)"/>
+  <!-- face screen -->
+  <rect x="358" y="98" width="124" height="100" rx="36" fill="#FFF8E7" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <!-- eyes -->
+  <circle cx="396" cy="140" r="20" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="444" cy="140" r="20" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="398" cy="143" r="12" fill="#2B2D42"/>
+  <circle cx="446" cy="143" r="12" fill="#2B2D42"/>
+  <circle cx="402" cy="137" r="4.5" fill="#FFFFFF"/>
+  <circle cx="450" cy="137" r="4.5" fill="#FFFFFF"/>
+  <circle cx="394" cy="148" r="2" fill="#FFFFFF"/>
+  <circle cx="442" cy="148" r="2" fill="#FFFFFF"/>
+  <!-- cheeks -->
+  <ellipse cx="374" cy="166" rx="9" ry="5" fill="#FF6B6B" opacity="0.75"/>
+  <ellipse cx="466" cy="166" rx="9" ry="5" fill="#FF6B6B" opacity="0.75"/>
+  <!-- big smile -->
+  <path d="M404 166 Q420 190 436 166 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M412 178 Q420 172 428 178 Q424 184 420 184 Q416 184 412 178 Z" fill="#FFB3B3"/>
+
+  <!-- ============ FRIEND 2: mint round robot with party popper (right) ============ -->
+  <!-- feet -->
+  <ellipse cx="630" cy="408" rx="16" ry="8" fill="#9B5DE5" stroke="#2B2D42" stroke-width="4"/>
+  <ellipse cx="670" cy="408" rx="16" ry="8" fill="#9B5DE5" stroke="#2B2D42" stroke-width="4"/>
+  <!-- arm holding popper -->
+  <path d="M690 354 Q712 340 718 316" stroke="#2B2D42" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M690 354 Q712 340 718 316" stroke="#ADB5BD" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <!-- party popper cone -->
+  <path d="M708 322 L742 262 L756 276 Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M722 300 L746 268 M716 312 L752 274" stroke="#FFD23F" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="718" cy="316" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <!-- popper streamers -->
+  <path d="M752 262 Q760 240 748 226 Q740 214 752 200" stroke="#9B5DE5" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M758 268 Q778 256 776 236 Q776 220 790 212" stroke="#FFD23F" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M746 260 Q730 240 736 222" stroke="#06D6A0" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- other arm -->
+  <path d="M610 354 Q590 344 584 326" stroke="#2B2D42" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M610 354 Q590 344 584 326" stroke="#ADB5BD" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="584" cy="322" r="9" fill="#FFD23F" stroke="#2B2D42" stroke-width="4"/>
+  <!-- body -->
+  <ellipse cx="650" cy="364" rx="46" ry="42" fill="#06D6A0" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M676 330 Q694 348 692 372 Q688 398 662 404 Q682 386 682 362 Q682 342 676 330 Z" fill="#04A57B"/>
+  <ellipse cx="628" cy="342" rx="10" ry="5" fill="#FFFFFF" opacity="0.8" transform="rotate(-25 628 342)"/>
+  <circle cx="650" cy="370" r="14" fill="#FFF8E7" stroke="#2B2D42" stroke-width="4"/>
+  <path d="M644 370 L648 374 L656 364" stroke="#06D6A0" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- head dome -->
+  <path d="M606 316 Q606 262 650 262 Q694 262 694 316 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M672 268 Q692 280 690 312 L676 312 Q680 286 672 268 Z" fill="#E9ECEF"/>
+  <rect x="604" y="310" width="92" height="14" rx="7" fill="#9B5DE5" stroke="#2B2D42" stroke-width="5"/>
+  <!-- visor with eyes -->
+  <rect x="620" y="278" width="60" height="28" rx="14" fill="#2B2D42"/>
+  <circle cx="637" cy="292" r="7" fill="#4CC9F0"/>
+  <circle cx="663" cy="292" r="7" fill="#4CC9F0"/>
+  <circle cx="639" cy="290" r="2.5" fill="#FFFFFF"/>
+  <circle cx="665" cy="290" r="2.5" fill="#FFFFFF"/>
+  <path d="M644 300 Q650 304 656 300" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="650" y1="262" x2="650" y2="248" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="650" cy="244" r="6" fill="#06D6A0" stroke="#2B2D42" stroke-width="3.5"/>
+
+  <!-- ============ CONFETTI ============ -->
+  <rect x="190" y="60" width="12" height="6" rx="2" fill="#FF6B6B" transform="rotate(30 196 63)"/>
+  <rect x="240" y="40" width="12" height="6" rx="2" fill="#9B5DE5" transform="rotate(-20 246 43)"/>
+  <rect x="300" y="78" width="12" height="6" rx="2" fill="#FFD23F" transform="rotate(50 306 81)"/>
+  <rect x="350" y="28" width="12" height="6" rx="2" fill="#06D6A0" transform="rotate(10 356 31)"/>
+  <rect x="470" y="30" width="12" height="6" rx="2" fill="#FF9F1C" transform="rotate(-40 476 33)"/>
+  <rect x="520" y="110" width="12" height="6" rx="2" fill="#FF6B6B" transform="rotate(70 526 113)"/>
+  <rect x="610" y="120" width="12" height="6" rx="2" fill="#FFD23F" transform="rotate(-15 616 123)"/>
+  <rect x="640" y="190" width="12" height="6" rx="2" fill="#9B5DE5" transform="rotate(35 646 193)"/>
+  <rect x="140" y="160" width="12" height="6" rx="2" fill="#06D6A0" transform="rotate(-60 146 163)"/>
+  <rect x="40" y="190" width="12" height="6" rx="2" fill="#FFD23F" transform="rotate(20 46 193)"/>
+  <rect x="160" y="230" width="12" height="6" rx="2" fill="#FF6B6B" transform="rotate(-30 166 233)"/>
+  <rect x="580" y="230" width="12" height="6" rx="2" fill="#4CC9F0" transform="rotate(45 586 233)"/>
+  <rect x="770" y="170" width="12" height="6" rx="2" fill="#FF6B6B" transform="rotate(-25 776 173)"/>
+  <rect x="700" y="210" width="12" height="6" rx="2" fill="#06D6A0" transform="rotate(60 706 213)"/>
+  <circle cx="220" cy="110" r="5" fill="#FF9F1C"/>
+  <circle cx="330" cy="200" r="4" fill="#9B5DE5"/>
+  <circle cx="560" cy="150" r="5" fill="#06D6A0"/>
+  <circle cx="110" cy="230" r="4" fill="#9B5DE5"/>
+  <circle cx="680" cy="150" r="5" fill="#FF6B6B"/>
+  <circle cx="30" cy="140" r="4" fill="#FF6B6B"/>
+  <circle cx="760" cy="240" r="4" fill="#FFD23F"/>
+  <path d="M170 120 q6 -8 12 0 t12 0" stroke="#FF6B6B" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M600 40 q6 -8 12 0 t12 0" stroke="#9B5DE5" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M520 200 q6 -8 12 0 t12 0" stroke="#FFD23F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- sparkles -->
+  <path d="M330 60 L334 70 L344 74 L334 78 L330 88 L326 78 L316 74 L326 70 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M590 280 L594 290 L604 294 L594 298 L590 308 L586 298 L576 294 L586 290 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M140 300 L143 308 L151 311 L143 314 L140 322 L137 314 L129 311 L137 308 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="pepper-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3EAFD"/>
+      <stop offset="1" stop-color="#E2D0F8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- backdrop blob -->
+  <circle cx="200" cy="196" r="172" fill="url(#pepper-bg)"/>
+  <circle cx="200" cy="196" r="148" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-dasharray="2 20" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- sparkles -->
+  <g stroke="#2B2D42" stroke-width="3" stroke-linejoin="round">
+    <path d="M58 70 Q58 84 72 84 Q58 84 58 98 Q58 84 44 84 Q58 84 58 70 Z" fill="#FFD23F"/>
+    <path d="M296 22 Q296 32 306 32 Q296 32 296 42 Q296 32 286 32 Q296 32 296 22 Z" fill="#9B5DE5"/>
+    <path d="M346 236 Q346 248 358 248 Q346 248 346 260 Q346 248 334 248 Q346 248 346 236 Z" fill="#06D6A0"/>
+    <path d="M46 253 Q46 262 55 262 Q46 262 46 271 Q46 262 37 262 Q46 262 46 253 Z" fill="#FF6B6B"/>
+    <path d="M322 318 Q322 326 330 326 Q322 326 322 334 Q322 326 314 326 Q322 326 322 318 Z" fill="#4CC9F0"/>
+  </g>
+  <circle cx="96" cy="38" r="4" fill="#FF6B6B"/>
+  <circle cx="30" cy="170" r="4" fill="#4CC9F0"/>
+  <circle cx="80" cy="328" r="5" fill="#FFD23F"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="370" rx="108" ry="12" fill="#2B2D42" opacity="0.18"/>
+
+  <g stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- wheels -->
+    <circle cx="158" cy="363" r="9" fill="#2B2D42"/>
+    <circle cx="200" cy="363" r="9" fill="#2B2D42"/>
+    <circle cx="242" cy="363" r="9" fill="#2B2D42"/>
+
+    <!-- lower body (single leg, flared) -->
+    <path d="M178 290 Q174 318 152 334 Q140 343 146 346 H254 Q260 343 248 334 Q226 318 222 290 Z" fill="#F5F7FA"/>
+    <path d="M208 293 H219 Q223 320 245 337 Q252 343 250 344 H230 Q218 326 208 293 Z" fill="#D3D9E0" stroke="none"/>
+    <ellipse cx="166" cy="334" rx="6" ry="3" fill="#FFFFFF" stroke="none" transform="rotate(-30 166 334)"/>
+    <ellipse cx="200" cy="316" rx="25" ry="7" fill="#ADB5BD" stroke-width="4"/>
+
+    <!-- wheel base -->
+    <rect x="134" y="340" width="132" height="24" rx="12" fill="#DEE2E6"/>
+    <path d="M240 343 H254 A9 9 0 0 1 263 352 A9 9 0 0 1 254 361 H240 Z" fill="#ADB5BD" stroke="none"/>
+    <rect x="150" y="348" width="16" height="8" rx="4" fill="#4CC9F0" stroke-width="3"/>
+    <rect x="192" y="348" width="16" height="8" rx="4" fill="#4CC9F0" stroke-width="3"/>
+    <rect x="234" y="348" width="16" height="8" rx="4" fill="#4CC9F0" stroke-width="3"/>
+
+    <!-- hip -->
+    <ellipse cx="200" cy="290" rx="32" ry="10" fill="#ADB5BD" stroke-width="4"/>
+
+    <!-- neck -->
+    <rect x="186" y="166" width="28" height="22" rx="8" fill="#ADB5BD" stroke-width="4"/>
+
+    <!-- torso -->
+    <path d="M150 198 Q150 180 168 180 H232 Q250 180 250 198 L244 274 Q242 290 226 290 H174 Q158 290 156 274 Z" fill="#F5F7FA"/>
+    <path d="M226 183 H232 Q247 183 247 198 L241 273 Q239 287 226 287 H220 Q234 240 226 183 Z" fill="#D3D9E0" stroke="none"/>
+    <ellipse cx="163" cy="198" rx="5" ry="9" fill="#FFFFFF" stroke="none"/>
+
+    <!-- chest tablet -->
+    <rect x="166" y="202" width="68" height="52" rx="10" fill="#2B2D42" stroke-width="4"/>
+    <rect x="173" y="209" width="54" height="38" rx="5" fill="#4CC9F0" stroke="none"/>
+    <path d="M176 212 L192 212 L178 232 Z" fill="#FFFFFF" stroke="none" opacity="0.45"/>
+    <path d="M200 240 C185 230 185 217 194 217 C198 217 200 221 200 223 C200 221 202 217 206 217 C215 217 215 230 200 240 Z" fill="#FF6B6B" stroke-width="3"/>
+    <circle cx="203" cy="224" r="2" fill="#FFFFFF" stroke="none"/>
+    <circle cx="200" cy="205.5" r="1.5" fill="#ADB5BD" stroke="none"/>
+    <path d="M184 266 H216 M188 274 H212" fill="none" stroke-width="3"/>
+
+    <!-- left arm (relaxed) -->
+    <g transform="rotate(12 152 196)">
+      <rect x="140" y="200" width="24" height="50" rx="12" fill="#F5F7FA"/>
+      <rect x="139" y="256" width="26" height="40" rx="12" fill="#F5F7FA"/>
+      <path d="M154 259 A9 9 0 0 1 162 268 V284 A9 9 0 0 1 154 293 Z" fill="#D3D9E0" stroke="none"/>
+      <circle cx="152" cy="253" r="9" fill="#ADB5BD" stroke-width="4"/>
+      <path d="M140 296 Q138 320 152 322 Q166 320 164 296 Z" fill="#F5F7FA"/>
+      <path d="M147 305 V316 M152 306 V318 M157 305 V316" fill="none" stroke-width="2.5"/>
+    </g>
+
+    <!-- right arm (waving hello) -->
+    <g transform="rotate(-140 248 196)">
+      <rect x="236" y="200" width="24" height="50" rx="12" fill="#F5F7FA"/>
+      <rect x="235" y="256" width="26" height="40" rx="12" fill="#F5F7FA"/>
+      <circle cx="248" cy="253" r="9" fill="#ADB5BD" stroke-width="4"/>
+      <path d="M236 296 Q234 320 248 322 Q262 320 260 296 Z" fill="#F5F7FA"/>
+      <path d="M243 305 V316 M248 306 V318 M253 305 V316" fill="none" stroke-width="2.5"/>
+    </g>
+    <path d="M354 74 Q366 92 356 112" fill="none" stroke-width="4"/>
+    <path d="M370 64 Q386 94 372 122" fill="none" stroke-width="4"/>
+
+    <!-- shoulders -->
+    <circle cx="152" cy="196" r="16" fill="#F5F7FA"/>
+    <circle cx="248" cy="196" r="16" fill="#F5F7FA"/>
+    <path d="M259.3 184.7 A16 16 0 0 1 236.7 207.3 A20 20 0 0 0 259.3 184.7 Z" fill="#D3D9E0" stroke="none"/>
+    <circle cx="248" cy="196" r="16" fill="none"/>
+
+    <!-- ears (speakers) -->
+    <circle cx="122" cy="114" r="20" fill="#DEE2E6" stroke-width="5"/>
+    <circle cx="122" cy="114" r="11" fill="#ADB5BD" stroke-width="3"/>
+    <circle cx="278" cy="114" r="20" fill="#DEE2E6" stroke-width="5"/>
+    <circle cx="278" cy="114" r="11" fill="#ADB5BD" stroke-width="3"/>
+
+    <!-- head -->
+    <circle cx="200" cy="110" r="80" fill="#F5F7FA"/>
+    <path d="M256.6 53.4 A80 80 0 0 1 143.4 166.6 A100 100 0 0 0 256.6 53.4 Z" fill="#D3D9E0" stroke="none"/>
+    <circle cx="200" cy="110" r="80" fill="none"/>
+    <ellipse cx="156" cy="58" rx="16" ry="8" fill="#FFFFFF" stroke="none" transform="rotate(-35 156 58)"/>
+    <circle cx="139" cy="78" r="4" fill="#FFFFFF" stroke="none"/>
+    <circle cx="200" cy="50" r="4" fill="#2B2D42" stroke="none"/>
+    <path d="M186 40 Q200 34 214 40" fill="none" stroke-width="3"/>
+
+    <!-- big black eyes with blue LED rings -->
+    <ellipse cx="166" cy="110" rx="26" ry="30" fill="#2B2D42"/>
+    <ellipse cx="166" cy="110" rx="19" ry="23" fill="#2B2D42" stroke="#4CC9F0" stroke-width="4"/>
+    <circle cx="158" cy="99" r="7" fill="#FFFFFF" stroke="none"/>
+    <circle cx="174" cy="121" r="3.5" fill="#FFFFFF" stroke="none"/>
+    <ellipse cx="234" cy="110" rx="26" ry="30" fill="#2B2D42"/>
+    <ellipse cx="234" cy="110" rx="19" ry="23" fill="#2B2D42" stroke="#4CC9F0" stroke-width="4"/>
+    <circle cx="226" cy="99" r="7" fill="#FFFFFF" stroke="none"/>
+    <circle cx="242" cy="121" r="3.5" fill="#FFFFFF" stroke="none"/>
+
+    <!-- mouth and blush -->
+    <path d="M191 150 Q200 157 209 150" fill="none" stroke-width="4"/>
+    <ellipse cx="146" cy="148" rx="9" ry="5" fill="#FF6B6B" stroke="none" opacity="0.65"/>
+    <ellipse cx="254" cy="148" rx="9" ry="5" fill="#FF6B6B" stroke="none" opacity="0.65"/>
+  </g>
+</svg>

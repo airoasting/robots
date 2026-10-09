@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="unitree-g1-headclip"><circle cx="170" cy="104" r="44"/></clipPath>
+    <clipPath id="unitree-g1-torsoclip"><rect x="144" y="154" width="64" height="80" rx="20"/></clipPath>
+  </defs>
+
+  <!-- backdrop blob -->
+  <circle cx="200" cy="198" r="168" fill="#ECEEF4"/>
+  <circle cx="200" cy="198" r="144" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-dasharray="2 18" stroke-linecap="round"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="180" cy="362" rx="92" ry="13" fill="#2B2D42" opacity="0.18"/>
+
+  <!-- kick motion lines -->
+  <g fill="none" stroke="#FF9F1C" stroke-width="5" stroke-linecap="round">
+    <path d="M226 262 Q262 262 296 238"/>
+    <path d="M232 280 Q272 278 306 252"/>
+    <path d="M240 298 Q276 294 312 266"/>
+  </g>
+
+  <!-- impact burst -->
+  <path d="M342 208 L356 186 L360 206 L384 198 L368 216 L388 230 L364 232 L370 256 L350 238 L336 254 L336 232 L314 230 L332 218 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="352" cy="220" r="7" fill="#FFFFFF"/>
+
+  <!-- back arm (raised) -->
+  <polyline points="206,170 234,146 254,118" fill="none" stroke="#2B2D42" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="206,170 234,146 254,118" fill="none" stroke="#5A6170" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="214" y1="160" x2="228" y2="148" stroke="#8A92A0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="234" cy="146" r="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="234" cy="146" r="3.5" fill="#2B2D42"/>
+  <circle cx="256" cy="114" r="13" fill="#5A6170" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M262 104 A13 13 0 0 1 262 124 A10 10 0 0 0 262 104 Z" fill="#41464F"/>
+  <circle cx="251" cy="110" r="3" fill="#8A92A0"/>
+
+  <!-- standing leg -->
+  <polyline points="166,238 158,292 166,338" fill="none" stroke="#2B2D42" stroke-width="32" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="166,238 158,292 166,338" fill="none" stroke="#5A6170" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="168" y1="302" x2="171" y2="326" stroke="#41464F" stroke-width="6" stroke-linecap="round"/>
+  <line x1="155" y1="252" x2="152" y2="276" stroke="#8A92A0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="158" cy="292" r="12" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="158" cy="292" r="4" fill="#4CC9F0"/>
+  <rect x="138" y="332" width="56" height="20" rx="9" fill="#5A6170" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="142" y="345" width="48" height="5" rx="2.5" fill="#41464F"/>
+  <circle cx="148" cy="339" r="2.5" fill="#8A92A0"/>
+
+  <!-- kicking leg -->
+  <polyline points="196,236 250,222 302,208" fill="none" stroke="#2B2D42" stroke-width="32" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="196,236 250,222 302,208" fill="none" stroke="#5A6170" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="262" y1="225" x2="292" y2="217" stroke="#41464F" stroke-width="6" stroke-linecap="round"/>
+  <line x1="208" y1="226" x2="236" y2="218" stroke="#8A92A0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="250" cy="222" r="12" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="250" cy="222" r="4" fill="#4CC9F0"/>
+  <rect x="300" y="186" width="22" height="46" rx="9" fill="#5A6170" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="314" y="190" width="5" height="38" rx="2.5" fill="#41464F"/>
+  <circle cx="307" cy="194" r="2.5" fill="#8A92A0"/>
+
+  <!-- hips -->
+  <rect x="152" y="224" width="54" height="26" rx="11" fill="#41464F" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="166" cy="237" r="4" fill="#ADB5BD"/>
+  <circle cx="194" cy="237" r="4" fill="#ADB5BD"/>
+
+  <!-- neck -->
+  <rect x="162" y="140" width="22" height="20" rx="5" fill="#41464F" stroke="#2B2D42" stroke-width="4"/>
+
+  <!-- torso -->
+  <rect x="144" y="154" width="64" height="80" rx="20" fill="#5A6170"/>
+  <rect x="188" y="150" width="30" height="90" fill="#41464F" clip-path="url(#unitree-g1-torsoclip)"/>
+  <rect x="144" y="154" width="64" height="80" rx="20" fill="none" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="157" cy="174" rx="4.5" ry="10" fill="#8A92A0"/>
+  <rect x="158" y="168" width="34" height="30" rx="8" fill="#41464F" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="175" cy="183" r="9" fill="none" stroke="#4CC9F0" stroke-width="4"/>
+  <circle cx="175" cy="183" r="3" fill="#4CC9F0"/>
+  <line x1="160" y1="208" x2="190" y2="208" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+  <line x1="160" y1="216" x2="190" y2="216" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="152" cy="164" r="2.5" fill="#ADB5BD"/>
+  <circle cx="200" cy="164" r="2.5" fill="#ADB5BD"/>
+  <rect x="196" y="186" width="6" height="16" rx="3" fill="#FF9F1C" stroke="#2B2D42" stroke-width="2"/>
+
+  <!-- front arm (guard) -->
+  <polyline points="148,170 112,188 104,152" fill="none" stroke="#2B2D42" stroke-width="28" stroke-linejoin="round" stroke-linecap="round"/>
+  <polyline points="148,170 112,188 104,152" fill="none" stroke="#5A6170" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="138" y1="170" x2="122" y2="178" stroke="#8A92A0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="148" cy="168" r="12" fill="#5A6170" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="145" cy="165" r="3" fill="#8A92A0"/>
+  <circle cx="112" cy="188" r="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="112" cy="188" r="3.5" fill="#2B2D42"/>
+  <circle cx="103" cy="146" r="14" fill="#5A6170" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M110 136 A14 14 0 0 1 110 157 A11 11 0 0 0 110 136 Z" fill="#41464F"/>
+  <path d="M96 142 L106 142 M96 148 L106 148" stroke="#2B2D42" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- head -->
+  <circle cx="124" cy="106" r="8" fill="#41464F" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="216" cy="106" r="8" fill="#41464F" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="170" cy="104" r="44" fill="#5A6170"/>
+  <circle cx="192" cy="120" r="44" fill="#41464F" clip-path="url(#unitree-g1-headclip)"/>
+  <circle cx="170" cy="104" r="44" fill="none" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M138 84 A38 38 0 0 1 158 66" fill="none" stroke="#8A92A0" stroke-width="5" stroke-linecap="round"/>
+  <!-- sensor on top -->
+  <rect x="160" y="52" width="20" height="12" rx="5" fill="#41464F" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="170" cy="58" r="3" fill="#06D6A0"/>
+  <!-- visor -->
+  <rect x="134" y="88" width="72" height="38" rx="19" fill="#2B2D42"/>
+  <path d="M144 94 L162 94" stroke="#4CC9F0" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+  <ellipse cx="156" cy="108" rx="9" ry="11" fill="#FFFFFF"/>
+  <circle cx="158" cy="110" r="5.5" fill="#2B2D42"/>
+  <circle cx="160" cy="106" r="2.2" fill="#FFFFFF"/>
+  <ellipse cx="184" cy="108" rx="9" ry="11" fill="#FFFFFF"/>
+  <circle cx="186" cy="110" r="5.5" fill="#2B2D42"/>
+  <circle cx="188" cy="106" r="2.2" fill="#FFFFFF"/>
+  <path d="M164 120 Q171 125 178 120" fill="none" stroke="#4CC9F0" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="146" cy="119" rx="4" ry="2.5" fill="#FF6B6B" opacity="0.8"/>
+  <ellipse cx="196" cy="119" rx="4" ry="2.5" fill="#FF6B6B" opacity="0.8"/>
+  <!-- headband stripe -->
+  <path d="M136 132 Q170 142 204 132" fill="none" stroke="#FF9F1C" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- sparkles -->
+  <path transform="translate(70 70)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(300 70) scale(0.8)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(60 270) scale(0.75)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#9B5DE5" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(330 320) scale(0.7)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="250" cy="48" r="4" fill="#FF6B6B"/>
+  <circle cx="44" cy="190" r="3.5" fill="#FF9F1C"/>
+  <circle cx="372" cy="150" r="4" fill="#FFD23F"/>
+</svg>

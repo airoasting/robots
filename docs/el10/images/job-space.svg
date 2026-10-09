@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="job-space-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B2D42"/>
+      <stop offset="1" stop-color="#4B2E83"/>
+    </linearGradient>
+  </defs>
+
+  <!-- space -->
+  <rect width="400" height="400" fill="url(#job-space-sky)"/>
+
+  <!-- tiny stars -->
+  <g fill="#FFFFFF">
+    <circle cx="24" cy="30" r="2"/>
+    <circle cx="112" cy="18" r="1.5"/>
+    <circle cx="160" cy="60" r="2"/>
+    <circle cx="210" cy="24" r="1.5"/>
+    <circle cx="36" cy="132" r="1.5"/>
+    <circle cx="120" cy="110" r="2"/>
+    <circle cx="372" cy="150" r="2"/>
+    <circle cx="340" cy="210" r="1.5"/>
+    <circle cx="384" cy="260" r="2"/>
+    <circle cx="300" cy="300" r="1.5"/>
+    <circle cx="350" cy="350" r="2"/>
+    <circle cx="260" cy="372" r="1.5"/>
+    <circle cx="60" cy="200" r="2"/>
+    <circle cx="22" cy="236" r="1.5"/>
+  </g>
+  <g fill="#FFD23F">
+    <circle cx="86" cy="62" r="2.5"/>
+    <circle cx="246" cy="130" r="2"/>
+    <circle cx="390" cy="20" r="2"/>
+    <circle cx="318" cy="252" r="2.5"/>
+  </g>
+
+  <!-- moon -->
+  <g stroke="#2B2D42" stroke-width="4" stroke-linejoin="round">
+    <circle cx="56" cy="88" r="22" fill="#E9ECEF"/>
+    <path d="M71.6 72.4 A22 22 0 0 1 40.4 103.6 A27 27 0 0 0 71.6 72.4 Z" fill="#ADB5BD" stroke="none"/>
+    <circle cx="56" cy="88" r="22" fill="none"/>
+    <circle cx="49" cy="82" r="4" fill="#ADB5BD" stroke-width="2"/>
+    <circle cx="62" cy="96" r="3" fill="#ADB5BD" stroke-width="2"/>
+  </g>
+
+  <!-- Earth -->
+  <circle cx="40" cy="440" r="166" fill="#4CC9F0" opacity="0.25"/>
+  <g stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="40" cy="440" r="150" fill="#4CC9F0"/>
+    <path d="M-30 310 Q10 296 40 316 Q70 334 58 360 Q40 380 10 366 Q-20 352 -30 330 Z" fill="#06D6A0" stroke-width="4"/>
+    <path d="M100 312 Q140 320 156 352 Q170 380 150 400 L110 400 Q118 372 96 356 Q80 340 100 312 Z" fill="#06D6A0" stroke-width="4"/>
+    <path d="M140 302 A150 150 0 0 1 190 440 L160 440 A124 124 0 0 0 124 318 Z" fill="#2FA8D0" stroke="none"/>
+    <circle cx="40" cy="440" r="150" fill="none"/>
+    <path d="M-10 302 Q20 288 54 296" fill="none" stroke="#FFFFFF" stroke-width="6" opacity="0.8"/>
+    <ellipse cx="80" cy="340" rx="18" ry="6" fill="#FFFFFF" stroke="none"/>
+    <ellipse cx="20" cy="384" rx="22" ry="7" fill="#FFFFFF" stroke="none"/>
+  </g>
+
+  <!-- space station -->
+  <g stroke="#2B2D42" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M250 60 H398" fill="none" stroke-width="6"/>
+    <rect x="252" y="26" width="40" height="26" fill="#9B5DE5"/>
+    <path d="M265 26 V52 M279 26 V52 M252 39 H292" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+    <rect x="252" y="68" width="40" height="26" fill="#9B5DE5"/>
+    <path d="M265 68 V94 M279 68 V94 M252 81 H292" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+    <path d="M272 52 V68" fill="none"/>
+    <rect x="352" y="26" width="40" height="26" fill="#9B5DE5"/>
+    <path d="M365 26 V52 M379 26 V52 M352 39 H392" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+    <rect x="352" y="68" width="40" height="26" fill="#9B5DE5"/>
+    <path d="M365 68 V94 M379 68 V94 M352 81 H392" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7"/>
+    <path d="M372 52 V68" fill="none"/>
+    <rect x="296" y="42" width="52" height="36" rx="14" fill="#E9ECEF" stroke-width="5"/>
+    <path d="M330 45 H334 A11 11 0 0 1 345 56 V64 A11 11 0 0 1 334 75 H330 Z" fill="#ADB5BD" stroke="none"/>
+    <rect x="296" y="42" width="52" height="36" rx="14" fill="none" stroke-width="5"/>
+    <circle cx="312" cy="60" r="5" fill="#4CC9F0" stroke-width="3"/>
+    <circle cx="328" cy="60" r="5" fill="#4CC9F0" stroke-width="3"/>
+    <rect x="312" y="78" width="20" height="16" rx="4" fill="#ADB5BD"/>
+    <path d="M322 42 V30" fill="none" stroke-width="3"/>
+    <circle cx="322" cy="28" r="4" fill="#FF6B6B" stroke-width="3"/>
+  </g>
+
+  <!-- tether -->
+  <path d="M248 252 C330 262 290 170 322 96" fill="none" stroke="#2B2D42" stroke-width="8" stroke-linecap="round"/>
+  <path d="M248 252 C330 262 290 170 322 96" fill="none" stroke="#FFD23F" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- sparkles -->
+  <g stroke="#2B2D42" stroke-width="3" stroke-linejoin="round">
+    <path d="M150 20 Q150 32 162 32 Q150 32 150 44 Q150 32 138 32 Q150 32 150 20 Z" fill="#FFD23F"/>
+    <path d="M360 300 Q360 312 372 312 Q360 312 360 324 Q360 312 348 312 Q360 312 360 300 Z" fill="#4CC9F0"/>
+    <path d="M30 172 Q30 180 38 180 Q30 180 30 188 Q30 180 22 180 Q30 180 30 172 Z" fill="#FF6B6B"/>
+    <path d="M226 324 Q226 332 234 332 Q226 332 226 340 Q226 332 218 332 Q226 332 226 324 Z" fill="#06D6A0"/>
+  </g>
+
+  <!-- ROBOT ASTRONAUT (floating) -->
+  <g transform="rotate(-10 200 220)" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- jetpack -->
+    <rect x="148" y="194" width="104" height="92" rx="22" fill="#ADB5BD"/>
+    <rect x="160" y="282" width="22" height="14" rx="4" fill="#E9ECEF" stroke-width="4"/>
+    <rect x="218" y="282" width="22" height="14" rx="4" fill="#E9ECEF" stroke-width="4"/>
+    <path d="M164 298 Q171 322 178 298 Z" fill="#FF9F1C" stroke-width="3"/>
+    <path d="M168 300 Q171 312 174 300 Z" fill="#FFD23F" stroke="none"/>
+    <path d="M222 298 Q229 322 236 298 Z" fill="#FF9F1C" stroke-width="3"/>
+    <path d="M226 300 Q229 312 232 300 Z" fill="#FFD23F" stroke="none"/>
+
+    <!-- legs -->
+    <g transform="rotate(18 182 282)">
+      <rect x="168" y="278" width="28" height="46" rx="13" fill="#F5F7FA"/>
+      <rect x="164" y="318" width="36" height="22" rx="10" fill="#FF6B6B"/>
+      <ellipse cx="174" cy="324" rx="5" ry="2.5" fill="#FFFFFF" stroke="none"/>
+    </g>
+    <g transform="rotate(-24 218 282)">
+      <rect x="204" y="278" width="28" height="46" rx="13" fill="#F5F7FA"/>
+      <rect x="200" y="318" width="36" height="22" rx="10" fill="#FF6B6B"/>
+      <ellipse cx="210" cy="324" rx="5" ry="2.5" fill="#FFFFFF" stroke="none"/>
+    </g>
+
+    <!-- suit torso -->
+    <rect x="158" y="198" width="84" height="94" rx="30" fill="#F5F7FA"/>
+    <path d="M210 201 H212 A27 27 0 0 1 239 228 V262 A27 27 0 0 1 212 289 H210 Z" fill="#D3D9E0" stroke="none"/>
+    <ellipse cx="172" cy="222" rx="5" ry="10" fill="#FFFFFF" stroke="none"/>
+    <rect x="176" y="222" width="48" height="30" rx="8" fill="#4CC9F0" stroke-width="4"/>
+    <circle cx="189" cy="237" r="5" fill="#FF6B6B" stroke-width="3"/>
+    <circle cx="203" cy="237" r="5" fill="#FFD23F" stroke-width="3"/>
+    <circle cx="214" cy="232" r="3" fill="#06D6A0" stroke="none"/>
+    <circle cx="214" cy="242" r="3" fill="#FFFFFF" stroke="none"/>
+    <rect x="162" y="266" width="76" height="12" rx="6" fill="#FF9F1C" stroke-width="4"/>
+
+    <!-- left arm (waving up) -->
+    <g transform="rotate(140 164 212)">
+      <rect x="151" y="214" width="26" height="54" rx="13" fill="#F5F7FA"/>
+      <rect x="149" y="260" width="30" height="10" rx="5" fill="#FF6B6B" stroke-width="4"/>
+      <circle cx="164" cy="282" r="13" fill="#F5F7FA"/>
+    </g>
+    <!-- right arm (holding tether) -->
+    <g transform="rotate(-70 236 212)">
+      <rect x="223" y="214" width="26" height="54" rx="13" fill="#F5F7FA"/>
+      <rect x="221" y="260" width="30" height="10" rx="5" fill="#FF6B6B" stroke-width="4"/>
+      <circle cx="236" cy="282" r="13" fill="#F5F7FA"/>
+    </g>
+
+    <!-- helmet collar -->
+    <rect x="150" y="190" width="100" height="18" rx="9" fill="#FF6B6B" stroke-width="5"/>
+
+    <!-- glass helmet (back) -->
+    <circle cx="200" cy="140" r="64" fill="#CFF1FC"/>
+
+    <!-- robot head inside -->
+    <path d="M200 96 V82" fill="none" stroke-width="4"/>
+    <circle cx="200" cy="80" r="6" fill="#FFD23F" stroke-width="3"/>
+    <circle cx="200" cy="146" r="48" fill="#E9ECEF"/>
+    <path d="M234 112 A48 48 0 0 1 166 180 A60 60 0 0 0 234 112 Z" fill="#ADB5BD" stroke="none"/>
+    <circle cx="200" cy="146" r="48" fill="none"/>
+    <circle cx="182" cy="142" r="13" fill="#FFFFFF" stroke-width="4"/>
+    <circle cx="184" cy="144" r="8" fill="#9B5DE5" stroke="none"/>
+    <circle cx="185" cy="145" r="4.5" fill="#2B2D42" stroke="none"/>
+    <circle cx="179" cy="138" r="3.5" fill="#FFFFFF" stroke="none"/>
+    <circle cx="218" cy="142" r="13" fill="#FFFFFF" stroke-width="4"/>
+    <circle cx="220" cy="144" r="8" fill="#9B5DE5" stroke="none"/>
+    <circle cx="221" cy="145" r="4.5" fill="#2B2D42" stroke="none"/>
+    <circle cx="215" cy="138" r="3.5" fill="#FFFFFF" stroke="none"/>
+    <path d="M190 166 Q200 175 210 166" fill="none" stroke-width="4"/>
+    <ellipse cx="170" cy="162" rx="6" ry="4" fill="#FF6B6B" stroke="none" opacity="0.8"/>
+    <ellipse cx="230" cy="162" rx="6" ry="4" fill="#FF6B6B" stroke="none" opacity="0.8"/>
+
+    <!-- glass helmet (front) -->
+    <circle cx="200" cy="140" r="64" fill="none"/>
+    <path d="M152 112 Q164 84 194 80" fill="none" stroke="#FFFFFF" stroke-width="8" opacity="0.85"/>
+    <circle cx="150" cy="128" r="4" fill="#FFFFFF" stroke="none" opacity="0.85"/>
+    <path d="M250 154 Q246 176 230 190" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/>
+  </g>
+</svg>

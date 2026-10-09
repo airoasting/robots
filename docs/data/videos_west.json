@@ -1,0 +1,665 @@
+{
+  "generated": "2026-10-08",
+  "companies": [
+    {
+      "id": "boston-dynamics",
+      "name": "Boston Dynamics",
+      "name_ko": "보스턴 다이내믹스",
+      "country": "미국",
+      "flagship": "Atlas (전동 양산형), Spot",
+      "tagline_ko": "연구용 곡예 로봇에서 현대차 공장에 투입되는 양산형 휴머노이드로 전환한 회사입니다.",
+      "summary_ko": "보스턴 다이내믹스는 2026년 1월 CES에서 양산형 전동 Atlas를 공개하고 즉시 생산에 들어갔습니다. 2026년 물량은 현대차그룹과 구글 딥마인드에 모두 배정됐고, 신규 고객은 2027년 초부터 받습니다. 2026년 9월에는 조지아주 현대차 메타플랜트에서 Atlas가 부품 물류 작업을 익히기 시작했습니다. 4족 로봇 Spot은 산업 현장 점검 제품으로 자리를 굳히고 있습니다.",
+      "specs": [
+        {
+          "label_ko": "자유도",
+          "value": "56"
+        },
+        {
+          "label_ko": "작업 반경",
+          "value": "2.3m (7.5ft)"
+        },
+        {
+          "label_ko": "최대 들어올림",
+          "value": "50kg (110lb)"
+        },
+        {
+          "label_ko": "작동 온도",
+          "value": "-20~40°C"
+        },
+        {
+          "label_ko": "배터리",
+          "value": "충전소로 자율 이동해 배터리 자가 교체"
+        },
+        {
+          "label_ko": "새 손 자유도",
+          "value": "손당 13 (4손가락, 2026-10 공개)"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-01",
+          "text_ko": "CES에서 양산형 Atlas를 공개하고 보스턴 본사에서 곧바로 생산에 들어갔습니다. 2026년 물량은 현대차 RMAC와 구글 딥마인드에 전량 배정됐습니다.",
+          "source_url": "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/"
+        },
+        {
+          "date": "2026-04",
+          "text_ko": "Spot의 AI 시각 점검(AIVI-Learning)에 구글 Gemini Robotics를 적용했습니다.",
+          "source_url": "https://bostondynamics.com/blog/aivi-learning-now-powered-google-gemini-robotics/"
+        },
+        {
+          "date": "2026-07",
+          "text_ko": "FIFA 월드컵 2026 경기장(NYNJ Stadium)에서 Atlas가 하프타임 라이브 공연을 펼치고, 후반전에 쓸 공을 전달했습니다.",
+          "source_url": "https://bostondynamics.com/blog/deploying-robots-into-and-onto-the-field/"
+        },
+        {
+          "date": "2026-09",
+          "text_ko": "현대차 메타플랜트 아메리카(조지아) 안에 RMAC를 열고, Atlas의 부품 물류·서열 작업 훈련을 시작했습니다.",
+          "source_url": "https://www.therobotreport.com/boston-dynamics-opens-metaplant-application-center-train-atlas-humanoid-robots/"
+        },
+        {
+          "date": "2026-10",
+          "text_ko": "관절마다 구동기를 직접 단 13자유도 4손가락 새 손을 공개했습니다. 역구동(바깥 힘에 밀려 거꾸로 돌 수 있는 구조)이 가능한 변속기와 손끝·손바닥 압력 센서를 갖췄습니다. sim-to-real(시뮬레이션에서 익힌 동작을 실제 로봇에 옮기는 방식) 강화학습에 맞춰 설계했습니다.",
+          "source_url": "https://bostondynamics.com/blog/robot-hands-for-modern-ai-and-real-work"
+        }
+      ],
+      "videos": [
+        {
+          "id": "4whgw2gLBS8",
+          "title": "New Hands for Atlas | Boston Dynamics",
+          "upload_date": "2026-10-01",
+          "channel": "Boston Dynamics",
+          "views": 2408354,
+          "duration_sec": 335,
+          "embeddable": true,
+          "note_ko": "Atlas의 새 13자유도 손을 소개하는 공식 영상입니다. 관절마다 구동기를 직접 달았고, 역구동 가능한 변속기를 적용했습니다. 시뮬레이션에서 강화학습한 정책을 실제 로봇으로 옮기도록 설계했고, 정밀한 물리 작업을 겨냥했다고 설명합니다."
+        },
+        {
+          "id": "rrUHZKlrxms",
+          "title": "Atlas | Product Features | Boston Dynamics",
+          "upload_date": "2026-01-05",
+          "channel": "Boston Dynamics",
+          "views": 563779,
+          "duration_sec": 103,
+          "embeddable": true,
+          "note_ko": "CES 2026에서 공개한 양산형 Atlas의 주요 기능을 짧게 정리한 영상입니다. 연구용이 아닌 제품 버전 Atlas가 어떤 모습인지 한눈에 보여 줍니다."
+        },
+        {
+          "id": "kBwxmlI2yHQ",
+          "title": "Smarter Inspections Powered by Google Gemini Robotics | Boston Dynamics",
+          "upload_date": "2026-04-14",
+          "channel": "Boston Dynamics",
+          "views": 84987,
+          "duration_sec": 100,
+          "embeddable": true,
+          "note_ko": "Spot과 관제 소프트웨어 Orbit의 AI 시각 점검에 구글 Gemini Robotics를 결합한 기능을 소개합니다. 시설 점검에서 로봇이 판독할 수 있는 정보가 늘었다는 점을 보여 줍니다."
+        },
+        {
+          "id": "CFS_zU1kWQw",
+          "title": "Inside the Robotics Race | Boston Dynamics x Hyundai Motor Group x Bloomberg Media Studios",
+          "upload_date": "2026-09-30",
+          "channel": "Boston Dynamics",
+          "views": 775548,
+          "duration_sec": 348,
+          "embeddable": true,
+          "note_ko": "보스턴 다이내믹스, 현대자동차그룹, 블룸버그 미디어 스튜디오가 함께 만든 휴머노이드 경쟁 다큐멘터리입니다. Spot과 Stretch 상용화 경험을 바탕으로 Atlas를 실제 환경에서 학습시키고 대량 생산하려는 전략을 다룹니다."
+        }
+      ]
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "name_ko": "테슬라",
+      "country": "미국",
+      "flagship": "Optimus",
+      "tagline_ko": "자동차 생산 라인을 철거하고 휴머노이드 양산 라인을 구축하고 있는 회사입니다.",
+      "summary_ko": "테슬라는 Optimus를 회사의 가장 큰 제품으로 내세우고 있습니다. 2026년 5월 프리몬트 공장의 모델 S·X 생산을 끝내고 그 자리에 1세대 Optimus 생산 라인을 설치하고 있으며, 2026년 안에 생산을 시작한다고 밝혔습니다. 다만 3세대(V3) 공개는 '연중반'으로 미뤄졌고, 2026년 9월 기준으로 아직 공개되지 않았습니다. 기가 텍사스에는 2027년부터 가동할 2세대 라인을 설계하고 있습니다.",
+      "specs": [],
+      "milestones": [
+        {
+          "date": "2025-06",
+          "text_ko": "Optimus 프로그램 책임자 밀란 코박이 물러나고, 오토파일럿 총괄 아쇼크 엘루스와미가 자리를 이어받았습니다.",
+          "source_url": "https://en.wikipedia.org/wiki/Optimus_(robot)"
+        },
+        {
+          "date": "2025-11",
+          "text_ko": "연례 주주총회에서 휴머노이드 100만 대 인도 등을 조건으로 한 머스크 보상안이 승인됐습니다. 발표의 중심에는 Optimus가 있었습니다.",
+          "source_url": "https://www.automotiveworld.com/news/tesla-shareholders-approve-historic-us1tr-musk-pay-package/"
+        },
+        {
+          "date": "2026-01",
+          "text_ko": "모델 S·X 단종과 프리몬트 라인의 Optimus 전환 계획을 발표했습니다.",
+          "source_url": "https://www.guru3d.com/story/tesla-to-end-model-s-and-x-production-fremont-pivots-to-optimus/"
+        },
+        {
+          "date": "2026-04",
+          "text_ko": "1분기 실적 발표에서 프리몬트에 1세대 Optimus 라인을 설치하고 있으며, 7~8월 생산 시작이 목표라고 밝혔습니다. V3 공개는 생산 시작 무렵으로 미뤘습니다.",
+          "source_url": "https://www.marketbeat.com/earnings/reports/2026-4-22-tesla-inc-stock/"
+        },
+        {
+          "date": "2026-07",
+          "text_ko": "2분기 실적 자료에서 모델 S·X 라인 철거를 마쳤다고 밝히고, 1세대 Optimus를 2026년에 생산하겠다고 약속했습니다. 초기 물량은 학습 데이터 수집에 투입합니다.",
+          "source_url": "https://www.shacknews.com/article/150109/tesla-tsla-q2-2026-earnings-call-transcript"
+        }
+      ],
+      "videos": [
+        {
+          "id": "0jHCsY8MnmQ",
+          "title": "Optimus’ red carpet debut",
+          "upload_date": "2025-10-07",
+          "channel": "Tesla",
+          "views": 790100,
+          "duration_sec": 31,
+          "embeddable": true,
+          "note_ko": "테슬라 공식 채널에 올라온 31초 길이의 짧은 영상입니다. 제목대로 Optimus가 레드카펫 행사에 처음 등장한 장면을 담았습니다."
+        },
+        {
+          "id": "7RxAS8Fujeo",
+          "title": "Poptimus at Tesla Diner",
+          "upload_date": "2025-09-07",
+          "channel": "Tesla",
+          "views": 277846,
+          "duration_sec": 33,
+          "embeddable": true,
+          "note_ko": "테슬라 공식 채널에 올라온 33초 길이의 짧은 영상입니다. 테슬라 다이너 매장에 'Poptimus'라는 이름으로 등장한 Optimus를 보여 줍니다."
+        }
+      ]
+    },
+    {
+      "id": "figure-ai",
+      "name": "Figure AI",
+      "name_ko": "피규어 AI",
+      "country": "미국",
+      "flagship": "Figure 03 (F.03)",
+      "tagline_ko": "자체 AI 'Helix'와 자체 공장 'BotQ'로 가정과 공장을 동시에 공략하는 휴머노이드 회사입니다.",
+      "summary_ko": "피규어 AI는 2025년 9월 시리즈 C에서 기업가치 390억 달러를 인정받았습니다. 2026년 4월에는 BotQ 공장의 생산 속도를 하루 1대에서 시간당 1대로 끌어올렸다고 밝혔습니다. 9월에는 Helix 2.5로 처음 방문한 집 30곳에서 추가 학습 없이 정리, 빨래 개기, 침대 정리를 수행하는 실험을 공개했습니다. BMW 스파턴버그 공장에는 2026년 6월부터 F.03이 투입됐습니다.",
+      "specs": [
+        {
+          "label_ko": "무선 충전",
+          "value": "발바닥 코일로 2kW 충전"
+        },
+        {
+          "label_ko": "촉각 센서",
+          "value": "손끝에서 3g 압력까지 감지"
+        },
+        {
+          "label_ko": "무게",
+          "value": "Figure 02 대비 9% 경량"
+        },
+        {
+          "label_ko": "BotQ 초기 생산능력",
+          "value": "연 최대 12,000대"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-09",
+          "text_ko": "시리즈 C에서 10억 달러 이상을 유치하고, 기업가치 390억 달러를 인정받았습니다.",
+          "source_url": "https://www.figure.ai/news/series-c"
+        },
+        {
+          "date": "2025-10",
+          "text_ko": "3세대 휴머노이드 Figure 03을 공개했습니다.",
+          "source_url": "https://www.figure.ai/news/introducing-figure-03"
+        },
+        {
+          "date": "2025-11",
+          "text_ko": "Figure 02가 BMW 공장에서 차량 3만 대 생산에 기여했다고 발표했습니다.",
+          "source_url": "https://www.figure.ai/news/production-at-bmw"
+        },
+        {
+          "date": "2026-01",
+          "text_ko": "Helix 02를 공개했습니다. 보행, 조작, 균형을 하나의 신경망으로 묶어 전신을 제어합니다.",
+          "source_url": "https://www.figure.ai/news/helix-02"
+        },
+        {
+          "date": "2026-04",
+          "text_ko": "BotQ 생산 속도를 하루 1대에서 시간당 1대로 24배 높였고, F.03을 350대 이상 출고했습니다.",
+          "source_url": "https://www.figure.ai/news/ramping-figure-03-production"
+        },
+        {
+          "date": "2026-09",
+          "text_ko": "Helix 2.5를 공개했습니다. 처음 방문한 집 30곳에서 추가 학습 없이 집안일을 수행했습니다.",
+          "source_url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+        }
+      ],
+      "videos": [
+        {
+          "id": "Eu5mYMavctM",
+          "title": "Introducing Figure 03",
+          "upload_date": "2025-10-09",
+          "channel": "Figure",
+          "views": 2230085,
+          "duration_sec": 379,
+          "embeddable": true,
+          "note_ko": "3세대 휴머노이드 Figure 03을 처음 공개한 공식 영상입니다. Helix AI에 맞춰 다시 설계한 센서·손과 가정용 안전 설계를 소개합니다."
+        },
+        {
+          "id": "lQsvTrRTBRs",
+          "title": "Introducing Helix 02",
+          "upload_date": "2026-01-27",
+          "channel": "Figure",
+          "views": 333131,
+          "duration_sec": 216,
+          "embeddable": true,
+          "note_ko": "Helix 02를 소개하는 공식 영상입니다. 상체만 제어하던 신경망 하나가 이제 걷기, 조작, 균형까지 아우르며 로봇 전체를 하나의 시스템으로 다룬다는 점을 보여 줍니다."
+        },
+        {
+          "id": "lJpM_2a1zrE",
+          "title": "Helix 2.5 30-Home Generalization",
+          "upload_date": "2026-09-17",
+          "channel": "Figure",
+          "views": 784388,
+          "duration_sec": 361,
+          "embeddable": true,
+          "note_ko": "Helix 2.5 발표 영상입니다. 피규어가 베이 에어리어의 집 30곳을 빌려 실험한 장면을 담았습니다. 로봇은 추가 학습 없이 집에 도착하자마자 실용적인 집안일을 시작합니다."
+        }
+      ]
+    },
+    {
+      "id": "agility-robotics",
+      "name": "Agility Robotics",
+      "name_ko": "어질리티 로보틱스",
+      "country": "미국",
+      "flagship": "Digit 5",
+      "tagline_ko": "물류 현장에서 가장 먼저 상업 계약을 체결한 휴머노이드 Digit의 제조사입니다.",
+      "summary_ko": "어질리티 로보틱스는 GXO, 셰플러, 토요타 캐나다 공장 등에 Digit을 배치해 상자 운반 업무를 수행해 왔습니다. 2026년 6월에는 스팩 합병으로 상장하겠다고 발표했고, 합병 전 기업가치는 25억 달러입니다. 같은 발표에서 밝힌 3억 달러 이상의 Digit 5 주문은 마일스톤 달성을 조건으로 한 단일 고객 계약입니다. 2026년 9월 공개한 Digit 5는 2027년 말 정식 출시될 예정입니다.",
+      "specs": [
+        {
+          "label_ko": "키",
+          "value": "1.81m (5ft 11in)"
+        },
+        {
+          "label_ko": "무게",
+          "value": "129kg (284lb)"
+        },
+        {
+          "label_ko": "가반하중",
+          "value": "최대 22.7kg (50lb), 반복 들기 기준"
+        },
+        {
+          "label_ko": "최대 도달 높이",
+          "value": "2.2m (7.2ft)"
+        },
+        {
+          "label_ko": "배터리",
+          "value": "작동 90분, 충전 약 9분"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2026-06",
+          "text_ko": "Churchill Capital Corp XI와 스팩 합병 계약을 맺었습니다. 합병 전 기업가치는 25억 달러이고, 폭스콘이 약 2억 달러 PIPE를 주도했습니다.",
+          "source_url": "https://lasvegassun.com/news/2026/jun/24/agility-robotics-to-go-public-through-25-billion-m/"
+        },
+        {
+          "date": "2026-06",
+          "text_ko": "Digit 5의 다년 계약 주문 3억 달러 이상을 공개했습니다(S-4 기준 단일 고객, 3년간 1,000대, 마일스톤 조건부).",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/0002074973/000121390026071287/ea029548401ex99-1.htm"
+        },
+        {
+          "date": "2026-09",
+          "text_ko": "Digit 5를 공개했습니다. 안전 펜스 없이 사람 곁에서 일하도록 협력형 안전 설계를 적용했습니다.",
+          "source_url": "https://www.therobotreport.com/agilitys-digit-5-humanoid-has-new-legs-batteries-safety-upgrades/"
+        },
+        {
+          "date": "2026-09",
+          "text_ko": "Digit 5를 2027년 상반기에 얼리 액세스로 내놓고 연말에 정식 출시하며, EU·영국에도 진출한다는 계획을 발표했습니다.",
+          "source_url": "https://geekwire.com/2026/agilitys-new-digit-5-robot-lifts-50-pounds-works-20-hours-a-day-and-operates-alongside-people"
+        }
+      ],
+      "videos": [
+        {
+          "id": "oyq9BOwK5XI",
+          "title": "Introducing Digit 5",
+          "upload_date": "2026-09-15",
+          "channel": "Agility",
+          "views": 78007,
+          "duration_sec": 70,
+          "embeddable": true,
+          "note_ko": "Digit 5를 처음 공개한 공식 영상입니다. 안전 펜스 없이 사람 가까이에서 일하도록 설계한 어질리티의 첫 협력형 안전 휴머노이드라고 소개합니다."
+        },
+        {
+          "id": "HYlrzihyL1k",
+          "title": "Agility Foundations: AI Stack",
+          "upload_date": "2026-09-15",
+          "channel": "Agility",
+          "views": 24379,
+          "duration_sec": 228,
+          "embeddable": true,
+          "note_ko": "Digit 5 공개와 같은 날 올라온 'Agility Foundations' 시리즈 영상입니다. 제목대로 Digit을 움직이는 AI 스택(소프트웨어 계층 구성)을 설명합니다."
+        },
+        {
+          "id": "2dbyg67EtUA",
+          "title": "Agility Foundations: Functional Safety",
+          "upload_date": "2026-09-15",
+          "channel": "Agility",
+          "views": 5452,
+          "duration_sec": 160,
+          "embeddable": true,
+          "note_ko": "같은 'Agility Foundations' 시리즈의 기능 안전 편입니다. 제목대로 사람 곁에서 일하는 Digit의 기능 안전 설계를 다룹니다."
+        }
+      ]
+    },
+    {
+      "id": "1x",
+      "name": "1X Technologies",
+      "name_ko": "원엑스 테크놀로지스",
+      "country": "미국·노르웨이",
+      "flagship": "NEO",
+      "tagline_ko": "공장이 아닌 집을 먼저 겨냥한 가정용 휴머노이드 NEO의 제조사입니다.",
+      "summary_ko": "1X는 2025년 10월 가정용 휴머노이드 NEO의 주문을 받기 시작했습니다. 얼리 액세스 가격은 2만 달러이고, 회사는 첫해 생산분 1만 대 이상이 5일 만에 매진됐다고 밝혔습니다. 2026년 4월에는 캘리포니아 헤이워드에서 연 1만 대 규모의 NEO 공장을 가동했습니다. 첫 고객 출하는 2026년 안으로 예고돼 있습니다.",
+      "specs": [
+        {
+          "label_ko": "키",
+          "value": "5ft 6in (약 168cm)"
+        },
+        {
+          "label_ko": "무게",
+          "value": "66lb (약 30kg)"
+        },
+        {
+          "label_ko": "들어올림",
+          "value": "154lb (약 70kg)"
+        },
+        {
+          "label_ko": "운반",
+          "value": "55lb (약 25kg)"
+        },
+        {
+          "label_ko": "자유도",
+          "value": "손 22×2, 팔 7×2, 목 3, 허리 2, 다리 6×2"
+        },
+        {
+          "label_ko": "소음",
+          "value": "22dB"
+        },
+        {
+          "label_ko": "배터리",
+          "value": "4시간"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-06",
+          "text_ko": "물리 법칙을 반영한 데이터 기반 시뮬레이터 '1X 월드 모델'을 공개했습니다.",
+          "source_url": "https://www.youtube.com/watch?v=xPX6dDRYbV4"
+        },
+        {
+          "date": "2025-10",
+          "text_ko": "가정용 NEO의 주문을 받기 시작했습니다. 얼리 액세스는 2만 달러, 구독은 월 499달러이며, 2026년에 배송할 예정입니다.",
+          "source_url": "https://www.businesswire.com/news/home/20251027434628/en/1X-Launches-NEO-The-Robot-Redefining-Life-at-Home"
+        },
+        {
+          "date": "2026-01",
+          "text_ko": "1X 월드 모델을 업데이트했습니다. 이제 로봇이 처음 보는 작업도 음성·텍스트 지시를 받아 스스로 시도합니다.",
+          "source_url": "https://www.aap.com.au/aapreleases/globenewswire9623335/"
+        },
+        {
+          "date": "2026-04",
+          "text_ko": "헤이워드 NEO 공장을 본격 가동했습니다. 규모는 연 1만 대이고, 2027년 말 연 10만 대 이상이 목표입니다.",
+          "source_url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1X-Opens-NEO-Factory-in-Hayward-CA"
+        },
+        {
+          "date": "2026-07",
+          "text_ko": "손가락·손바닥·엄지에 25자유도를 갖춘 새 NEO 손을 공개했습니다.",
+          "source_url": "https://www.youtube.com/watch?v=QRyXV3csReA"
+        }
+      ],
+      "videos": [
+        {
+          "id": "LTYMWadOW7c",
+          "title": "NEO The Home Robot | Order Today",
+          "upload_date": "2025-10-28",
+          "channel": "1X",
+          "views": 1886070,
+          "duration_sec": 593,
+          "embeddable": true,
+          "note_ko": "NEO의 주문 개시와 함께 공개한 공식 소개 영상입니다. 집안일을 하고 개인 맞춤 도움을 주는 안전한 가정용 휴머노이드라는 콘셉트를 보여 줍니다."
+        },
+        {
+          "id": "ag_rFhvSNmE",
+          "title": "NEO Factory | Hayward, California",
+          "upload_date": "2026-04-30",
+          "channel": "1X",
+          "views": 105084,
+          "duration_sec": 170,
+          "embeddable": true,
+          "note_ko": "캘리포니아 헤이워드 NEO 공장의 가동을 알리는 공식 영상입니다. 약 5,400㎡(5만 8천 제곱피트) 규모 공장에서 모터, 배터리, 감속기, 센서까지 직접 만들고 최종 조립한다고 소개합니다."
+        },
+        {
+          "id": "QRyXV3csReA",
+          "title": "NEO’s Hands",
+          "upload_date": "2026-07-09",
+          "channel": "1X",
+          "views": 202949,
+          "duration_sec": 107,
+          "embeddable": true,
+          "note_ko": "NEO에 새로 들어가는 25자유도 로봇 손을 소개하는 공식 영상입니다. 힘줄 구동 방식(줄로 손가락을 당겨 움직이는 방식)과 고해상도 촉각 센서로 레고 조립, 전구 교체, 지퍼 올리기 같은 정밀 동작을 해내는 모습을 보여 줍니다."
+        }
+      ]
+    },
+    {
+      "id": "apptronik",
+      "name": "Apptronik",
+      "name_ko": "앱트로닉",
+      "country": "미국",
+      "flagship": "Apollo 2",
+      "tagline_ko": "구글 딥마인드와 손잡고 데이터 수집 시설까지 세운 텍사스의 휴머노이드 회사입니다.",
+      "summary_ko": "앱트로닉은 2026년 2월 5억 2천만 달러를 추가로 유치해 시리즈 A 총액이 9억 3,500만 달러를 넘었습니다. 구글 딥마인드와는 2025년 3월부터 Gemini Robotics 기반 차세대 휴머노이드를 함께 개발하고 있습니다. 2026년 6월 말에는 2족 보행형과 바퀴형 구성을 모두 갖춘 Apollo 2를 공개했습니다. 메르세데스-벤츠, GXO, 자빌이 배치 파트너로 거론됩니다.",
+      "specs": [
+        {
+          "label_ko": "키 (1세대 Apollo 공개 기준)",
+          "value": "5ft 8in (약 173cm)"
+        },
+        {
+          "label_ko": "무게 (1세대 Apollo 공개 기준)",
+          "value": "160lb (약 73kg)"
+        },
+        {
+          "label_ko": "가반하중 (1세대 Apollo 공개 기준)",
+          "value": "최대 55lb (약 25kg)"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-02",
+          "text_ko": "3억 5천만 달러 규모의 시리즈 A를 유치했습니다(B Capital·Capital Factory 공동 주도, 구글 참여).",
+          "source_url": "https://apptronik.com/news-collection/apptronik-raises-350-million-in-series-a-funding"
+        },
+        {
+          "date": "2025-03",
+          "text_ko": "구글 딥마인드와 Gemini Robotics 기반 차세대 휴머노이드를 함께 개발한다고 발표했습니다.",
+          "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+        },
+        {
+          "date": "2026-02",
+          "text_ko": "시리즈 A 확장 투자로 5억 2천만 달러를 유치했습니다. 기업가치는 50억 달러 이상으로 보도됐습니다.",
+          "source_url": "https://news.bloomberglaw.com/private-equity/apptronik-raises-520-million-in-new-funding-to-build-more-humanoids"
+        },
+        {
+          "date": "2026-06",
+          "text_ko": "오스틴에 약 9만 제곱피트 규모의 데이터 수집 시설 Robot Park를 열고, Apollo 2를 공개했습니다.",
+          "source_url": "https://www.verdict.co.uk/apptronik-opens-robot-training-hub/"
+        },
+        {
+          "date": "2026-07",
+          "text_ko": "구글 딥마인드가 Gemini Robotics 2의 전신 제어 시연 플랫폼으로 Apollo 2를 채택했습니다.",
+          "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+        }
+      ],
+      "videos": [
+        {
+          "id": "iPyxwELiD9Q",
+          "title": "Welcome to Robot Park, where Apptronik is building the future with Apollo 2",
+          "upload_date": "2026-06-30",
+          "channel": "Apptronik",
+          "views": 25276,
+          "duration_sec": 74,
+          "embeddable": true,
+          "note_ko": "앱트로닉이 Robot Park와 Apollo 2를 발표한 공식 영상입니다. 약 9만 제곱피트 시설에서 Apollo 2가 자율 휴머노이드에 필요한 실제 학습 데이터를 모으는 모습을 보여 줍니다."
+        },
+        {
+          "id": "ikZeU3wKVjM",
+          "title": "Gemini Robotics: Developing the next generation of humanoid robots with Apptronik",
+          "upload_date": "2025-03-12",
+          "channel": "Google DeepMind",
+          "views": 152241,
+          "duration_sec": 82,
+          "embeddable": true,
+          "note_ko": "구글 딥마인드 채널에 올라온 앱트로닉 협업 발표 영상입니다. Gemini 2.0 기반 Gemini Robotics 모델로 차세대 휴머노이드를 함께 개발한다는 내용입니다."
+        },
+        {
+          "id": "9MNLEAzA59o",
+          "title": "Intelligent whole-body control with Gemini Robotics 2",
+          "upload_date": "2026-07-30",
+          "channel": "Google DeepMind",
+          "views": 100971,
+          "duration_sec": 168,
+          "embeddable": true,
+          "note_ko": "구글 딥마인드의 Gemini Robotics 2 전신 제어 시연 영상입니다. 딥마인드 발표에 따르면 시연에 쓰인 휴머노이드는 Apollo 2입니다. 상체만 다뤘던 이전 모델과 달리 손 뻗기, 몸 굽히기, 균형 잡기 같은 전신 동작을 보여 줍니다."
+        }
+      ]
+    },
+    {
+      "id": "google-deepmind",
+      "name": "Google DeepMind",
+      "name_ko": "구글 딥마인드",
+      "country": "영국·미국",
+      "flagship": "Gemini Robotics 2",
+      "tagline_ko": "로봇 몸체가 아니라 여러 로봇에 들어가는 '두뇌' 모델을 만드는 회사입니다.",
+      "summary_ko": "구글 딥마인드는 2025년 3월 Gemini Robotics를 시작으로 로봇용 파운데이션 모델을 빠르게 갱신하고 있습니다. 2026년에는 보스턴 다이내믹스와 손잡고 Atlas에 모델을 통합했습니다. 2026년 7월 30일 공개한 Gemini Robotics 2는 VLA, 추론(ER 2), 온디바이스의 세 모델로 휴머노이드 전신 제어까지 다룹니다. ER 2는 Google AI Studio에서 쓸 수 있습니다.",
+      "specs": [
+        {
+          "label_ko": "모델 구성",
+          "value": "Gemini Robotics 2 (VLA), ER 2 (추론), On-Device 2"
+        },
+        {
+          "label_ko": "새 로봇 적응 (On-Device 2)",
+          "value": "보통 200개 미만 예시로 수 시간"
+        },
+        {
+          "label_ko": "공개 범위",
+          "value": "ER 2는 Google AI Studio, VLA·On-Device 2는 얼리 액세스"
+        }
+      ],
+      "milestones": [
+        {
+          "date": "2025-06",
+          "text_ko": "로봇 안에서 네트워크 없이 작동하는 Gemini Robotics On-Device를 공개했습니다.",
+          "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/"
+        },
+        {
+          "date": "2025-09",
+          "text_ko": "행동 전에 추론하고 로봇 간에 기술을 이전할 수 있는 Gemini Robotics 1.5·ER 1.5를 공개했습니다.",
+          "source_url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
+        },
+        {
+          "date": "2026-01",
+          "text_ko": "보스턴 다이내믹스 양산형 Atlas에 딥마인드 파운데이션 모델을 통합하기로 하고, 2026년 Atlas 물량 일부를 배정받았습니다.",
+          "source_url": "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/"
+        },
+        {
+          "date": "2026-04",
+          "text_ko": "Gemini Robotics ER 1.6을 발표하고, 보스턴 다이내믹스 Spot의 시각 점검에 적용했습니다.",
+          "source_url": "https://deepmind.google/blog/gemini-robotics-er-1-6"
+        },
+        {
+          "date": "2026-07",
+          "text_ko": "휴머노이드 전신 제어를 지원하는 Gemini Robotics 2 모델군을 공개했습니다.",
+          "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+        }
+      ],
+      "videos": [
+        {
+          "id": "4lSQnrMC6nY",
+          "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+          "upload_date": "2026-07-30",
+          "channel": "Google DeepMind",
+          "views": 5936814,
+          "duration_sec": 180,
+          "embeddable": true,
+          "note_ko": "Gemini Robotics 2를 대표하는 공식 발표 영상입니다. 미리 짜인 동작이나 원격 조종에 머물던 로봇이 스스로 생각하고 행동하며 다른 기체로 기술을 이전하는 방향을 제시합니다."
+        },
+        {
+          "id": "O9-650iHAls",
+          "title": "Advanced dexterity with Gemini Robotics 2",
+          "upload_date": "2026-07-30",
+          "channel": "Google DeepMind",
+          "views": 41767,
+          "duration_sec": 137,
+          "embeddable": true,
+          "note_ko": "Gemini Robotics 2의 정밀 조작 능력을 보여 주는 영상입니다. 손과 그리퍼(집게형 손) 등 서로 다른 말단 장치로 섬세한 작업을 해내는 모습을 담았습니다."
+        },
+        {
+          "id": "CiTPDm7PKW0",
+          "title": "Multi-robot collaboration with Gemini Robotics 2",
+          "upload_date": "2026-07-30",
+          "channel": "Google DeepMind",
+          "views": 26373,
+          "duration_sec": 151,
+          "embeddable": true,
+          "note_ko": "Gemini Robotics 2의 다중 로봇 협업 시연 영상입니다. 종류가 다른 로봇들이 서로 소통하며 복잡한 문제를 함께 푸는 장면을 보여 줍니다."
+        }
+      ]
+    },
+    {
+      "id": "physical-intelligence",
+      "name": "Physical Intelligence",
+      "name_ko": "피지컬 인텔리전스",
+      "country": "미국",
+      "flagship": "π0.7 (파이 0.7)",
+      "tagline_ko": "어떤 로봇에도 탑재할 수 있는 범용 로봇 파운데이션 모델을 만드는 스타트업입니다.",
+      "summary_ko": "피지컬 인텔리전스는 하드웨어 대신 여러 로봇을 움직이는 범용 정책 모델(VLA)을 만듭니다. 2025년 11월 6억 달러를 유치해 기업가치 56억 달러를 인정받았다고 보도됐습니다. 2026년 3월에는 기업가치 110억 달러 이상의 추가 조달 협상이 보도됐지만, 마감은 공식 발표되지 않았습니다. 2026년 4월 공개한 π0.7은 학습하지 않은 작업을 익힌 기술의 조합으로 해결하는 초기 징후를 보였다고 회사는 설명합니다.",
+      "specs": [],
+      "milestones": [
+        {
+          "date": "2025-04",
+          "text_ko": "처음 보는 집에서도 작동하는 개방형 일반화 VLA π0.5를 공개했습니다.",
+          "source_url": "https://www.youtube.com/watch?v=Zn8yMaepzVk"
+        },
+        {
+          "date": "2025-11",
+          "text_ko": "경험과 교정을 바탕으로 강화학습하는 Recap과 π*0.6을 공개했습니다. 어려운 작업의 처리량이 2배 이상 늘었습니다.",
+          "source_url": "https://www.pi.website/blog/pistar06"
+        },
+        {
+          "date": "2025-11",
+          "text_ko": "CapitalG 주도로 6억 달러를 유치해 기업가치 56억 달러를 인정받았다고 보도됐습니다.",
+          "source_url": "https://siliconangle.com/2025/11/20/jeff-bezos-backed-physical-intelligence-raises-600m-improve-ai-robot-brains/"
+        },
+        {
+          "date": "2026-03",
+          "text_ko": "기업가치 110억 달러 이상으로 약 10억 달러를 새로 조달하는 협상이 보도됐습니다(마감 미확인).",
+          "source_url": "https://news.bloomberglaw.com/artificial-intelligence/ai-robotics-lab-in-talks-to-nab-1-billion-at-11-billion-value"
+        },
+        {
+          "date": "2026-04",
+          "text_ko": "조합적 일반화(익힌 기술을 조합해 새 작업을 해결하는 능력)를 보인, 조종 가능한 범용 모델 π0.7을 공개했습니다.",
+          "source_url": "https://www.pi.website/blog/pi07"
+        }
+      ],
+      "videos": [
+        {
+          "id": "iG2fHqa6ohk",
+          "title": "π*0.6: one hour of making espresso drinks",
+          "upload_date": "2025-11-18",
+          "channel": "Physical Intelligence",
+          "views": 8404,
+          "duration_sec": 3100,
+          "embeddable": true,
+          "note_ko": "π*0.6 모델이 한 시간 동안 에스프레소 음료를 만드는 장면을 담은 공식 영상입니다. 로봇의 실제 경험으로 강화학습(Recap)한 모델이 오랜 시간 실제 작업을 이어 가는 모습을 보여 줍니다."
+        },
+        {
+          "id": "ZpHapIlJnMo",
+          "title": "π*0.6: two and a half hours of unseen folding laundry",
+          "upload_date": "2025-11-18",
+          "channel": "Physical Intelligence",
+          "views": 3324,
+          "duration_sec": 9097,
+          "embeddable": true,
+          "note_ko": "π*0.6 모델이 학습 때 보지 못한 빨래를 2시간 반 동안 개는 장면을 담은 공식 영상입니다. 처음 보는 물건을 다루며 긴 시간 작업을 이어 가는 모습을 보여 줍니다."
+        }
+      ]
+    }
+  ]
+}

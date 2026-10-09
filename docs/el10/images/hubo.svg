@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="hubo-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF8E7"/>
+      <stop offset="1" stop-color="#E6F7FD"/>
+    </linearGradient>
+  </defs>
+  <!-- background -->
+  <rect x="0" y="0" width="400" height="400" fill="url(#hubo-bg)"/>
+  <circle cx="200" cy="200" r="168" fill="#D3F1FC"/>
+  <circle cx="200" cy="200" r="168" fill="none" stroke="#B5E6F8" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <!-- sparkles -->
+  <path d="M60 90 L66 104 L80 110 L66 116 L60 130 L54 116 L40 110 L54 104 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M340 70 L344 80 L354 84 L344 88 L340 98 L336 88 L326 84 L336 80 Z" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M350 250 L354 260 L364 264 L354 268 L350 278 L346 268 L336 264 L346 260 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="52" cy="240" r="6" fill="#FF6B6B" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="318" cy="140" r="4" fill="#06D6A0"/>
+  <circle cx="88" cy="300" r="4" fill="#9B5DE5"/>
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="364" rx="112" ry="14" fill="#2B2D42" opacity="0.18"/>
+
+  <!-- LEGS -->
+  <!-- left leg -->
+  <rect x="150" y="272" width="40" height="40" rx="8" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M176 275 L187 275 L187 309 L176 309 Z" fill="#E9ECEF"/>
+  <circle cx="170" cy="314" r="11" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="148" y="318" width="44" height="26" rx="6" fill="#1E6FD9" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M180 321 L189 321 L189 341 L180 341 Z" fill="#1557AE"/>
+  <path d="M136 342 L196 342 Q200 358 192 360 L134 360 Q128 352 136 342 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="140" y="352" width="50" height="5" rx="2" fill="#ADB5BD"/>
+  <!-- right leg -->
+  <rect x="210" y="272" width="40" height="40" rx="8" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M236 275 L247 275 L247 309 L236 309 Z" fill="#E9ECEF"/>
+  <circle cx="230" cy="314" r="11" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="208" y="318" width="44" height="26" rx="6" fill="#1E6FD9" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M240 321 L249 321 L249 341 L240 341 Z" fill="#1557AE"/>
+  <path d="M204 342 L264 342 Q272 352 266 360 L208 360 Q200 358 204 342 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="210" y="352" width="50" height="5" rx="2" fill="#ADB5BD"/>
+
+  <!-- pelvis -->
+  <rect x="158" y="256" width="84" height="26" rx="8" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="190" y="262" width="20" height="14" rx="3" fill="#2B2D42"/>
+
+  <!-- ARMS -->
+  <!-- left arm (viewer's left, waving up) -->
+  <circle cx="122" cy="172" r="16" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6"/>
+  <rect x="88" y="128" width="30" height="50" rx="10" fill="#1E6FD9" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" transform="rotate(-30 103 153)"/>
+  <circle cx="86" cy="122" r="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="62" y="78" width="28" height="44" rx="9" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" transform="rotate(-12 76 100)"/>
+  <!-- left hand -->
+  <path d="M58 70 Q56 52 66 48 Q72 40 80 46 Q90 44 92 56 Q96 66 88 76 L64 78 Q58 76 58 70 Z" fill="#E9ECEF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M68 50 L68 64 M78 47 L78 62" stroke="#2B2D42" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- motion lines -->
+  <path d="M40 60 Q34 74 40 88 M30 54 Q22 74 30 94" stroke="#2B2D42" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- right arm (down) -->
+  <circle cx="278" cy="172" r="16" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6"/>
+  <rect x="280" y="174" width="30" height="50" rx="10" fill="#1E6FD9" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round" transform="rotate(-10 295 199)"/>
+  <rect x="300" y="182" width="9" height="36" rx="4" fill="#1557AE" transform="rotate(-10 295 199)"/>
+  <circle cx="300" cy="228" r="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="288" y="232" width="28" height="36" rx="9" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <!-- right gripper -->
+  <path d="M290 266 L286 286 Q292 292 298 286 L300 268 Z" fill="#E9ECEF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M306 268 L310 286 Q316 290 320 284 L314 266 Z" fill="#E9ECEF" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- TORSO (boxy chest) -->
+  <rect x="128" y="146" width="144" height="116" rx="14" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M248 150 L268 150 Q268 150 268 160 L268 250 Q268 258 260 258 L248 258 Z" fill="#E9ECEF"/>
+  <!-- blue chest panel -->
+  <rect x="146" y="164" width="96" height="58" rx="8" fill="#1E6FD9" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M226 167 L239 167 L239 219 L226 219 Z" fill="#1557AE"/>
+  <ellipse cx="164" cy="174" rx="10" ry="4" fill="#FFFFFF" opacity="0.7"/>
+  <!-- chest display -->
+  <rect x="160" y="180" width="54" height="28" rx="5" fill="#2B2D42"/>
+  <path d="M166 196 L174 196 L178 186 L184 204 L190 192 L194 196 L208 196" stroke="#06D6A0" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- LEDs -->
+  <circle cx="226" cy="186" r="5" fill="#FFD23F" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="226" cy="202" r="5" fill="#06D6A0" stroke="#2B2D42" stroke-width="2"/>
+  <!-- belly vents -->
+  <rect x="152" y="232" width="60" height="5" rx="2.5" fill="#ADB5BD"/>
+  <rect x="152" y="242" width="60" height="5" rx="2.5" fill="#ADB5BD"/>
+  <!-- bolts -->
+  <circle cx="140" cy="158" r="3.5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="260" cy="158" r="3.5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="140" cy="250" r="3.5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="232" cy="242" r="3.5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="2"/>
+  <!-- shoulder pads -->
+  <rect x="116" y="146" width="36" height="22" rx="8" fill="#1E6FD9" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <rect x="248" y="146" width="36" height="22" rx="8" fill="#1E6FD9" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="128" cy="152" rx="6" ry="2.5" fill="#FFFFFF" opacity="0.8"/>
+  <ellipse cx="260" cy="152" rx="6" ry="2.5" fill="#FFFFFF" opacity="0.8"/>
+
+  <!-- neck -->
+  <rect x="184" y="132" width="32" height="18" rx="4" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- HEAD -->
+  <!-- lidar sensor on top -->
+  <rect x="180" y="26" width="40" height="20" rx="6" fill="#2B2D42" stroke="#2B2D42" stroke-width="4"/>
+  <rect x="186" y="30" width="28" height="7" rx="3.5" fill="#4CC9F0"/>
+  <rect x="194" y="44" width="12" height="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="3"/>
+  <rect x="132" y="50" width="136" height="88" rx="24" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M244 54 Q264 56 264 76 L264 116 Q264 134 244 134 Z" fill="#E9ECEF"/>
+  <ellipse cx="156" cy="64" rx="12" ry="5" fill="#FFFFFF" stroke="#E9ECEF" stroke-width="2"/>
+  <!-- blue visor band -->
+  <rect x="144" y="70" width="112" height="50" rx="16" fill="#1E6FD9" stroke="#2B2D42" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M236 73 Q252 74 252 90 L252 104 Q252 117 236 117 Z" fill="#1557AE"/>
+  <!-- ear modules -->
+  <rect x="120" y="78" width="16" height="36" rx="6" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="264" y="78" width="16" height="36" rx="6" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+  <circle cx="128" cy="96" r="3" fill="#FFD23F"/>
+  <circle cx="272" cy="96" r="3" fill="#FFD23F"/>
+  <!-- eyes -->
+  <circle cx="176" cy="94" r="15" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="224" cy="94" r="15" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="178" cy="96" r="8" fill="#2B2D42"/>
+  <circle cx="226" cy="96" r="8" fill="#2B2D42"/>
+  <circle cx="181" cy="92" r="3" fill="#FFFFFF"/>
+  <circle cx="229" cy="92" r="3" fill="#FFFFFF"/>
+  <circle cx="175" cy="99" r="1.5" fill="#FFFFFF"/>
+  <circle cx="223" cy="99" r="1.5" fill="#FFFFFF"/>
+  <!-- cheeks -->
+  <ellipse cx="160" cy="112" rx="7" ry="4" fill="#FF6B6B" opacity="0.8"/>
+  <ellipse cx="240" cy="112" rx="7" ry="4" fill="#FF6B6B" opacity="0.8"/>
+  <!-- smile -->
+  <path d="M192 110 Q200 118 208 110" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- chin lamp -->
+  <rect x="186" y="126" width="28" height="6" rx="3" fill="#4CC9F0" stroke="#2B2D42" stroke-width="2"/>
+</svg>

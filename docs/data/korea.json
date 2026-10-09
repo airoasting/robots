@@ -1,0 +1,177 @@
+{
+  "fx": {
+    "krw_per_usd": 1358.4,
+    "date": "2026-09-30",
+    "basis": "서울외국환중개 미국 달러 매매기준율(시장평균환율). 같은 날 서울외환시장 주간거래 종가(15:30)는 1,352.8원.",
+    "source_url": "http://www.smbs.biz/ExRate/StdExRate.jsp",
+    "source_url_alt": "https://www.mt.co.kr/economy/2026/09/30/2026093015352291632"
+  },
+  "nonwage_ratio": {
+    "value": 0.262,
+    "basis": "간접노동비용 1,386천원 ÷ 직접노동비용 5,295천원 = 0.262 (계산값). 2025 회계연도 기업체노동비용조사, 상용근로자 10인 이상 기업체, 상용근로자 1인당 월평균. 총 노동비용 6,681천원. 간접노동비용 내역: 퇴직급여 등 549천원, 법정 노동비용(4대보험 등) 503천원, 법정외 복지비 303천원, 나머지(채용·교육훈련 등) 31천원(계산값). 직접노동비용에는 정액·초과급여 4,474천원과 상여금·성과급 821천원이 들어감.",
+    "year": "2025 회계연도(2026-09-30 고용노동부 발표)",
+    "source_url": "https://eiec.kdi.re.kr/policy/materialView.do?num=287628",
+    "source_url_detail": "https://magazine.hankyung.com/business/article/202609304903b",
+    "industry_total_monthly_krw": {
+      "제조업": 7631000,
+      "숙박·음식점업": 4147000,
+      "사업시설관리·사업지원 및 임대서비스업": 3363000,
+      "전산업": 6681000
+    }
+  },
+  "min_wage_2026": {
+    "hourly": 10320,
+    "monthly": 2156880,
+    "basis": "월 209시간 기준 고시 금액. 전년 대비 2.9%(290원) 인상, 2025-08-05 결정고시. 2027년 적용분은 시간급 10,700원(월 2,236,300원), 2026-08-05 결정고시.",
+    "annual_calc": 25882560,
+    "annual_calc_formula": "2,156,880 × 12 = 25,882,560원 (계산값)",
+    "annual_total_comp_calc": 32663791,
+    "annual_total_comp_calc_formula": "25,882,560 × (1 + 0.262) = 32,663,791원 ≈ 24.0천달러 (계산값)",
+    "source_url": "https://www.minimumwage.go.kr/minWage/policy/decisionMain.do"
+  },
+  "jobs": [
+    {
+      "us_job": "Packers and packagers, hand",
+      "ko_job": "제조 관련 단순 종사자(수작업 포장 포함)",
+      "keco": "KSCO 930 제조 관련 단순 종사자 (KECO 코드는 미대응, 워크피디아가 쓰는 한국표준직업분류 소분류 코드)",
+      "annual_wage_krw": 27600000,
+      "basis": "워크피디아 맞춤형 임금정보, 직업 조건만 선택한 연간 임금 중위값 2,760만원(하위25% 2,487, 상위25% 3,323, 평균 3,063만원). 정액급여+특별급여, 초과급여 제외. 제조업(C) 한정 중위값 2,750만원.",
+      "year": "2024년 기준 추정치(고용형태별근로실태조사 최근 3개년 + 사업체노동력조사 연계, 2026-10-09 조회)",
+      "source_url": "https://www.wagework.go.kr/pt/c/a/retrieveCstmWageSrch.do",
+      "match": "근사",
+      "match_note": "포장 전용 소분류가 없어 제조 단순노무 소분류 전체로 대응. 선별·단순조립이 함께 섞임.",
+      "calc_total_comp_krw": 34831200,
+      "calc_total_comp_formula": "27,600,000 × (1 + 0.262) = 34,831,200원 (계산값)",
+      "calc_total_comp_usd_k": 25.6,
+      "calc_total_comp_usd_formula": "34,831,200 ÷ 1358.4 ÷ 1000 = 25.6천달러 (계산값)",
+      "us_total_comp_usd_k": 49.0,
+      "us_robot_cost_usd_k": 45.4,
+      "us_multiple": 0.9,
+      "calc_ko_multiple": 1.8,
+      "calc_ko_multiple_formula": "미국 로봇 연간 비용 45.4 ÷ 국내 총보상 환산 25.6 = 1.8배 (계산값, 로봇 비용을 미국 값 그대로 둔 가정)"
+    },
+    {
+      "us_job": "Taxi drivers",
+      "ko_job": "자동차 운전원(택시 포함)",
+      "keco": "KSCO 873 자동차 운전원 (KECO 코드는 미대응, 워크피디아가 쓰는 한국표준직업분류 소분류 코드)",
+      "annual_wage_krw": 36740000,
+      "basis": "워크피디아 맞춤형 임금정보, 직업 조건만 선택한 연간 임금 중위값 3,674만원(하위25% 2,946, 상위25% 4,572, 평균 3,845만원). 정액급여+특별급여, 초과급여 제외. 육상운송업(H49) 한정 중위값 3,767만원.",
+      "year": "2024년 기준 추정치(고용형태별근로실태조사 최근 3개년 + 사업체노동력조사 연계, 2026-10-09 조회)",
+      "source_url": "https://www.wagework.go.kr/pt/c/a/retrieveCstmWageSrch.do",
+      "match": "근사",
+      "match_note": "택시만 분리된 값 없음. 버스·화물·승용차 운전원 포함. 100인 이상 사업체 기준이라 개인택시·소규모 법인택시가 빠짐.",
+      "calc_total_comp_krw": 46365880,
+      "calc_total_comp_formula": "36,740,000 × (1 + 0.262) = 46,365,880원 (계산값)",
+      "calc_total_comp_usd_k": 34.1,
+      "calc_total_comp_usd_formula": "46,365,880 ÷ 1358.4 ÷ 1000 = 34.1천달러 (계산값)",
+      "us_total_comp_usd_k": 56.8,
+      "us_robot_cost_usd_k": 57.8,
+      "us_multiple": 1.0,
+      "calc_ko_multiple": 1.7,
+      "calc_ko_multiple_formula": "미국 로봇 연간 비용 57.8 ÷ 국내 총보상 환산 34.1 = 1.7배 (계산값, 로봇 비용을 미국 값 그대로 둔 가정)"
+    },
+    {
+      "us_job": "Dishwashers",
+      "ko_job": "음식 관련 단순 종사자(주방보조·설거지 포함)",
+      "keco": "KSCO 952 음식 관련 단순 종사자 (KECO 코드는 미대응, 워크피디아가 쓰는 한국표준직업분류 소분류 코드)",
+      "annual_wage_krw": 27410000,
+      "basis": "워크피디아 맞춤형 임금정보, 직업 조건만 선택한 연간 임금 중위값 2,741만원(하위25% 2,481, 상위25% 3,193, 평균 2,865만원). 정액급여+특별급여, 초과급여 제외. 숙박·음식점업(I) 한정 중위값 2,744만원.",
+      "year": "2024년 기준 추정치(고용형태별근로실태조사 최근 3개년 + 사업체노동력조사 연계, 2026-10-09 조회)",
+      "source_url": "https://www.wagework.go.kr/pt/c/a/retrieveCstmWageSrch.do",
+      "match": "불확실",
+      "match_note": "설거지원만 분리된 값 없음. 패스트푸드 준비원, 주방보조원 등 포함. 상대표준오차 0.745%로 5개 중 가장 큼.",
+      "calc_total_comp_krw": 34591420,
+      "calc_total_comp_formula": "27,410,000 × (1 + 0.262) = 34,591,420원 (계산값)",
+      "calc_total_comp_usd_k": 25.5,
+      "calc_total_comp_usd_formula": "34,591,420 ÷ 1358.4 ÷ 1000 = 25.5천달러 (계산값)",
+      "us_total_comp_usd_k": 45.0,
+      "us_robot_cost_usd_k": 172.0,
+      "us_multiple": 3.8,
+      "calc_ko_multiple": 6.7,
+      "calc_ko_multiple_formula": "미국 로봇 연간 비용 172.0 ÷ 국내 총보상 환산 25.5 = 6.7배 (계산값, 로봇 비용을 미국 값 그대로 둔 가정)"
+    },
+    {
+      "us_job": "Janitors and cleaners",
+      "ko_job": "청소원 및 환경미화원",
+      "keco": "KSCO 941 청소원 및 환경미화원 (KECO 코드는 미대응, 워크피디아가 쓰는 한국표준직업분류 소분류 코드)",
+      "annual_wage_krw": 26960000,
+      "basis": "워크피디아 맞춤형 임금정보, 직업 조건만 선택한 연간 임금 중위값 2,696만원(하위25% 2,460, 상위25% 3,121, 평균 2,933만원). 정액급여+특별급여, 초과급여 제외. 사업시설관리업(N) 한정 중위값 2,767만원.",
+      "year": "2024년 기준 추정치(고용형태별근로실태조사 최근 3개년 + 사업체노동력조사 연계, 2026-10-09 조회)",
+      "source_url": "https://www.wagework.go.kr/pt/c/a/retrieveCstmWageSrch.do",
+      "match": "근사",
+      "match_note": "건물 청소원과 거리 환경미화원이 함께 묶임. 미국 직업은 가사도우미 제외 건물 청소원.",
+      "calc_total_comp_krw": 34023520,
+      "calc_total_comp_formula": "26,960,000 × (1 + 0.262) = 34,023,520원 (계산값)",
+      "calc_total_comp_usd_k": 25.0,
+      "calc_total_comp_usd_formula": "34,023,520 ÷ 1358.4 ÷ 1000 = 25.0천달러 (계산값)",
+      "us_total_comp_usd_k": 47.7,
+      "us_robot_cost_usd_k": 280.0,
+      "us_multiple": 5.9,
+      "calc_ko_multiple": 11.2,
+      "calc_ko_multiple_formula": "미국 로봇 연간 비용 280.0 ÷ 국내 총보상 환산 25.0 = 11.2배 (계산값, 로봇 비용을 미국 값 그대로 둔 가정)"
+    },
+    {
+      "us_job": "Welders, cutters, solderers, and brazers",
+      "ko_job": "용접원",
+      "keco": "KSCO 743 용접원 (KECO 코드는 미대응, 워크피디아가 쓰는 한국표준직업분류 소분류 코드)",
+      "annual_wage_krw": 36500000,
+      "basis": "워크피디아 맞춤형 임금정보, 직업 조건만 선택한 연간 임금 중위값 3,650만원(하위25% 2,948, 상위25% 4,800, 평균 4,106만원). 정액급여+특별급여, 초과급여 제외. 제조업(C) 한정 중위값 3,622만원.",
+      "year": "2024년 기준 추정치(고용형태별근로실태조사 최근 3개년 + 사업체노동력조사 연계, 2026-10-09 조회)",
+      "source_url": "https://www.wagework.go.kr/pt/c/a/retrieveCstmWageSrch.do",
+      "match": "정확",
+      "match_note": "미국 Welders, cutters, solderers, and brazers와 직무 범위가 거의 같음.",
+      "calc_total_comp_krw": 46063000,
+      "calc_total_comp_formula": "36,500,000 × (1 + 0.262) = 46,063,000원 (계산값)",
+      "calc_total_comp_usd_k": 33.9,
+      "calc_total_comp_usd_formula": "46,063,000 ÷ 1358.4 ÷ 1000 = 33.9천달러 (계산값)",
+      "us_total_comp_usd_k": 73.4,
+      "us_robot_cost_usd_k": 334.6,
+      "us_multiple": 4.6,
+      "calc_ko_multiple": 9.9,
+      "calc_ko_multiple_formula": "미국 로봇 연간 비용 334.6 ÷ 국내 총보상 환산 33.9 = 9.9배 (계산값, 로봇 비용을 미국 값 그대로 둔 가정)"
+    }
+  ],
+  "extras": [
+    {
+      "label": "제조업 로봇 밀도(한국)",
+      "value": "직원 1만 명당 1,220대, 세계 1위 (2024년 데이터, World Robotics 2025)",
+      "source_url": "https://ifr.org/ifr-press-releases/news/robot-density-surges-in-europe-asia-and-americas"
+    },
+    {
+      "label": "제조업 로봇 밀도(미국)",
+      "value": "직원 1만 명당 307대, 세계 8위 (같은 자료). 세계 평균 132대.",
+      "source_url": "https://ifr.org/ifr-press-releases/news/robot-density-surges-in-europe-asia-and-americas"
+    },
+    {
+      "label": "산업별 1인당 월 노동비용(2025 회계연도)",
+      "value": "제조업 7,631천원, 숙박·음식점업 4,147천원, 사업시설관리·사업지원 및 임대서비스업 3,363천원, 전산업 6,681천원",
+      "source_url": "https://eiec.kdi.re.kr/policy/materialView.do?num=287628"
+    },
+    {
+      "label": "워크피디아 임금정보 범위",
+      "value": "상용근로자 100인 이상 사업체의 전일제 상용근로자, 연간 임금(정액+특별급여, 초과급여 제외), 2024년 기준 추정치, 표본 60명 이상일 때만 제공",
+      "source_url": "https://www.wagework.go.kr/pt/c/a/retrieveClsfWageSrch.do"
+    }
+  ],
+  "notes": [
+    "국내 임금은 워크피디아 직업별 중위값이다. 미국 원문은 BLS OEWS 중위 임금에 ECEC 복리후생을 더한 총보상이라, 국내 값에 비임금 비율 0.262를 곱해 맞췄다. 이 곱셈은 계산값이다.",
+    "비임금 비율은 전산업 평균(10인 이상 기업)이다. 직종별·산업별 직접/간접 구분은 보도자료 요약에서 확인하지 못했다. 저임금 단순노무직은 법정외 복지가 작아 실제 비율이 이보다 낮을 수 있다.",
+    "워크피디아 값은 초과급여를 뺀 임금이고, 노동비용조사의 직접노동비용은 초과급여를 포함한다. 둘을 곱하면 정의가 완전히 일치하지 않는다.",
+    "워크피디아는 100인 이상 사업체만 다룬다. 중소 사업장이 많은 청소, 음식점, 택시 직종은 실제 중위 임금이 더 낮을 가능성이 크다.",
+    "워크피디아 값은 2024년 기준 추정치다. 2026년 최저임금 연 환산 2,588만원(계산값)이 청소원 중위값 2,696만원, 음식 관련 단순 종사자 2,741만원에 바짝 붙어 있다. 저임금 직종은 사실상 최저임금이 하한선이다.",
+    "배수 재계산은 미국 로봇 비용(달러)을 국내에 그대로 적용한 가정이다. 국내 도입가, 유지보수 인건비, 전기료, 금리, 정부 보조금은 반영하지 않았다.",
+    "택시는 한국에서 상용 로보택시가 운행되지 않아 로봇 비용 비교 자체가 가정이다. 또 국내 택시 기사 다수는 개인택시나 소규모 법인 소속이라 워크피디아 값과 거리가 있다.",
+    "환율은 2026-09-30 서울외국환중개 매매기준율 1,358.4원이다. 10월 초 1,339~1,360원 사이에서 움직였다. 환율 1% 변화는 배수를 약 1% 바꾼다.",
+    "KECO 코드는 확인하지 못했다. 직종 코드는 워크피디아가 쓰는 한국표준직업분류 소분류 3자리이며, 분류 차수는 사이트에 표시되지 않았다."
+  ],
+  "not_found": [
+    "고용형태별근로실태조사 2025년 보고서의 직종 소분류별 월 임금총액 표(보고서 PDF가 노동통계누리집 첨부로만 제공되어 내려받지 않음)",
+    "기업체노동비용조사의 제조업·사업시설관리업별 직접/간접 노동비용 분해(보도자료 PDF 원문 미확인)",
+    "한국은행 ECOS 기준환율 원자료(API 키 필요). 서울외국환중개 값으로 대체",
+    "국내 산업용 로봇 평균 판매가격의 공식 통계"
+  ],
+  "_meta": {
+    "created": "2026-10-09",
+    "us_values_from": "docs/data/anthropic.json fig7_robot_costs_physical_occupations (중위 총보상, 연간 로봇 비용 합계)"
+  }
+}

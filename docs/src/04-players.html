@@ -1,0 +1,1866 @@
+<section id="players" class="sec" data-nav="플레이어" aria-labelledby="players-title">
+  <div class="wrap">
+    <header class="pl-head">
+      <div class="sheet">
+        <span class="sheet-no">ARG-03</span>
+        <span class="sheet-name">플레이어</span>
+      </div>
+      <h2 id="players-title" class="h-display">주요 로봇 플레이어</h2>
+      <p class="lead">휴머노이드와 로봇 AI를 이끄는 업체 <span data-pl-stat="companies">15</span>곳을 제조사 사양서 한 장씩으로 정리했습니다. 색인에서 업체를 고르면 대표 모델, 공개 사양, 마일스톤, 관련 영상이 아래에 펼쳐집니다.</p>
+    </header>
+
+    <div class="pl-index" id="pl-index">
+      <div class="pl-index-hd" aria-hidden="true"><span>국가</span><span>업체 · 대표 모델</span></div>
+      <div class="pl-index-body" role="group" aria-label="업체 색인. 국가별로 묶었습니다. 방향키로 이동합니다" data-pl-index></div>
+    </div>
+
+    <p class="sr-only" aria-live="polite" data-pl-live></p>
+    <article class="pl-sheet" id="pl-sheet" tabindex="-1" data-pl-sheet></article>
+
+    <details class="pl-ledger" id="pl-ledger" data-pl-ledger>
+      <summary>
+        <span class="pl-ledger-t">전 업체 마일스톤 원장, 날짜순</span>
+        <span class="pl-ledger-m" data-pl-ledger-meta></span>
+      </summary>
+      <div class="pl-ledger-scroll">
+        <table class="pl-ltable">
+          <caption class="sr-only">전 업체 마일스톤, 최신순</caption>
+          <thead><tr><th scope="col">날짜</th><th scope="col">업체</th><th scope="col">내용</th><th scope="col">출처</th></tr></thead>
+          <tbody data-pl-ledger-body></tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+  <script type="application/json" id="players-data">{
+  "west": {
+    "generated": "2026-10-08",
+    "companies": [
+      {
+        "id": "boston-dynamics",
+        "name": "Boston Dynamics",
+        "name_ko": "보스턴 다이내믹스",
+        "country": "미국",
+        "flagship": "Atlas (전동 양산형), Spot",
+        "tagline_ko": "연구용 곡예 로봇에서 현대차 공장에 투입되는 양산형 휴머노이드로 전환한 회사입니다.",
+        "summary_ko": "보스턴 다이내믹스는 2026년 1월 CES에서 양산형 전동 Atlas를 공개하고 즉시 생산에 들어갔습니다. 2026년 물량은 현대차그룹과 구글 딥마인드에 모두 배정됐고, 신규 고객은 2027년 초부터 받습니다. 2026년 9월에는 조지아주 현대차 메타플랜트에서 Atlas가 부품 물류 작업을 익히기 시작했습니다. 4족 로봇 Spot은 산업 현장 점검 제품으로 자리를 굳히고 있습니다.",
+        "specs": [
+          {
+            "label_ko": "자유도",
+            "value": "56"
+          },
+          {
+            "label_ko": "작업 반경",
+            "value": "2.3m (7.5ft)"
+          },
+          {
+            "label_ko": "최대 들어올림",
+            "value": "50kg (110lb)"
+          },
+          {
+            "label_ko": "작동 온도",
+            "value": "-20~40°C"
+          },
+          {
+            "label_ko": "배터리",
+            "value": "충전소로 자율 이동해 배터리 자가 교체"
+          },
+          {
+            "label_ko": "새 손 자유도",
+            "value": "손당 13 (4손가락, 2026-10 공개)"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2026-01",
+            "text_ko": "CES에서 양산형 Atlas를 공개하고 보스턴 본사에서 곧바로 생산에 들어갔습니다. 2026년 물량은 현대차 RMAC와 구글 딥마인드에 전량 배정됐습니다.",
+            "source_url": "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "Spot의 AI 시각 점검(AIVI-Learning)에 구글 Gemini Robotics를 적용했습니다.",
+            "source_url": "https://bostondynamics.com/blog/aivi-learning-now-powered-google-gemini-robotics/"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "FIFA 월드컵 2026 경기장(NYNJ Stadium)에서 Atlas가 하프타임 라이브 공연을 펼치고, 후반전에 쓸 공을 전달했습니다.",
+            "source_url": "https://bostondynamics.com/blog/deploying-robots-into-and-onto-the-field/"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "현대차 메타플랜트 아메리카(조지아) 안에 RMAC를 열고, Atlas의 부품 물류·서열 작업 훈련을 시작했습니다.",
+            "source_url": "https://www.therobotreport.com/boston-dynamics-opens-metaplant-application-center-train-atlas-humanoid-robots/"
+          },
+          {
+            "date": "2026-10",
+            "text_ko": "관절마다 구동기를 직접 단 13자유도 4손가락 새 손을 공개했습니다. 역구동(바깥 힘에 밀려 거꾸로 돌 수 있는 구조)이 가능한 변속기와 손끝·손바닥 압력 센서를 갖췄습니다. sim-to-real(시뮬레이션에서 익힌 동작을 실제 로봇에 옮기는 방식) 강화학습에 맞춰 설계했습니다.",
+            "source_url": "https://bostondynamics.com/blog/robot-hands-for-modern-ai-and-real-work"
+          }
+        ],
+        "videos": [
+          {
+            "id": "4whgw2gLBS8",
+            "title": "New Hands for Atlas | Boston Dynamics",
+            "upload_date": "2026-10-01",
+            "channel": "Boston Dynamics",
+            "views": 2408354,
+            "duration_sec": 335,
+            "embeddable": true,
+            "note_ko": "Atlas의 새 13자유도 손을 소개하는 공식 영상입니다. 관절마다 구동기를 직접 달았고, 역구동 가능한 변속기를 적용했습니다. 시뮬레이션에서 강화학습한 정책을 실제 로봇으로 옮기도록 설계했고, 정밀한 물리 작업을 겨냥했다고 설명합니다."
+          },
+          {
+            "id": "rrUHZKlrxms",
+            "title": "Atlas | Product Features | Boston Dynamics",
+            "upload_date": "2026-01-05",
+            "channel": "Boston Dynamics",
+            "views": 563779,
+            "duration_sec": 103,
+            "embeddable": true,
+            "note_ko": "CES 2026에서 공개한 양산형 Atlas의 주요 기능을 짧게 정리한 영상입니다. 연구용이 아닌 제품 버전 Atlas가 어떤 모습인지 한눈에 보여 줍니다."
+          },
+          {
+            "id": "kBwxmlI2yHQ",
+            "title": "Smarter Inspections Powered by Google Gemini Robotics | Boston Dynamics",
+            "upload_date": "2026-04-14",
+            "channel": "Boston Dynamics",
+            "views": 84987,
+            "duration_sec": 100,
+            "embeddable": true,
+            "note_ko": "Spot과 관제 소프트웨어 Orbit의 AI 시각 점검에 구글 Gemini Robotics를 결합한 기능을 소개합니다. 시설 점검에서 로봇이 판독할 수 있는 정보가 늘었다는 점을 보여 줍니다."
+          },
+          {
+            "id": "CFS_zU1kWQw",
+            "title": "Inside the Robotics Race | Boston Dynamics x Hyundai Motor Group x Bloomberg Media Studios",
+            "upload_date": "2026-09-30",
+            "channel": "Boston Dynamics",
+            "views": 775548,
+            "duration_sec": 348,
+            "embeddable": true,
+            "note_ko": "보스턴 다이내믹스, 현대자동차그룹, 블룸버그 미디어 스튜디오가 함께 만든 휴머노이드 경쟁 다큐멘터리입니다. Spot과 Stretch 상용화 경험을 바탕으로 Atlas를 실제 환경에서 학습시키고 대량 생산하려는 전략을 다룹니다."
+          }
+        ]
+      },
+      {
+        "id": "tesla",
+        "name": "Tesla",
+        "name_ko": "테슬라",
+        "country": "미국",
+        "flagship": "Optimus",
+        "tagline_ko": "자동차 생산 라인을 철거하고 휴머노이드 양산 라인을 구축하고 있는 회사입니다.",
+        "summary_ko": "테슬라는 Optimus를 회사의 가장 큰 제품으로 내세우고 있습니다. 2026년 5월 프리몬트 공장의 모델 S·X 생산을 끝내고 그 자리에 1세대 Optimus 생산 라인을 설치하고 있으며, 2026년 안에 생산을 시작한다고 밝혔습니다. 다만 3세대(V3) 공개는 '연중반'으로 미뤄졌고, 2026년 9월 기준으로 아직 공개되지 않았습니다. 기가 텍사스에는 2027년부터 가동할 2세대 라인을 설계하고 있습니다.",
+        "specs": [],
+        "milestones": [
+          {
+            "date": "2025-06",
+            "text_ko": "Optimus 프로그램 책임자 밀란 코박이 물러나고, 오토파일럿 총괄 아쇼크 엘루스와미가 자리를 이어받았습니다.",
+            "source_url": "https://en.wikipedia.org/wiki/Optimus_(robot)"
+          },
+          {
+            "date": "2025-11",
+            "text_ko": "연례 주주총회에서 휴머노이드 100만 대 인도 등을 조건으로 한 머스크 보상안이 승인됐습니다. 발표의 중심에는 Optimus가 있었습니다.",
+            "source_url": "https://www.automotiveworld.com/news/tesla-shareholders-approve-historic-us1tr-musk-pay-package/"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "모델 S·X 단종과 프리몬트 라인의 Optimus 전환 계획을 발표했습니다.",
+            "source_url": "https://www.guru3d.com/story/tesla-to-end-model-s-and-x-production-fremont-pivots-to-optimus/"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "1분기 실적 발표에서 프리몬트에 1세대 Optimus 라인을 설치하고 있으며, 7~8월 생산 시작이 목표라고 밝혔습니다. V3 공개는 생산 시작 무렵으로 미뤘습니다.",
+            "source_url": "https://www.marketbeat.com/earnings/reports/2026-4-22-tesla-inc-stock/"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "2분기 실적 자료에서 모델 S·X 라인 철거를 마쳤다고 밝히고, 1세대 Optimus를 2026년에 생산하겠다고 약속했습니다. 초기 물량은 학습 데이터 수집에 투입합니다.",
+            "source_url": "https://www.shacknews.com/article/150109/tesla-tsla-q2-2026-earnings-call-transcript"
+          }
+        ],
+        "videos": [
+          {
+            "id": "0jHCsY8MnmQ",
+            "title": "Optimus’ red carpet debut",
+            "upload_date": "2025-10-07",
+            "channel": "Tesla",
+            "views": 790100,
+            "duration_sec": 31,
+            "embeddable": true,
+            "note_ko": "테슬라 공식 채널에 올라온 31초 길이의 짧은 영상입니다. 제목대로 Optimus가 레드카펫 행사에 처음 등장한 장면을 담았습니다."
+          },
+          {
+            "id": "7RxAS8Fujeo",
+            "title": "Poptimus at Tesla Diner",
+            "upload_date": "2025-09-07",
+            "channel": "Tesla",
+            "views": 277846,
+            "duration_sec": 33,
+            "embeddable": true,
+            "note_ko": "테슬라 공식 채널에 올라온 33초 길이의 짧은 영상입니다. 테슬라 다이너 매장에 'Poptimus'라는 이름으로 등장한 Optimus를 보여 줍니다."
+          }
+        ]
+      },
+      {
+        "id": "figure-ai",
+        "name": "Figure AI",
+        "name_ko": "피규어 AI",
+        "country": "미국",
+        "flagship": "Figure 03 (F.03)",
+        "tagline_ko": "자체 AI 'Helix'와 자체 공장 'BotQ'로 가정과 공장을 동시에 공략하는 휴머노이드 회사입니다.",
+        "summary_ko": "피규어 AI는 2025년 9월 시리즈 C에서 기업가치 390억 달러를 인정받았습니다. 2026년 4월에는 BotQ 공장의 생산 속도를 하루 1대에서 시간당 1대로 끌어올렸다고 밝혔습니다. 9월에는 Helix 2.5로 처음 방문한 집 30곳에서 추가 학습 없이 정리, 빨래 개기, 침대 정리를 수행하는 실험을 공개했습니다. BMW 스파턴버그 공장에는 2026년 6월부터 F.03이 투입됐습니다.",
+        "specs": [
+          {
+            "label_ko": "무선 충전",
+            "value": "발바닥 코일로 2kW 충전"
+          },
+          {
+            "label_ko": "촉각 센서",
+            "value": "손끝에서 3g 압력까지 감지"
+          },
+          {
+            "label_ko": "무게",
+            "value": "Figure 02 대비 9% 경량"
+          },
+          {
+            "label_ko": "BotQ 초기 생산능력",
+            "value": "연 최대 12,000대"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-09",
+            "text_ko": "시리즈 C에서 10억 달러 이상을 유치하고, 기업가치 390억 달러를 인정받았습니다.",
+            "source_url": "https://www.figure.ai/news/series-c"
+          },
+          {
+            "date": "2025-10",
+            "text_ko": "3세대 휴머노이드 Figure 03을 공개했습니다.",
+            "source_url": "https://www.figure.ai/news/introducing-figure-03"
+          },
+          {
+            "date": "2025-11",
+            "text_ko": "Figure 02가 BMW 공장에서 차량 3만 대 생산에 기여했다고 발표했습니다.",
+            "source_url": "https://www.figure.ai/news/production-at-bmw"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "Helix 02를 공개했습니다. 보행, 조작, 균형을 하나의 신경망으로 묶어 전신을 제어합니다.",
+            "source_url": "https://www.figure.ai/news/helix-02"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "BotQ 생산 속도를 하루 1대에서 시간당 1대로 24배 높였고, F.03을 350대 이상 출고했습니다.",
+            "source_url": "https://www.figure.ai/news/ramping-figure-03-production"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "Helix 2.5를 공개했습니다. 처음 방문한 집 30곳에서 추가 학습 없이 집안일을 수행했습니다.",
+            "source_url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization"
+          }
+        ],
+        "videos": [
+          {
+            "id": "Eu5mYMavctM",
+            "title": "Introducing Figure 03",
+            "upload_date": "2025-10-09",
+            "channel": "Figure",
+            "views": 2230085,
+            "duration_sec": 379,
+            "embeddable": true,
+            "note_ko": "3세대 휴머노이드 Figure 03을 처음 공개한 공식 영상입니다. Helix AI에 맞춰 다시 설계한 센서·손과 가정용 안전 설계를 소개합니다."
+          },
+          {
+            "id": "lQsvTrRTBRs",
+            "title": "Introducing Helix 02",
+            "upload_date": "2026-01-27",
+            "channel": "Figure",
+            "views": 333131,
+            "duration_sec": 216,
+            "embeddable": true,
+            "note_ko": "Helix 02를 소개하는 공식 영상입니다. 상체만 제어하던 신경망 하나가 이제 걷기, 조작, 균형까지 아우르며 로봇 전체를 하나의 시스템으로 다룬다는 점을 보여 줍니다."
+          },
+          {
+            "id": "lJpM_2a1zrE",
+            "title": "Helix 2.5 30-Home Generalization",
+            "upload_date": "2026-09-17",
+            "channel": "Figure",
+            "views": 784388,
+            "duration_sec": 361,
+            "embeddable": true,
+            "note_ko": "Helix 2.5 발표 영상입니다. 피규어가 베이 에어리어의 집 30곳을 빌려 실험한 장면을 담았습니다. 로봇은 추가 학습 없이 집에 도착하자마자 실용적인 집안일을 시작합니다."
+          }
+        ]
+      },
+      {
+        "id": "agility-robotics",
+        "name": "Agility Robotics",
+        "name_ko": "어질리티 로보틱스",
+        "country": "미국",
+        "flagship": "Digit 5",
+        "tagline_ko": "물류 현장에서 가장 먼저 상업 계약을 체결한 휴머노이드 Digit의 제조사입니다.",
+        "summary_ko": "어질리티 로보틱스는 GXO, 셰플러, 토요타 캐나다 공장 등에 Digit을 배치해 상자 운반 업무를 수행해 왔습니다. 2026년 6월에는 스팩 합병으로 상장하겠다고 발표했고, 합병 전 기업가치는 25억 달러입니다. 같은 발표에서 밝힌 3억 달러 이상의 Digit 5 주문은 마일스톤 달성을 조건으로 한 단일 고객 계약입니다. 2026년 9월 공개한 Digit 5는 2027년 말 정식 출시될 예정입니다.",
+        "specs": [
+          {
+            "label_ko": "키",
+            "value": "1.81m (5ft 11in)"
+          },
+          {
+            "label_ko": "무게",
+            "value": "129kg (284lb)"
+          },
+          {
+            "label_ko": "가반하중",
+            "value": "최대 22.7kg (50lb), 반복 들기 기준"
+          },
+          {
+            "label_ko": "최대 도달 높이",
+            "value": "2.2m (7.2ft)"
+          },
+          {
+            "label_ko": "배터리",
+            "value": "작동 90분, 충전 약 9분"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2026-06",
+            "text_ko": "Churchill Capital Corp XI와 스팩 합병 계약을 맺었습니다. 합병 전 기업가치는 25억 달러이고, 폭스콘이 약 2억 달러 PIPE를 주도했습니다.",
+            "source_url": "https://lasvegassun.com/news/2026/jun/24/agility-robotics-to-go-public-through-25-billion-m/"
+          },
+          {
+            "date": "2026-06",
+            "text_ko": "Digit 5의 다년 계약 주문 3억 달러 이상을 공개했습니다(S-4 기준 단일 고객, 3년간 1,000대, 마일스톤 조건부).",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/0002074973/000121390026071287/ea029548401ex99-1.htm"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "Digit 5를 공개했습니다. 안전 펜스 없이 사람 곁에서 일하도록 협력형 안전 설계를 적용했습니다.",
+            "source_url": "https://www.therobotreport.com/agilitys-digit-5-humanoid-has-new-legs-batteries-safety-upgrades/"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "Digit 5를 2027년 상반기에 얼리 액세스로 내놓고 연말에 정식 출시하며, EU·영국에도 진출한다는 계획을 발표했습니다.",
+            "source_url": "https://geekwire.com/2026/agilitys-new-digit-5-robot-lifts-50-pounds-works-20-hours-a-day-and-operates-alongside-people"
+          }
+        ],
+        "videos": [
+          {
+            "id": "oyq9BOwK5XI",
+            "title": "Introducing Digit 5",
+            "upload_date": "2026-09-15",
+            "channel": "Agility",
+            "views": 78007,
+            "duration_sec": 70,
+            "embeddable": true,
+            "note_ko": "Digit 5를 처음 공개한 공식 영상입니다. 안전 펜스 없이 사람 가까이에서 일하도록 설계한 어질리티의 첫 협력형 안전 휴머노이드라고 소개합니다."
+          },
+          {
+            "id": "HYlrzihyL1k",
+            "title": "Agility Foundations: AI Stack",
+            "upload_date": "2026-09-15",
+            "channel": "Agility",
+            "views": 24379,
+            "duration_sec": 228,
+            "embeddable": true,
+            "note_ko": "Digit 5 공개와 같은 날 올라온 'Agility Foundations' 시리즈 영상입니다. 제목대로 Digit을 움직이는 AI 스택(소프트웨어 계층 구성)을 설명합니다."
+          },
+          {
+            "id": "2dbyg67EtUA",
+            "title": "Agility Foundations: Functional Safety",
+            "upload_date": "2026-09-15",
+            "channel": "Agility",
+            "views": 5452,
+            "duration_sec": 160,
+            "embeddable": true,
+            "note_ko": "같은 'Agility Foundations' 시리즈의 기능 안전 편입니다. 제목대로 사람 곁에서 일하는 Digit의 기능 안전 설계를 다룹니다."
+          }
+        ]
+      },
+      {
+        "id": "1x",
+        "name": "1X Technologies",
+        "name_ko": "원엑스 테크놀로지스",
+        "country": "미국·노르웨이",
+        "flagship": "NEO",
+        "tagline_ko": "공장이 아닌 집을 먼저 겨냥한 가정용 휴머노이드 NEO의 제조사입니다.",
+        "summary_ko": "1X는 2025년 10월 가정용 휴머노이드 NEO의 주문을 받기 시작했습니다. 얼리 액세스 가격은 2만 달러이고, 회사는 첫해 생산분 1만 대 이상이 5일 만에 매진됐다고 밝혔습니다. 2026년 4월에는 캘리포니아 헤이워드에서 연 1만 대 규모의 NEO 공장을 가동했습니다. 첫 고객 출하는 2026년 안으로 예고돼 있습니다.",
+        "specs": [
+          {
+            "label_ko": "키",
+            "value": "5ft 6in (약 168cm)"
+          },
+          {
+            "label_ko": "무게",
+            "value": "66lb (약 30kg)"
+          },
+          {
+            "label_ko": "들어올림",
+            "value": "154lb (약 70kg)"
+          },
+          {
+            "label_ko": "운반",
+            "value": "55lb (약 25kg)"
+          },
+          {
+            "label_ko": "자유도",
+            "value": "손 22×2, 팔 7×2, 목 3, 허리 2, 다리 6×2"
+          },
+          {
+            "label_ko": "소음",
+            "value": "22dB"
+          },
+          {
+            "label_ko": "배터리",
+            "value": "4시간"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-06",
+            "text_ko": "물리 법칙을 반영한 데이터 기반 시뮬레이터 '1X 월드 모델'을 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=xPX6dDRYbV4"
+          },
+          {
+            "date": "2025-10",
+            "text_ko": "가정용 NEO의 주문을 받기 시작했습니다. 얼리 액세스는 2만 달러, 구독은 월 499달러이며, 2026년에 배송할 예정입니다.",
+            "source_url": "https://www.businesswire.com/news/home/20251027434628/en/1X-Launches-NEO-The-Robot-Redefining-Life-at-Home"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "1X 월드 모델을 업데이트했습니다. 이제 로봇이 처음 보는 작업도 음성·텍스트 지시를 받아 스스로 시도합니다.",
+            "source_url": "https://www.aap.com.au/aapreleases/globenewswire9623335/"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "헤이워드 NEO 공장을 본격 가동했습니다. 규모는 연 1만 대이고, 2027년 말 연 10만 대 이상이 목표입니다.",
+            "source_url": "https://www.globenewswire.com/news-release/2026/04/30/3285118/0/en/1X-Opens-NEO-Factory-in-Hayward-CA"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "손가락·손바닥·엄지에 25자유도를 갖춘 새 NEO 손을 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=QRyXV3csReA"
+          }
+        ],
+        "videos": [
+          {
+            "id": "LTYMWadOW7c",
+            "title": "NEO The Home Robot | Order Today",
+            "upload_date": "2025-10-28",
+            "channel": "1X",
+            "views": 1886070,
+            "duration_sec": 593,
+            "embeddable": true,
+            "note_ko": "NEO의 주문 개시와 함께 공개한 공식 소개 영상입니다. 집안일을 하고 개인 맞춤 도움을 주는 안전한 가정용 휴머노이드라는 콘셉트를 보여 줍니다."
+          },
+          {
+            "id": "ag_rFhvSNmE",
+            "title": "NEO Factory | Hayward, California",
+            "upload_date": "2026-04-30",
+            "channel": "1X",
+            "views": 105084,
+            "duration_sec": 170,
+            "embeddable": true,
+            "note_ko": "캘리포니아 헤이워드 NEO 공장의 가동을 알리는 공식 영상입니다. 약 5,400㎡(5만 8천 제곱피트) 규모 공장에서 모터, 배터리, 감속기, 센서까지 직접 만들고 최종 조립한다고 소개합니다."
+          },
+          {
+            "id": "QRyXV3csReA",
+            "title": "NEO’s Hands",
+            "upload_date": "2026-07-09",
+            "channel": "1X",
+            "views": 202949,
+            "duration_sec": 107,
+            "embeddable": true,
+            "note_ko": "NEO에 새로 들어가는 25자유도 로봇 손을 소개하는 공식 영상입니다. 힘줄 구동 방식(줄로 손가락을 당겨 움직이는 방식)과 고해상도 촉각 센서로 레고 조립, 전구 교체, 지퍼 올리기 같은 정밀 동작을 해내는 모습을 보여 줍니다."
+          }
+        ]
+      },
+      {
+        "id": "apptronik",
+        "name": "Apptronik",
+        "name_ko": "앱트로닉",
+        "country": "미국",
+        "flagship": "Apollo 2",
+        "tagline_ko": "구글 딥마인드와 손잡고 데이터 수집 시설까지 세운 텍사스의 휴머노이드 회사입니다.",
+        "summary_ko": "앱트로닉은 2026년 2월 5억 2천만 달러를 추가로 유치해 시리즈 A 총액이 9억 3,500만 달러를 넘었습니다. 구글 딥마인드와는 2025년 3월부터 Gemini Robotics 기반 차세대 휴머노이드를 함께 개발하고 있습니다. 2026년 6월 말에는 2족 보행형과 바퀴형 구성을 모두 갖춘 Apollo 2를 공개했습니다. 메르세데스-벤츠, GXO, 자빌이 배치 파트너로 거론됩니다.",
+        "specs": [
+          {
+            "label_ko": "키 (1세대 Apollo 공개 기준)",
+            "value": "5ft 8in (약 173cm)"
+          },
+          {
+            "label_ko": "무게 (1세대 Apollo 공개 기준)",
+            "value": "160lb (약 73kg)"
+          },
+          {
+            "label_ko": "가반하중 (1세대 Apollo 공개 기준)",
+            "value": "최대 55lb (약 25kg)"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-02",
+            "text_ko": "3억 5천만 달러 규모의 시리즈 A를 유치했습니다(B Capital·Capital Factory 공동 주도, 구글 참여).",
+            "source_url": "https://apptronik.com/news-collection/apptronik-raises-350-million-in-series-a-funding"
+          },
+          {
+            "date": "2025-03",
+            "text_ko": "구글 딥마인드와 Gemini Robotics 기반 차세대 휴머노이드를 함께 개발한다고 발표했습니다.",
+            "source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/"
+          },
+          {
+            "date": "2026-02",
+            "text_ko": "시리즈 A 확장 투자로 5억 2천만 달러를 유치했습니다. 기업가치는 50억 달러 이상으로 보도됐습니다.",
+            "source_url": "https://news.bloomberglaw.com/private-equity/apptronik-raises-520-million-in-new-funding-to-build-more-humanoids"
+          },
+          {
+            "date": "2026-06",
+            "text_ko": "오스틴에 약 9만 제곱피트 규모의 데이터 수집 시설 Robot Park를 열고, Apollo 2를 공개했습니다.",
+            "source_url": "https://www.verdict.co.uk/apptronik-opens-robot-training-hub/"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "구글 딥마인드가 Gemini Robotics 2의 전신 제어 시연 플랫폼으로 Apollo 2를 채택했습니다.",
+            "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+          }
+        ],
+        "videos": [
+          {
+            "id": "iPyxwELiD9Q",
+            "title": "Welcome to Robot Park, where Apptronik is building the future with Apollo 2",
+            "upload_date": "2026-06-30",
+            "channel": "Apptronik",
+            "views": 25276,
+            "duration_sec": 74,
+            "embeddable": true,
+            "note_ko": "앱트로닉이 Robot Park와 Apollo 2를 발표한 공식 영상입니다. 약 9만 제곱피트 시설에서 Apollo 2가 자율 휴머노이드에 필요한 실제 학습 데이터를 모으는 모습을 보여 줍니다."
+          },
+          {
+            "id": "ikZeU3wKVjM",
+            "title": "Gemini Robotics: Developing the next generation of humanoid robots with Apptronik",
+            "upload_date": "2025-03-12",
+            "channel": "Google DeepMind",
+            "views": 152241,
+            "duration_sec": 82,
+            "embeddable": true,
+            "note_ko": "구글 딥마인드 채널에 올라온 앱트로닉 협업 발표 영상입니다. Gemini 2.0 기반 Gemini Robotics 모델로 차세대 휴머노이드를 함께 개발한다는 내용입니다."
+          },
+          {
+            "id": "9MNLEAzA59o",
+            "title": "Intelligent whole-body control with Gemini Robotics 2",
+            "upload_date": "2026-07-30",
+            "channel": "Google DeepMind",
+            "views": 100971,
+            "duration_sec": 168,
+            "embeddable": true,
+            "note_ko": "구글 딥마인드의 Gemini Robotics 2 전신 제어 시연 영상입니다. 딥마인드 발표에 따르면 시연에 쓰인 휴머노이드는 Apollo 2입니다. 상체만 다뤘던 이전 모델과 달리 손 뻗기, 몸 굽히기, 균형 잡기 같은 전신 동작을 보여 줍니다."
+          }
+        ]
+      },
+      {
+        "id": "google-deepmind",
+        "name": "Google DeepMind",
+        "name_ko": "구글 딥마인드",
+        "country": "영국·미국",
+        "flagship": "Gemini Robotics 2",
+        "tagline_ko": "로봇 몸체가 아니라 여러 로봇에 들어가는 '두뇌' 모델을 만드는 회사입니다.",
+        "summary_ko": "구글 딥마인드는 2025년 3월 Gemini Robotics를 시작으로 로봇용 파운데이션 모델을 빠르게 갱신하고 있습니다. 2026년에는 보스턴 다이내믹스와 손잡고 Atlas에 모델을 통합했습니다. 2026년 7월 30일 공개한 Gemini Robotics 2는 VLA, 추론(ER 2), 온디바이스의 세 모델로 휴머노이드 전신 제어까지 다룹니다. ER 2는 Google AI Studio에서 쓸 수 있습니다.",
+        "specs": [
+          {
+            "label_ko": "모델 구성",
+            "value": "Gemini Robotics 2 (VLA), ER 2 (추론), On-Device 2"
+          },
+          {
+            "label_ko": "새 로봇 적응 (On-Device 2)",
+            "value": "보통 200개 미만 예시로 수 시간"
+          },
+          {
+            "label_ko": "공개 범위",
+            "value": "ER 2는 Google AI Studio, VLA·On-Device 2는 얼리 액세스"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-06",
+            "text_ko": "로봇 안에서 네트워크 없이 작동하는 Gemini Robotics On-Device를 공개했습니다.",
+            "source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/"
+          },
+          {
+            "date": "2025-09",
+            "text_ko": "행동 전에 추론하고 로봇 간에 기술을 이전할 수 있는 Gemini Robotics 1.5·ER 1.5를 공개했습니다.",
+            "source_url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "보스턴 다이내믹스 양산형 Atlas에 딥마인드 파운데이션 모델을 통합하기로 하고, 2026년 Atlas 물량 일부를 배정받았습니다.",
+            "source_url": "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "Gemini Robotics ER 1.6을 발표하고, 보스턴 다이내믹스 Spot의 시각 점검에 적용했습니다.",
+            "source_url": "https://deepmind.google/blog/gemini-robotics-er-1-6"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "휴머노이드 전신 제어를 지원하는 Gemini Robotics 2 모델군을 공개했습니다.",
+            "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+          }
+        ],
+        "videos": [
+          {
+            "id": "4lSQnrMC6nY",
+            "title": "Gemini Robotics 2 brings whole body intelligence to robots",
+            "upload_date": "2026-07-30",
+            "channel": "Google DeepMind",
+            "views": 5936814,
+            "duration_sec": 180,
+            "embeddable": true,
+            "note_ko": "Gemini Robotics 2를 대표하는 공식 발표 영상입니다. 미리 짜인 동작이나 원격 조종에 머물던 로봇이 스스로 생각하고 행동하며 다른 기체로 기술을 이전하는 방향을 제시합니다."
+          },
+          {
+            "id": "O9-650iHAls",
+            "title": "Advanced dexterity with Gemini Robotics 2",
+            "upload_date": "2026-07-30",
+            "channel": "Google DeepMind",
+            "views": 41767,
+            "duration_sec": 137,
+            "embeddable": true,
+            "note_ko": "Gemini Robotics 2의 정밀 조작 능력을 보여 주는 영상입니다. 손과 그리퍼(집게형 손) 등 서로 다른 말단 장치로 섬세한 작업을 해내는 모습을 담았습니다."
+          },
+          {
+            "id": "CiTPDm7PKW0",
+            "title": "Multi-robot collaboration with Gemini Robotics 2",
+            "upload_date": "2026-07-30",
+            "channel": "Google DeepMind",
+            "views": 26373,
+            "duration_sec": 151,
+            "embeddable": true,
+            "note_ko": "Gemini Robotics 2의 다중 로봇 협업 시연 영상입니다. 종류가 다른 로봇들이 서로 소통하며 복잡한 문제를 함께 푸는 장면을 보여 줍니다."
+          }
+        ]
+      },
+      {
+        "id": "physical-intelligence",
+        "name": "Physical Intelligence",
+        "name_ko": "피지컬 인텔리전스",
+        "country": "미국",
+        "flagship": "π0.7 (파이 0.7)",
+        "tagline_ko": "어떤 로봇에도 탑재할 수 있는 범용 로봇 파운데이션 모델을 만드는 스타트업입니다.",
+        "summary_ko": "피지컬 인텔리전스는 하드웨어 대신 여러 로봇을 움직이는 범용 정책 모델(VLA)을 만듭니다. 2025년 11월 6억 달러를 유치해 기업가치 56억 달러를 인정받았다고 보도됐습니다. 2026년 3월에는 기업가치 110억 달러 이상의 추가 조달 협상이 보도됐지만, 마감은 공식 발표되지 않았습니다. 2026년 4월 공개한 π0.7은 학습하지 않은 작업을 익힌 기술의 조합으로 해결하는 초기 징후를 보였다고 회사는 설명합니다.",
+        "specs": [],
+        "milestones": [
+          {
+            "date": "2025-04",
+            "text_ko": "처음 보는 집에서도 작동하는 개방형 일반화 VLA π0.5를 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=Zn8yMaepzVk"
+          },
+          {
+            "date": "2025-11",
+            "text_ko": "경험과 교정을 바탕으로 강화학습하는 Recap과 π*0.6을 공개했습니다. 어려운 작업의 처리량이 2배 이상 늘었습니다.",
+            "source_url": "https://www.pi.website/blog/pistar06"
+          },
+          {
+            "date": "2025-11",
+            "text_ko": "CapitalG 주도로 6억 달러를 유치해 기업가치 56억 달러를 인정받았다고 보도됐습니다.",
+            "source_url": "https://siliconangle.com/2025/11/20/jeff-bezos-backed-physical-intelligence-raises-600m-improve-ai-robot-brains/"
+          },
+          {
+            "date": "2026-03",
+            "text_ko": "기업가치 110억 달러 이상으로 약 10억 달러를 새로 조달하는 협상이 보도됐습니다(마감 미확인).",
+            "source_url": "https://news.bloomberglaw.com/artificial-intelligence/ai-robotics-lab-in-talks-to-nab-1-billion-at-11-billion-value"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "조합적 일반화(익힌 기술을 조합해 새 작업을 해결하는 능력)를 보인, 조종 가능한 범용 모델 π0.7을 공개했습니다.",
+            "source_url": "https://www.pi.website/blog/pi07"
+          }
+        ],
+        "videos": [
+          {
+            "id": "iG2fHqa6ohk",
+            "title": "π*0.6: one hour of making espresso drinks",
+            "upload_date": "2025-11-18",
+            "channel": "Physical Intelligence",
+            "views": 8404,
+            "duration_sec": 3100,
+            "embeddable": true,
+            "note_ko": "π*0.6 모델이 한 시간 동안 에스프레소 음료를 만드는 장면을 담은 공식 영상입니다. 로봇의 실제 경험으로 강화학습(Recap)한 모델이 오랜 시간 실제 작업을 이어 가는 모습을 보여 줍니다."
+          },
+          {
+            "id": "ZpHapIlJnMo",
+            "title": "π*0.6: two and a half hours of unseen folding laundry",
+            "upload_date": "2025-11-18",
+            "channel": "Physical Intelligence",
+            "views": 3324,
+            "duration_sec": 9097,
+            "embeddable": true,
+            "note_ko": "π*0.6 모델이 학습 때 보지 못한 빨래를 2시간 반 동안 개는 장면을 담은 공식 영상입니다. 처음 보는 물건을 다루며 긴 시간 작업을 이어 가는 모습을 보여 줍니다."
+          }
+        ]
+      }
+    ]
+  },
+  "asia": {
+    "generated": "2026-10-08",
+    "region": "asia",
+    "companies": [
+      {
+        "id": "unitree",
+        "name": "Unitree Robotics",
+        "name_ko": "유니트리",
+        "country": "중국",
+        "flagship": "H2 / G1",
+        "tagline_ko": "가격과 출하량으로 휴머노이드 대중화를 앞당기는 항저우의 로봇 회사입니다.",
+        "summary_ko": "유니트리는 사족보행 로봇으로 출발해 G1, H2, R1으로 이어지는 휴머노이드 라인업을 갖췄습니다. 보도에 따르면 투자설명서 기준 2025년 휴머노이드 출하량은 5,511대입니다. 2026년 8월에는 상하이 STAR 마켓에 상장해 약 61억 위안을 조달했습니다. 다만 판매 물량의 상당 부분은 연구기관과 엔터테인먼트 수요라는 지적이 나옵니다.",
+        "specs": [
+          {
+            "label_ko": "G1 키",
+            "value": "1,320mm"
+          },
+          {
+            "label_ko": "G1 무게",
+            "value": "약 35kg(배터리 포함)"
+          },
+          {
+            "label_ko": "G1 자유도",
+            "value": "23 (EDU 23~43)"
+          },
+          {
+            "label_ko": "G1 배터리 사용 시간",
+            "value": "약 2시간 (9,000mAh)"
+          },
+          {
+            "label_ko": "G1 시작가",
+            "value": "US$13.5K"
+          },
+          {
+            "label_ko": "H2 키·무게",
+            "value": "180cm · 70kg"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-07",
+            "text_ko": "보급형 휴머노이드 R1을 39,900위안(약 5,900달러)에 공개했습니다.",
+            "source_url": "https://eurweb.com/unitree-r1-humanoid-robot-ai-conference/"
+          },
+          {
+            "date": "2025-10",
+            "text_ko": "키 180cm, 무게 70kg의 풀사이즈 휴머노이드 H2를 공개했습니다.",
+            "source_url": "https://36kr.jp/440407/"
+          },
+          {
+            "date": "2026-08",
+            "text_ko": "상하이 STAR 마켓에 상장해 약 61억 위안을 조달했습니다.",
+            "source_url": "https://aibusiness.com/robotics/unitree-shares-surge-stock-market-debut"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "UnifoLM-X2-1.0 기반의 완전 자율 휴머노이드 격투 데모를 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=qkIJELDgULA"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "월드스킬스 상하이 2026 개막식에서 휴머노이드 19대가 AI 자율 군집 공연을 펼쳤습니다.",
+            "source_url": "https://www.youtube.com/watch?v=bYkyz9QwqCw"
+          }
+        ],
+        "videos": [
+          {
+            "id": "eUdBIFkMh-M",
+            "title": "Unitree Introducing | Unitree H2 Destiny Awakening!🥳",
+            "upload_date": "2025-10-20",
+            "channel": "Unitree Robotics",
+            "views": 4743128,
+            "duration_sec": 50,
+            "embeddable": true,
+            "note_ko": "유니트리가 키 180cm, 무게 70kg의 H2 휴머노이드를 처음 소개하는 공식 공개 영상입니다. 사람에 가까운 비율과 얼굴형 외관을 앞세워 안전하고 친근한 서비스 로봇이라는 콘셉트를 보여 줍니다."
+          },
+          {
+            "id": "qkIJELDgULA",
+            "title": "Unitree Breakthrough: The World’s First Fully Autonomous Humanoid Robot Combat",
+            "upload_date": "2026-09-07",
+            "channel": "Unitree Robotics",
+            "views": 2430011,
+            "duration_sec": 39,
+            "embeddable": true,
+            "note_ko": "월드 액션 파운데이션 모델 UnifoLM-X2-1.0으로 휴머노이드끼리 완전 자율 격투를 벌이는 장면을 담은 영상입니다. 회사는 로봇이 즉석에서 계획하고 판단하며, 상대와 주고받는 동작을 실시간으로 실행할 수 있게 됐다고 설명합니다."
+          },
+          {
+            "id": "bYkyz9QwqCw",
+            "title": "The World's Largest-Scale Full-Size Humanoid Robot Real-Time Livestream Performance",
+            "upload_date": "2026-09-24",
+            "channel": "Unitree Robotics",
+            "views": 4482774,
+            "duration_sec": 49,
+            "embeddable": true,
+            "note_ko": "2026년 9월 22일 월드스킬스 상하이 개막식에서 휴머노이드 19대가 무용수 120명과 함께 공연한 실황 영상입니다. 1만 명 이상의 관객 앞에서 AI 기반 자율 군집 공연을 실시간 중계했다고 설명합니다."
+          }
+        ]
+      },
+      {
+        "id": "ubtech",
+        "name": "UBTECH Robotics",
+        "name_ko": "유비테크",
+        "country": "중국",
+        "flagship": "Walker S2",
+        "tagline_ko": "산업용 휴머노이드 대량 인도를 가장 먼저 수치로 입증한 홍콩 상장 로봇 회사입니다.",
+        "summary_ko": "유비테크는 자동차 공장과 물류 현장을 겨냥한 산업용 휴머노이드 Walker S2를 주력으로 삼고 있습니다. 회사 발표 기준 Walker 시리즈 수주는 2025년 초 이후 8억 위안을 넘었고, BYD, 지리, 폭스콘 등이 고객사로 거론됩니다. 2025년 12월 1,000번째 Walker S2를 출고했고, 2026년 9월에는 1만 대 규모 스마트 공장을 가동했다고 밝혔습니다.",
+        "specs": [
+          {
+            "label_ko": "가반하중",
+            "value": "15kg"
+          },
+          {
+            "label_ko": "허리 회전",
+            "value": "±162°"
+          },
+          {
+            "label_ko": "배터리 교체",
+            "value": "3분 이내 자율 교체"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-07",
+            "text_ko": "유비테크가 세계 최초라고 소개한, 스스로 배터리를 교체하는 휴머노이드 Walker S2를 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=mHP1WGlw5Wk"
+          },
+          {
+            "date": "2025-11",
+            "text_ko": "Walker S2 양산과 첫 대량 인도를 시작했고, Walker 시리즈 수주가 8억 위안을 넘었다고 발표했습니다.",
+            "source_url": "https://kyodonewsprwire.jp/release/202511179261"
+          },
+          {
+            "date": "2025-12",
+            "text_ko": "류저우 공장에서 1,000번째 Walker S2가 출고됐고, 500대 이상이 인도됐다고 밝혔습니다.",
+            "source_url": "https://www.youtube.com/watch?v=lBW3YlbZ6tY"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "에어버스와 로봇 계약을 맺으며 해외 고객을 확대했습니다.",
+            "source_url": "https://investinchina.chinaservicesinfo.com/s/202601/26/WS6977061e498e36855033a2b6/chinas-ubtech-expands-overseas-reach-with-airbus-robot-deal.html"
+          },
+          {
+            "date": "2026-06",
+            "text_ko": "초생체형 휴머노이드 UWORLD U1을 출시했고, 출시일 기준 누적 주문이 13,361대를 넘었다고 밝혔습니다.",
+            "source_url": "https://www.youtube.com/watch?v=jXRbNaFqByo"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "회사는 10분에 1대꼴로 생산하는 1만 대 규모 휴머노이드 스마트 공장이 양산 가동에 들어갔다고 발표했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=hUlfQOrvPxA"
+          }
+        ],
+        "videos": [
+          {
+            "id": "hUlfQOrvPxA",
+            "title": "Robots Building Robots: World's First 10,000-Scale Humanoid Robot Smart Factory Goes Mass Production",
+            "upload_date": "2026-09-15",
+            "channel": "UBTECH Robotics",
+            "views": 140410,
+            "duration_sec": 63,
+            "embeddable": true,
+            "note_ko": "로봇이 로봇을 만드는 유비테크의 1만 대 규모 휴머노이드 스마트 공장을 소개하는 영상입니다. 10분마다 한 대씩 출고되며, 1,000대 체제에서 1만 대 체제로 넘어가는 데 9개월이 채 걸리지 않았다고 설명합니다."
+          },
+          {
+            "id": "nzflxCHT4vw",
+            "title": "UBTECH Walker S2 - World’s First Mass Delivery of Humanoid Robots",
+            "upload_date": "2025-11-12",
+            "channel": "UBTECH Robotics",
+            "views": 735079,
+            "duration_sec": 82,
+            "embeddable": true,
+            "note_ko": "수백 대의 Walker S2가 파트너사에 일괄 인도되는 현장을 담은 영상입니다. 유비테크는 이를 세계 최초의 휴머노이드 대량 인도라고 소개합니다."
+          },
+          {
+            "id": "jXRbNaFqByo",
+            "title": "UBTECH Launches UWORLD U1 — The World’s First Full-Size Mass-Produced Ultra-Bionic Humanoid Robot 🤖",
+            "upload_date": "2026-07-02",
+            "channel": "UBTECH Robotics",
+            "views": 78415,
+            "duration_sec": 116,
+            "embeddable": true,
+            "note_ko": "2026년 6월 30일 선전에서 열린 글로벌 출시 행사에서 초생체형 휴머노이드 UWORLD U1 시리즈를 공개하는 영상입니다. 출시일 기준 누적 주문이 13,361대를 넘었다고 설명합니다."
+          }
+        ]
+      },
+      {
+        "id": "xpeng",
+        "name": "XPENG",
+        "name_ko": "샤오펑",
+        "country": "중국",
+        "flagship": "IRON",
+        "tagline_ko": "자동차 생산 방식을 휴머노이드에 적용하고 있는 전기차 회사입니다.",
+        "summary_ko": "샤오펑은 2025년 11월 AI 데이에서 유연한 척추와 인공 근육, 피부를 갖춘 차세대 IRON을 공개했습니다. 2026년 8월에는 로봇 사업부가 첫 외부 투자로 9억 달러 이상을 유치했고, 9월에는 광저우에서 핵심 공정의 80% 이상을 자동화한 생산라인을 가동했습니다. 회사는 2026년 말 본격 양산, 2027년 상업 인도를 목표로 하지만, 생산 능력과 가격은 아직 공개하지 않았습니다.",
+        "specs": [
+          {
+            "label_ko": "AI 칩",
+            "value": "자체 Turing AI 칩 3개 (회사 발표)"
+          },
+          {
+            "label_ko": "배터리",
+            "value": "전고체 배터리 (회사 발표)"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-11",
+            "text_ko": "AI 데이에서 차세대 IRON을 공개하고 2026년 말 양산 목표를 밝혔습니다.",
+            "source_url": "https://technode.com/2025/11/05/xpeng-unveils-new-iron-humanoid-robot-with-full-solid-state-battery-and-ai-brain/"
+          },
+          {
+            "date": "2025-11",
+            "text_ko": "사람이 들어 있다는 의혹이 일자 무대에서 IRON의 다리를 갈라 내부를 보여 줬습니다.",
+            "source_url": "https://ispr.info/2025/11/24/chinese-companys-new-humanoid-robot-moves-so-smoothly-they-had-to-cut-it-open-to-prove-a-person-wasnt-hiding-inside/"
+          },
+          {
+            "date": "2026-08",
+            "text_ko": "로봇 사업부가 첫 투자 라운드에서 9억 달러 이상을 유치했습니다.",
+            "source_url": "https://sovereignmagazine.com/article/xpeng-iron-humanoid-robot-mass-production"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "광저우 휴머노이드 자동화 생산라인을 가동했고, 첫 IRON이 스스로 걸어 나왔습니다.",
+            "source_url": "https://technode.com/2026/09/09/xpeng-puts-humanoid-robot-production-line-into-operation-as-first-iron-robot-walks-off-autonomously/"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "자율 방향 인식, 신원 기억, 다국어 전환을 보여 주는 실사용 상호작용 테스트를 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=4i22XO_HJB8"
+          }
+        ],
+        "videos": [
+          {
+            "id": "p9P84bt3AQY",
+            "title": "XPENG Robotics Production Line Officially Launched",
+            "upload_date": "2026-09-08",
+            "channel": "XPENG",
+            "views": 228556,
+            "duration_sec": 147,
+            "embeddable": true,
+            "note_ko": "샤오펑이 범용 휴머노이드 자동화 생산라인의 가동을 알린 공식 영상입니다. 첫 IRON이 자동 조립을 마치고 스스로 걸어서 라인을 빠져나오는 장면을 보여 줍니다."
+          },
+          {
+            "id": "4i22XO_HJB8",
+            "title": "XPENG Robotics Real-World Interaction Test",
+            "upload_date": "2026-09-22",
+            "channel": "XPENG",
+            "views": 170778,
+            "duration_sec": 343,
+            "embeddable": true,
+            "note_ko": "IRON의 실제 상호작용 능력을 네 가지 항목으로 시험하는 영상입니다. 자율 방향 인식, 동적 신원 기억, 다국어 전환, 복합 질의응답을 시연합니다."
+          },
+          {
+            "id": "6M6B2W8eqUU",
+            "title": "IRON Is Going Mass Production — From Vision to Reality",
+            "upload_date": "2025-11-10",
+            "channel": "XPENG",
+            "views": 225036,
+            "duration_sec": 46,
+            "embeddable": true,
+            "note_ko": "차세대 IRON이 양산 궤도에 올랐다고 알리는 2025년 11월 공개 영상입니다. 2026년까지 대규모 휴머노이드 양산에 근접하겠다는 목표를 제시합니다."
+          }
+        ]
+      },
+      {
+        "id": "agibot",
+        "name": "AGIBOT",
+        "name_ko": "애지봇(AGIBOT, 智元)",
+        "country": "중국",
+        "flagship": "A3 Ultra",
+        "tagline_ko": "출고 대수와 현장 배치 규모로 승부하는 상하이의 체화 지능(몸을 갖고 현실에서 움직이는 인공지능) 회사입니다.",
+        "summary_ko": "애지봇은 2026년 3월 10,000번째 로봇을 출고했고, 보도에 따르면 6월까지 누적 출고가 15,000대에 이르렀습니다. 2026년 7월 WAIC에서 풀사이즈 휴머노이드 A3 Ultra를 포함한 신제품 4종을 내놓았고, 같은 달 홍콩 IPO 절차에 들어갔습니다. 주하이 창룽 리조트에 300대 이상을 배치하는 등 호텔, 지하철역, 자동차 매장으로 상용 배치를 확대하고 있습니다.",
+        "specs": [
+          {
+            "label_ko": "A3 Ultra 키",
+            "value": "1.74m"
+          },
+          {
+            "label_ko": "A3 Ultra 무게",
+            "value": "60kg"
+          },
+          {
+            "label_ko": "능동 자유도",
+            "value": "51"
+          },
+          {
+            "label_ko": "가반하중",
+            "value": "팔당 5kg"
+          },
+          {
+            "label_ko": "운용 시간",
+            "value": "최대 8시간(복합 운용 기준), 배터리 교체·자율 충전 지원"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2026-03",
+            "text_ko": "10,000번째 휴머노이드 로봇을 출고했습니다.",
+            "source_url": "https://www.aap.com.au/aapreleases/cision20260330ae21903/"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "WAIC 2026에서 A3 Ultra, X2 Edu, G2 Max, OmniHand 3 Ultra-M 신제품 4종을 공개했습니다.",
+            "source_url": "https://www.aap.com.au/aapreleases/cision20260719ae07639/"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "홍콩 IPO 절차에 착수했습니다.",
+            "source_url": "https://autonews.gasgoo.com/articles/ICV/agibot-launches-hong-kong-ipo-process-2082120389458100225"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "IFA 2026에서 A3 Ultra의 TÜV 라인란드 인증을 소개했습니다.",
+            "source_url": "https://agibot.com/article/231/detail/96.html"
+          },
+          {
+            "date": "2026-09",
+            "text_ko": "월드 액션 모델 GE-Act 2.0을 공개하고, 학습 데이터를 100배로 늘리자 성공률이 올랐다고 보고했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=PCUCSwyLsBw"
+          }
+        ],
+        "videos": [
+          {
+            "id": "L-JmM5PXCjU",
+            "title": "AGIBOT A3 Ultra is moving from mass production into real-world deployment.",
+            "upload_date": "2026-09-17",
+            "channel": "AGIBOT",
+            "views": 281990,
+            "duration_sec": 173,
+            "embeddable": true,
+            "note_ko": "A3 Ultra가 양산 단계를 지나 실제 현장에 배치되는 모습을 담은 영상입니다. 호텔, 자동차 매장, 슈퍼마켓, 지하철 점검 현장에서 자율로 일하는 장면을 보여 줍니다."
+          },
+          {
+            "id": "HpR3yKnYFhQ",
+            "title": "What does a 300+ robot deployment actually look like?",
+            "upload_date": "2026-09-27",
+            "channel": "AGIBOT",
+            "views": 82361,
+            "duration_sec": 50,
+            "embeddable": true,
+            "note_ko": "주하이 창룽 리조트에 배치된 애지봇 로봇 300여 대의 운영 현장을 보여 주는 영상입니다. 로봇들이 공연, 안내, 질의응답, 서비스를 맡는 모습을 담았습니다."
+          },
+          {
+            "id": "PCUCSwyLsBw",
+            "title": "AGIBOT GE-Act 2.0 — the first native World Action Model to validate a pretraining and scaling path",
+            "upload_date": "2026-09-11",
+            "channel": "AGIBOT",
+            "views": 1824,
+            "duration_sec": 229,
+            "embeddable": true,
+            "note_ko": "월드 액션 모델 GE-Act 2.0의 학습 방식과 실제 로봇 제로샷 시험(따로 학습하지 않은 과제에 바로 투입하는 시험) 결과를 소개하는 영상입니다. 학습 데이터를 300시간에서 30,000시간으로 늘리자 G1-OP 과제 성공률이 17.1%에서 44.1%로 올랐다고 설명합니다."
+          }
+        ]
+      },
+      {
+        "id": "fourier",
+        "name": "Fourier",
+        "name_ko": "푸리에",
+        "country": "중국",
+        "flagship": "GR-3",
+        "tagline_ko": "재활 로봇에서 출발해 돌봄형 휴머노이드로 방향을 잡은 상하이 회사입니다.",
+        "summary_ko": "푸리에는 재활 로봇 기술을 바탕으로 GR-1, GR-2, GR-3로 휴머노이드 라인업을 이어 왔습니다. 2025년 1월 시리즈 E 라운드에서 약 1억 900만 달러를 확보했습니다. 2025년 8월 공개한 GR-3는 병원, 요양시설, 학교를 겨냥한 첫 풀사이즈 돌봄 로봇이고, 같은 해 9월 판매를 시작했습니다. 다만 공개된 유료 배치 실적은 아직 확인되지 않습니다.",
+        "specs": [
+          {
+            "label_ko": "키",
+            "value": "165cm"
+          },
+          {
+            "label_ko": "무게",
+            "value": "약 71kg"
+          },
+          {
+            "label_ko": "자유도",
+            "value": "55"
+          },
+          {
+            "label_ko": "한 손 가반하중",
+            "value": "약 3kg"
+          },
+          {
+            "label_ko": "배터리 사용 시간",
+            "value": "약 3시간 (핫스왑 지원)"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2025-01",
+            "text_ko": "시리즈 E 라운드에서 약 1억 900만 달러를 유치했습니다.",
+            "source_url": "https://dealstreetasia.com/?p=425571"
+          },
+          {
+            "date": "2025-08",
+            "text_ko": "첫 풀사이즈 케어봇 GR-3를 공개했습니다.",
+            "source_url": "https://interestingengineering.com/innovation/fourier-gr3-carebot-robot-emotion"
+          },
+          {
+            "date": "2025-09",
+            "text_ko": "GR-3 판매를 시작했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=xNxtKU7Wq98"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "CES 2026에서 GR-3와 탁상형 케어봇 시제품을 전시했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=_v77-uoLDIQ"
+          }
+        ],
+        "videos": [
+          {
+            "id": "bkzXjzlEKrU",
+            "title": "Fourier GR-3：A Caring and Capable Companion",
+            "upload_date": "2025-09-10",
+            "channel": "Fourier",
+            "views": 11058,
+            "duration_sec": 330,
+            "embeddable": true,
+            "note_ko": "GR-3를 돌봄과 생활을 함께하는 동반자로 소개하는 공식 홍보 영상입니다. 약 5분 30초 동안 GR-3의 외형과 상호작용 장면을 보여 줍니다."
+          },
+          {
+            "id": "xNxtKU7Wq98",
+            "title": "Fourier GR-3: How to Be a Good Robot?",
+            "upload_date": "2025-09-08",
+            "channel": "Fourier",
+            "views": 2136,
+            "duration_sec": 84,
+            "embeddable": true,
+            "note_ko": "GR-3 판매 개시를 알리며 여러 감각을 함께 쓰는 멀티모달 상호작용 시스템을 소개하는 영상입니다. 상업 서비스, 학술 연구, 산업, 웰니스 돌봄까지 활용 범위를 제시합니다."
+          },
+          {
+            "id": "25ULRycszkA",
+            "title": "CES 2026 | Come and Dance with Fourier GR-3 in Vegas",
+            "upload_date": "2026-01-09",
+            "channel": "Fourier",
+            "views": 1327,
+            "duration_sec": 61,
+            "embeddable": true,
+            "note_ko": "CES 2026 현장에서 GR-3가 관람객과 틱택토 게임을 하고 함께 춤을 추는 모습을 담은 영상입니다. 음성 위치 추적, 시각 인식, 촉각 반응을 결합한 케어봇 기능을 보여 줍니다."
+          }
+        ]
+      },
+      {
+        "id": "rainbow-robotics",
+        "name": "Rainbow Robotics",
+        "name_ko": "레인보우로보틱스",
+        "country": "한국",
+        "flagship": "RB-Y1",
+        "tagline_ko": "휴보 연구진이 세우고 삼성전자가 최대주주가 된 한국 대표 로봇 회사입니다.",
+        "summary_ko": "레인보우로보틱스는 KAIST 휴보 연구진이 세운 로봇 회사로, 2024년 12월 삼성전자가 지분을 35%로 늘려 최대주주가 됐습니다. 회사 관계자에 따르면 양팔 모바일 매니퓰레이터 RB-Y1은 2026년 4월 기준 연구용으로 300여 대가 공급됐습니다. 2026년 6월에는 쿠팡 풀필먼트 센터에서 실증을 시작했다고 보도됐습니다. 후속 모델 RB-Y2는 2027년 양산을 목표로 한다고 전해집니다.",
+        "specs": [
+          {
+            "label_ko": "RB-Y1 키",
+            "value": "1,400mm"
+          },
+          {
+            "label_ko": "RB-Y1 무게",
+            "value": "131kg (A형)"
+          },
+          {
+            "label_ko": "가반하중",
+            "value": "팔당 3kg"
+          },
+          {
+            "label_ko": "주행 속도",
+            "value": "1.5m/s"
+          },
+          {
+            "label_ko": "배터리",
+            "value": "1,250Wh (A형)"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2024-04",
+            "text_ko": "국내 첫 양팔 모바일 매니퓰레이터 RB-Y1을 공개했습니다.",
+            "source_url": "https://www.plantautomation-technology.com/news/rainbow-robotics-unveils-rb-y1-koreas-first-bimanual-mobile-manipulator"
+          },
+          {
+            "date": "2024-12",
+            "text_ko": "삼성전자가 지분을 35%로 늘려 최대주주가 됐습니다.",
+            "source_url": "https://www.therobotreport.com/samsung-increases-stake-in-rainbow-robotics-establishes-future-robotics-office/"
+          },
+          {
+            "date": "2026-04",
+            "text_ko": "SIMTOS 2026에서 제조 현장용 후속 모델 RB-Y2를 처음 공개했습니다(팔당 가반하중 약 6~7kg).",
+            "source_url": "https://kidd.co.kr/news/245649"
+          },
+          {
+            "date": "2026-06",
+            "text_ko": "RB-Y1이 쿠팡 풀필먼트 센터에서 실증 테스트에 들어갔다고 보도됐습니다.",
+            "source_url": "https://newsspace.kr/news/article.html?no=14362"
+          }
+        ],
+        "videos": [
+          {
+            "id": "rNPI5z6qfp0",
+            "title": "Rainbow Robotics Quadruped Robot #RBQ Series Demo",
+            "upload_date": "2026-04-10",
+            "channel": "Rainbow Robotics",
+            "views": 4323,
+            "duration_sec": 90,
+            "embeddable": true,
+            "note_ko": "사족보행 로봇 RBQ 시리즈가 험지, 경사, 계단에서 이동하는 모습을 보여 주는 데모 영상입니다. 동역학 기반 보행 제어와 AI 보행 기술로 순찰, 점검, 안전 관리 임무를 겨냥한다고 설명합니다."
+          },
+          {
+            "id": "Dp0JxQzJ-NM",
+            "title": "Teleoperation of Dual-Arm Mobile Manipulator RB-Y1",
+            "upload_date": "2025-12-19",
+            "channel": "Rainbow Robotics",
+            "views": 4050,
+            "duration_sec": 213,
+            "embeddable": true,
+            "note_ko": "RB-Y1의 원격 조작 기술을 소개하는 영상입니다. 스탠드형 마스터 암 기반 원격 조작, 임피던스 제어(바깥 힘에 맞춰 팔의 단단함을 조절하는 제어), VR 원격 조작 인터페이스를 시연합니다."
+          },
+          {
+            "id": "x6RbbJm_T6Y",
+            "title": "Dual Arm Mobile Manipulator RB-Y1 X VR Art Live at #SIMTOS_2026",
+            "upload_date": "2026-04-13",
+            "channel": "Rainbow Robotics",
+            "views": 1890,
+            "duration_sec": 94,
+            "embeddable": true,
+            "note_ko": "SIMTOS 2026에서 RB-Y1이 VR 아티스트 염동균 작가와 협업해 그림을 그리는 현장을 담은 영상입니다. 양팔을 자유롭게 쓰는 모바일 매니퓰레이터가 작가의 붓 터치를 어떻게 구현하는지 보여 줍니다."
+          }
+        ]
+      },
+      {
+        "id": "holiday-robotics",
+        "name": "Holiday Robotics",
+        "name_ko": "홀리데이로보틱스",
+        "country": "한국",
+        "flagship": "FRIDAY(프라이데이)",
+        "tagline_ko": "제조 현장의 반복 작업을 맡는 바퀴형 산업용 휴머노이드 프라이데이를 만드는 서울의 스타트업입니다.",
+        "summary_ko": "홀리데이로보틱스는 수아랩 창업자 송기영 대표가 2024년 세운 휴머노이드 스타트업입니다. 첫 제품 프라이데이는 바퀴형 하체에 정교한 양손을 단 산업용 휴머노이드로, 회사 발표 기준 64 자유도 가운데 40개가 손에 있습니다. 손과 촉각 센서를 직접 만들고 자체 시뮬레이터에서 동작을 학습시킵니다. 2026년 7월 1550억 원 규모 시리즈A를 유치해 국내 시리즈A 최대 규모로 보도됐습니다.",
+        "specs": [
+          {
+            "label_ko": "키",
+            "value": "176 cm"
+          },
+          {
+            "label_ko": "무게",
+            "value": "115 kg"
+          },
+          {
+            "label_ko": "전체 자유도",
+            "value": "64 DoF (손에 40)"
+          },
+          {
+            "label_ko": "손 자유도",
+            "value": "손당 20 DoF"
+          },
+          {
+            "label_ko": "이동 방식",
+            "value": "바퀴형 모바일 베이스"
+          },
+          {
+            "label_ko": "배터리",
+            "value": "핫스왑 교체식"
+          }
+        ],
+        "milestones": [
+          {
+            "date": "2024-04",
+            "text_ko": "송기영 대표가 회사를 설립한 것으로 보도됐습니다.",
+            "source_url": "https://www.unicornfactory.co.kr/article/2024083105313549988"
+          },
+          {
+            "date": "2024-08",
+            "text_ko": "스톤브릿지벤처스 주도로 175억 원 규모 시드 투자를 유치한 것으로 보도됐습니다.",
+            "source_url": "https://www.unicornfactory.co.kr/article/2024083105313549988"
+          },
+          {
+            "date": "2025-10",
+            "text_ko": "첫 휴머노이드 프라이데이를 공식 유튜브 영상으로 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=iUNat-40BeM"
+          },
+          {
+            "date": "2026-01",
+            "text_ko": "시뮬레이션으로만 학습한 토트 이송 작업을 첫 공식 데모로 공개했습니다.",
+            "source_url": "https://www.youtube.com/watch?v=8tQ2YIdTYO8"
+          },
+          {
+            "date": "2026-07",
+            "text_ko": "1550억 원 규모 시리즈A 투자 유치를 발표했고, 국내 시리즈A 최대 규모로 보도됐습니다.",
+            "source_url": "https://www.unicornfactory.co.kr/article/2026071308233216474"
+          }
+        ],
+        "videos": [
+          {
+            "id": "iUNat-40BeM",
+            "title": "Introducing FRIDAY - the first humanoid robot from Holiday Robotics.",
+            "upload_date": "2025-10-28",
+            "channel": "Holiday Robotics",
+            "views": 10688,
+            "duration_sec": 87,
+            "embeddable": true,
+            "note_ko": "회사가 첫 휴머노이드 프라이데이를 처음 공개한 소개 영상입니다. 설명란에 키, 무게, 관절 배치, 손과 촉각 센서 사양이 정리돼 있습니다."
+          },
+          {
+            "id": "8tQ2YIdTYO8",
+            "title": "FRIDAY's Demo #1: Tote Transfer - One-Shot Video-Guided Sim-to-Real",
+            "upload_date": "2026-01-14",
+            "channel": "Holiday Robotics",
+            "views": 3317,
+            "duration_sec": 151,
+            "embeddable": true,
+            "note_ko": "프라이데이가 토트 상자를 옮기는 첫 공식 데모입니다. 회사 설명 기준 사람 원격조작 데이터 없이 시뮬레이션 학습만으로 4시간 넘게 연속 작업했습니다."
+          },
+          {
+            "id": "r0tVElEa7rA",
+            "title": "Closer look at FRIDAY's 20 DoF Hand",
+            "upload_date": "2026-07-02",
+            "channel": "Holiday Robotics",
+            "views": 3006,
+            "duration_sec": 15,
+            "embeddable": true,
+            "note_ko": "손당 20 자유도를 가진 프라이데이 손을 가까이서 보여 주는 짧은 영상입니다. 손가락 관절을 하나씩 따로 제어하는 모습을 담았습니다."
+          },
+          {
+            "id": "2pT4yMZmRg0",
+            "title": "FRIDAY Hand - Durability Testing",
+            "upload_date": "2026-09-14",
+            "channel": "Holiday Robotics",
+            "views": 1986,
+            "duration_sec": 14,
+            "embeddable": true,
+            "note_ko": "자체 제작한 손가락 끝 촉각 센서와 손가락 관절의 내구 시험 장면입니다. 회사 설명 기준 센서는 325만 회 반복을 통과하고 시험을 이어 가고 있습니다."
+          }
+        ]
+      },
+      {
+        "id": "kawasaki",
+        "name": "Kawasaki Heavy Industries",
+        "name_ko": "가와사키중공업",
+        "country": "일본",
+        "flagship": "Kaleido 9",
+        "tagline_ko": "10년 넘게 재난 대응형 휴머노이드를 고도화해 온 일본 산업로봇 회사입니다.",
+        "summary_ko": "가와사키중공업은 2015년부터 휴머노이드 Kaleido를 개발해 왔고, 2025년 12월 iREX 2025에서 9세대 모델을 공개했습니다. 전시에서는 모의 화재를 진압하는 재난 대응 시연을 보였습니다. 회사는 완전 자율보다 원격 조작과 자율을 섞는 단계적 접근을 택하고 있습니다. 2026년 5월에는 실리콘밸리에 Physical AI 센터를 열었습니다.",
+        "specs": [],
+        "milestones": [
+          {
+            "date": "2025-04",
+            "text_ko": "오사카 엑스포에 맞춰 수소로 움직이는 탑승형 사족보행 콘셉트 CORLEO를 공개했습니다.",
+            "source_url": "https://livescience.com/technology/robotics/scientists-design-new-kind-of-robot-horse-that-you-can-one-day-ride-up-a-mountain"
+          },
+          {
+            "date": "2025-12",
+            "text_ko": "iREX 2025에서 9세대 휴머노이드 Kaleido를 공개하고 재난 대응 시연을 했습니다.",
+            "source_url": "https://english.adnkronos.com/2025/12/04/cutting-edge-humanoid-robots-on-display-at-tokyo-show/"
+          },
+          {
+            "date": "2026-03",
+            "text_ko": "공식 블로그에서 Kaleido 9를 단계적으로 자율화하겠다는 목표를 소개했습니다.",
+            "source_url": "https://kawasakirobotics.com/in/?p=6314"
+          },
+          {
+            "date": "2026-05",
+            "text_ko": "미국 산호세에 Kawasaki Physical AI Center를 열었습니다.",
+            "source_url": "https://www.youtube.com/watch?v=_lD3Mszvzds"
+          }
+        ],
+        "videos": [
+          {
+            "id": "iJffdB9EWPU",
+            "title": "【iREX2025】川崎重工 ヒューマノイドロボット RHP Kaleido 9｜Highlight",
+            "upload_date": "2026-02-19",
+            "channel": "Kawasaki Robotics JP",
+            "views": 46527,
+            "duration_sec": 168,
+            "embeddable": true,
+            "note_ko": "iREX 2025에서 공개된 9세대 휴머노이드 RHP Kaleido 9의 시연을 요약한 공식 하이라이트 영상입니다. 공장, 가정, 재난 현장을 상정해 차세대 컨트롤러 연동, 사람용 도구 사용, 원격 조작, 힘을 쓰는 동작을 보여 줍니다."
+          },
+          {
+            "id": "6k2_0kv-KKU",
+            "title": "ヒューマノイドロボットRHP Kaleido / Friendsの軌跡",
+            "upload_date": "2025-12-26",
+            "channel": "Kawasaki Robotics JP",
+            "views": 4744,
+            "duration_sec": 144,
+            "embeddable": true,
+            "note_ko": "가와사키중공업의 휴머노이드 RHP Kaleido와 Friends 시리즈가 걸어온 개발 과정을 돌아보는 영상입니다. 제목으로 보아 역대 세대의 변화를 정리한 회고 영상입니다."
+          },
+          {
+            "id": "_lD3Mszvzds",
+            "title": "Kawasaki Opens Physical AI Center in Silicon Valley | Message from NVIDIA CEO Jensen Huang",
+            "upload_date": "2026-05-22",
+            "channel": "Kawasaki Robotics",
+            "views": 594,
+            "duration_sec": 129,
+            "embeddable": true,
+            "note_ko": "2026년 5월 21일 실리콘밸리에 문을 연 Kawasaki Physical AI Center San Jose를 소개하는 영상입니다. 개소를 맞아 엔비디아 젠슨 황 CEO가 보낸 축하 메시지를 담았습니다."
+          }
+        ]
+      }
+    ]
+  }
+}</script>
+</section>
+
+<style>
+/* ARG-03 players: country index + manufacturer spec sheet + dated ledger. Tokens only, rules over fills. */
+#players{color:var(--text);font-family:var(--f-body)}
+#players .pl-date{font-family:var(--f-mono);font-size:.94em;color:var(--text);font-variant-numeric:tabular-nums;white-space:nowrap}
+#players .pl-head .sheet{flex-wrap:wrap;row-gap:6px}
+#players .pl-head .sheet-no{white-space:nowrap}
+#players button{font:inherit;color:inherit}
+#players button:focus-visible,#players a:focus-visible,#players summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- index: one ruled table, rows = countries ---------- */
+#players .pl-index{margin-top:clamp(40px,5vw,64px);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+#players .pl-index-hd{display:grid;grid-template-columns:168px minmax(0,1fr);padding:10px 0;border-bottom:1px solid var(--line);font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--dim)}
+#players .pl-row{display:grid;grid-template-columns:168px minmax(0,1fr);border-top:1px solid var(--line)}
+#players .pl-row:first-child{border-top:0}
+#players .pl-g{margin:0;padding:16px 16px 16px 0;display:flex;align-items:baseline;gap:10px;font:600 16px/1.4 var(--f-body);color:var(--text);border-right:1px solid var(--line)}
+#players .pl-g span{font:500 13px/1 var(--f-mono);color:var(--dim);font-variant-numeric:tabular-nums}
+#players .pl-cos{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr))}
+#players .pl-cos li{display:flex;border-left:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 -1px -1px}
+#players .pl-co{appearance:none;flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-height:64px;padding:12px 16px 12px 18px;border:0;border-radius:0;background:transparent;text-align:left;cursor:pointer;position:relative;transition:background .25s var(--ease)}
+#players .pl-co b{font:600 16px/1.35 var(--f-body);color:var(--text)}
+#players .pl-co small{font:400 13px/1.45 var(--f-mono);letter-spacing:.01em;font-variant-numeric:tabular-nums;color:var(--dim)}
+#players .pl-co::before{content:"";position:absolute;left:-1px;top:-1px;bottom:0;width:3px;background:var(--accent);transform:scaleY(0);transform-origin:50% 0;transition:transform .3s var(--ease)}
+#players .pl-co:hover{background:var(--surface)}
+#players .pl-co:hover small{color:var(--muted)}
+#players .pl-co[aria-pressed="true"]{background:var(--surface-2)}
+#players .pl-co[aria-pressed="true"]::before{transform:none}
+#players .pl-co[aria-pressed="true"] small{color:var(--accent-2)}
+
+/* ---------- spec sheet ---------- */
+#players .pl-sheet{display:block;margin-top:clamp(32px,4vw,48px);border:1px solid var(--line);border-top:2px solid var(--line-2);border-radius:var(--radius);background:var(--bg);outline:0}
+#players .pl-sheet:focus-visible{box-shadow:inset 0 0 0 2px var(--accent)}
+#players .pl-sh-head{display:grid;grid-template-columns:minmax(0,1fr);border-bottom:1px solid var(--line-2)}
+#players .pl-id{padding:clamp(24px,3.4vw,44px) clamp(20px,3.4vw,44px) clamp(24px,3vw,36px)}
+#players .pl-h{margin:0;font-weight:inherit}
+#players .pl-maker{display:block;font:600 18px/1.4 var(--f-body);color:var(--muted)}
+#players .pl-model{display:block;margin-top:10px;font:700 clamp(38px,5vw,72px)/1.1 var(--f-display);letter-spacing:-.025em;color:var(--text);word-break:keep-all;text-wrap:balance}
+#players .pl-tagline{margin:20px 0 0;max-width:46em;font-size:clamp(17px,1.4vw,19px);line-height:1.65;font-weight:500;color:var(--text);word-break:keep-all}
+#players .pl-tb{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line)}
+#players .pl-tb div{padding:12px 16px;border-left:1px solid var(--line)}
+#players .pl-tb div:first-child{border-left:0;padding-left:clamp(20px,3.4vw,44px)}
+#players .pl-tb dt{font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--dim)}
+#players .pl-tb dd{margin:4px 0 0;font-size:15px;line-height:1.5;color:var(--text)}
+#players .pl-tb dd.is-mono{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+#players .pl-vhint{margin:-4px 0 18px;font-size:15px;line-height:1.6;color:var(--muted)}
+
+#players .pl-sh-body{display:grid;grid-template-columns:minmax(0,1fr)}
+#players .pl-col{padding:clamp(24px,3vw,40px) clamp(20px,3.4vw,44px)}
+#players .pl-col + .pl-col{border-top:1px solid var(--line)}
+#players .pl-sub{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line-2);font:600 16px/1.4 var(--f-body);color:var(--text)}
+#players .pl-sub span{font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--dim);font-variant-numeric:tabular-nums}
+#players .pl-summary{margin:0 0 32px;font-size:16px;line-height:1.8;color:var(--muted);word-break:keep-all}
+
+#players .pl-specs{width:100%;border-collapse:collapse;font-size:15px}
+#players .pl-specs th,#players .pl-specs td{padding:11px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:baseline}
+#players .pl-specs thead th{padding:0 0 8px;font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--dim);border-bottom:1px solid var(--line)}
+#players .pl-specs tbody th{width:38%;padding-right:20px;font-weight:400;color:var(--muted);word-break:keep-all}
+#players .pl-specs td{line-height:1.55;color:var(--muted);word-break:keep-all}
+#players .pl-specs td .n{font-family:var(--f-mono);font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--text);white-space:nowrap}
+#players .pl-specs td.is-text{color:var(--text)}
+#players .pl-empty{margin:0;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.7;color:var(--muted)}
+
+#players .pl-ms{margin:0;padding:0;list-style:none}
+#players .pl-ms li{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+#players .pl-ms li:first-child{padding-top:4px}
+#players .pl-ms time{font:500 14px/1.65 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted)}
+#players .pl-ms li.is-last time{color:var(--accent)}
+#players .pl-ms p{margin:0;font-size:16px;line-height:1.7;color:var(--text);word-break:keep-all}
+#players .pl-cite{grid-column:2;justify-self:start;margin-top:6px;display:inline-flex;align-items:center;gap:6px;font:400 13px/1.4 var(--f-mono);color:var(--dim);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;overflow-wrap:anywhere;transition:color .25s var(--ease),border-color .25s var(--ease)}
+#players .pl-cite:hover{color:var(--accent-2);border-color:var(--accent)}
+#players .pl-cite svg,#players .pl-ext svg,#players .pl-lsrc svg{width:11px;height:11px;flex:0 0 auto}
+
+/* ---------- media files ---------- */
+#players .pl-media{padding:clamp(24px,3vw,40px) clamp(20px,3.4vw,44px);border-top:1px solid var(--line-2)}
+#players .pl-vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px}
+#players .pl-vid{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:var(--bg)}
+#players .pl-vmedia{position:relative;aspect-ratio:16/9;background:var(--bg-2);border-bottom:1px solid var(--line)}
+#players .pl-vmedia iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#players .pl-vplay{appearance:none;position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;border-radius:0;background:none;cursor:pointer}
+#players .pl-vplay[disabled]{cursor:default}
+#players .pl-vplay img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8);transition:filter .5s var(--ease)}
+#players .pl-vplay:not([disabled]):hover img{filter:none}
+#players .pl-vtag{position:absolute;left:0;bottom:0;display:inline-flex;align-items:center;gap:8px;padding:7px 12px 7px 10px;background:var(--bg-2);border-top:1px solid var(--line-2);border-right:1px solid var(--line-2);border-top-right-radius:2px;font:500 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--text);transition:background .25s var(--ease),color .25s var(--ease)}
+#players .pl-vtag svg{width:10px;height:11px;fill:var(--accent)}
+#players .pl-vplay:not([disabled]):hover .pl-vtag{background:var(--accent);color:var(--accent-ink)}
+#players .pl-vplay:not([disabled]):hover .pl-vtag svg{fill:var(--accent-ink)}
+#players .pl-vbody{display:flex;flex-direction:column;flex:1;padding:14px 16px 14px}
+#players .pl-vt{margin:0;font:600 15px/1.45 var(--f-body);color:var(--text);word-break:keep-all;overflow-wrap:anywhere}
+#players .pl-vmeta{margin:8px 0 0;display:flex;flex-wrap:wrap;gap:2px 12px;font:400 13px/1.5 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--dim)}
+#players .pl-vnote{margin:12px 0 0;font-size:15px;line-height:1.7;color:var(--muted);word-break:keep-all}
+#players .pl-vfoot{margin-top:auto;padding-top:14px}
+#players .pl-ext{display:inline-flex;align-items:center;gap:6px;padding-top:12px;font-size:14px;font-weight:500;color:var(--text);text-decoration:none;border-top:1px solid var(--line);width:100%;transition:color .25s var(--ease)}
+#players .pl-ext:hover{color:var(--accent-2)}
+@media (min-width:1100px){#players .pl-vid.is-wide{grid-column:span 2}}
+
+/* ---------- sheet footer: prev / next ---------- */
+#players .pl-sh-foot{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;border-top:1px solid var(--line-2)}
+#players .pl-step{appearance:none;display:flex;flex-direction:column;gap:2px;padding:14px clamp(20px,3.4vw,44px);border:0;border-radius:0;background:transparent;text-align:left;cursor:pointer;transition:background .25s var(--ease)}
+#players .pl-step + .pl-up + .pl-step,#players .pl-step.is-next{text-align:right;align-items:flex-end}
+#players .pl-step small{font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--dim)}
+#players .pl-step b{font:600 16px/1.4 var(--f-body);color:var(--text)}
+#players .pl-step:hover{background:var(--surface)}
+#players .pl-step:hover b{color:var(--accent-2)}
+#players .pl-up{display:flex;align-items:center;padding:0 20px;border-left:1px solid var(--line);border-right:1px solid var(--line);font:500 13px/1.4 var(--f-mono);color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .25s var(--ease)}
+#players .pl-up:hover{color:var(--accent-2)}
+
+/* ---------- ledger (all milestones, newest first) ---------- */
+#players .pl-ledger{margin-top:clamp(40px,5vw,64px);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line)}
+#players .pl-ledger summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:18px 0;cursor:pointer;list-style:none}
+#players .pl-ledger summary::-webkit-details-marker{display:none}
+#players .pl-ledger summary::before{content:"+";width:14px;font:500 16px/1 var(--f-mono);color:var(--accent)}
+#players .pl-ledger[open] summary::before{content:"−"}
+#players .pl-ledger-t{font:600 17px/1.4 var(--f-body);color:var(--text)}
+#players .pl-ledger-m{font:500 13px/1.4 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--dim)}
+#players .pl-ledger summary:hover .pl-ledger-t{color:var(--accent-2)}
+#players .pl-ltable{width:100%;border-collapse:collapse;margin-bottom:8px}
+#players .pl-ltable thead th{padding:10px 16px 10px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line);text-align:left;font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;color:var(--dim)}
+#players .pl-ltable td{padding:12px 16px 12px 0;border-bottom:1px solid var(--line);vertical-align:baseline;font-size:15px;line-height:1.65}
+#players .pl-ltable tbody tr:last-child td{border-bottom:0}
+#players .pl-ltable td:nth-child(1){width:92px;font:500 14px/1.65 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+#players .pl-ltable td:nth-child(2){width:200px}
+#players .pl-ltable td:nth-child(3){color:var(--muted);word-break:keep-all}
+#players .pl-ltable td:nth-child(4){width:56px;padding-right:0;text-align:right}
+#players .pl-ltable tr.is-y td{border-top:1px solid var(--line-2)}
+#players .pl-lco{appearance:none;padding:0;border:0;background:none;font-weight:600;color:var(--text);text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:4px;transition:color .25s var(--ease),text-decoration-color .25s var(--ease)}
+#players .pl-lco:hover{color:var(--accent-2);text-decoration-color:var(--accent)}
+#players .pl-ltable time{font-variant-numeric:tabular-nums}
+#players .pl-lsrc{display:inline-flex;align-items:center;justify-content:center;gap:4px;font:400 13px/1 var(--f-mono);color:var(--dim);text-decoration:none;transition:color .25s var(--ease)}
+#players .pl-lsrc:hover{color:var(--accent-2)}
+
+/* ---------- breakpoints ---------- */
+@media (min-width:1000px){
+  #players .pl-sh-body{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+  #players .pl-col + .pl-col{border-top:0;border-left:1px solid var(--line)}
+}
+@media (max-width:760px){
+  #players .pl-index-hd{display:none}
+  #players .pl-tb{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #players .pl-tb div:nth-child(3){grid-column:1 / -1;border-left:0;padding-left:clamp(20px,3.4vw,44px)}
+  #players .pl-tb div:nth-child(n+3){border-top:1px solid var(--line)}
+  #players .pl-row{grid-template-columns:1fr}
+  #players .pl-g{padding:14px 0 10px;border-right:0;border-bottom:1px solid var(--line)}
+  #players .pl-cos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #players .pl-cos li{border-left:0;border-right:1px solid var(--line);margin:0 0 -1px}
+  #players .pl-cos li:nth-child(2n){border-right:0}
+  #players .pl-co{min-height:60px;padding:10px 12px 10px 14px}
+  #players .pl-co b{font-size:15px}
+  #players .pl-ms li{grid-template-columns:1fr;row-gap:4px}
+  #players .pl-cite{grid-column:1}
+  #players .pl-sh-foot{grid-template-columns:1fr 1fr}
+  #players .pl-up{grid-column:1 / -1;grid-row:2;justify-content:center;padding:12px;border:0;border-top:1px solid var(--line)}
+  #players .pl-step{padding:14px 16px}
+  #players .pl-step.is-next{border-left:1px solid var(--line)}
+  #players .pl-ltable thead{display:none}
+  #players .pl-ltable,#players .pl-ltable tbody,#players .pl-ltable tr,#players .pl-ltable td{display:block;width:auto}
+  #players .pl-ltable tr{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+  #players .pl-ltable tr.is-y{border-top:1px solid var(--line-2)}
+  #players .pl-ltable td,#players .pl-ltable tr.is-y td{padding:0;border:0}
+  #players .pl-ltable td:nth-child(1){width:auto}
+  #players .pl-ltable td:nth-child(2){width:auto}
+  #players .pl-ltable td:nth-child(3){grid-column:1 / -1;margin-top:6px}
+  #players .pl-ltable td:nth-child(4){grid-column:3;grid-row:1;width:auto}
+}
+@media (max-width:420px){
+  #players .pl-maker span{display:block;margin:2px 0 0}
+  #players .pl-specs tbody th{width:44%;padding-right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  #players *,#players *::before,#players *::after{transition:none!important;animation:none!important}
+}
+</style>
+
+<script>
+(function(){
+  var root=document.getElementById('players');
+  if(!root) return;
+  var raw;
+  try{ raw=JSON.parse(document.getElementById('players-data').textContent); }catch(e){ return; }
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var gsap=window.gsap, ST=window.ScrollTrigger;
+  var anim=!!gsap&&!reduce;
+  function q(s){return root.querySelector(s);}
+
+  /* ---------- helpers ---------- */
+  var SVGNS='http://www.w3.org/2000/svg';
+  function h(tag,attrs,kids){
+    var el=document.createElement(tag);
+    if(attrs) for(var k in attrs){
+      var v=attrs[k]; if(v==null||v===false) continue;
+      if(k==='text') el.textContent=v;
+      else el.setAttribute(k,v===true?'':v);
+    }
+    (kids||[]).forEach(function(c){ if(c!=null) el.appendChild(typeof c==='string'?document.createTextNode(c):c); });
+    return el;
+  }
+  function icon(path,vb,filled){
+    var s=document.createElementNS(SVGNS,'svg');
+    s.setAttribute('viewBox',vb||'0 0 12 12');s.setAttribute('aria-hidden','true');s.setAttribute('focusable','false');
+    var p=document.createElementNS(SVGNS,'path');p.setAttribute('d',path);
+    if(!filled){p.setAttribute('fill','none');p.setAttribute('stroke','currentColor');p.setAttribute('stroke-width','1.3');p.setAttribute('stroke-linecap','round');p.setAttribute('stroke-linejoin','round');}
+    s.appendChild(p);return s;
+  }
+  function extIcon(){return icon('M4.5 2.5h5v5M9.5 2.5L2.5 9.5');}
+  function playIcon(){return icon('M0 0L10 5.5L0 11Z','0 0 10 11',true);}
+  function ym(d){return String(d).replace('-','.');}
+  function ymd(d){return String(d).replace(/-/g,'.');}
+  function dur(s){
+    s=Math.max(0,Math.round(+s||0));
+    var hh=Math.floor(s/3600),mm=Math.floor(s%3600/60),ss=s%60;
+    var p=function(n){return (n<10?'0':'')+n;};
+    return hh?hh+':'+p(mm)+':'+p(ss):mm+':'+p(ss);
+  }
+  function views(n){
+    n=+n||0;
+    if(n>=1e8) return (Math.round(n/1e7)/10).toString().replace(/\.0$/,'')+'억';
+    if(n>=1e4) return (Math.round(n/1e3)/10).toString().replace(/\.0$/,'')+'만';
+    return n.toLocaleString('ko-KR');
+  }
+  function host(u){try{return new URL(u).hostname.replace(/^www\./,'');}catch(e){return '';}}
+  function num(v){var m=String(v).match(/\d+(?:[.,]\d+)*/);return m?m[0].replace(/,/g,''):null;}
+  /* spec value: numbers with their units set in mono tabular figures, words stay in the body face */
+  var NUM_RE=/(?:US\$)?[-±]?\d[\d.,]*(?:~-?\d[\d.,]*)?(?:K|%|mAh|mm|cm|m\/s|kg|lb|ft|in|°C|°|dB|kW|Wh|m|g)?/g;
+  function specValue(td,v){
+    v=String(v);
+    if(!/\d/.test(v)){td.className='is-text';td.textContent=v;return;}
+    var last=0,m;NUM_RE.lastIndex=0;
+    while((m=NUM_RE.exec(v))){
+      if(m.index>last) td.appendChild(document.createTextNode(v.slice(last,m.index)));
+      td.appendChild(h('span',{'class':'n',text:m[0]}));
+      last=m.index+m[0].length;
+      if(!m[0].length) NUM_RE.lastIndex++;
+    }
+    if(last<v.length) td.appendChild(document.createTextNode(v.slice(last)));
+  }
+
+  /* ---------- merge (같은 id는 하나로 합침) ---------- */
+  var list=[],byId={};
+  [].concat((raw.west&&raw.west.companies)||[],(raw.asia&&raw.asia.companies)||[]).forEach(function(c){
+    var cur=byId[c.id];
+    if(!cur){
+      cur={id:c.id,name:c.name,name_ko:c.name_ko,country:c.country,flagship:c.flagship,tagline_ko:c.tagline_ko,summary_ko:c.summary_ko,
+        specs:(c.specs||[]).slice(),milestones:(c.milestones||[]).slice(),videos:(c.videos||[]).slice()};
+      byId[c.id]=cur;list.push(cur);return;
+    }
+    var dates={};cur.milestones.forEach(function(m){dates[m.date]=1;});
+    (c.milestones||[]).forEach(function(m){if(!dates[m.date]) cur.milestones.push(m);});
+    var vids={};cur.videos.forEach(function(v){vids[v.id]=1;});
+    (c.videos||[]).forEach(function(v){if(!vids[v.id]){vids[v.id]=1;cur.videos.push(v);}});
+    var labels={},nums={};
+    cur.specs.forEach(function(s){labels[s.label_ko]=1;var n=num(s.value);if(n) nums[n]=1;});
+    (c.specs||[]).forEach(function(s){
+      if(labels[s.label_ko]) return;
+      var n=num(s.value); if(n&&nums[n]) return;
+      cur.specs.push(s);labels[s.label_ko]=1;if(n) nums[n]=1;
+    });
+  });
+  /* country groups: primary country first (미국·노르웨이 → 미국), order 미국, 중국, then data order */
+  var groups=[],gBy={};
+  list.forEach(function(c){
+    c.group=/미국/.test(c.country)?'미국':/중국/.test(c.country)?'중국':String(c.country||'기타').split('·')[0];
+    c.milestones.sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:0;});
+    c.videos.sort(function(a,b){return a.upload_date<b.upload_date?1:a.upload_date>b.upload_date?-1:0;});
+    if(!gBy[c.group]){gBy[c.group]={k:c.group,items:[]};groups.push(gBy[c.group]);}
+    gBy[c.group].items.push(c);
+  });
+  var RANK={'미국':0,'중국':1};
+  groups.sort(function(a,b){var ra=a.k in RANK?RANK[a.k]:9,rb=b.k in RANK?RANK[b.k]:9;return ra-rb;});
+  var order=[];groups.forEach(function(g){g.items.forEach(function(c){order.push(c);});});
+
+  var totalVideos=list.reduce(function(a,c){return a+c.videos.length;},0);
+  var totalMs=list.reduce(function(a,c){return a+c.milestones.length;},0);
+  var genEl=q('[data-pl-generated]'),gen=(raw.west&&raw.west.generated)||(raw.asia&&raw.asia.generated)||'';
+  if(genEl&&gen) genEl.textContent=gen;
+  var stats={companies:order.length,videos:totalVideos,milestones:totalMs};
+  root.querySelectorAll('[data-pl-stat]').forEach(function(el){el.textContent=stats[el.getAttribute('data-pl-stat')]||0;});
+
+  /* ---------- index ---------- */
+  var indexEl=q('[data-pl-index]'),sheetEl=q('[data-pl-sheet]'),liveEl=q('[data-pl-live]');
+  var state={id:order[0]&&order[0].id};
+  groups.forEach(function(g,gi){
+    var gid='pl-g-'+gi;
+    var ul=h('ul',{'class':'pl-cos'});
+    g.items.forEach(function(c){
+      var b=h('button',{type:'button','class':'pl-co','data-id':c.id,'aria-pressed':'false','aria-controls':'pl-sheet'},[
+        h('b',{text:c.name}),h('small',{text:c.flagship||''})]);
+      b.addEventListener('click',function(){select(c.id,{scroll:true});});
+      ul.appendChild(h('li',null,[b]));
+    });
+    indexEl.appendChild(h('div',{'class':'pl-row',role:'group','aria-labelledby':gid},[
+      h('h3',{'class':'pl-g',id:gid},[g.k,h('span',{text:String(g.items.length),'aria-label':g.items.length+'곳'})]),ul]));
+  });
+  /* arrow keys walk the index in reading order; Home/End jump */
+  indexEl.addEventListener('keydown',function(e){
+    var btns=[].slice.call(indexEl.querySelectorAll('.pl-co')),i=btns.indexOf(document.activeElement);
+    if(i<0) return;
+    var to=null;
+    if(e.key==='ArrowRight'||e.key==='ArrowDown') to=Math.min(btns.length-1,i+1);
+    else if(e.key==='ArrowLeft'||e.key==='ArrowUp') to=Math.max(0,i-1);
+    else if(e.key==='Home') to=0;
+    else if(e.key==='End') to=btns.length-1;
+    if(to==null) return;
+    e.preventDefault();btns[to].focus();
+  });
+
+  /* ---------- spec sheet ---------- */
+  function scrollToSheet(){
+    var navH=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'))||64;
+    var top=sheetEl.getBoundingClientRect().top+window.pageYOffset-navH-16;
+    window.scrollTo({top:top,behavior:reduce?'auto':'smooth'});
+  }
+
+  function playVideo(media,v){
+    var f=h('iframe',{
+      src:'https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.id)+'?autoplay=1&rel=0',
+      title:v.title,allow:'autoplay; encrypted-media; picture-in-picture',allowfullscreen:true,
+      referrerpolicy:'strict-origin-when-cross-origin'
+    });
+    media.textContent='';media.appendChild(f);
+    var card=media.closest('.pl-vid');if(card){card.classList.add('is-wide');if(ST) requestAnimationFrame(function(){ST.refresh();});}
+    try{f.focus();}catch(e){}
+  }
+
+  function videoCard(v){
+    var watch='https://www.youtube.com/watch?v='+encodeURIComponent(v.id);
+    var embeddable=v.embeddable!==false;
+    var img=h('img',{src:'https://i.ytimg.com/vi/'+encodeURIComponent(v.id)+'/hqdefault.jpg',alt:'',loading:'lazy',decoding:'async'});
+    img.addEventListener('error',function(){img.style.display='none';});
+    var btn=h('button',{type:'button','class':'pl-vplay','aria-label':embeddable?'이 자리에서 재생: '+v.title:v.title+' (YouTube에서만 재생)',disabled:!embeddable},[
+      img,h('span',{'class':'pl-vtag','aria-hidden':'true'},embeddable?[playIcon(),'재생 '+dur(v.duration_sec)]:['YouTube 전용 · '+dur(v.duration_sec)])
+    ]);
+    var media=h('div',{'class':'pl-vmedia'},[btn]);
+    if(embeddable) btn.addEventListener('click',function(){playVideo(media,v);});
+    var meta=h('p',{'class':'pl-vmeta'},[
+      h('span',{text:ymd(v.upload_date)}),
+      h('span',{text:dur(v.duration_sec)}),
+      v.views?h('span',{text:'조회 '+views(v.views)}):null,
+      v.channel?h('span',{text:v.channel}):null
+    ]);
+    return h('article',{'class':'pl-vid'},[media,h('div',{'class':'pl-vbody'},[
+      h('h5',{'class':'pl-vt',text:v.title}),meta,
+      v.note_ko?h('p',{'class':'pl-vnote',text:v.note_ko}):null,
+      h('div',{'class':'pl-vfoot'},[h('a',{'class':'pl-ext',href:watch,target:'_blank',rel:'noopener'},['YouTube에서 보기',extIcon()])])
+    ])]);
+  }
+
+  function renderSheet(c){
+    sheetEl.textContent='';
+    sheetEl.setAttribute('aria-labelledby','pl-sheet-title');
+    /* head: identity left, title block right */
+    var id=h('div',{'class':'pl-id'},[
+      h('h3',{'class':'pl-h',id:'pl-sheet-title'},[
+        h('span',{'class':'pl-maker',text:c.name}),
+        h('span',{'class':'pl-model'},[h('span',{'class':'sr-only',text:'대표 모델 '}),c.flagship||c.name])
+      ]),
+      c.tagline_ko?h('p',{'class':'pl-tagline',text:c.tagline_ko}):null
+    ]);
+    function cell(dt,dd,mono){return h('div',null,[h('dt',{text:dt}),h('dd',{'class':mono?'is-mono':null,text:dd})]);}
+    var span=c.milestones.length?ym(c.milestones[0].date)+(c.milestones.length>1?' ~ '+ym(c.milestones[c.milestones.length-1].date):''):'';
+    var tb=h('dl',{'class':'pl-tb'},[
+      cell('국가',c.country||''),
+      cell('한글 표기',c.name_ko||c.name),
+      cell('기록 기간',span,true)
+    ]);
+    var head=h('header',{'class':'pl-sh-head'},[id,tb]);
+
+    /* body left: summary + public specs */
+    var left=h('div',{'class':'pl-col'},[
+      c.summary_ko?h('p',{'class':'pl-summary',text:c.summary_ko}):null,
+      h('h4',{'class':'pl-sub'},['공개 사양',h('span',{text:c.specs.length+'항목'})])
+    ]);
+    if(c.specs.length){
+      var tbody=h('tbody');
+      c.specs.forEach(function(s){
+        var td=h('td');specValue(td,s.value);
+        tbody.appendChild(h('tr',null,[h('th',{scope:'row',text:s.label_ko}),td]));
+      });
+      left.appendChild(h('table',{'class':'pl-specs'},[
+        h('caption',{'class':'sr-only',text:c.name+' 공개 사양'}),
+        h('thead',null,[h('tr',null,[h('th',{scope:'col',text:'항목'}),h('th',{scope:'col',text:'공개값'})])]),tbody]));
+    }else{
+      left.appendChild(h('p',{'class':'pl-empty',text:'이 데이터에는 공개된 수치 사양이 없습니다. 마일스톤과 영상을 참고해 주십시오.'}));
+    }
+
+    /* body right: milestone ledger */
+    var ol=h('ol',{'class':'pl-ms'});
+    c.milestones.forEach(function(m,i){
+      var li=h('li',{'class':i===c.milestones.length-1?'is-last':null},[
+        h('time',{datetime:m.date,text:ym(m.date)}),
+        h('p',{text:m.text_ko})
+      ]);
+      if(m.source_url) li.appendChild(h('a',{'class':'pl-cite',href:m.source_url,target:'_blank',rel:'noopener','aria-label':'출처 열기: '+host(m.source_url)},[host(m.source_url),extIcon()]));
+      ol.appendChild(li);
+    });
+    var right=h('div',{'class':'pl-col'},[h('h4',{'class':'pl-sub'},['마일스톤',h('span',{text:c.milestones.length+'건'})]),ol]);
+
+    /* media */
+    var vids=h('div',{'class':'pl-vids'});
+    c.videos.forEach(function(v){vids.appendChild(videoCard(v));});
+    var media=h('section',{'class':'pl-media','aria-label':c.name+' 관련 영상'},[
+      h('h4',{'class':'pl-sub'},['관련 영상',h('span',{text:c.videos.length+'편'})]),h('p',{'class':'pl-vhint',text:'썸네일을 누르면 이 자리에서 재생됩니다.'}),vids]);
+
+    /* foot: prev / back to index / next */
+    var i=order.indexOf(c),prev=order[(i-1+order.length)%order.length],next=order[(i+1)%order.length];
+    function step(t,label,cls){
+      var b=h('button',{type:'button','class':'pl-step '+cls,'aria-label':label+': '+t.name},[h('small',{text:label}),h('b',{text:t.name})]);
+      b.addEventListener('click',function(){select(t.id,{scroll:true,focus:true});});
+      return b;
+    }
+    var up=h('a',{'class':'pl-up',href:'#pl-index'},['업체 색인 ↑']);
+    up.addEventListener('click',function(e){
+      e.preventDefault();
+      var btn=indexEl.querySelector('.pl-co[data-id="'+c.id+'"]');
+      var navH=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'))||64;
+      window.scrollTo({top:q('.pl-index').getBoundingClientRect().top+window.pageYOffset-navH-16,behavior:reduce?'auto':'smooth'});
+      if(btn) try{btn.focus({preventScroll:true});}catch(err){btn.focus();}
+    });
+    var foot=h('footer',{'class':'pl-sh-foot'},[step(prev,'이전 업체','is-prev'),up,step(next,'다음 업체','is-next')]);
+
+    sheetEl.appendChild(head);
+    sheetEl.appendChild(h('div',{'class':'pl-sh-body'},[left,right]));
+    if(c.videos.length) sheetEl.appendChild(media);
+    sheetEl.appendChild(foot);
+  }
+
+  function select(id,opt){
+    opt=opt||{};
+    var c=byId[id]; if(!c) return;
+    var changed=state.id!==id||!sheetEl.firstChild;
+    state.id=id;
+    indexEl.querySelectorAll('.pl-co').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-id')===id));});
+    if(changed){
+      renderSheet(c);
+      if(opt.scroll) liveEl.textContent=c.name+' 사양서를 표시했습니다.';
+      if(anim&&opt.scroll) gsap.fromTo(sheetEl.children,{opacity:0},{opacity:1,duration:.45,ease:'power2.out',stagger:.05,clearProps:'opacity'});
+      /* refresh synchronously, before any smooth scroll starts, so later sections' triggers match the new height */
+      if(ST&&opt.scroll) ST.refresh();
+    }
+    if(opt.scroll){
+      var r=sheetEl.getBoundingClientRect();
+      if(opt.focus) try{sheetEl.focus({preventScroll:true});}catch(e){}
+      if(opt.focus||r.top>window.innerHeight*0.55||r.top<0) scrollToSheet();
+    }
+  }
+
+  /* ---------- ledger: every milestone, newest first ---------- */
+  var events=[];
+  order.forEach(function(c,ci){c.milestones.forEach(function(m){events.push({c:c,ci:ci,m:m});});});
+  events.sort(function(a,b){return a.m.date<b.m.date?1:a.m.date>b.m.date?-1:a.ci-b.ci;});
+  var lbody=q('[data-pl-ledger-body]');
+  if(events.length){
+    q('[data-pl-ledger-meta]').textContent=events.length+'건 · '+ym(events[events.length-1].m.date)+' ~ '+ym(events[0].m.date);
+  }
+  var prevY='';
+  events.forEach(function(ev){
+    var y=ev.m.date.slice(0,4);
+    var co=h('button',{type:'button','class':'pl-lco','aria-label':ev.c.name+' 사양서 보기',text:ev.c.name});
+    co.addEventListener('click',function(){select(ev.c.id,{scroll:true,focus:true});});
+    lbody.appendChild(h('tr',{'class':prevY&&y!==prevY?'is-y':null},[
+      h('td',null,[h('time',{datetime:ev.m.date,text:ym(ev.m.date)})]),
+      h('td',null,[co]),
+      h('td',{text:ev.m.text_ko}),
+      h('td',null,[ev.m.source_url?h('a',{'class':'pl-lsrc',href:ev.m.source_url,target:'_blank',rel:'noopener','aria-label':'출처 열기: '+host(ev.m.source_url),title:host(ev.m.source_url)},['출처',extIcon()]):null])
+    ]));
+    prevY=y;
+  });
+  var ledger=q('[data-pl-ledger]');
+  ledger.addEventListener('toggle',function(){if(ST) requestAnimationFrame(function(){ST.refresh();});});
+
+  /* ---------- init ---------- */
+  if(state.id) select(state.id);
+})();
+</script>

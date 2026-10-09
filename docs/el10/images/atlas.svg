@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="atlas-headclip"><circle cx="200" cy="118" r="46"/></clipPath>
+    <clipPath id="atlas-torsoclip"><rect x="166" y="168" width="68" height="84" rx="24"/></clipPath>
+    <clipPath id="atlas-screenclip"><circle cx="200" cy="120" r="33"/></clipPath>
+  </defs>
+
+  <!-- backdrop blob -->
+  <circle cx="200" cy="195" r="168" fill="#E3F6FD"/>
+  <circle cx="200" cy="195" r="142" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-dasharray="2 18" stroke-linecap="round"/>
+
+  <!-- ground shadow (small: robot is in the air) -->
+  <ellipse cx="205" cy="372" rx="72" ry="12" fill="#2B2D42" opacity="0.16"/>
+  <ellipse cx="205" cy="372" rx="40" ry="6" fill="#2B2D42" opacity="0.12"/>
+
+  <!-- backflip motion arc -->
+  <path d="M96 305 C 58 205 108 82 210 56 C 292 38 346 92 350 162" fill="none" stroke="#4CC9F0" stroke-width="6" stroke-dasharray="4 14" stroke-linecap="round"/>
+  <path d="M336 150 L351 174 L366 148" fill="none" stroke="#4CC9F0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- speed lines -->
+  <g stroke="#ADB5BD" stroke-width="5" stroke-linecap="round">
+    <line x1="118" y1="330" x2="146" y2="318"/>
+    <line x1="128" y1="350" x2="166" y2="336"/>
+    <line x1="250" y1="350" x2="284" y2="340"/>
+  </g>
+
+  <!-- ROBOT (tilted mid-flip) -->
+  <g transform="rotate(-28 200 215)">
+    <!-- arms (thrown up) -->
+    <polyline points="171,184 138,150 128,110" fill="none" stroke="#2B2D42" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="171,184 138,150 128,110" fill="none" stroke="#E9ECEF" stroke-width="18" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="160,176 144,158" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <polyline points="229,184 262,150 272,110" fill="none" stroke="#2B2D42" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="229,184 262,150 272,110" fill="none" stroke="#E9ECEF" stroke-width="18" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="265,140 270,118" fill="none" stroke="#ADB5BD" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="138" cy="150" r="11" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+    <circle cx="138" cy="150" r="3.5" fill="#2B2D42"/>
+    <circle cx="262" cy="150" r="11" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+    <circle cx="262" cy="150" r="3.5" fill="#2B2D42"/>
+    <!-- hands -->
+    <circle cx="127" cy="104" r="14" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+    <path d="M134 94 A14 14 0 0 1 133 116 A12 12 0 0 0 134 94 Z" fill="#E9ECEF"/>
+    <circle cx="273" cy="104" r="14" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+    <path d="M280 94 A14 14 0 0 1 279 116 A12 12 0 0 0 280 94 Z" fill="#E9ECEF"/>
+
+    <!-- legs (tucked) -->
+    <polyline points="187,250 156,282 178,316" fill="none" stroke="#2B2D42" stroke-width="32" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="187,250 156,282 178,316" fill="none" stroke="#E9ECEF" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="213,250 246,280 226,316" fill="none" stroke="#2B2D42" stroke-width="32" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="213,250 246,280 226,316" fill="none" stroke="#E9ECEF" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"/>
+    <line x1="236" y1="290" x2="230" y2="304" stroke="#ADB5BD" stroke-width="5" stroke-linecap="round"/>
+    <line x1="165" y1="292" x2="172" y2="304" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="156" cy="282" r="12" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+    <circle cx="156" cy="282" r="4" fill="#4CC9F0"/>
+    <circle cx="246" cy="280" r="12" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+    <circle cx="246" cy="280" r="4" fill="#4CC9F0"/>
+    <!-- feet -->
+    <rect x="160" y="310" width="40" height="20" rx="10" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="164" y="322" width="32" height="5" rx="2.5" fill="#ADB5BD"/>
+    <rect x="206" y="310" width="40" height="20" rx="10" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="210" y="322" width="32" height="5" rx="2.5" fill="#ADB5BD"/>
+
+    <!-- pelvis -->
+    <rect x="176" y="236" width="48" height="26" rx="11" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+    <line x1="200" y1="240" x2="200" y2="258" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- neck -->
+    <rect x="189" y="156" width="22" height="18" rx="5" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+
+    <!-- torso -->
+    <rect x="166" y="168" width="68" height="84" rx="24" fill="#E9ECEF"/>
+    <rect x="214" y="160" width="40" height="100" fill="#ADB5BD" clip-path="url(#atlas-torsoclip)"/>
+    <rect x="166" y="168" width="68" height="84" rx="24" fill="none" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+    <ellipse cx="180" cy="190" rx="5" ry="11" fill="#FFFFFF"/>
+    <rect x="184" y="184" width="32" height="26" rx="8" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+    <circle cx="200" cy="197" r="7" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3"/>
+    <circle cx="198" cy="195" r="2" fill="#FFFFFF"/>
+    <rect x="186" y="220" width="28" height="7" rx="3.5" fill="#4CC9F0" stroke="#2B2D42" stroke-width="3"/>
+    <line x1="190" y1="236" x2="210" y2="236" stroke="#ADB5BD" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="176" cy="180" r="3" fill="#ADB5BD"/>
+    <circle cx="224" cy="180" r="3" fill="#FFFFFF"/>
+    <circle cx="176" cy="240" r="3" fill="#ADB5BD"/>
+    <circle cx="224" cy="240" r="3" fill="#FFFFFF"/>
+    <!-- shoulder caps -->
+    <circle cx="170" cy="184" r="13" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+    <circle cx="230" cy="184" r="13" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+    <path d="M236 175 A13 13 0 0 1 236 193 A10 10 0 0 0 236 175 Z" fill="#E9ECEF"/>
+
+    <!-- head -->
+    <circle cx="154" cy="118" r="9" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+    <circle cx="246" cy="118" r="9" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+    <circle cx="200" cy="118" r="46" fill="#FFFFFF"/>
+    <circle cx="224" cy="134" r="46" fill="#E9ECEF" clip-path="url(#atlas-headclip)"/>
+    <circle cx="200" cy="118" r="46" fill="none" stroke="#2B2D42" stroke-width="6"/>
+    <path d="M168 96 A40 40 0 0 1 190 78" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+    <!-- ring-light face -->
+    <circle cx="200" cy="120" r="37" fill="none" stroke="#4CC9F0" stroke-width="3" opacity="0.55"/>
+    <circle cx="200" cy="120" r="33" fill="#2B2D42"/>
+    <circle cx="200" cy="120" r="28" fill="none" stroke="#4CC9F0" stroke-width="4"/>
+    <path d="M178 106 A28 28 0 0 1 196 92" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <circle cx="232" cy="140" r="18" fill="#3A3D55" clip-path="url(#atlas-screenclip)"/>
+    <!-- eyes -->
+    <ellipse cx="189" cy="117" rx="8" ry="10" fill="#FFFFFF"/>
+    <circle cx="190" cy="119" r="5" fill="#2B2D42"/>
+    <circle cx="192" cy="116" r="2" fill="#FFFFFF"/>
+    <ellipse cx="211" cy="117" rx="8" ry="10" fill="#FFFFFF"/>
+    <circle cx="212" cy="119" r="5" fill="#2B2D42"/>
+    <circle cx="214" cy="116" r="2" fill="#FFFFFF"/>
+    <path d="M192 132 Q200 139 208 132" fill="none" stroke="#4CC9F0" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="181" cy="130" rx="4" ry="2.5" fill="#FF6B6B" opacity="0.8"/>
+    <ellipse cx="219" cy="130" rx="4" ry="2.5" fill="#FF6B6B" opacity="0.8"/>
+  </g>
+
+  <!-- sparkles -->
+  <path transform="translate(70 92)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(334 260) scale(0.8)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#FF6B6B" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(300 52) scale(0.7)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path transform="translate(52 220) scale(0.75)" d="M0 -14 Q3 -3 14 0 Q3 3 0 14 Q-3 3 -14 0 Q-3 -3 0 -14Z" fill="#9B5DE5" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="110" cy="56" r="4" fill="#FF9F1C"/>
+  <circle cx="352" cy="212" r="4" fill="#FFD23F"/>
+  <circle cx="44" cy="160" r="3.5" fill="#4CC9F0"/>
+  <circle cx="356" cy="320" r="3.5" fill="#9B5DE5"/>
+</svg>

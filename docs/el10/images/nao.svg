@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="nao-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E8F8FE"/>
+      <stop offset="1" stop-color="#C9EEFB"/>
+    </linearGradient>
+    <clipPath id="nao-c-head"><ellipse cx="200" cy="130" rx="78" ry="70"/></clipPath>
+    <clipPath id="nao-c-face"><ellipse cx="200" cy="146" rx="60" ry="38"/></clipPath>
+    <clipPath id="nao-c-torso"><path d="M150,208 Q200,198 250,208 L258,268 Q200,292 142,268 Z"/></clipPath>
+  </defs>
+
+  <!-- backdrop blob -->
+  <path d="M200,36 C292,34 364,100 362,195 C360,292 300,362 205,364 C108,366 38,300 40,200 C42,104 110,38 200,36 Z" fill="url(#nao-bg)"/>
+  <!-- sparkles -->
+  <path d="M68,76 Q68,92 84,92 Q68,92 68,108 Q68,92 52,92 Q68,92 68,76 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M344,226 Q344,238 356,238 Q344,238 344,250 Q344,238 332,238 Q344,238 344,226 Z" fill="#FFD23F" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60,250 Q60,259 69,259 Q60,259 60,268 Q60,259 51,259 Q60,259 60,250 Z" fill="#06D6A0" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M96,40 Q96,48 104,48 Q96,48 96,56 Q96,48 88,48 Q96,48 96,40 Z" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="330" cy="200" r="4" fill="#FF6B6B"/>
+  <circle cx="80" cy="190" r="4" fill="#9B5DE5"/>
+  <circle cx="356" cy="60" r="3.5" fill="#4CC9F0"/>
+
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="376" rx="92" ry="12" fill="#2B2D42" opacity="0.15"/>
+
+  <!-- left leg -->
+  <rect x="162" y="292" width="32" height="38" rx="12" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="181" y="298" width="8" height="26" rx="4" fill="#DDE2E8"/>
+  <rect x="163" y="332" width="30" height="26" rx="10" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="181" y="337" width="7" height="16" rx="3" fill="#DDE2E8"/>
+  <circle cx="178" cy="330" r="11" fill="#FF9F1C" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="174" cy="326" r="3" fill="#FFFFFF"/>
+  <path d="M150,372 Q150,352 172,352 L186,352 Q206,352 206,372 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M190,357 Q201,360 201,368 L190,368 Z" fill="#DDE2E8"/>
+  <line x1="156" y1="366" x2="200" y2="366" stroke="#ADB5BD" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- right leg -->
+  <rect x="206" y="292" width="32" height="38" rx="12" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="225" y="298" width="8" height="26" rx="4" fill="#DDE2E8"/>
+  <rect x="207" y="332" width="30" height="26" rx="10" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="225" y="337" width="7" height="16" rx="3" fill="#DDE2E8"/>
+  <circle cx="222" cy="330" r="11" fill="#FF9F1C" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="218" cy="326" r="3" fill="#FFFFFF"/>
+  <path d="M194,372 Q194,352 216,352 L230,352 Q250,352 250,372 Z" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M234,357 Q245,360 245,368 L234,368 Z" fill="#DDE2E8"/>
+  <line x1="200" y1="366" x2="244" y2="366" stroke="#ADB5BD" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- pelvis -->
+  <rect x="160" y="274" width="80" height="24" rx="10" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="214" y="280" width="20" height="12" rx="5" fill="#8D96A0"/>
+
+  <!-- left arm (hanging) -->
+  <rect x="135" y="218" width="26" height="42" rx="12" transform="rotate(15 148 218)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="150" y="226" width="7" height="26" rx="3" transform="rotate(15 148 218)" fill="#DDE2E8"/>
+  <rect x="125" y="259" width="24" height="34" rx="11" transform="rotate(8 137 259)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="139" y="265" width="6" height="22" rx="3" transform="rotate(8 137 259)" fill="#DDE2E8"/>
+  <circle cx="137" cy="259" r="9" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="131" cy="301" r="13" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M126,306 L126,312 M132,307 L132,313" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- neck -->
+  <rect x="186" y="192" width="28" height="20" rx="6" fill="#ADB5BD" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- torso -->
+  <g clip-path="url(#nao-c-torso)">
+    <rect x="130" y="190" width="140" height="110" fill="#DDE2E8"/>
+    <path d="M150,208 Q200,198 250,208 L258,268 Q200,292 142,268 Z" transform="translate(-9 -6)" fill="#FFFFFF"/>
+  </g>
+  <path d="M150,208 Q200,198 250,208 L258,268 Q200,292 142,268 Z" fill="none" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M156,222 Q166,218 170,226 L168,256 Q160,258 154,252 Z" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M244,222 Q234,218 230,226 L232,256 Q240,258 246,252 Z" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M236,230 L240,232 L241,250 L237,250 Z" fill="#E07F00"/>
+  <path d="M180,214 Q200,210 220,214 L222,262 Q200,270 178,262 Z" fill="#E9ECEF" stroke="#2B2D42" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="200" cy="238" r="13" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="200" cy="238" r="7" fill="#4CC9F0"/>
+  <circle cx="197" cy="235" r="2.5" fill="#FFFFFF"/>
+  <circle cx="170" cy="270" r="2.5" fill="#ADB5BD"/>
+  <circle cx="230" cy="270" r="2.5" fill="#ADB5BD"/>
+
+  <!-- head -->
+  <g clip-path="url(#nao-c-head)">
+    <rect x="110" y="50" width="180" height="160" fill="#DDE2E8"/>
+    <ellipse cx="191" cy="121" rx="78" ry="70" fill="#FFFFFF"/>
+  </g>
+  <ellipse cx="200" cy="130" rx="78" ry="70" fill="none" stroke="#2B2D42" stroke-width="6"/>
+  <!-- top stripe with touch sensors -->
+  <path d="M150,84 Q200,54 250,84 L242,98 Q200,74 158,98 Z" fill="#FF9F1C" stroke="#2B2D42" stroke-width="4" stroke-linejoin="round"/>
+  <ellipse cx="172" cy="80" rx="8" ry="3" transform="rotate(-25 172 80)" fill="#FFFFFF"/>
+  <circle cx="186" cy="80" r="3" fill="#FFF8E7" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="200" cy="76" r="3" fill="#FFF8E7" stroke="#2B2D42" stroke-width="2"/>
+  <circle cx="214" cy="80" r="3" fill="#FFF8E7" stroke="#2B2D42" stroke-width="2"/>
+
+  <!-- face plate -->
+  <g clip-path="url(#nao-c-face)">
+    <rect x="130" y="100" width="140" height="90" fill="#CBD2D9"/>
+    <ellipse cx="195" cy="141" rx="60" ry="38" fill="#E9ECEF"/>
+  </g>
+  <ellipse cx="200" cy="146" rx="60" ry="38" fill="none" stroke="#2B2D42" stroke-width="4"/>
+
+  <!-- glowing eyes -->
+  <circle cx="172" cy="142" r="26" fill="#FFD23F" opacity="0.35"/>
+  <circle cx="228" cy="142" r="26" fill="#FFD23F" opacity="0.35"/>
+  <circle cx="172" cy="142" r="21" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="228" cy="142" r="21" fill="#FFD23F" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="172" cy="142" r="15" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="228" cy="142" r="15" fill="#FFFFFF" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="174" cy="144" r="9" fill="#2B2D42"/>
+  <circle cx="230" cy="144" r="9" fill="#2B2D42"/>
+  <circle cx="170" cy="139" r="3.5" fill="#FFFFFF"/>
+  <circle cx="226" cy="139" r="3.5" fill="#FFFFFF"/>
+  <circle cx="178" cy="148" r="1.5" fill="#FFFFFF"/>
+  <circle cx="234" cy="148" r="1.5" fill="#FFFFFF"/>
+  <!-- smile and cheeks -->
+  <path d="M189,170 Q200,179 211,170" fill="none" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="153" cy="167" rx="7" ry="4" fill="#FF6B6B" opacity="0.55"/>
+  <ellipse cx="247" cy="167" rx="7" ry="4" fill="#FF6B6B" opacity="0.55"/>
+
+  <!-- ear speakers -->
+  <circle cx="125" cy="138" r="18" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M119,152 A14,14 0 0 0 137,146" fill="none" stroke="#8D96A0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="125" cy="138" r="9" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="125" cy="138" r="3" fill="#2B2D42"/>
+  <circle cx="275" cy="138" r="18" fill="#ADB5BD" stroke="#2B2D42" stroke-width="6"/>
+  <path d="M269,152 A14,14 0 0 0 287,146" fill="none" stroke="#8D96A0" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="275" cy="138" r="9" fill="#FF9F1C" stroke="#2B2D42" stroke-width="3"/>
+  <circle cx="275" cy="138" r="3" fill="#2B2D42"/>
+  <circle cx="120" cy="132" r="2.5" fill="#FFFFFF"/>
+  <circle cx="270" cy="132" r="2.5" fill="#FFFFFF"/>
+
+  <!-- shoulder caps -->
+  <circle cx="148" cy="216" r="16" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M152,229 A13,13 0 0 0 161,214" fill="none" stroke="#E07F00" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="143" cy="211" r="3.5" fill="#FFFFFF"/>
+
+  <!-- right arm (waving) -->
+  <rect x="239" y="172" width="26" height="46" rx="12" transform="rotate(55 252 218)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="255" y="180" width="7" height="30" rx="3" transform="rotate(55 252 218)" fill="#DDE2E8"/>
+  <rect x="278" y="148" width="24" height="44" rx="11" transform="rotate(20 290 192)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="292" y="155" width="6" height="30" rx="3" transform="rotate(20 290 192)" fill="#DDE2E8"/>
+  <circle cx="290" cy="192" r="9" fill="#ADB5BD" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="252" cy="216" r="16" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M256,229 A13,13 0 0 0 265,214" fill="none" stroke="#E07F00" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="247" cy="211" r="3.5" fill="#FFFFFF"/>
+  <!-- waving hand -->
+  <ellipse cx="295" cy="122" rx="5" ry="10" transform="rotate(-15 295 122)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <ellipse cx="308" cy="117" rx="5" ry="11" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <ellipse cx="321" cy="122" rx="5" ry="10" transform="rotate(15 321 122)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <ellipse cx="291" cy="143" rx="5" ry="8" transform="rotate(-60 291 143)" fill="#FFFFFF" stroke="#2B2D42" stroke-width="4"/>
+  <circle cx="307" cy="139" r="15" fill="#FFFFFF" stroke="#2B2D42" stroke-width="5"/>
+  <path d="M311,150 A12,12 0 0 0 319,138" fill="none" stroke="#DDE2E8" stroke-width="4" stroke-linecap="round"/>
+  <!-- motion lines -->
+  <path d="M334,104 Q345,122 336,142" fill="none" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <path d="M346,94 Q362,122 349,152" fill="none" stroke="#2B2D42" stroke-width="4" stroke-linecap="round"/>
+  <path d="M280,100 Q273,108 274,118" fill="none" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+</svg>
