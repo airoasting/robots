@@ -409,6 +409,40 @@ if (window.gsap && window.ScrollTrigger) { gsap.registerPlugin(ScrollTrigger); }
 @media (prefers-reduced-motion:reduce){
   #hero *,#hero *::before,#hero *::after{transition:none!important;animation:none!important}
 }
+
+/* dock: the hero's own robot, carried to the lower right past the hero (body-level, built by the hero script) */
+#hero-dock{position:fixed;inset:0;z-index:40;pointer-events:none;visibility:hidden;font-family:var(--f-body)}
+#hero-dock.is-fly,#hero-dock.is-docked,#hero-dock.is-min.is-past{visibility:visible}
+#hero-dock .hd-stage{position:absolute;left:0;top:0;pointer-events:none}
+#hero-dock .hd-stage canvas{display:block;width:100%;height:100%}
+#hero-dock .hd-box{position:absolute;right:max(16px,2.2vw);bottom:20px;width:150px;height:236px}
+#hero-dock .hd-hit{all:unset;box-sizing:border-box;position:absolute;inset:0;cursor:grab;pointer-events:none;touch-action:none;border-radius:2px}
+#hero-dock.is-grabbing .hd-hit{cursor:grabbing}
+#hero-dock.is-docked .hd-hit{pointer-events:auto}
+#hero-dock .hd-hit:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#hero-dock .hd-tag{position:absolute;right:calc(100% + 6px);bottom:28px;margin:0;padding:8px 12px;white-space:nowrap;border:1px solid var(--line-2);border-right:2px solid var(--accent);border-radius:2px;background:var(--bg-2);opacity:0;transform:translateX(6px);transition:opacity .25s var(--ease),transform .25s var(--ease);pointer-events:none}
+#hero-dock .hd-tag b{display:block;font:600 14px/1.4 var(--f-body);color:var(--text)}
+#hero-dock .hd-tag em{display:block;margin-top:2px;font:400 13px/1.4 var(--f-body);font-style:normal;color:var(--muted)}
+#hero-dock.is-docked:not(.is-grabbing) .hd-box:hover .hd-tag,#hero-dock.is-docked .hd-hit:focus-visible~.hd-tag{opacity:1;transform:none}
+#hero-dock .hd-min{all:unset;box-sizing:border-box;position:absolute;right:-4px;top:-4px;width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:2px;background:var(--bg-2);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s var(--ease)}
+#hero-dock .hd-min i{width:10px;height:2px;background:var(--muted)}
+#hero-dock .hd-min:hover i{background:var(--text)}
+#hero-dock .hd-min:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#hero-dock.is-docked .hd-box:hover .hd-min,#hero-dock.is-docked .hd-min:focus-visible{opacity:1;pointer-events:auto}
+#hero-dock .hd-pill{all:unset;box-sizing:border-box;position:absolute;right:max(16px,2.2vw);bottom:20px;display:none;align-items:center;gap:8px;height:36px;padding:0 14px 0 12px;border:1px solid var(--line-2);border-radius:2px;background:var(--bg-2);font:600 13px/1 var(--f-mono);letter-spacing:.04em;color:var(--muted);cursor:pointer;pointer-events:auto}
+#hero-dock .hd-pill i{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--accent)}
+#hero-dock .hd-pill:hover{color:var(--text);border-color:var(--muted)}
+#hero-dock .hd-pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#hero-dock.is-min.is-past .hd-pill{display:inline-flex}
+#hero-dock.is-min .hd-box,#hero-dock.is-min .hd-stage{display:none}
+@media (max-width:760px){
+  #hero-dock .hd-box{right:8px;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:84px;height:132px}
+  #hero-dock .hd-tag{display:none}
+  #hero-dock .hd-pill{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));height:32px;padding:0 12px 0 10px}
+}
+@media (hover:none){
+  #hero-dock.is-docked .hd-min{opacity:1;pointer-events:auto;width:24px;height:24px;right:0;top:0}
+}
 </style>
 
 <script>
@@ -1616,9 +1650,18 @@ async function initHero() {
     const b = mesh(new THREE.PlaneGeometry(0.18, 0.34), blobMat);
     b.rotation.x = -Math.PI / 2;
     b.position.set(p0.x, 0.003 - robot.position.y, p0.z);
+    b.userData.z0 = p0.z;
     robot.add(b);
     return b;
   });
+  // seated contact shadow under the pelvis (the dock's sitting pose)
+  const seatBlob = mesh(new THREE.PlaneGeometry(0.42, 0.36), blobMat.clone());
+  seatBlob.rotation.x = -Math.PI / 2;
+  seatBlob.visible = false;
+  robot.add(seatBlob);
+  // assembled silhouette in world space: the dock fits this box into its frame
+  const ROBOT_BOX = new THREE.Box3();
+  parts.forEach((pt) => ROBOT_BOX.union(_box.setFromObject(pt.obj)));
 
   /* ---------- eye glow, scan ring, sparks, guide lines ---------- */
   const eyeGlow = new THREE.Sprite(new THREE.SpriteMaterial({ map: dotTex, color: COL.accent2, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false }));
@@ -1690,8 +1733,9 @@ async function initHero() {
   const disc = mesh(new THREE.CircleGeometry(2.6, 64), new THREE.MeshStandardMaterial({ color: 0x15171a, metalness: 0.6, roughness: 0.55, transparent: true, alphaMap: fadeTex, depthWrite: false, envMapIntensity: 0.25 }));
   disc.rotation.x = -Math.PI / 2;
   disc.visible = false;
+  let shadowPlane = null;
   if (SHADOWS) {
-    const shadowPlane = mesh(new THREE.PlaneGeometry(6, 6), new THREE.ShadowMaterial({ opacity: 0.55, depthWrite: false }));
+    shadowPlane = mesh(new THREE.PlaneGeometry(6, 6), new THREE.ShadowMaterial({ opacity: 0.55, depthWrite: false }));
     shadowPlane.rotation.x = -Math.PI / 2;
     shadowPlane.position.y = 0.001;
     shadowPlane.receiveShadow = true;
@@ -1774,9 +1818,9 @@ async function initHero() {
   let hover = null, hoverFlip = false, pickTick = 0, hoverK = 0;
   const fresMat = new THREE.ShaderMaterial({
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, toneMapped: false,
-    uniforms: { uCol: { value: COL.accent2.clone() }, uK: { value: 0 } },
+    uniforms: { uCol: { value: COL.accent2.clone() }, uK: { value: 0 }, uBase: { value: 0 } },
     vertexShader: 'varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix * vec4(position, 1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }',
-    fragmentShader: 'uniform vec3 uCol; uniform float uK; varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0 - abs(dot(normalize(vN), normalize(vV))), 2.4); gl_FragColor = vec4(uCol * (f * 1.8) * uK, 1.0); }',
+    fragmentShader: 'uniform vec3 uCol; uniform float uK; uniform float uBase; varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0 - abs(dot(normalize(vN), normalize(vV))), 2.4); gl_FragColor = vec4(uCol * (uBase + f * 1.8) * uK, 1.0); }',
   });
   function ensureFres(pt) {
     if (pt.fres) return;
@@ -1836,6 +1880,246 @@ async function initHero() {
   const HOLD = 0.8; // the last 20% of the pin holds the finished robot so it can be turned
   const STAGE_AT = [0, 0.07, 0.28, 0.46, 0.6, 0.86, 0.97];
 
+  /* ---------- dock: past the hero the same robot walks down to the lower right and stays ----------
+     One renderer, one camera. The hero frame (view.w x view.h, base offset bx/by) is mapped to the screen as
+     screen = s * frame + t; the canvas shows whatever part of that frame falls inside its own rect, through
+     setViewOffset, so the hand-off between hosts never moves a pixel. Spec: review/ROBOT_COMPANION.md */
+  const DOCK = !STATIC && HAS_GSAP;
+  const dock = { mode: 'hero', e: 0, k: 0, s: 1, tx: 0, ty: 0, C: { x: 0, y: 0, w: 1, h: 1 }, D: { x: 0, y: 0, w: 1, h: 1 }, B: null,
+    min: false, past: false, ready: false, lastY: window.scrollY, flex: 0, sec: -1, secId: '', glance: -1,
+    sel: null, pv: null, hlId: null, hlParts: [], pulse: 0, moved: 0, ptrId: null };
+  // anatomy component id (02 fragment) -> hero parts that light up for it
+  const PART_MAP = {
+    'vision': /^FACE SHIELD/,
+    'touch-force': /^(HAND R|FOOT )/,
+    'compute': /^CHEST PLATE/,
+    'foundation-model': /^HEAD SHELL/,
+    'rotary-actuator': /^((NECK|SHOULDER|ELBOW|WRIST|HIP) JOINT|WAIST ACTUATOR)/,
+    'linear-actuator': /^(KNEE|ANKLE) ACTUATOR/,
+    'hand': /^HAND L/,
+    'battery': /^BATTERY PACK/,
+    'dof': (pt) => !!pt.d.joint,
+    'locomotion': /^(HIP JOINT|FEMUR|KNEE|TIBIA|ANKLE|FOOT|THIGH|SHIN|CALF)/,
+    'structure': (pt) => pt.d.stage === 0 && !pt.d.joint,
+    'safety-comms': /^(HARNESS|ELBOW CABLE|BACK PLATE)/,
+  };
+  const partsFor = (id) => {
+    const m = PART_MAP[id];
+    if (!m) return [];
+    return parts.filter((pt) => (typeof m === 'function' ? m(pt) : m.test(pt.d.name)));
+  };
+  /* ---------- dock behaviour: idle acts, sitting, greeting ----------
+     Standing still, the robot finds small things to do (weight shift, look around, check its hand, stretch).
+     After 7 s without scrolling it sits down, forearms on its knees, and stands up as soon as the page moves.
+     Events add a wave (first arrival, pointer on the dock) and a point at the page (new section). */
+  const ACT_DUR = { wave: 2.6, point: 2.2, stretch: 3.0, check: 2.8, shift: 3.4, look: 2.8 };
+  const act = { name: null, t: 0, w: 0, next: 2.5, still: 0, sit: 0, sitT: 0, waveCd: 0, greeted: false, last: '' };
+  function playAct(name, force) {
+    if (act.name && !force) return;
+    act.name = name; act.t = 0;
+  }
+  function stepAct(dt, vY, docked) {
+    act.waveCd = Math.max(0, act.waveCd - dt);
+    if (!docked) {
+      act.name = null; act.still = 0; act.sitT = 0; act.next = 2.5;
+    } else {
+      const moving = Math.abs(vY) > 25 || orbit.drag;
+      act.still = moving ? 0 : act.still + dt;
+      if (!act.greeted && p > 0.99) { act.greeted = true; playAct('wave', true); act.waveCd = 6; }
+      act.sitT = act.still > 7 ? 1 : 0;
+      if (moving && act.name !== 'wave' && act.name !== 'point') act.name = null; // scrolling cancels idle business
+      if (act.name) {
+        act.t += dt;
+        if (act.t >= ACT_DUR[act.name]) { act.name = null; act.next = 3 + rnd() * 3; }
+      } else if (act.still > 1.2 && (act.next -= dt) <= 0) {
+        const pool = act.sit > 0.5 ? ['look', 'check'] : ['shift', 'look', 'check', 'stretch'];
+        let n = pool[Math.floor(rnd() * pool.length)];
+        if (n === act.last) n = pool[(pool.indexOf(n) + 1) % pool.length];
+        act.last = n; playAct(n);
+      }
+    }
+    const d = act.name ? ACT_DUR[act.name] : 1;
+    act.w = act.name ? smooth(0, 0.45, act.t) * (1 - smooth(d - 0.6, d, act.t)) : 0;
+    // sit down slowly, stand up briskly
+    act.sit += (act.sitT - act.sit) * (1 - Math.exp(-dt * (act.sitT > act.sit ? 1.6 : 4.5)));
+    if (Math.abs(act.sitT - act.sit) < 1e-4) act.sit = act.sitT;
+  }
+  // seated pose: pelvis on the floor, thighs up, shins forward, forearms resting on the knees
+  const SIT = { hx: -2.2, kn: 1.2, hz: 0.14, lean: 0.14, shx: -0.55, shz: 0.06, el: -1.0 };
+  const footZ = (hx, k) => 0.42 * Math.sin(-hx) + 0.41 * Math.sin(-(hx + k));
+  // arm targets per act; side s = 1 is the robot's left (screen right), -1 its right (screen left, toward the text)
+  function actArm(name, s, t) {
+    if (name === 'wave' && s > 0) return { x: -2.45, z: s * (0.3 + 0.32 * Math.sin(t * 8.5)), el: -0.55 + 0.1 * Math.sin(t * 8.5 + 1) };
+    if (name === 'point' && s < 0) return { x: -0.3, z: s * 1.4, el: -0.12 };
+    if (name === 'stretch') return { x: -2.85, z: s * 0.18, el: -0.15 };
+    if (name === 'check' && s > 0) return { x: -1.15, z: -s * 0.25, el: -1.35 };
+    return null;
+  }
+  let dockEl = null, dockStage = null, dockBox = null, dockHit = null, dockMin = null, heroST = null;
+  const heroStage = q('.h-stage');
+  const DOCK_KEY = 'argos-dock';
+  if (DOCK) {
+    dockEl = document.createElement('div');
+    dockEl.id = 'hero-dock';
+    dockEl.innerHTML =
+      '<div class="hd-stage" aria-hidden="true"></div>' +
+      '<div class="hd-box">' +
+        '<button type="button" class="hd-hit" aria-label="ARGOS 3D 화면으로 돌아가기"></button>' +
+        '<p class="hd-tag" aria-hidden="true"><b>3D 화면으로 돌아가기</b><em>드래그하면 돌려 볼 수 있습니다</em></p>' +
+        '<button type="button" class="hd-min" aria-label="로봇 접기"><i aria-hidden="true"></i></button>' +
+      '</div>' +
+      '<button type="button" class="hd-pill" aria-label="로봇 펼치기"><i aria-hidden="true"></i>ARGOS</button>';
+    document.body.appendChild(dockEl);
+    dockStage = dockEl.querySelector('.hd-stage');
+    dockBox = dockEl.querySelector('.hd-box');
+    dockHit = dockEl.querySelector('.hd-hit');
+    dockMin = dockEl.querySelector('.hd-min');
+    try { dock.min = localStorage.getItem(DOCK_KEY) === 'min'; } catch (_) { /* storage blocked: start open */ }
+    dockEl.classList.toggle('is-min', dock.min);
+  }
+  const SECS = Array.from(document.querySelectorAll('main .sec[data-nav]'));
+  const secTop = (s) => { const pa = s.parentElement; return ((pa && pa.classList.contains('pin-spacer')) ? pa : s).getBoundingClientRect().top; };
+  /* hero exit (0 at the end of the pin, 1 once 70% of it has scrolled away) and the section being read */
+  function track() {
+    if (!DOCK) return;
+    const r = root.getBoundingClientRect();
+    dock.e = dock.ready ? clamp(-r.top / (view.h * 0.7), 0, 1) : 0;
+    const past = dock.e >= 1;
+    if (past !== dock.past) { dock.past = past; dockEl.classList.toggle('is-past', past); }
+    const probe = window.innerHeight * 0.38;
+    let idx = 0;
+    for (let i = 0; i < SECS.length; i++) if (secTop(SECS[i]) <= probe) idx = i;
+    if (idx !== dock.sec) {
+      if (dock.sec > 0 && idx > 0 && dock.mode === 'dock') { dock.glance = 0; playAct('point', true); } // look and point at the new section once
+      dock.sec = idx; dock.secId = SECS[idx] ? SECS[idx].id : '';
+    }
+  }
+  function setMode(m) {
+    dock.mode = m;
+    const host = m === 'hero' ? heroStage : dockStage;
+    if (renderer.domElement.parentNode !== host) host.appendChild(renderer.domElement);
+    dockEl.classList.toggle('is-fly', m === 'fly');
+    dockEl.classList.toggle('is-docked', m === 'dock');
+    const C = m === 'dock' ? dock.D : { x: 0, y: 0, w: view.w, h: view.h };
+    dockStage.style.cssText = 'left:' + C.x + 'px;top:' + C.y + 'px;width:' + C.w + 'px;height:' + C.h + 'px';
+    renderer.setSize(C.w, C.h, false);
+    // docked highlights read through the shells, like an X-ray: a faint fill so flat faces (battery, chest) show too
+    fresMat.depthTest = m === 'hero';
+    fresMat.uniforms.uBase.value = m === 'hero' ? 0 : 0.32;
+    // a 236px robot does not need its 2048px shadow map redrawn every frame; frame() refreshes it at ~10 fps
+    renderer.shadowMap.autoUpdate = m !== 'dock';
+    renderer.shadowMap.needsUpdate = true;
+  }
+  /* the robot's box on the hero frame and the dock rect on screen; both change only on resize */
+  function measureDock() {
+    if (!DOCK) return;
+    // desktop: size the robot to the margin right of the 1360px text column, so it stands beside the page, not on it
+    if (!view.narrow) {
+      const vw = document.documentElement.clientWidth;
+      const g = (vw - Math.min(vw, 1360)) / 2 + clamp(vw * 0.04, 16, 56);
+      const h = Math.round(clamp(g * 2.5, 160, 236)), w = Math.round(h * 0.46);
+      dockBox.style.cssText = 'width:' + w + 'px;height:' + h + 'px;right:' + Math.round(Math.max(4, (g - w) / 2)) + 'px';
+    } else dockBox.style.cssText = '';
+    const b = dockBox.getBoundingClientRect();
+    dock.D = { x: Math.round(b.left), y: Math.round(b.top), w: Math.max(1, Math.round(b.width)), h: Math.max(1, Math.round(b.height)) };
+    const cam = camera.clone();
+    const rad = 5.6 * view.radK;
+    cam.position.set(Math.sin(0.42) * Math.cos(0.045) * rad, 0.92 + Math.sin(0.045) * rad, Math.cos(0.42) * Math.cos(0.045) * rad);
+    cam.lookAt(0, 0.92, 0);
+    cam.setViewOffset(view.w, view.h, view.bx, view.by, view.w, view.h);
+    cam.updateProjectionMatrix();
+    cam.updateMatrixWorld();
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (let i = 0; i < 8; i++) {
+      _mc.set(i & 1 ? ROBOT_BOX.max.x : ROBOT_BOX.min.x, i & 2 ? ROBOT_BOX.max.y : ROBOT_BOX.min.y, i & 4 ? ROBOT_BOX.max.z : ROBOT_BOX.min.z).project(cam);
+      const x = (_mc.x * 0.5 + 0.5) * view.w, y = (-_mc.y * 0.5 + 0.5) * view.h;
+      x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+    }
+    dock.B = { cx: (x0 + x1) / 2, y0, y1, w: x1 - x0, h: y1 - y0 };
+    if (dock.mode === 'dock') setMode('dock');
+  }
+  /* per frame: where the frame sits on screen, which canvas shows it, and the camera window into it */
+  function stepDock() {
+    let k = 0;
+    if (DOCK && !dock.min && dock.B) {
+      const e = dock.e;
+      k = e * e * (3 - 2 * e);
+    }
+    dock.k = k;
+    const m = k <= 0 ? 'hero' : k >= 1 ? 'dock' : 'fly';
+    if (DOCK && m !== dock.mode) setMode(m);
+    if (m === 'hero') {
+      const r = root.getBoundingClientRect();
+      dock.C = { x: r.left, y: r.top, w: view.w, h: view.h };
+      camera.setViewOffset(view.w, view.h, view.bx, view.by, view.w, view.h);
+    } else {
+      const B = dock.B, D = dock.D;
+      // fit the silhouette to the dock: feet on its floor, head clear of the top edge
+      const s1 = Math.min((D.h - 18) / B.h, (D.w - 8) / B.w);
+      const fx0 = B.cx, fy0 = (B.y0 + B.y1) / 2;
+      const fx1 = D.x + D.w / 2, fy1 = D.y + D.h - 6 - s1 * B.h / 2;
+      const s = Math.exp(Math.log(s1) * k);
+      const cx = lerp(fx0, fx1, k), cy = lerp(fy0, fy1, k);
+      dock.s = s; dock.tx = cx - s * fx0; dock.ty = cy - s * fy0;
+      const C = m === 'dock' ? dock.D : { x: 0, y: 0, w: view.w, h: view.h };
+      dock.C = C;
+      camera.setViewOffset(view.w, view.h, view.bx + (C.x - dock.tx) / s, view.by + (C.y - dock.ty) / s, C.w / s, C.h / s);
+    }
+    camera.updateProjectionMatrix();
+  }
+  if (DOCK) {
+    const goHero = () => {
+      const y = heroST ? Math.round(heroST.start + (heroST.end - heroST.start) * ((1 + HOLD) / 2)) : 0;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    };
+    dockHit.addEventListener('pointerenter', (e) => {
+      if (e.pointerType === 'mouse' && dock.mode === 'dock' && act.waveCd <= 0) { playAct('wave', true); act.waveCd = 8; }
+    });
+    dockHit.addEventListener('pointerdown', (e) => {
+      if (e.button > 0 || !orbit.on) return;
+      dock.moved = 0; dock.ptrId = e.pointerId;
+      orbit.drag = true; orbit.id = e.pointerId; orbit.x = e.clientX; orbit.y = e.clientY; orbit.vy = 0;
+      try { dockHit.setPointerCapture(e.pointerId); } catch (_) { /* ignore */ }
+      dockEl.classList.add('is-grabbing');
+    });
+    dockHit.addEventListener('pointermove', (e) => {
+      if (!orbit.drag || e.pointerId !== dock.ptrId) return;
+      const dx = e.clientX - orbit.x, dy = e.clientY - orbit.y;
+      orbit.x = e.clientX; orbit.y = e.clientY;
+      dock.moved += Math.abs(dx) + Math.abs(dy);
+      orbit.yaw += dx * 0.02; orbit.vy = dx * 0.02;
+      if (e.pointerType !== 'touch') orbit.pitch = clamp(orbit.pitch + dy * 0.008, -0.1, 0.45);
+    });
+    const endDock = (e) => {
+      if (e.pointerId !== dock.ptrId) return;
+      dock.ptrId = null; orbit.drag = false; orbit.id = null;
+      dockEl.classList.remove('is-grabbing');
+    };
+    dockHit.addEventListener('pointerup', endDock);
+    dockHit.addEventListener('pointercancel', endDock);
+    dockHit.addEventListener('lostpointercapture', endDock);
+    dockHit.addEventListener('click', () => { if (dock.moved < 6) goHero(); dock.moved = 0; });
+    const setMin = (v) => {
+      dock.min = v;
+      dockEl.classList.toggle('is-min', v);
+      try { localStorage.setItem(DOCK_KEY, v ? 'min' : 'open'); } catch (_) { /* not remembered */ }
+      if (v) { setMode('hero'); dock.k = 0; if (!inView) stop(); } else start(); // folded: the canvas goes home to the hero
+      (v ? dockEl.querySelector('.hd-pill') : dockHit).focus({ preventScroll: true });
+    };
+    dockMin.addEventListener('click', () => setMin(true));
+    dockEl.querySelector('.hd-pill').addEventListener('click', () => setMin(false));
+    /* anatomy (02) tells which component is being read; the docked robot lights the matching parts */
+    document.addEventListener('argos:part', (ev) => {
+      const d = ev.detail || {};
+      if (!d.id) return;
+      if (d.sel) dock.sel = d.id;
+      else if (d.on) dock.pv = d.id;
+      else if (dock.pv === d.id) dock.pv = null;
+    });
+    // also runs while the loop is stopped (minimised), so the pill still knows when the hero is gone
+    window.addEventListener('scroll', track, { passive: true });
+  }
+
   if (STATIC || !HAS_GSAP) {
     intro.load = 100; intro.grid = 1; intro.parts = 1;
     p = target = 1;
@@ -1845,6 +2129,7 @@ async function initHero() {
 
   const onPtr = (e) => {
     const r = root.getBoundingClientRect();
+    ptr.sx = e.clientX; ptr.sy = e.clientY;
     ptr.cx = e.clientX - r.left;
     ptr.cy = e.clientY - r.top;
     ptr.x = clamp((ptr.cx / Math.max(1, r.width)) * 2 - 1, -1, 1);
@@ -1900,9 +2185,19 @@ async function initHero() {
       if (Math.abs(target - p) < 1e-4) p = target;
     }
     const sp = eInOutSine(p);
+    track();
+    stepDock();
+    const dk = dock.k, docked = dock.mode === 'dock';
     const kM = 1 - Math.exp(-dt * 2.5);
-    mouseS.x += ((STATIC ? 0 : ptr.x) - mouseS.x) * kM;
-    mouseS.y += ((STATIC ? 0 : ptr.y) - mouseS.y) * kM;
+    // the page-wide camera sway belongs to the hero; the docked robot keeps its framing
+    mouseS.x += ((STATIC ? 0 : ptr.x * (1 - dk)) - mouseS.x) * kM;
+    mouseS.y += ((STATIC ? 0 : ptr.y * (1 - dk)) - mouseS.y) * kM;
+    // scroll speed: the docked robot absorbs it in the knees, quick in, slow out
+    const sY = window.scrollY, vY = dt > 0 ? (sY - dock.lastY) / dt : 0;
+    dock.lastY = sY;
+    const flexT = docked ? clamp(Math.abs(vY) / 2600, 0, 1) : 0;
+    dock.flex += (flexT - dock.flex) * (1 - Math.exp(-dt * (flexT > dock.flex ? 9 : 2.5)));
+    if (DOCK) stepAct(dt, vY, docked && !STATIC);
 
     const canOrbit = !STATIC && p > 0.97;
     if (canOrbit !== orbit.on) { orbit.on = canOrbit; root.classList.toggle('is-orbit', canOrbit); if (!canOrbit) endDrag(); }
@@ -1910,6 +2205,12 @@ async function initHero() {
       if (orbit.on) {
         orbit.yaw += orbit.vy; orbit.vy *= Math.exp(-dt * 3.2); // release spin, damped
         if (Math.abs(orbit.vy) < 1e-5) orbit.vy = 0;
+        if (dk > 0 && Math.abs(orbit.vy) < 0.002) {
+          // off the hero the robot turns back to its three-quarter view once the spin has died down
+          orbit.yaw = Math.atan2(Math.sin(orbit.yaw), Math.cos(orbit.yaw));
+          const kb = 1 - Math.exp(-dt * 1.4);
+          orbit.yaw -= orbit.yaw * kb; orbit.pitch -= orbit.pitch * kb;
+        }
       } else {
         // scrolled away: settle back to the front view along the short way round
         orbit.yaw = Math.atan2(Math.sin(orbit.yaw), Math.cos(orbit.yaw));
@@ -1980,30 +2281,57 @@ async function initHero() {
     /* pose: flexed stance, one actuator pump mid-assembly, breathing, contrapposto */
     const br = Math.sin(time * 1.6);
     const pump = STATIC ? 0 : Math.sin(Math.PI * clamp((p - 0.43) / 0.1, 0, 1));
-    const hx = POSE.hipx - pump * 0.14;
-    const knB = POSE.kn + pump * 0.34 + br * 0.012 * idle;
+    const fl = dock.flex;
+    const sk = act.sit * act.sit * (3 - 2 * act.sit); // 0 standing, 1 seated
+    const aw = act.w, an = act.name, at = act.t;
+    // weight shift: one sway onto the right leg and back
+    const ws = an === 'shift' ? aw * Math.sin(Math.PI * clamp(at / ACT_DUR.shift, 0, 1)) : 0;
+    const hx0 = POSE.hipx - pump * 0.14 - fl * 0.12, kn0 = POSE.kn + pump * 0.34 + fl * 0.3 + br * 0.012 * idle;
+    const hx = lerp(hx0, SIT.hx, sk);
+    const knB = lerp(kn0, SIT.kn, sk);
     for (const L of LIMBS) {
-      const k = knB + (L.s < 0 ? POSE.knR : 0);
+      const k = knB + (L.s < 0 ? POSE.knR * (1 - sk) : 0) + (L.s > 0 ? 0.18 : -0.04) * ws;
       L.hp.rotation.x = hx;
+      L.hp.rotation.z = L.s * (0.02 + SIT.hz * sk);
       L.kn.rotation.x = k;
       L.an.rotation.x = -(hx + k);
-      L.el.rotation.x = POSE.el - pump * 0.4 + br * 0.01 * idle;
+      L.an.rotation.z = -L.s * (0.02 + SIT.hz * sk);
+      L.el.rotation.x = lerp(POSE.el - (pump + fl * 0.5) * 0.4 + br * 0.01 * idle, SIT.el, sk);
     }
     robot.position.y = robotY(hx, knB);
-    for (const b of blobs) b.position.y = 0.003 - robot.position.y;
-    pelv.rotation.z = POSE.tilt;
-    torso.rotation.z = -POSE.tilt * 1.3;
+    // seated, the feet stay where they stood: the pelvis moves back instead of the feet sliding forward
+    const dz = sk > 0 ? footZ(hx, knB) - footZ(hx0, kn0) : 0;
+    for (const b of blobs) { b.position.y = 0.003 - robot.position.y; b.position.z = b.userData.z0 + dz; }
+    seatBlob.position.y = 0.004 - robot.position.y;
+    seatBlob.material.opacity = 0.5 * sk;
+    seatBlob.visible = sk > 0.01;
+    pelv.rotation.z = POSE.tilt + 0.05 * ws;
+    torso.rotation.z = -POSE.tilt * 1.3 - 0.07 * ws;
     torso.position.y = 0.11 + br * 0.003 * idle;
-    torso.rotation.x = POSE.lean + br * 0.008 * idle;
-    shL.rotation.z = POSE.sh + (br * 0.01 + Math.sin(time * 0.7) * 0.008) * idle;
-    shR.rotation.z = -POSE.sh - (br * 0.01 + Math.sin(time * 0.7 + 1) * 0.008) * idle;
-    shL.rotation.x = POSE.shx + Math.sin(time * 0.8) * 0.015 * idle;
-    shR.rotation.x = POSE.shx + Math.sin(time * 0.8 + 2) * 0.015 * idle;
+    torso.rotation.x = lerp(POSE.lean, SIT.lean, sk) + br * 0.008 * idle;
+    shL.rotation.z = lerp(POSE.sh, SIT.shz, sk) + (br * 0.01 + Math.sin(time * 0.7) * 0.008) * idle;
+    shR.rotation.z = -lerp(POSE.sh, SIT.shz, sk) - (br * 0.01 + Math.sin(time * 0.7 + 1) * 0.008) * idle;
+    shL.rotation.x = lerp(POSE.shx, SIT.shx, sk) + Math.sin(time * 0.8) * 0.015 * idle;
+    shR.rotation.x = lerp(POSE.shx, SIT.shx, sk) + Math.sin(time * 0.8 + 2) * 0.015 * idle;
+    // arm acts blend over whatever the arms are doing (standing or seated)
+    for (const L of LIMBS) {
+      const tg = an ? actArm(an, L.s, at) : null;
+      if (tg && aw > 0) {
+        L.sh.rotation.x = lerp(L.sh.rotation.x, tg.x, aw);
+        L.sh.rotation.z = lerp(L.sh.rotation.z, tg.z, aw);
+        L.el.rotation.x = lerp(L.el.rotation.x, tg.el, aw);
+      }
+      // checking the hand: the wrist turns it over twice
+      L.wr.rotation.y = L.s * 0.15 + (an === 'check' && L.s > 0 ? Math.sin(at * 3.2) * 0.6 * aw : 0);
+    }
+    if (an === 'stretch') torso.rotation.z += Math.sin(at * 2.2) * 0.06 * aw;
     robot.rotation.y = mouseS.x * 0.1 + orbit.yaw + (STATIC ? 0 : (1 - sp) * Math.sin(time * 0.12) * 0.25);
+    robot.position.x = -Math.sin(robot.rotation.y) * dz;
+    robot.position.z = -Math.cos(robot.rotation.y) * dz;
 
     const [az, el] = placeCamera(sp);
     scene.updateMatrixWorld();
-    if (!view.narrow) fitMark(dt); else root.classList.add('mark-on');
+    if (dock.mode === 'hero') { if (!view.narrow) fitMark(dt); else root.classList.add('mark-on'); }
 
     /* linkages: each linear actuator aims at its crank and the rod takes up the distance */
     for (const L of LINKS) {
@@ -2026,14 +2354,33 @@ async function initHero() {
     let tx = 0, ty = 0;
     if (!STATIC) {
       if (ptr.has) {
+        // head and pointer in screen space, so the gaze holds in every host (hero, flight, dock)
         head.localToWorld(_w.set(0, 0.15, 0)).project(camera);
-        const hx = (_w.x * 0.5 + 0.5) * view.w, hy = (-_w.y * 0.5 + 0.5) * view.h;
-        tx = clamp((ptr.cx - hx) / (view.w * 0.4), -1, 1);
-        // vertical neutral sits well below the head (upper-middle of the screen), so an ordinary cursor keeps the face level
-        ty = clamp(-(ptr.cy - (hy + view.h * 0.28)) / (view.h * 0.3), -1, 1);
+        const C = dock.C;
+        const hx = C.x + (_w.x * 0.5 + 0.5) * C.w, hy = C.y + (-_w.y * 0.5 + 0.5) * C.h;
+        tx = clamp((ptr.sx - hx) / (view.w * 0.4), -1, 1);
+        // vertical neutral sits well below the head (upper-middle of the screen), so an ordinary cursor keeps the face level;
+        // docked at the bottom, the neutral moves up to the head so the robot looks up at the page without craning
+        ty = clamp(-(ptr.sy - (hy + view.h * 0.28 * (1 - dk))) / (view.h * 0.3), -1, 1 - 0.3 * dk);
       } else {
         tx = Math.sin(time * 0.3) * 0.35;
         ty = Math.sin(time * 0.21) * 0.1;
+      }
+      // new section while docked: one look over at the page, then back to the pointer
+      if (dock.glance >= 0) {
+        dock.glance += dt;
+        const g = Math.sin(Math.PI * clamp(dock.glance / 1.6, 0, 1));
+        tx = lerp(tx, -0.95, g); ty = lerp(ty, 0.3, g);
+        if (dock.glance >= 1.6) dock.glance = -1;
+      }
+      // acts steer the gaze too: face the viewer to wave, look down at the hand, scan the room, look up mid-stretch
+      if (aw > 0) {
+        let gx = null, gy = 0;
+        if (an === 'wave') { gx = 0.05; gy = 0.2; }
+        else if (an === 'check') { gx = 0.3; gy = -0.6; }
+        else if (an === 'look') { gx = Math.sin(at * 2.4) * 0.85; gy = 0.15 + 0.1 * Math.sin(at * 1.3); }
+        else if (an === 'stretch') { gx = 0; gy = 0.5; }
+        if (gx !== null) { tx = lerp(tx, gx, aw); ty = lerp(ty, gy, aw); }
       }
     }
     const kL = 1 - Math.exp(-dt * 4);
@@ -2042,7 +2389,7 @@ async function initHero() {
     // finished pose faces the viewer (offsets the torso lean); the head follows the pointer in both axes
     // the upper body turns with the gaze (about a third of it), the head carries the rest; up-look has more range than down-look
     const pitch = look.y > 0 ? look.y * 0.34 : look.y * 0.14;
-    torso.rotation.y = look.x * 0.2 * lookW;
+    torso.rotation.y = look.x * 0.2 * lookW - (an === 'point' ? 0.25 * aw : 0); // pointing turns the chest toward the text
     torso.rotation.x -= pitch * 0.25 * lookW;
     head.rotation.y = look.x * 0.45 * lookW;
     head.rotation.x = lerp(0.24, -0.1, lift) - pitch * 0.75 * lookW + Math.sin(time * 1.6 + 0.6) * 0.008 * idle;
@@ -2072,9 +2419,13 @@ async function initHero() {
     }
 
     /* floor */
-    floorMat.uniforms.uReveal.value = intro.grid;
+    // leaving the hero, the grid folds back under the feet (the intro, run backwards); the dock keeps contact shadows only
+    const floorK = 1 - smooth(0, 0.55, dk);
+    floorMat.uniforms.uReveal.value = intro.grid * floorK;
     floorMat.uniforms.uGrid.value = lerp(1, 0.16, smooth(0.3, 1, p));
-    floorMat.uniforms.uGlow.value = (0.06 + 0.08 * smooth(0.5, 1, p)) * intro.grid;
+    floorMat.uniforms.uGlow.value = (0.06 + 0.08 * smooth(0.5, 1, p)) * intro.grid * floorK;
+    grid.visible = floorK > 0.001;
+    if (shadowPlane) { shadowPlane.material.opacity = 0.55 * (1 - smooth(0, 0.45, dk)); shadowPlane.visible = dk < 0.45; }
     disc.material.opacity = intro.grid;
 
     /* world-space positions after matrices are current: sparks, guides, labels */
@@ -2101,7 +2452,7 @@ async function initHero() {
         _v.copy(_w).project(camera);
         const x = (_v.x * 0.5 + 0.5) * view.w, y = (-_v.y * 0.5 + 0.5) * view.h;
         // skip a label whose text box would collide with one already placed this frame
-        let hit = _v.z >= 1 || x < 12 || y < 70 || y > view.h - 60 || (x < view.copyR && y > view.copyT && y < view.copyB);
+        let hit = dk > 0 || _v.z >= 1 || x < 12 || y < 70 || y > view.h - 60 || (x < view.copyR && y > view.copyT && y < view.copyB);
         for (let j = 0; j < placed && !hit; j++) {
           if (Math.abs(lblBox[j * 2] - x) < 190 && Math.abs(lblBox[j * 2 + 1] - y) < 44) hit = true;
         }
@@ -2119,7 +2470,7 @@ async function initHero() {
       }
     }
     /* hover label: pick the part under the cursor, tag it, light its wireframe in gold */
-    const inside = !STATIC && ptr.has && ptr.cx >= 0 && ptr.cy >= 0 && ptr.cx <= view.w && ptr.cy <= view.h && ip > 0.5;
+    const inside = !STATIC && dk === 0 && ptr.has && ptr.cx >= 0 && ptr.cy >= 0 && ptr.cx <= view.w && ptr.cy <= view.h && ip > 0.5;
     if (!inside) {
       if (hover) { showFres(hover, false); hover = null; hoverLbl.style.opacity = '0'; root.classList.remove('is-picking'); }
     } else if ((pickTick = (pickTick + 1) % 3) === 0) {
@@ -2146,9 +2497,19 @@ async function initHero() {
       if (flip !== hoverFlip) { hoverLbl.classList.toggle('is-flip', flip); hoverFlip = flip; }
       hoverLbl.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0)';
     }
+    /* docked in the anatomy section: the component being read (hover first, then the selection) lights up */
+    const hlId = docked && dock.secId === 'anatomy' ? (dock.pv || dock.sel) : null;
+    if (hlId !== dock.hlId) {
+      dock.hlParts.forEach((pt) => showFres(pt, false));
+      dock.hlParts = hlId ? partsFor(hlId) : [];
+      dock.hlParts.forEach((pt) => showFres(pt, true));
+      dock.hlId = hlId;
+      if (hlId) dock.pulse = 1;
+    }
+    dock.pulse = Math.max(0, dock.pulse - dt * 2.2);
     guide.visible = ip > 0.01;
-    hoverK += ((hover ? 1 : 0) - hoverK) * (1 - Math.exp(-dt * 8));
-    fresMat.uniforms.uK.value = hoverK;
+    hoverK += ((hover || hlId ? 1 : 0) - hoverK) * (1 - Math.exp(-dt * 8));
+    fresMat.uniforms.uK.value = hoverK * (1 + 0.8 * dock.pulse * dock.pulse);
     guideGeo.attributes.position.needsUpdate = true;
     guideGeo.attributes.color.needsUpdate = true;
 
@@ -2205,13 +2566,14 @@ async function initHero() {
 
   /* ---------- loop, visibility, resize ---------- */
   const clock = new THREE.Clock();
-  let running = false, raf = 0, inView = true;
+  let running = false, raf = 0, inView = true, shadowTick = 0;
   function frame() {
     if (!running) return;
     raf = requestAnimationFrame(frame);
     const dt = Math.min(clock.getDelta(), 0.05);
     time += dt;
     update(dt);
+    if (!renderer.shadowMap.autoUpdate && (++shadowTick % 6 === 0)) renderer.shadowMap.needsUpdate = true;
     draw();
   }
   function start() {
@@ -2233,7 +2595,7 @@ async function initHero() {
   function resize() {
     const w = Math.max(1, root.clientWidth), h = Math.max(1, root.clientHeight);
     view.w = w; view.h = h;
-    renderer.setSize(w, h, false);
+    if (dock.mode !== 'dock') renderer.setSize(w, h, false);
     const aspect = w / h;
     camera.aspect = aspect;
     camera.fov = aspect < 0.75 ? 32 : aspect < 1.1 ? 28 : 24;
@@ -2241,8 +2603,11 @@ async function initHero() {
     const narrow = w <= 760;
     view.narrow = narrow;
     mark.locked = false;
-    camera.setViewOffset(w, h, narrow ? 0 : -w * 0.16, narrow ? h * 0.13 : 0, w, h);
+    view.bx = narrow ? 0 : -w * 0.16; view.by = narrow ? h * 0.13 : 0;
+    camera.setViewOffset(w, h, view.bx, view.by, w, h);
     camera.updateProjectionMatrix();
+    measureDock();
+    if (dock.mode === 'fly') setMode('fly');
     if (composer) { composer.setPixelRatio(renderer.getPixelRatio()); composer.setSize(w, h); drawBg(w, h, narrow); }
     const rr = root.getBoundingClientRect(), cr = q('.h-copy').getBoundingClientRect();
     view.copyR = cr.right - rr.left + 24;
@@ -2274,7 +2639,8 @@ async function initHero() {
   if ('IntersectionObserver' in window) {
     new IntersectionObserver((entries) => {
       inView = entries[0].isIntersecting;
-      if (inView) start(); else stop();
+      // an open dock keeps the robot on screen after the hero has gone
+      if (inView || (DOCK && dock.ready && !dock.min)) start(); else stop();
     }, { threshold: 0 }).observe(root);
   }
   start();
@@ -2293,6 +2659,7 @@ async function initHero() {
       invalidateOnRefresh: true,
       onUpdate: (self) => { target = Math.min(1, self.progress / HOLD); },
     });
+    heroST = st;
     target = Math.min(1, st.progress / HOLD);
     /* stage rail: jump to the middle of each stage's scroll window */
     stepEls.forEach((li, i) => {
@@ -2312,6 +2679,7 @@ async function initHero() {
     intro.load = 100;
     root.classList.add('is-loaded', 'is-intro-done');
     load.ready();
+    if (DOCK) { dock.ready = true; track(); if (!inView && !dock.min) start(); }
     gsap.timeline()
       .to(intro, { grid: 1, duration: 0.7, ease: 'power3.inOut' })
       .to(intro, { parts: 1, duration: 0.7, ease: 'power2.out' }, '<0.1');
@@ -3362,7 +3730,14 @@ async function initHero() {
       onComplete: function () { draws.forEach(function (c) { c.style.strokeDasharray = ''; c.style.strokeDashoffset = ''; }); }
     });
   }
+  /* tell the docked hero robot which component is being read (01 fragment listens; no globals) */
+  function emit(i, on, sel) {
+    var d = DATA[i];
+    if (!d) return;
+    try { document.dispatchEvent(new CustomEvent('argos:part', { detail: { id: d.id, on: on, sel: sel } })); } catch (e) {}
+  }
   function preview(i, on) {
+    emit(i, on, false);
     bls.forEach(function (b, k) { b.classList.toggle('pv', on && k === i && k !== cur); });
     rows.forEach(function (r, k) { r.classList.toggle('pv', on && k === i && k !== cur); });
     ldrs.forEach(function (l, k) { l.classList.toggle('pv', on && k === i && k !== cur); });
@@ -3404,6 +3779,7 @@ async function initHero() {
     rows.forEach(function (r, k) { r.classList.toggle('is-on', k === i); r.classList.remove('pv'); });
     bomBtns.forEach(function (b, k) { b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
     ldrs.forEach(function (l, k) { l.classList.toggle('on', k === i); l.classList.remove('pv'); });
+    if (!opt.instant) emit(i, true, true);
     if (changed || opt.force) {
       swapPanel(i, opt.instant);
       highlight(i, opt.instant);

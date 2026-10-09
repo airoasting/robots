@@ -1035,7 +1035,14 @@
       onComplete: function () { draws.forEach(function (c) { c.style.strokeDasharray = ''; c.style.strokeDashoffset = ''; }); }
     });
   }
+  /* tell the docked hero robot which component is being read (01 fragment listens; no globals) */
+  function emit(i, on, sel) {
+    var d = DATA[i];
+    if (!d) return;
+    try { document.dispatchEvent(new CustomEvent('argos:part', { detail: { id: d.id, on: on, sel: sel } })); } catch (e) {}
+  }
   function preview(i, on) {
+    emit(i, on, false);
     bls.forEach(function (b, k) { b.classList.toggle('pv', on && k === i && k !== cur); });
     rows.forEach(function (r, k) { r.classList.toggle('pv', on && k === i && k !== cur); });
     ldrs.forEach(function (l, k) { l.classList.toggle('pv', on && k === i && k !== cur); });
@@ -1077,6 +1084,7 @@
     rows.forEach(function (r, k) { r.classList.toggle('is-on', k === i); r.classList.remove('pv'); });
     bomBtns.forEach(function (b, k) { b.setAttribute('aria-pressed', k === i ? 'true' : 'false'); });
     ldrs.forEach(function (l, k) { l.classList.toggle('on', k === i); l.classList.remove('pv'); });
+    if (!opt.instant) emit(i, true, true);
     if (changed || opt.force) {
       swapPanel(i, opt.instant);
       highlight(i, opt.instant);
