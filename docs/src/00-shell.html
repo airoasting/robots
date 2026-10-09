@@ -166,6 +166,8 @@ html{scrollbar-width:thin;scrollbar-color:var(--line-2) var(--bg-2)}
   .js .reveal{opacity:1;transform:none}
   .tn,.tn-links a,.tn-links a::after,.ft a{transition:none}
 }
+/* hero loader: hold the page still until the 3D hero has built its pin */
+html.hero-loading{overflow:hidden}
 </style>
 
 <!-- Libraries: loaded once here. Sections must not load them again. -->
@@ -337,7 +339,8 @@ if (window.gsap && window.ScrollTrigger) { gsap.registerPlugin(ScrollTrigger); }
   if (ST) {
     var loaded = new Promise(function (r) { if (document.readyState === 'complete') r(); else window.addEventListener('load', r, { once: true }); });
     var fonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-    Promise.all([loaded, fonts]).then(function () {
+    var hero = window.__heroReady || Promise.resolve(); /* the hero builds its pin after a progressive load */
+    Promise.all([loaded, fonts, hero]).then(function () {
       setTimeout(function () { /* not rAF: rAF is paused in background tabs */
         /* Pins were created out of page order (hero is a module script and runs last).
            Sort by document position so earlier pins are measured first; a trigger that

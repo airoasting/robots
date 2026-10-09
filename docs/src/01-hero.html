@@ -68,7 +68,8 @@
   </div>
 
   <div class="h-loader" aria-hidden="true">
-    <div class="h-ld-bar"><i></i></div>
+    <p class="h-ld-num"><b data-ld>0</b><span>%</span></p>
+    <div class="h-ld-bar"><i data-ld-bar></i></div>
   </div>
 </section>
 
@@ -153,11 +154,13 @@
 #hero .h-tick{position:absolute;top:-4px;width:1px;height:10px;background:var(--line-2)}
 
 /* loader */
-#hero .h-loader{position:absolute;left:0;right:0;bottom:0;z-index:6;height:2px;pointer-events:none;transition:opacity .4s var(--ease),visibility 0s linear .4s}
+#hero .h-loader{position:absolute;inset:0;z-index:6;pointer-events:none;transition:opacity .5s var(--ease),visibility 0s linear .5s}
 #hero.is-loaded .h-loader{opacity:0;visibility:hidden}
-#hero .h-ld-bar{position:relative;width:100%;height:1px;background:transparent}
-#hero .h-ld-bar i{position:absolute;inset:0;background:var(--accent);transform-origin:0 50%;animation:heroLd 1.4s var(--ease) infinite}
-@keyframes heroLd{0%{transform:scaleX(0);opacity:1}80%{transform:scaleX(1);opacity:.6}100%{transform:scaleX(1);opacity:0}}
+#hero .h-ld-num{position:absolute;left:66%;top:46%;margin:0;transform:translate(-50%,-50%);display:flex;align-items:baseline;gap:.08em;font:600 clamp(56px,7vw,104px)/1 var(--f-mono);letter-spacing:-.02em;color:var(--text);font-variant-numeric:tabular-nums}
+#hero .h-ld-num span{font-size:.36em;font-weight:500;color:var(--dim)}
+@media (max-width:760px){ #hero .h-ld-num{left:50%;top:40%} }
+#hero .h-ld-bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--line)}
+#hero .h-ld-bar i{position:absolute;inset:0;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
 #hero .h-stage{opacity:0;transition:opacity .8s var(--ease)}
 #hero.is-loaded .h-stage{opacity:1}
 
@@ -209,6 +212,52 @@
 </style>
 
 <script>
+/* Loader: a real percentage. Downloads move it to 15, the 3D module reports the rest through
+   window.__heroLoad(pct). The shell waits for window.__heroReady before its single ScrollTrigger refresh. */
+(function () {
+  var s = document.getElementById('hero');
+  var html = document.documentElement;
+  var settle;
+  window.__heroReady = new Promise(function (r) { settle = r; });
+  function ready() { html.classList.remove('hero-loading'); settle(); }
+  if (!s) { ready(); return; }
+  html.classList.add('hero-loading');
+  setTimeout(ready, 15000); // never keep the page locked
+  var num = s.querySelector('[data-ld]'), bar = s.querySelector('[data-ld-bar]');
+  var target = 0, shown = 0, last = -1, waiters = [], raf = 0;
+  function paint() {
+    var v = Math.floor(shown);
+    if (v !== last) { last = v; if (num) num.textContent = v; if (bar) bar.style.transform = 'scaleX(' + (v / 100) + ')'; }
+  }
+  function tick() {
+    raf = 0;
+    shown = Math.min(target, shown + Math.max(0.6, (target - shown) * 0.16));
+    paint();
+    if (shown >= 100) { var w = waiters; waiters = []; setTimeout(function () { w.forEach(function (f) { f(); }); }, 160); return; }
+    if (shown < target) raf = requestAnimationFrame(tick);
+  }
+  function set(p) {
+    target = Math.max(target, Math.min(100, p));
+    if (document.hidden) { shown = target; paint(); return; }
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  window.__heroLoad = set;
+  /* resolves once the counter has visibly reached 100 */
+  set.finish = function () {
+    set(100);
+    if (document.hidden || shown >= 100) return Promise.resolve();
+    return new Promise(function (r) { waiters.push(r); });
+  };
+  set.ready = ready;
+  /* downloads: each three.js module file is one step, up to 14 */
+  var got = 0;
+  try {
+    new PerformanceObserver(function (l) {
+      l.getEntries().forEach(function (e) { if (e.name.indexOf('/three@') > -1) { got += 1; set(Math.min(14, got)); } });
+    }).observe({ type: 'resource', buffered: true });
+  } catch (e) { set(8); }
+})();
+
 /* WebGL watchdog: no WebGL, or the 3D module never starts (e.g. CDN blocked), shows the CSS fallback. */
 (function () {
   var s = document.getElementById('hero');
@@ -222,6 +271,7 @@
     if (s.dataset.ready) return;
     s.dataset.ready = 'fallback';
     s.classList.add('is-fallback', 'is-loaded', 'is-intro-done');
+    if (window.__heroLoad) window.__heroLoad.ready();
   }
   if (!ok) { fallback(); return; }
   setTimeout(fallback, 9000);
@@ -248,14 +298,25 @@ function toFallback(err) {
   root.classList.add('is-fallback', 'is-loaded', 'is-intro-done');
   const st = root.querySelector('.h-stage');
   if (st) st.textContent = '';
+  if (load.ready) load.ready();
 }
+
+/* loader hooks from the inline script above; no-ops when it is missing */
+const load = window.__heroLoad || Object.assign(() => {}, { finish: () => Promise.resolve(), ready: () => {} });
+/* give the browser one frame to paint the counter. Background tabs throttle timers to once a second or
+   slower, so there the build runs straight through, as before. */
+const yieldFrame = () => (document.hidden ? Promise.resolve() : new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0))));
 
 if (root && root.dataset.ready !== 'fallback' && !root.dataset.heroInit) {
   root.dataset.heroInit = '1';
-  try { initHero(); } catch (err) { toFallback(err); }
+  initHero().catch(toFallback);
+} else {
+  load.ready();
 }
 
-function initHero() {
+async function initHero() {
+  load(15);
+  await yieldFrame();
   /* ---------- helpers ---------- */
   const q = (s) => root.querySelector(s);
   const qa = (s) => Array.from(root.querySelectorAll(s));
@@ -287,6 +348,8 @@ function initHero() {
   } catch (e) { toFallback(e); return; }
   if (!renderer.getContext()) { toFallback('no WebGL context'); return; }
   root.dataset.ready = 'webgl';
+  load(26);
+  await yieldFrame();
 
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.setClearColor(0x000000, 0);
@@ -324,6 +387,8 @@ function initHero() {
   const pmrem = new THREE.PMREMGenerator(renderer);
   scene.environment = pmrem.fromScene(studioEnv(), 0.02).texture;
   pmrem.dispose();
+  load(32);
+  await yieldFrame();
 
   /* post: AO for contact and crevices, a faint bloom for the lights only (desktop, WebGL2) */
   const USE_POST = false; // no bloom: the only light is the eye line and its own halo
@@ -1264,9 +1329,16 @@ function initHero() {
   const codeCount = [0, 0, 0, 0, 0];
   const parts = [];
   const _box = new THREE.Box3();
-  DEF.forEach((d) => {
+  let sliceAt = performance.now();
+  for (let di = 0; di < DEF.length; di++) {
+    if (performance.now() - sliceAt > 32) {
+      load(32 + Math.round((di / DEF.length) * 54));
+      await yieldFrame();
+      sliceAt = performance.now();
+    }
+    const d = DEF[di];
     codeCount[d.stage] += 1;
-    if (MOBILE && d.detail) return;
+    if (MOBILE && d.detail) continue;
     const obj = d.build ? d.build(S) : mesh(d.make(S), d.mat);
     obj.traverse((o) => { if (o.isMesh) { o.castShadow = SHADOWS; o.receiveShadow = SHADOWS; } });
     _box.setFromObject(obj);
@@ -1289,7 +1361,9 @@ function initHero() {
     const pt = { d, obj, parent, h, hq, wire, cLocal, code: STAGE_CODE[d.stage] + '-' + String(codeCount[d.stage]).padStart(2, '0') };
     if (d.link) LINKS.push({ pt, crank: d.link });
     parts.push(pt);
-  });
+  }
+  load(86);
+  await yieldFrame();
   const faceLight = parts.find((pt) => pt.d.light === 'face');
   const coreLight = parts.find((pt) => pt.d.light === 'core');
 
@@ -1565,7 +1639,6 @@ function initHero() {
   if (STATIC || !HAS_GSAP) {
     intro.load = 100; intro.grid = 1; intro.parts = 1;
     p = target = 1;
-    root.classList.add('is-loaded', 'is-intro-done');
     if (STATIC) root.classList.add('is-static');
   }
   parts.forEach((pt) => { pt.prev = clamp((p - pt.s0) / pt.dur, 0, 1); });
@@ -1977,6 +2050,23 @@ function initHero() {
     view.copyB = cr.bottom - rr.top + 40;
     if (!running) renderStatic();
   }
+  /* compile shaders off the main thread where the driver allows it, counting ready programs for 86 → 96.
+     Whatever is not ready in 4s (or in a background tab, where the status never resolves) compiles on the first draw. */
+  if (!document.hidden) {
+    try {
+      let compiled = false;
+      renderer.compileAsync(scene, camera).then(() => { compiled = true; }, () => { compiled = true; });
+      const t0 = performance.now();
+      while (!compiled && performance.now() - t0 < 4000) {
+        const progs = renderer.info.programs || [];
+        const ok = progs.filter((pr) => pr.isReady && pr.isReady()).length;
+        load(86 + Math.round((10 * ok) / Math.max(1, progs.length)));
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) { /* first draw compiles instead */ }
+  }
+  load(96);
+  await yieldFrame();
   resize();
   if ('ResizeObserver' in window) new ResizeObserver(resize).observe(root);
   else window.addEventListener('resize', resize);
@@ -2018,14 +2108,18 @@ function initHero() {
     /* the shell runs ScrollTrigger.sort() + refresh() once after load and fonts */
 
     /* intro: headline is already on screen (CSS); the 3D stage fades in, grid and parts unfold in 0.7s */
-    renderer.compile(scene, camera);
+    await load.finish();
     intro.load = 100;
     root.classList.add('is-loaded', 'is-intro-done');
+    load.ready();
     gsap.timeline()
       .to(intro, { grid: 1, duration: 0.7, ease: 'power3.inOut' })
       .to(intro, { parts: 1, duration: 0.7, ease: 'power2.out' }, '<0.1');
   } else {
     renderStatic();
+    await load.finish();
+    root.classList.add('is-loaded', 'is-intro-done');
+    load.ready();
   }
 }
 </script>

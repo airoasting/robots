@@ -65,6 +65,7 @@ python3 build.py --check   # 생성 없이 점검만. 정본과 사본 불일치
 - 토큰: `--bg --bg-2 --surface --surface-2 --line --line-2 --text --muted --dim --accent --accent-2 --steel --danger --ok --radius --ease --f-display --f-body --f-mono --nav-h --gutter`
 - 유틸: `.overline` `.h-display` `.lead` `.wrap` `.reveal`(화면에 들어오면 페이드 + 24px 상승, 0.9s) `.sr-only`
 - 런타임: 현재 섹션 하이라이트, 진행 바, pin 여백을 계산한 앵커 이동, 모든 ScrollTrigger의 문서 순서 정렬 후 단일 refresh
+- 히어로 로딩: 01 조각이 실제 진행률(three.js 다운로드, WebGL 준비, 부품 생성, 셰이더 컴파일)을 0~100%로 보여 줍니다. 부품 생성은 32ms 단위로 쪼개 프레임을 양보하고, 백그라운드 탭에서는 쪼개지 않습니다. 셸의 단일 refresh는 `window.__heroReady`(히어로가 pin을 만든 뒤 해제)까지 기다리고, 로딩 중에는 페이지 스크롤을 잠급니다(최대 15초)
 - 섹션 배경: 셸이 섹션별 그라디언트를 소유합니다(앞 섹션의 끝 톤 = 다음 섹션의 시작 톤). 조각은 섹션 루트에 background를 지정하지 않습니다.
 - 푸터 출처: `build.py`가 `data/anthropic.json`(리서치 원문, PDF, 데이터)과 `data/videos_*.json`(업체별 공식 채널 영상 1건)에서 채웁니다.
 
